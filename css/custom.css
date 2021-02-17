@@ -1,1 +1,120 @@
 /* You can customize theme styles here */
+.badge{
+    font-size: 18px;
+    font-weight: 100;
+    padding: 16px 24px 16px 24px;
+    margin: 10px 5px 5px 0px;
+}
+
+.badge-2{
+    font-size: 14px;
+    padding: 4.35px 16px 4.35px 16px; 
+    margin-right: 10px;
+}
+
+.clients__item{
+    background-color: #edf1f4;
+    font-size: 24px;
+    padding: 28px;
+}
+
+.rad-showcase__bg img{
+    height: 574px;
+    width: auto;
+}
+
+.section{
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-top: 60px;
+    margin-bottom: 0px;
+}
+
+.section .row.row--padded{
+    margin-bottom:0px;
+    margin-top: 60px;
+}
+
+.titlenumber{
+    font-size: 200px; 
+    font-weight: 600;
+    color: #555555; 
+    opacity: 5%;
+}
+
+.sectiontitle{
+    font-size: 48px;
+    color: #000000;
+    font-weight: 600; 
+    margin-top: -136px;
+}
+
+.sectiontitle-eng{
+    font-size: 18px;
+    color: #555555;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.title4{
+    font-size: 32px;
+    color: #000000;
+    letter-spacing: 0;
+    font-weight: 600;
+    margin-top: 90px;
+}
+
+.lead{
+    padding-top:40px; 
+    font-size: 18px;
+    color: #555555;
+    letter-spacing: 0;
+    text-align: justify;
+    line-height: 30px;
+    font-weight: 400;
+}
+
+.carousel-control-next-icon, .carousel-control-prev-icon{
+    padding:30px 10px 30px 10px;
+    background-color: #555555;
+}
+
+.subtitle{
+    font-size: 18px;
+    color: #555555;
+    background-color: #ffffff;
+    opacity: 80%;
+    margin-bottom: 40px;
+}
+
+.carousel-indicators li{
+    background-color:#555555;
+    border-bottom:20px solid transparent;
+}
+
+.section li::before{
+    width: 0px;
+    height:0px;
+}
+
+.mb-0{
+    font-size: 18px;
+    color: black;
+    font-weight: 600;
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+
+.imgsubtitle{
+    margin-top: 30px;
+    font-size: 18px;
+    color: #A2A2A2;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 30px;
+    font-weight: 400;
+}
+
+.imgstyle{
+    margin-top: 60px;
+}
