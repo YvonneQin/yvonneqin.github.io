@@ -120,3 +120,13 @@
 .imgstyle{
     margin-top: 40px;
 }
+
+div.customhover:link{
+    color: black;
+}
+div.customhover:visited{
+    color:white
+}
+div.customhover:hover{
+    box-shadow: 20px red;
+}}
