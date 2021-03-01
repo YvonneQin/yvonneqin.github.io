@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="684px" height="448px" viewBox="0 0 684 448" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Background Copy2</title>
+    <defs>
+        <polygon id="path-1" points="0 0 684 0 684 448 94.6973294 448"></polygon>
+        <linearGradient x1="75.8625%" y1="32.0602599%" x2="12.6147111%" y2="69.7767227%" id="linearGradient-3">
+            <stop stop-color="#33353F" offset="0%"></stop>
+            <stop stop-color="#1C1D22" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="我的网页" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Index" transform="translate(-882.000000, -4910.000000)">
+            <g id="Background-Copy" transform="translate(882.000000, 4910.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Mask" fill="#D8D8D8" xlink:href="#path-1"></use>
+                <rect fill="url(#linearGradient-3)" mask="url(#mask-2)" x="0" y="0" width="684" height="448"></rect>
+                <text id="#-my-attitude-to-lea" mask="url(#mask-2)" font-family="PingFangSC-Semibold, PingFang SC" font-size="31" font-weight="500" fill="#FFFFFF" fill-opacity="0.155184659">
+                    <tspan x="142" y="81"># my attitude to learning</tspan>
+                    <tspan x="142" y="125"></tspan>
+                    <tspan x="142" y="169">import Time</tspan>
+                    <tspan x="142" y="213">for i in range (1, mylife):  # (1, 28)</tspan>
+                    <tspan x="142" y="257">learn( )</tspan>
+                    <tspan x="142" y="301">time.sleep( 8985599 )</tspan>
+                    <tspan x="142" y="345"></tspan>
+                    <tspan x="142" y="389">!The End     To be Continued…</tspan>
+                </text>
+                <text id="{-measure-}" mask="url(#mask-2)" font-family="PingFangSC-Semibold, PingFang SC" font-size="66" font-weight="500" fill="#FFFFFF">
+                    <tspan x="193.074" y="238">{ Measure }</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>
