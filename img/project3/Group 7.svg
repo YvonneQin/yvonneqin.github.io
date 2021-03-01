@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1152px" height="617px" viewBox="0 0 1152 617" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 7</title>
+    <g id="我的网页" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="project-3" transform="translate(-414.000000, -3046.000000)">
+            <g id="Group-7" transform="translate(414.000000, 3046.000000)">
+                <rect id="Rectangle-Copy-2" fill="#F6F7F7" x="0" y="0" width="1152" height="617"></rect>
+                <g id="Group" transform="translate(92.000000, 42.000000)">
+                    <text id="按照时间轴整理，发现设计突破口" font-family="PingFangSC-Semibold, PingFang SC" font-size="24" font-weight="500" fill="#E96E51">
+                        <tspan x="304" y="28">按照时间轴整理，发现设计突破口</tspan>
+                    </text>
+                    <text id="特点" font-family="PingFangSC-Semibold, PingFang SC" font-size="20" font-weight="500" fill="#555555">
+                        <tspan x="57" y="89">特点</tspan>
+                    </text>
+                    <text id="通勤路上，环境嘈杂。持机操作不便利。" font-family="PingFangSC-Regular, PingFang SC" font-size="16" font-weight="normal" fill="#555555">
+                        <tspan x="183" y="89">通勤路上，环境嘈杂。</tspan>
+                        <tspan x="199" y="111">持机操作不便利。</tspan>
+                    </text>
+                    <text id="思维活跃、且高效-安排今日事项，为今日计" font-family="PingFangSC-Regular, PingFang SC" font-size="16" font-weight="normal" fill="#555555">
+                        <tspan x="404" y="89">思维活跃、且高效</tspan>
+                        <tspan x="388" y="111">安排今日事项，为今日</tspan>
+                        <tspan x="428" y="133">计划作准备</tspan>
+                    </text>
+                    <text id="按计划，解决问题。冷静高效执行" font-family="PingFangSC-Regular, PingFang SC" font-size="16" font-weight="normal" fill="#555555">
+                        <tspan x="690" y="89">按计划，解决问题。冷</tspan>
+                        <tspan x="730" y="111">静高效执行</tspan>
+                    </text>
+                    <rect id="Rectangle" fill-opacity="0.2" fill="#E96E51" x="182" y="166" width="162" height="81"></rect>
+                    <rect id="Rectangle-Copy-3" stroke="#E96E51" stroke-width="3" fill-opacity="0.2" fill="#E96E51" x="182" y="330" width="162" height="203"></rect>
+                    <rect id="Rectangle-Copy" fill-opacity="0.2" fill="#E96E51" x="387" y="166" width="162" height="81"></rect>
+                    <rect id="Rectangle-Copy-4" fill-opacity="0.2" fill="#E96E51" x="387" y="330" width="162" height="203"></rect>
+                    <rect id="Rectangle-Copy-6" fill-opacity="0.2" fill="#E96E51" x="806" y="330" width="162" height="203"></rect>
+                    <rect id="Rectangle-Copy-2" fill-opacity="0.2" fill="#E96E51" x="577" y="166" width="391" height="81"></rect>
+                    <rect id="Rectangle-Copy-5" stroke="#E96E51" stroke-width="3" fill-opacity="0.2" fill="#E96E51" x="577" y="330" width="214" height="203"></rect>
+                    <g id="Group-3" transform="translate(832.000000, 0.000000)">
+                        <rect id="Rectangle-Copy-7" stroke="#E96E51" stroke-width="3" fill-opacity="0.2" fill="#E96E51" x="0" y="0" width="136" height="40"></rect>
+                        <text id="重点场景" font-family="PingFangSC-Regular, PingFang SC" font-size="16" font-weight="normal" fill="#555555">
+                            <tspan x="36" y="17">重点场景</tspan>
+                        </text>
+                    </g>
+                    <text id="场景" font-family="PingFangSC-Semibold, PingFang SC" font-size="20" font-weight="500" fill="#555555">
+                        <tspan x="57" y="204">场景</tspan>
+                    </text>
+                    <text id="高频使用功能" font-family="PingFangSC-Semibold, PingFang SC" font-size="20" font-weight="500" fill="#555555">
+                        <tspan x="17" y="429">高频使用功能</tspan>
+                    </text>
+                    <path id="Line" d="M960,284 L969,288.5 L960,293 L960,284 Z M11,288 L11,289 L0,289 L0,288 L11,288 Z M31,288 L31,289 L20,289 L20,288 L31,288 Z M51,288 L51,289 L40,289 L40,288 L51,288 Z M71,288 L71,289 L60,289 L60,288 L71,288 Z M91,288 L91,289 L80,289 L80,288 L91,288 Z M111,288 L111,289 L100,289 L100,288 L111,288 Z M131,288 L131,289 L120,289 L120,288 L131,288 Z M151,288 L151,289 L140,289 L140,288 L151,288 Z M171,288 L171,289 L160,289 L160,288 L171,288 Z M191,288 L191,289 L180,289 L180,288 L191,288 Z M211,288 L211,289 L200,289 L200,288 L211,288 Z M231,288 L231,289 L220,289 L220,288 L231,288 Z M251,288 L251,289 L240,289 L240,288 L251,288 Z M271,288 L271,289 L260,289 L260,288 L271,288 Z M291,288 L291,289 L280,289 L280,288 L291,288 Z M311,288 L311,289 L300,289 L300,288 L311,288 Z M331,288 L331,289 L320,289 L320,288 L331,288 Z M351,288 L351,289 L340,289 L340,288 L351,288 Z M371,288 L371,289 L360,289 L360,288 L371,288 Z M391,288 L391,289 L380,289 L380,288 L391,288 Z M411,288 L411,289 L400,289 L400,288 L411,288 Z M431,288 L431,289 L420,289 L420,288 L431,288 Z M451,288 L451,289 L440,289 L440,288 L451,288 Z M471,288 L471,289 L460,289 L460,288 L471,288 Z M491,288 L491,289 L480,289 L480,288 L491,288 Z M511,288 L511,289 L500,289 L500,288 L511,288 Z M531,288 L531,289 L520,289 L520,288 L531,288 Z M551,288 L551,289 L540,289 L540,288 L551,288 Z M571,288 L571,289 L560,289 L560,288 L571,288 Z M591,288 L591,289 L580,289 L580,288 L591,288 Z M611,288 L611,289 L600,289 L600,288 L611,288 Z M631,288 L631,289 L620,289 L620,288 L631,288 Z M651,288 L651,289 L640,289 L640,288 L651,288 Z M671,288 L671,289 L660,289 L660,288 L671,288 Z M691,288 L691,289 L680,289 L680,288 L691,288 Z M711,288 L711,289 L700,289 L700,288 L711,288 Z M731,288 L731,289 L720,289 L720,288 L731,288 Z M751,288 L751,289 L740,289 L740,288 L751,288 Z M771,288 L771,289 L760,289 L760,288 L771,288 Z M791,288 L791,289 L780,289 L780,288 L791,288 Z M811,288 L811,289 L800,289 L800,288 L811,288 Z M831,288 L831,289 L820,289 L820,288 L831,288 Z M851,288 L851,289 L840,289 L840,288 L851,288 Z M871,288 L871,289 L860,289 L860,288 L871,288 Z M891,288 L891,289 L880,289 L880,288 L891,288 Z M911,288 L911,289 L900,289 L900,288 L911,288 Z M931,288 L931,289 L920,289 L920,288 L931,288 Z M951,288 L951,289 L940,289 L940,288 L951,288 Z" fill="#E96E51" fill-rule="nonzero"></path>
+                    <text id="上班前-9:30-am" font-family="PingFangSC-Regular, PingFang SC" font-size="16" font-weight="normal" fill="#555555">
+                        <tspan x="239" y="202">上班前</tspan>
+                        <tspan x="232.512" y="224">9:30 am</tspan>
+                    </text>
+                    <text id="移动打卡" font-family="PingFangSC-Regular, PingFang SC" font-size="16" font-weight="normal" fill="#555555">
+                        <tspan x="231" y="394">移动打卡</tspan>
+                    </text>
+                    <text id="上班后前半小时-9:30-10:30" font-family="PingFangSC-Regular, PingFang SC" font-size="16" font-weight="normal" fill="#555555">
+                        <tspan x="412" y="202">上班后前半小时</tspan>
+                        <tspan x="426.928" y="224">9:30-10:30</tspan>
+                    </text>
+                    <text id="今日事项-查看邮件-新建邮件-预定会议" font-family="PingFangSC-Regular, PingFang SC" font-size="16" font-weight="normal" fill="#555555">
+                        <tspan x="436" y="383">今日事项</tspan>
+                        <tspan x="436" y="405">查看邮件</tspan>
+                        <tspan x="436" y="427">新建邮件</tspan>
+                        <tspan x="436" y="449">预定会议</tspan>
+                        <tspan x="388" y="471">扫码登录云桌面移动办</tspan>
+                        <tspan x="460" y="493">公</tspan>
+                    </text>
+                    <text id="云桌面-VPN-疫情防控-员工服务热线" font-family="PingFangSC-Regular, PingFang SC" font-size="16" font-weight="normal" fill="#555555">
+                        <tspan x="863" y="405">云桌面</tspan>
+                        <tspan x="871" y="427">VPN</tspan>
+                        <tspan x="855" y="449">疫情防控</tspan>
+                        <tspan x="839" y="471">员工服务热线</tspan>
+                    </text>
+                    <text id="上班后-10:30之后" font-family="PingFangSC-Regular, PingFang SC" font-size="16" font-weight="normal" fill="#555555">
+                        <tspan x="748.5" y="202">上班后</tspan>
+                        <tspan x="736.78" y="224">10:30之后</tspan>
+                    </text>
+                    <text id="有声任务：拨打音视频-预定会议-设置待办" font-family="PingFangSC-Regular, PingFang SC" font-size="16" font-weight="normal" fill="#555555">
+                        <tspan x="604" y="394">有声任务：拨打音视频</tspan>
+                        <tspan x="652" y="416">预定会议</tspan>
+                        <tspan x="636" y="438">设置待办事项</tspan>
+                        <tspan x="668" y="460">找人</tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
