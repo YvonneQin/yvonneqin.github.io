@@ -447,7 +447,7 @@
             import os
             import xlrd
             
-            filename=os.listdir('/Users/r李恩琪/Desktop/Py/生命力评估python练习/结果文件') #读取文件夹的内容
+            filename=os.listdir('url') #读取文件夹的内容
             filename.remove('.DS_Store') #去除文件夹中的无关文件
             
             def caculate(): # 定义单个文件相关数据的计算的函数
@@ -483,20 +483,21 @@
             import pymongo
 
             myclient=pymongo.MongoClient("mongodb://localhost:27017/")
-            db=myclient['ForresterCX报告']
+            db=myclient['file_name']
             datatable=db['test']
 
             #result=[]
-            for i in range(1,10): #总共304页
-                web=requests.get('https://www.forrester.com/search?tmtxt=CX&searchOption=10001&page='+str(i)+'&navigation=last&dateRange=0')
+            for i in range(1,10): 
+                web=requests.get('url'+str(i)+'&navigation=last&dateRange=0')
                 soup=BeautifulSoup(web.text,'lxml')
                 list=soup.find_all('div',class_="result-info")
                 for li in list:
                     dic={}
-                    dic['报告标题']=li.h4.text.replace('\nReport\n','').replace('\n','')
+                    dic['标题']=li.h4.text.replace('\nReport\n','').replace('\n','')
                     datatable.insert_one(dic)
             #        result.append(dic)
-                s = requests.session() #http连接太多没有关闭导致的，requests使用了urllib3库，默认的http connection是keep-alive的，requests设置False关闭。
+                s = requests.session() 
+                #http连接太多没有关闭导致的，requests使用了urllib3库，默认的http connection是keep-alive的，requests设置False关闭。
                 s.keep_alive = False
                 time.sleep(5)
                     
