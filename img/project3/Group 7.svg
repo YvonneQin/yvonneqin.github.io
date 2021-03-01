@@ -35,7 +35,7 @@
                     <g id="Group-3" transform="translate(832.000000, 0.000000)">
                         <rect id="Rectangle-Copy-7" stroke="#E96E51" stroke-width="3" fill-opacity="0.2" fill="#E96E51" x="0" y="0" width="136" height="40"></rect>
                         <text id="重点场景" font-family="PingFangSC-Regular, PingFang SC" font-size="16" font-weight="normal" fill="#555555">
-                            <tspan x="36" y="17">重点场景</tspan>
+                            <tspan x="36" y="23">重点场景</tspan>
                         </text>
                     </g>
                     <text id="场景" font-family="PingFangSC-Semibold, PingFang SC" font-size="20" font-weight="500" fill="#555555">
