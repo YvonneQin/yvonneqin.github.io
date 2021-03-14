@@ -1,28 +1,90 @@
+.header .navbar .nav-item .nav-link{
+    font-weight: 600;
+    padding:0px 16px;
+}
+
+.section--contact .container{
+    box-shadow: 0 42px 34px -16px rgb(0 0 0 / 30%);
+}
+
+.rad-showcase .platform-links{
+    margin-top:20px;
+}
+
+.badge-2.rounded-pill{
+    font-size: 10px; font-weight: 400;padding:3px 16px ;
+}
+
+.header::before{
+    height: 70px;
+}
+
+.experience__title{
+    font-size: 16px;
+}
+
+
+.container {
+    max-width: 740px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.btn {
+    font-size: 12px;
+    font-weight: 400;
+    padding:10px 16px;
+}
+
+.rad-showcase{
+    min-height: 600px;
+}
+
+.rad-showcase__bg img{
+    width: 340px;
+    height: auto;
+    margin-top: 0px;
+}
+
+.education__title{
+    font-size: 18px;
+}
+.education__degree, .experience__date{
+    font-size: 10px;
+}
+
+h1.display-1{
+    padding-top: 20px;
+}
+
+h2{
+    font-size: 32px;
+}
+
+h3{
+    font-size: 20px;
+}
 
 .badge{
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 100;
-    padding: 16px 24px 16px 24px;
+    padding: 12px 24px 12px 24px;
     margin: 10px 5px 5px 0px;
 }
 
 .badge-2{
-    font-size: 14px;
-    padding: 4.35px 16px 4.35px 16px; 
-    margin-right: 10px;
+    font-size: 10px;
+    font-weight: 600;
+    padding: 6px 16px; 
+    margin-right: 3px;
 }
 
 .clients__item{
     background-color: #edf1f4;
-    font-size: 24px;
-    padding: 28px;
+    font-size: 16px;
+    padding: 16px;
+    margin-right: 8px;
 }
 
-.rad-showcase__bg img{
-    height: 574px;
-    width: auto;
-    margin-top: 0px;
-}
 
 .section{
     padding-top: 0px;
@@ -38,42 +100,46 @@
 }
 
 .titlenumber{
-    font-size: 200px; 
+    font-size: 170px; 
     font-weight: 600;
     color: #555555; 
     opacity: 5%;
 }
 
 .sectiontitle{
-    font-size: 48px;
+    font-size: 36px;
     color: #000000;
     font-weight: 600; 
-    margin-top: -136px;
+    margin-top: -100px;
 }
 
 .sectiontitle-eng{
-    font-size: 18px;
+    font-size: 14px;
     color: #555555;
     font-weight: 600;
     text-transform: uppercase;
 }
 
 .title4{
-    font-size: 32px;
+    font-size: 28px;
     color: #000000;
     letter-spacing: 0;
     font-weight: 600;
-    margin-top: 90px;
+    margin-top: 66px;
 }
 
 .lead{
     padding-top:40px; 
-    font-size: 18px;
+    font-size: 14px;
     color: #555555;
     letter-spacing: 0;
     text-align: justify;
     line-height: 30px;
     font-weight: 400;
+}
+
+.mb-0{
+    font-size: 20px;margin-top: 40px;
 }
 
 .carousel-control-next-icon, .carousel-control-prev-icon{
@@ -82,7 +148,7 @@
 }
 
 .subtitle{
-    font-size: 18px;
+    font-size: 14px;
     color: #555555;
     background-color: #ffffff;
     opacity: 80%;
@@ -100,7 +166,6 @@
 }
 
 .mb-0{
-    font-size: 18px;
     color: black;
     font-weight: 600;
     padding-top: 40px;
@@ -108,8 +173,8 @@
 }
 
 .imgsubtitle{
-    margin-top: 30px;
-    font-size: 18px;
+    margin-top: 18px;
+    font-size: 14px;
     color: #A2A2A2;
     letter-spacing: 0;
     text-align: center;
@@ -118,15 +183,6 @@
 }
 
 .imgstyle{
-    margin-top: 40px;
+    margin-top: 30px;
 }
 
-div.customhover:link{
-    color: black;
-}
-div.customhover:visited{
-    color:white
-}
-div.customhover:hover{
-    box-shadow: 20px red;
-}}
