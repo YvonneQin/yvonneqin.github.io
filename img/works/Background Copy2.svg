@@ -8,7 +8,7 @@
             <stop stop-color="#1C1D22" offset="100%"></stop>
         </linearGradient>
     </defs>
-    <g id="我的网页" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g id="我的网页-0311" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="Index" transform="translate(-882.000000, -4910.000000)">
             <g id="Background-Copy" transform="translate(882.000000, 4910.000000)">
                 <mask id="mask-2" fill="white">
@@ -26,8 +26,9 @@
                     <tspan x="142" y="345"></tspan>
                     <tspan x="142" y="389">!The End     To be Continued…</tspan>
                 </text>
-                <text id="{-measure-}" mask="url(#mask-2)" font-family="PingFangSC-Semibold, PingFang SC" font-size="66" font-weight="500" fill="#FFFFFF">
-                    <tspan x="193.074" y="238">{ Measure }</tspan>
+                <text id="#Python-{-measure-}" mask="url(#mask-2)" font-family="PTSans-Regular, PT Sans" font-size="50" font-weight="normal" fill="#FFFFFF">
+                    <tspan x="182" y="210"># Python</tspan>
+                    <tspan x="182" y="269">{ measure }</tspan>
                 </text>
             </g>
         </g>
