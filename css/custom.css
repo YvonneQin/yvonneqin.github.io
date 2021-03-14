@@ -7,6 +7,22 @@
     box-shadow: 0 42px 34px -16px rgb(0 0 0 / 30%);
 }
 
+.hero_footer-svg {
+    opacity: 20%;
+    position: absolute;
+    bottom: 20px;
+    animation: move_left 5s infinite linear;
+    animation-direction: alternate-reverse;
+}
+
+.hero_footer-svg_right {
+    opacity: 20%;
+    position: absolute;
+    bottom: 20px;
+    animation: move_right 5s infinite linear;
+    animation-direction: alternate-reverse;
+}
+
 .rad-showcase .platform-links{
     margin-top:20px;
 }
