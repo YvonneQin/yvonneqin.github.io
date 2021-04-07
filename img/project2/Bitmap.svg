@@ -29,7 +29,10 @@
                     <tspan x="98" y="325">定义</tspan>
                 </text>
                 <text id="权重-*-（实际目的/诉求---摩擦/限" mask="url(#mask-2)" font-family="PingFangSC-Semibold, PingFang SC" font-size="30" font-weight="500" fill="#555555">
-                    <tspan x="96.437467" y="502">权重 * （实际目的/诉求 - 摩擦/限制）      =</tspan>
+                    <tspan x="96.437467" y="502">权重 * （实际目的/诉求 - 摩擦/限制） </tspan>
+                </text>
+                <text id="=" mask="url(#mask-2)" font-family="PingFangSC-Semibold, PingFang SC" font-size="30" font-weight="500" fill="#555555">
+                    <tspan x="677.437467" y="499">=</tspan>
                 </text>
                 <text id="场景频次-+-结构频次" mask="url(#mask-2)" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" fill="#555555">
                     <tspan x="96.437467" y="541">场景频次 + 结构频次</tspan>
