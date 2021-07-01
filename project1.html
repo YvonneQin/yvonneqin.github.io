@@ -2,6 +2,31 @@
 <!DOCTYPE html>
 <html lang="en">
 
+  <SCRIPT language=JavaScript> 
+    function password() { 
+    var testV = 1;     
+    var pass1 = prompt('请输入密码:','');    
+    while (testV < 3) {    
+      if (!pass1)
+      history.go(-1);
+      if (pass1 == "ZHDJ") { 
+        alert('密码正确!'); 
+    break; 
+    } 
+     
+    testV+=-1; 
+    var pass1 = prompt('密码错误!请重新输入:'); 
+    } 
+    if (pass1!="password" & testV ==3) 
+    history.go(-1); 
+    return " ";      
+    } 
+     
+    document.write(password()); 
+     
+    </SCRIPT>
+
+
 <head>
   <meta name="author" content="yuwen">
   <meta charset="UTF-8"/> 
@@ -299,7 +324,7 @@
         <span class="badge-2 rounded-pill" style="background-color:#D5FFE9!important;">项目管理</span>
         <h3 style="margin-top: 16px;">智慧党建平台前后台系统搭建与设计</h3>
         <p class="lead">
-          2020年6月 - 至今<br/>
+          2020年6月 - 2021年3月<br/>
           项目负责人<br/>
           本文阅读大约需要 15 mins
         </p>
