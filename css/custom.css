@@ -35,6 +35,10 @@
     height: 70px;
 }
 
+.contact__info, .experience+.experience{
+    padding-top: 30px;
+}
+
 .experience__title{
     font-size: 16px;
 }
