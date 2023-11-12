@@ -1,281 +1,271 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
-<SCRIPT language=JavaScript> 
-  function password() { 
-  var testV = 1;     
-  var pass1 = prompt('Pls fill in password:','');    
-  while (testV < 3) {    
-    if (!pass1)
-    history.go(-1);
-    if (pass1 == " ") { 
-      alert('Go!'); 
-  break; 
-  } 
-   
-  testV+=-1; 
-  var pass1 = prompt('Error, pls fill in again:'); 
-  } 
-  if (pass1!="password" & testV ==3) 
-  history.go(-1); 
-  return " ";      
-  } 
-   
-  document.write(password()); 
-   
-  </SCRIPT>
+<SCRIPT language=JavaScript>
+  function password() {
+    var testV = 1;
+    var pass1 = prompt('Pls fill in password:', '');
+    while (testV < 3) {
+      if (!pass1)
+        history.go(-1);
+      if (pass1 == " ") {
+        alert('Go!');
+        break;
+      }
+
+      testV += -1;
+      var pass1 = prompt('Error, pls fill in again:');
+    }
+    if (pass1 != "password" & testV == 3)
+      history.go(-1);
+    return " ";
+  }
+
+  document.write(password());
+
+</SCRIPT>
 
 
 <head>
   <meta name="author" content="yuwen">
-  <meta charset="UTF-8"/> 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <link rel="icon" type="image/x-icon" href="favicon.ico" />
-  <link rel="stylesheet" href="css/main.css"/>
-  <link rel="stylesheet" href="css/rad-icons.css"/>
-  <link rel="stylesheet" href="css/custom.css"/>
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/rad-icons.css" />
+  <link rel="stylesheet" href="css/custom.css" />
 
   <script>
-      (function (w, d, s, l, i) {
-          w[l] = w[l] || [];
-          w[l].push({
-              'gtm.start': new Date().getTime(),
-              event: 'gtm.js'
-          });
-          var f = d.getElementsByTagName(s)[0],
-              j = d.createElement(s),
-              dl = l != 'dataLayer' ? '&l=' + l : '';
-          j.async = true;
-          j.src =
-              'https://www.googletagmanager.com/gtm.js?id=GTM-000000' + i + dl;
-          f.parentNode.insertBefore(j, f);
-      })(window, document, 'script', 'dataLayer', 'GTM-000000');
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src =
+        'https://www.googletagmanager.com/gtm.js?id=GTM-000000' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-000000');
   </script>
 
   <title>EDC临床试验套件概念性工作流</title>
-  <style> 
-      
-      .rad-fade-in {
-          will-change: opacity, transform;
-          animation-name: rad-fade-in-fallback;
-          animation-duration: 5s;
-          animation-fill-mode: both;
+  <style>
+    .rad-fade-in {
+      will-change: opacity, transform;
+      animation-name: rad-fade-in-fallback;
+      animation-duration: 5s;
+      animation-fill-mode: both;
+    }
+
+    @keyframes rad-fade-in-fallback {
+      0% {
+        opacity: 0;
       }
 
-      @keyframes rad-fade-in-fallback {
-          0% {
-              opacity: 0;
-          }
-
-          75% {
-              opacity: 0;
-          }
-
-          100% {
-              opacity: 1;
-          }
+      75% {
+        opacity: 0;
       }
 
-      .fonts-loaded .rad-fade-in.rad-waiting {
-          animation-name: none;
-          opacity: 0;
+      100% {
+        opacity: 1;
+      }
+    }
+
+    .fonts-loaded .rad-fade-in.rad-waiting {
+      animation-name: none;
+      opacity: 0;
+    }
+
+    .fonts-loaded .rad-fade-in.rad-animate {
+      animation-name: rad-fade-in;
+      animation-duration: 1.1s;
+      animation-fill-mode: both;
+    }
+
+    @keyframes rad-fade-in {
+      0% {
+        opacity: 0;
       }
 
-      .fonts-loaded .rad-fade-in.rad-animate {
-          animation-name: rad-fade-in;
-          animation-duration: 1.1s;
-          animation-fill-mode: both;
+      100% {
+        opacity: 1;
+      }
+    }
+
+
+    .rad-fade-in-long {
+      will-change: opacity, transform;
+      animation-name: rad-fade-in-long-fallback;
+      animation-duration: 8s;
+      animation-fill-mode: both;
+    }
+
+    @keyframes rad-fade-in-long-fallback {
+      0% {
+        opacity: 0;
       }
 
-      @keyframes rad-fade-in {
-          0% {
-              opacity: 0;
-          }
-
-          100% {
-              opacity: 1;
-          }
+      75% {
+        opacity: 0;
       }
 
-      
-      .rad-fade-in-long {
-          will-change: opacity, transform;
-          animation-name: rad-fade-in-long-fallback;
-          animation-duration: 8s;
-          animation-fill-mode: both;
+      100% {
+        opacity: 1;
+      }
+    }
+
+    .fonts-loaded .rad-fade-in-long.rad-waiting {
+      animation-name: none;
+      opacity: 0;
+    }
+
+    .fonts-loaded .rad-fade-in-long.rad-animate {
+      animation-name: rad-fade-in-long;
+      animation-duration: 2s;
+      animation-fill-mode: both;
+    }
+
+    @keyframes rad-fade-in-long {
+      0% {
+        opacity: 0;
       }
 
-      @keyframes rad-fade-in-long-fallback {
-          0% {
-              opacity: 0;
-          }
-
-          75% {
-              opacity: 0;
-          }
-
-          100% {
-              opacity: 1;
-          }
+      20% {
+        opacity: 0;
       }
 
-      .fonts-loaded .rad-fade-in-long.rad-waiting {
-          animation-name: none;
-          opacity: 0;
+      100% {
+        opacity: 1;
+      }
+    }
+
+
+    .rad-fade-down {
+      will-change: opacity, transform;
+      animation-name: rad-fade-down-fallback;
+      animation-duration: 5s;
+      animation-fill-mode: both;
+      transform: translateY(-30px);
+    }
+
+    @keyframes rad-fade-down-fallback {
+      0% {
+        opacity: 0;
+        transform: translateY(-30px);
       }
 
-      .fonts-loaded .rad-fade-in-long.rad-animate {
-          animation-name: rad-fade-in-long;
-          animation-duration: 2s;
-          animation-fill-mode: both;
+      75% {
+        opacity: 0;
+        transform: translateY(-30px);
       }
 
-      @keyframes rad-fade-in-long {
-          0% {
-              opacity: 0;
-          }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
 
-          20% {
-              opacity: 0;
-          }
+    .fonts-loaded .rad-fade-down.rad-waiting {
+      animation-name: none;
+      opacity: 0;
+      transform: translateY(-30px);
+    }
 
-          100% {
-              opacity: 1;
-          }
+    .fonts-loaded .rad-fade-down.rad-animate {
+      animation-name: rad-fade-down;
+      animation-duration: 1.1s;
+    }
+
+    @keyframes rad-fade-down {
+      0% {
+        opacity: 0;
+        transform: translateY(-30px);
       }
 
-      
-      .rad-fade-down {
-          will-change: opacity, transform;
-          animation-name: rad-fade-down-fallback;
-          animation-duration: 5s;
-          animation-fill-mode: both;
-          transform: translateY(-30px);
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+
+    .rad-scale-down {
+      will-change: opacity, transform;
+      animation-name: rad-scale-down-fallback;
+      animation-duration: 5s;
+      animation-fill-mode: both;
+      transform-origin: 50% 0;
+    }
+
+    @keyframes rad-scale-down-fallback {
+      0% {
+        opacity: 0;
+        transform: scaleY(0.95);
       }
 
-      @keyframes rad-fade-down-fallback {
-          0% {
-              opacity: 0;
-              transform: translateY(-30px);
-          }
-
-          75% {
-              opacity: 0;
-              transform: translateY(-30px);
-          }
-
-          100% {
-              opacity: 1;
-              transform: translateY(0);
-          }
+      75% {
+        opacity: 0;
+        transform: scaleY(0.95);
       }
 
-      .fonts-loaded .rad-fade-down.rad-waiting {
-          animation-name: none;
-          opacity: 0;
-          transform: translateY(-30px);
+      100% {
+        opacity: 1;
+        transform: scaleY(1);
+      }
+    }
+
+    .fonts-loaded .rad-scale-down.rad-waiting {
+      animation-name: none;
+      opacity: 0;
+      transform: scaleY(0.95);
+    }
+
+    .fonts-loaded .rad-scale-down.rad-animate {
+      animation-name: rad-scale-down;
+      animation-duration: 1.1s;
+      animation-fill-mode: both;
+    }
+
+    @keyframes rad-scale-down {
+      0% {
+        opacity: 0;
+        transform: scaleY(0.95);
       }
 
-      .fonts-loaded .rad-fade-down.rad-animate {
-          animation-name: rad-fade-down;
-          animation-duration: 1.1s;
+      100% {
+        opacity: 1;
+        transform: scaleY(1);
       }
 
-      @keyframes rad-fade-down {
-          0% {
-              opacity: 0;
-              transform: translateY(-30px);
-          }
-
-          100% {
-              opacity: 1;
-              transform: translateY(0);
-          }
-      }
-
-      
-      .rad-scale-down {
-          will-change: opacity, transform;
-          animation-name: rad-scale-down-fallback;
-          animation-duration: 5s;
-          animation-fill-mode: both;
-          transform-origin: 50% 0;
-      }
-
-      @keyframes rad-scale-down-fallback {
-          0% {
-              opacity: 0;
-              transform: scaleY(0.95);
-          }
-
-          75% {
-              opacity: 0;
-              transform: scaleY(0.95);
-          }
-
-          100% {
-              opacity: 1;
-              transform: scaleY(1);
-          }
-      }
-
-      .fonts-loaded .rad-scale-down.rad-waiting {
-          animation-name: none;
-          opacity: 0;
-          transform: scaleY(0.95);
-      }
-
-      .fonts-loaded .rad-scale-down.rad-animate {
-          animation-name: rad-scale-down;
-          animation-duration: 1.1s;
-          animation-fill-mode: both;
-      }
-
-      @keyframes rad-scale-down {
-          0% {
-              opacity: 0;
-              transform: scaleY(0.95);
-          }
-
-          100% {
-              opacity: 1;
-              transform: scaleY(1);
-          }
-      
-      }
-      
-      
+    }
   </style>
 
 
-  
+
 
 
 </head>
 
 <body>
 
-	<header class="header fixed-top rad-animation-group" id="header">
+  <header class="header fixed-top rad-animation-group" id="header">
     <div class="container rad-fade-in">
       <nav class="navbar navbar-expand-lg navbar-light p-0">
         <a class="navbar-brand" href="index.html">
           <span style="font-size: 24px;">Yuwen</span>
           <span style="font-size: 24px;">Qin</span>
-          
-          
-          
+
+
+
         </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarSupportedContent, #header"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+          data-target="#navbarSupportedContent, #header" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -284,11 +274,11 @@
             <li class="nav-item">
               <a class="nav-link" href="index.html">Homepage</a>
             </li>
-            
+
             <li class="nav-item">
               <a data-scroll class="nav-link" href="index.html#about">Skills</a>
             </li>
-            
+
             <li class="nav-item">
               <a data-scroll class="nav-link" href="index.html#portfolio">Projects</a>
             </li>
@@ -300,286 +290,288 @@
             <li class="nav-item">
               <a data-scroll class="nav-link" href="more me.html">More Me</a>
             </li>
-            
+
             <!-- <li class="nav-item">
               <a data-scroll class="nav-link" href="#mytestimony">行业口碑</a>
             </li> -->
 
-            
+
           </ul>
         </div>
       </nav>
     </div>
   </header>
 
-	
 
 
 
-	
-	
-<section class="section">
-  <div class="container">
-    
-    <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
-      <div class="col-12 col-md-5 mt-4 mt-md-0 my-md-auto">
-        <span class="badge-2 rounded-pill" style="background-color:#F4EDEE!important;">产品</span>
-        <span class="badge-2 rounded-pill" style="background-color:#D5EDFF!important;">交互</span>
-        <span class="badge-2 rounded-pill" style="background-color:#D5FFE9!important;">项目管理</span>
-        <h3 style="margin-top: 16px;">EDC临床试验套件概念性工作流</h3>
-        <p class="lead">
-          2021年4月 - 至今<br/>
-          交互设计师<br/>
-          本文阅读大约需要 3 mins
-        </p>
+
+
+
+  <section class="section">
+    <div class="container">
+
+      <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
+        <div class="col-12 col-md-5 mt-4 mt-md-0 my-md-auto">
+          <span class="badge-2 rounded-pill" style="background-color:#F4EDEE!important;">产品</span>
+          <span class="badge-2 rounded-pill" style="background-color:#D5EDFF!important;">交互</span>
+          <span class="badge-2 rounded-pill" style="background-color:#D5FFE9!important;">项目管理</span>
+          <h3 style="margin-top: 16px;">EDC临床试验套件概念性工作流</h3>
+          <p class="lead">
+            2021年4月 - 至今<br />
+            交互设计师<br />
+            本文阅读大约需要 3 mins
+          </p>
+        </div>
+        <div class="col-12 col-md-7 pl-md-0 text-right">
+          <img class='lozad img-responsive img-clip-right-backward'
+            src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
+            data-src="img/project2/EDC.png" data-srcset="img/project2/EDC.png 1x, img/project2/EDC@2x.png 2x"
+            alt="This is ifa-banner." />
+        </div>
       </div>
-      <div class="col-12 col-md-7 pl-md-0 text-right">
-        <img
-          class='lozad img-responsive img-clip-right-backward'
-          src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
-          data-src="img/project2/EDC.png"
-          data-srcset="img/project2/EDC.png 1x, img/project2/EDC@2x.png 2x"
-          alt="This is ifa-banner."
-        />
-      </div>
+
     </div>
-
-  </div>
-</section>
+  </section>
 
 
-<section class="section" style="margin-top: 0px;">
-  <div class="container">
-    
-    <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row" style="margin-top: 0px;">
-      <div class="col-12 mt-4 mt-md-0 my-md-auto">
-        <div>
-          <div class="titlenumber">01</div>
-          <div class="sectiontitle">关于临床试验？</div>
-          <div class="sectiontitle-eng"> Clinical Trial</div>
-        </div>
-        
-        <div class="title4">什么是临床试验？</div>
-        <blockquote class="blockquote text-center">
-          <p class="mb-0">
-            临床试验是非常复杂的行业，对于这个行业，面临诸多的问题，易出错，
-            自带光环的一个行业
-            体面 体面的一个体现，
-            全部报错 - 非常优雅 caring 一直很有温度
-            小心呵护用户的挫折感”</p>
-        </blockquote>
-        
-        
-        
-</section>
+  <section class="section" style="margin-top: 0px;">
+    <div class="container">
 
-<section class="section" style="margin-top: 0px;">
-  <div class="container">
-    
-    <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row" style="margin-top: 0px;">
-      <div class="col-12 mt-4 mt-md-0 my-md-auto">
-        <div>
-          <div class="titlenumber">01</div>
-          <div class="sectiontitle">临床试验设计</div>
-          <div class="sectiontitle-eng">Study Design</div>
-        </div>
-        
-        <div class="title4">如何应对复杂的临床试验设计？</div>
-        <blockquote class="blockquote text-center">
-          <p class="mb-0">“ 临床试验越来越复杂，如何让临床试验设计有关人员直观地设计并构建试验？ ”</p>
-        </blockquote>
-        <p class="lead">
-          临床试验设计人员经常会画图表来解释试验逻辑和流程。我们的Study Flow Builder 把试验逻辑和图表直接关联起来，让试验设计变得更直接和直观。随机化这些本来很复杂的实验配置都变得更简单。
-        </p>
+      <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
+        style="margin-top: 0px;">
+        <div class="col-12 mt-4 mt-md-0 my-md-auto">
+          <div>
+            <div class="titlenumber">01</div>
+            <div class="sectiontitle">关于临床试验？</div>
+            <div class="sectiontitle-eng"> Clinical Trial</div>
+          </div>
 
-        <div>
-          <img class="imgstyle" src="img/project0/Study Design.gif">
-          <div class="imgsubtitle">试临床验设计流程</div>
-        </div>
-        <div>
-          <img class="imgstyle" src="img/project0/2021624-22144.png">
-          <div class="imgsubtitle">添加试验事件</div>
-        </div>
-        <div>
-          <img class="imgstyle" src="img/project0/2021624-2226.png">
-          <div class="imgsubtitle">编辑试验事件名称</div>
-        </div>
-        <div>
-          <img class="imgstyle" src="img/project0/2021624-22214.png">
-          <div class="imgsubtitle">添加试验随机化因素</div>
-        </div>
-        <div>
-          <img class="imgstyle" src="img/project0/2021624-22221.png">
-          <div class="imgsubtitle">临床试验随机分配规则编辑</div>
-        </div>
-        <div>
-          <img class="imgstyle" src="img/project0/2021624-22230.png">
-          <div class="imgsubtitle">表单设计</div>
-        </div>
-        
-        
-        
-</section>
-
-<section class="section" style="margin-top: 0px;">
-  <div class="container">
-    
-    <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row" style="margin-top: 0px;">
-      <div class="col-12 mt-4 mt-md-0 my-md-auto">
-        <div>
-          <div class="titlenumber">02</div>
-          <div class="sectiontitle">临床试验验证</div>
-          <div class="sectiontitle-eng">Study Validation</div>
-        </div>
-        
-        <div class="title4">如何轻松明晰得设计试验逻辑？</div>
-        <blockquote class="blockquote text-center">
-          <p class="mb-0">“ 我们如何帮助客户提高数据质量，并且同时减少花在建库和质量控制的时间？ ”</p>
-        </blockquote>
-        <p class="lead">
-          有了强大的实验设计功能后我们就有能力把大部分 Study Validation 的配置自动化。大大减少建 Edit Check 的工作。
-          同时用户也可以用 No Code 的交互方式来定义或调整每条 Edit Check。
-        </p>
-
-        <div>
-          <img class="imgstyle" src="img/project0/1数据验证逻辑规则.png">
-          <div class="imgsubtitle">数据验证逻辑规则</div>
-        </div>
-
-        <div>
-          <img class="imgstyle" src="img/project0/2申明式添加逻辑对象.png">
-          <div class="imgsubtitle">申明式添加逻辑对象</div>
-        </div>
-
-        <div>
-          <img class="imgstyle" src="img/project0/3检索逻辑对象.png">
-          <div class="imgsubtitle">检索逻辑对象</div>
-        </div>
-
-        <div>
-          <img class="imgstyle" src="img/project0/4添加逻辑运用对象.png">
-          <div class="imgsubtitle">添加逻辑运用对象</div>
-        </div>
-
-        <div>
-          <img class="imgstyle" src="img/project0/5申明式方式完成逻辑核查.png">
-          <div class="imgsubtitle">申明式方式完成逻辑核查编写</div>
-        </div>
-        
-        
-        
-        
-</section>
+          <div class="title4">什么是临床试验？</div>
+          <blockquote class="blockquote text-center">
+            <p class="mb-0">
+              临床试验是非常复杂的行业，对于这个行业，面临诸多的问题，易出错，
+              自带光环的一个行业
+              体面 体面的一个体现，
+              全部报错 - 非常优雅 caring 一直很有温度
+              小心呵护用户的挫折感”</p>
+          </blockquote>
 
 
-<section class="section" style="margin-top: 80px; margin-bottom: 100px;">
-  <div class="container">
-    <a type="button" class="btn btn-primary btn-lg buttom-link" style="float: left;width: 340px;height: 80px;" href="index.html">上一篇：回到首页</a>
-    <a type="button" class="btn btn-primary btn-lg buttom-link" style="float: right;width: 340px;height: 80px;"href="project1.html">下一篇：智慧党建平台前后台系统搭建与设计</a>
-  </div>
-</section>
+
+  </section>
+
+  <section class="section" style="margin-top: 0px;">
+    <div class="container">
+
+      <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
+        style="margin-top: 0px;">
+        <div class="col-12 mt-4 mt-md-0 my-md-auto">
+          <div>
+            <div class="titlenumber">01</div>
+            <div class="sectiontitle">临床试验设计</div>
+            <div class="sectiontitle-eng">Study Design</div>
+          </div>
+
+          <div class="title4">如何应对复杂的临床试验设计？</div>
+          <blockquote class="blockquote text-center">
+            <p class="mb-0">“ 临床试验越来越复杂，如何让临床试验设计有关人员直观地设计并构建试验？ ”</p>
+          </blockquote>
+          <p class="lead">
+            临床试验设计人员经常会画图表来解释试验逻辑和流程。我们的Study Flow Builder 把试验逻辑和图表直接关联起来，让试验设计变得更直接和直观。随机化这些本来很复杂的实验配置都变得更简单。
+          </p>
+
+          <div>
+            <img class="imgstyle" src="img/project0/Study Design.gif">
+            <div class="imgsubtitle">试临床验设计流程</div>
+          </div>
+          <div>
+            <img class="imgstyle" src="img/project0/2021624-22144.png">
+            <div class="imgsubtitle">添加试验事件</div>
+          </div>
+          <div>
+            <img class="imgstyle" src="img/project0/2021624-2226.png">
+            <div class="imgsubtitle">编辑试验事件名称</div>
+          </div>
+          <div>
+            <img class="imgstyle" src="img/project0/2021624-22214.png">
+            <div class="imgsubtitle">添加试验随机化因素</div>
+          </div>
+          <div>
+            <img class="imgstyle" src="img/project0/2021624-22221.png">
+            <div class="imgsubtitle">临床试验随机分配规则编辑</div>
+          </div>
+          <div>
+            <img class="imgstyle" src="img/project0/2021624-22230.png">
+            <div class="imgsubtitle">表单设计</div>
+          </div>
+
+
+
+  </section>
+
+  <section class="section" style="margin-top: 0px;">
+    <div class="container">
+
+      <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
+        style="margin-top: 0px;">
+        <div class="col-12 mt-4 mt-md-0 my-md-auto">
+          <div>
+            <div class="titlenumber">02</div>
+            <div class="sectiontitle">临床试验验证</div>
+            <div class="sectiontitle-eng">Study Validation</div>
+          </div>
+
+          <div class="title4">如何轻松明晰得设计试验逻辑？</div>
+          <blockquote class="blockquote text-center">
+            <p class="mb-0">“ 我们如何帮助客户提高数据质量，并且同时减少花在建库和质量控制的时间？ ”</p>
+          </blockquote>
+          <p class="lead">
+            有了强大的实验设计功能后我们就有能力把大部分 Study Validation 的配置自动化。大大减少建 Edit Check 的工作。
+            同时用户也可以用 No Code 的交互方式来定义或调整每条 Edit Check。
+          </p>
+
+          <div>
+            <img class="imgstyle" src="img/project0/1数据验证逻辑规则.png">
+            <div class="imgsubtitle">数据验证逻辑规则</div>
+          </div>
+
+          <div>
+            <img class="imgstyle" src="img/project0/2申明式添加逻辑对象.png">
+            <div class="imgsubtitle">申明式添加逻辑对象</div>
+          </div>
+
+          <div>
+            <img class="imgstyle" src="img/project0/3检索逻辑对象.png">
+            <div class="imgsubtitle">检索逻辑对象</div>
+          </div>
+
+          <div>
+            <img class="imgstyle" src="img/project0/4添加逻辑运用对象.png">
+            <div class="imgsubtitle">添加逻辑运用对象</div>
+          </div>
+
+          <div>
+            <img class="imgstyle" src="img/project0/5申明式方式完成逻辑核查.png">
+            <div class="imgsubtitle">申明式方式完成逻辑核查编写</div>
+          </div>
 
 
 
 
+  </section>
 
-	
 
-<footer class="footer">
-  <div class="container">
-    <div class="footer__left">
-      <div class="footer__copy">
-        Designed and coded by Yuwen. All rights reserved.
-      </div>
+  <section class="section" style="margin-top: 80px; margin-bottom: 100px;">
+    <div class="container">
+      <a type="button" class="btn btn-primary btn-lg buttom-link" style="float: left;width: 340px;height: 80px;"
+        href="index.html">上一篇：回到首页</a>
+      <a type="button" class="btn btn-primary btn-lg buttom-link" style="float: right;width: 340px;height: 80px;"
+        href="project1.html">下一篇：智慧党建平台前后台系统搭建与设计</a>
     </div>
-    <div class="footer__links">
-      <ul class="navbar-nav ">
-        <li class="nav-item">
-          <a class="nav-link" href="index.html">主页</a>
-        </li>
-        
-        <li class="nav-item">
-          <a class="nav-link" href="index.html#about">技能</a>
-        </li>
-        
-        <li class="nav-item">
-          <a class="nav-link" href="index.html#portfolio">我的实践</a>
-        </li>
+  </section>
 
-        <li class="nav-item">
-          <a class="nav-link" href="index.html#contact">联系方式</a>
-        </li>
-        
-        <!-- <li class="nav-item">
+
+
+
+
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__left">
+        <div class="footer__copy">
+          Designed and coded by Yuwen. All rights reserved.
+        </div>
+      </div>
+      <div class="footer__links">
+        <ul class="navbar-nav ">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">主页</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#about">技能</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#portfolio">我的实践</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#contact">联系方式</a>
+          </li>
+
+          <!-- <li class="nav-item">
           <a class="nav-link" href="#myfriend">行业口碑</a>
         </li> -->
-        
-      </ul>
-    </div>
-    <!-- <div class="footer__right">
+
+        </ul>
+      </div>
+      <!-- <div class="footer__right">
       <img
           src="img/general/design-and-code-radity.svg"
           srcset="https://raditian-hugo.radity.com/img/general/design-and-code-radity.png 1x, https://raditian-hugo.radity.com/img/general/design-and-code-radity@2x.png 2x"
           alt="Design &amp; Code - yuwen"
       />
     </div> -->
-  </div>
-</footer>
+    </div>
+  </footer>
 
-<script src='js/rad-animations.js'></script>
-<script src='js/library/lozad.min.js'></script>
-<script>
-  window.addEventListener("load", function() {
-    var observer = window.lozad(".lozad", {
-      rootMargin: window.innerHeight / 2 + "px 0px",
-      threshold: 0.01
-    }); 
-    observer.observe();
-  });
-</script>
-<script src='js/library/jquery-3.3.1.slim.min.js'></script>
-<script src='js/library/bootstrap.min.js'></script>
-<script src='js/sticky-header.js'></script>
-<script src='js/library/smooth-scroll.polyfills.min.js'></script>
-<script src='js/library/fontfaceobserver.js'></script>
-<script>
-  (function(w) {
-    
-    if (w.document.documentElement.className.indexOf("fonts-loaded") > -1) {
-      return;
-    }
-    var fontA = new w.FontFaceObserver("Inter", {
-      weight: 300
+  <script src='js/rad-animations.js'></script>
+  <script src='js/library/lozad.min.js'></script>
+  <script>
+    window.addEventListener("load", function () {
+      var observer = window.lozad(".lozad", {
+        rootMargin: window.innerHeight / 2 + "px 0px",
+        threshold: 0.01
+      });
+      observer.observe();
     });
-    var fontB = new w.FontFaceObserver("Inter", {
-      weight: 400
-    });
-    var fontC = new w.FontFaceObserver("Inter", {
-      weight: 500
-    });
-    var fontD = new w.FontFaceObserver("Inter", {
-      weight: 600
-    });
-    var fontE = new w.FontFaceObserver("Inter", {
-      weight: 700
-    });
-    var fontF = new w.FontFaceObserver("Inter", {
-      weight: 900
-    });
-    w.Promise.all([fontA.load(), fontC.load(), fontF.load()]).then(function() {
-      w.document.documentElement.className += " fonts-loaded";
-    });
-  })(this);
-</script>
-<script>
-  const scroll = new SmoothScroll('a[href*="#"]');
+  </script>
+  <script src='js/library/jquery-3.3.1.slim.min.js'></script>
+  <script src='js/library/bootstrap.min.js'></script>
+  <script src='js/sticky-header.js'></script>
+  <script src='js/library/smooth-scroll.polyfills.min.js'></script>
+  <script src='js/library/fontfaceobserver.js'></script>
+  <script>
+    (function (w) {
+
+      if (w.document.documentElement.className.indexOf("fonts-loaded") > -1) {
+        return;
+      }
+      var fontA = new w.FontFaceObserver("Inter", {
+        weight: 300
+      });
+      var fontB = new w.FontFaceObserver("Inter", {
+        weight: 400
+      });
+      var fontC = new w.FontFaceObserver("Inter", {
+        weight: 500
+      });
+      var fontD = new w.FontFaceObserver("Inter", {
+        weight: 600
+      });
+      var fontE = new w.FontFaceObserver("Inter", {
+        weight: 700
+      });
+      var fontF = new w.FontFaceObserver("Inter", {
+        weight: 900
+      });
+      w.Promise.all([fontA.load(), fontC.load(), fontF.load()]).then(function () {
+        w.document.documentElement.className += " fonts-loaded";
+      });
+    })(this);
+  </script>
+  <script>
+    const scroll = new SmoothScroll('a[href*="#"]');
     $('a.nav-link').on('click', () => {
       const navbar = $('.navbar-collapse');
       if (navbar && navbar.hasClass('show')) {
         $('.navbar-toggler').click();
       }
     })
-</script>
+  </script>
 
 </body>
 

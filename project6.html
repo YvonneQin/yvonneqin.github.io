@@ -1,256 +1,246 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta name="author" content="yuwen">
-  <meta charset="UTF-8"/> 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <link rel="icon" type="image/x-icon" href="favicon.ico" />
-  <link rel="stylesheet" href="css/main.css"/>
-  <link rel="stylesheet" href="css/rad-icons.css"/>
-  <link rel="stylesheet" href="css/custom.css"/>
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/rad-icons.css" />
+  <link rel="stylesheet" href="css/custom.css" />
 
   <script>
-      (function (w, d, s, l, i) {
-          w[l] = w[l] || [];
-          w[l].push({
-              'gtm.start': new Date().getTime(),
-              event: 'gtm.js'
-          });
-          var f = d.getElementsByTagName(s)[0],
-              j = d.createElement(s),
-              dl = l != 'dataLayer' ? '&l=' + l : '';
-          j.async = true;
-          j.src =
-              'https://www.googletagmanager.com/gtm.js?id=GTM-000000' + i + dl;
-          f.parentNode.insertBefore(j, f);
-      })(window, document, 'script', 'dataLayer', 'GTM-000000');
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src =
+        'https://www.googletagmanager.com/gtm.js?id=GTM-000000' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-000000');
   </script>
 
   <title>毕业设计 - 基于体感技术的残障人士产品服务系统研究</title>
-  <style> 
-      
-      .rad-fade-in {
-          will-change: opacity, transform;
-          animation-name: rad-fade-in-fallback;
-          animation-duration: 5s;
-          animation-fill-mode: both;
+  <style>
+    .rad-fade-in {
+      will-change: opacity, transform;
+      animation-name: rad-fade-in-fallback;
+      animation-duration: 5s;
+      animation-fill-mode: both;
+    }
+
+    @keyframes rad-fade-in-fallback {
+      0% {
+        opacity: 0;
       }
 
-      @keyframes rad-fade-in-fallback {
-          0% {
-              opacity: 0;
-          }
-
-          75% {
-              opacity: 0;
-          }
-
-          100% {
-              opacity: 1;
-          }
+      75% {
+        opacity: 0;
       }
 
-      .fonts-loaded .rad-fade-in.rad-waiting {
-          animation-name: none;
-          opacity: 0;
+      100% {
+        opacity: 1;
+      }
+    }
+
+    .fonts-loaded .rad-fade-in.rad-waiting {
+      animation-name: none;
+      opacity: 0;
+    }
+
+    .fonts-loaded .rad-fade-in.rad-animate {
+      animation-name: rad-fade-in;
+      animation-duration: 1.1s;
+      animation-fill-mode: both;
+    }
+
+    @keyframes rad-fade-in {
+      0% {
+        opacity: 0;
       }
 
-      .fonts-loaded .rad-fade-in.rad-animate {
-          animation-name: rad-fade-in;
-          animation-duration: 1.1s;
-          animation-fill-mode: both;
+      100% {
+        opacity: 1;
+      }
+    }
+
+
+    .rad-fade-in-long {
+      will-change: opacity, transform;
+      animation-name: rad-fade-in-long-fallback;
+      animation-duration: 8s;
+      animation-fill-mode: both;
+    }
+
+    @keyframes rad-fade-in-long-fallback {
+      0% {
+        opacity: 0;
       }
 
-      @keyframes rad-fade-in {
-          0% {
-              opacity: 0;
-          }
-
-          100% {
-              opacity: 1;
-          }
+      75% {
+        opacity: 0;
       }
 
-      
-      .rad-fade-in-long {
-          will-change: opacity, transform;
-          animation-name: rad-fade-in-long-fallback;
-          animation-duration: 8s;
-          animation-fill-mode: both;
+      100% {
+        opacity: 1;
+      }
+    }
+
+    .fonts-loaded .rad-fade-in-long.rad-waiting {
+      animation-name: none;
+      opacity: 0;
+    }
+
+    .fonts-loaded .rad-fade-in-long.rad-animate {
+      animation-name: rad-fade-in-long;
+      animation-duration: 2s;
+      animation-fill-mode: both;
+    }
+
+    @keyframes rad-fade-in-long {
+      0% {
+        opacity: 0;
       }
 
-      @keyframes rad-fade-in-long-fallback {
-          0% {
-              opacity: 0;
-          }
-
-          75% {
-              opacity: 0;
-          }
-
-          100% {
-              opacity: 1;
-          }
+      20% {
+        opacity: 0;
       }
 
-      .fonts-loaded .rad-fade-in-long.rad-waiting {
-          animation-name: none;
-          opacity: 0;
+      100% {
+        opacity: 1;
+      }
+    }
+
+
+    .rad-fade-down {
+      will-change: opacity, transform;
+      animation-name: rad-fade-down-fallback;
+      animation-duration: 5s;
+      animation-fill-mode: both;
+      transform: translateY(-30px);
+    }
+
+    @keyframes rad-fade-down-fallback {
+      0% {
+        opacity: 0;
+        transform: translateY(-30px);
       }
 
-      .fonts-loaded .rad-fade-in-long.rad-animate {
-          animation-name: rad-fade-in-long;
-          animation-duration: 2s;
-          animation-fill-mode: both;
+      75% {
+        opacity: 0;
+        transform: translateY(-30px);
       }
 
-      @keyframes rad-fade-in-long {
-          0% {
-              opacity: 0;
-          }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
 
-          20% {
-              opacity: 0;
-          }
+    .fonts-loaded .rad-fade-down.rad-waiting {
+      animation-name: none;
+      opacity: 0;
+      transform: translateY(-30px);
+    }
 
-          100% {
-              opacity: 1;
-          }
+    .fonts-loaded .rad-fade-down.rad-animate {
+      animation-name: rad-fade-down;
+      animation-duration: 1.1s;
+    }
+
+    @keyframes rad-fade-down {
+      0% {
+        opacity: 0;
+        transform: translateY(-30px);
       }
 
-      
-      .rad-fade-down {
-          will-change: opacity, transform;
-          animation-name: rad-fade-down-fallback;
-          animation-duration: 5s;
-          animation-fill-mode: both;
-          transform: translateY(-30px);
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+
+    .rad-scale-down {
+      will-change: opacity, transform;
+      animation-name: rad-scale-down-fallback;
+      animation-duration: 5s;
+      animation-fill-mode: both;
+      transform-origin: 50% 0;
+    }
+
+    @keyframes rad-scale-down-fallback {
+      0% {
+        opacity: 0;
+        transform: scaleY(0.95);
       }
 
-      @keyframes rad-fade-down-fallback {
-          0% {
-              opacity: 0;
-              transform: translateY(-30px);
-          }
-
-          75% {
-              opacity: 0;
-              transform: translateY(-30px);
-          }
-
-          100% {
-              opacity: 1;
-              transform: translateY(0);
-          }
+      75% {
+        opacity: 0;
+        transform: scaleY(0.95);
       }
 
-      .fonts-loaded .rad-fade-down.rad-waiting {
-          animation-name: none;
-          opacity: 0;
-          transform: translateY(-30px);
+      100% {
+        opacity: 1;
+        transform: scaleY(1);
+      }
+    }
+
+    .fonts-loaded .rad-scale-down.rad-waiting {
+      animation-name: none;
+      opacity: 0;
+      transform: scaleY(0.95);
+    }
+
+    .fonts-loaded .rad-scale-down.rad-animate {
+      animation-name: rad-scale-down;
+      animation-duration: 1.1s;
+      animation-fill-mode: both;
+    }
+
+    @keyframes rad-scale-down {
+      0% {
+        opacity: 0;
+        transform: scaleY(0.95);
       }
 
-      .fonts-loaded .rad-fade-down.rad-animate {
-          animation-name: rad-fade-down;
-          animation-duration: 1.1s;
+      100% {
+        opacity: 1;
+        transform: scaleY(1);
       }
 
-      @keyframes rad-fade-down {
-          0% {
-              opacity: 0;
-              transform: translateY(-30px);
-          }
-
-          100% {
-              opacity: 1;
-              transform: translateY(0);
-          }
-      }
-
-      
-      .rad-scale-down {
-          will-change: opacity, transform;
-          animation-name: rad-scale-down-fallback;
-          animation-duration: 5s;
-          animation-fill-mode: both;
-          transform-origin: 50% 0;
-      }
-
-      @keyframes rad-scale-down-fallback {
-          0% {
-              opacity: 0;
-              transform: scaleY(0.95);
-          }
-
-          75% {
-              opacity: 0;
-              transform: scaleY(0.95);
-          }
-
-          100% {
-              opacity: 1;
-              transform: scaleY(1);
-          }
-      }
-
-      .fonts-loaded .rad-scale-down.rad-waiting {
-          animation-name: none;
-          opacity: 0;
-          transform: scaleY(0.95);
-      }
-
-      .fonts-loaded .rad-scale-down.rad-animate {
-          animation-name: rad-scale-down;
-          animation-duration: 1.1s;
-          animation-fill-mode: both;
-      }
-
-      @keyframes rad-scale-down {
-          0% {
-              opacity: 0;
-              transform: scaleY(0.95);
-          }
-
-          100% {
-              opacity: 1;
-              transform: scaleY(1);
-          }
-      
-      }
-      
-      
+    }
   </style>
 
 
-  
+
 
 
 </head>
 
 <body>
 
-	<header class="header fixed-top rad-animation-group" id="header">
+  <header class="header fixed-top rad-animation-group" id="header">
     <div class="container rad-fade-in">
       <nav class="navbar navbar-expand-lg navbar-light p-0">
         <a class="navbar-brand" href="index.html">
           <span style="font-size: 24px;">Yuwen</span>
           <span style="font-size: 24px;">Qin</span>
-          
-          
-          
+
+
+
         </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarSupportedContent, #header"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+          data-target="#navbarSupportedContent, #header" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -259,11 +249,11 @@
             <li class="nav-item">
               <a class="nav-link" href="index.html">Homepage</a>
             </li>
-            
+
             <li class="nav-item">
               <a data-scroll class="nav-link" href="index.html#about">Skills</a>
             </li>
-            
+
             <li class="nav-item">
               <a data-scroll class="nav-link" href="index.html#portfolio">Projects</a>
             </li>
@@ -275,392 +265,402 @@
             <li class="nav-item">
               <a data-scroll class="nav-link" href="more me.html">More Me</a>
             </li>
-            
+
             <!-- <li class="nav-item">
               <a data-scroll class="nav-link" href="#mytestimony">行业口碑</a>
             </li> -->
 
-            
+
           </ul>
         </div>
       </nav>
     </div>
   </header>
 
-	
 
 
 
-	
-	
-<section class="section">
-  <div class="container">
-    
-    <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
-      <div class="col-12 col-md-5 mt-4 mt-md-0 my-md-auto">
-        <span class="badge-2 rounded-pill" style="background-color:#F8D5FF!important;">智能硬件 </span>
-        <span class="badge-2 rounded-pill" style="background-color:#D5EDFF!important;">交互</span>
-        <h3 style="margin-top: 16px;">毕业设计 - 基于体感技术的残障人士产品服务系统研究</h3>
-        <p class="lead">
-          2016年1月<br/>
-          本文阅读大约需要 15 mins
-        </p>
-      </div>
-      <div class="col-12 col-md-7 pl-md-0 text-right">
-        <img
-          class='lozad img-responsive img-clip-left-backward'
-          src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
-          data-src="img/project6/Background Copy.png"
-          data-srcset="img/project6/Background Copy.png 1x, img/project6/Background Copy@2x.png 2x"
-          alt="This is banner."
-        />
-      </div>
-    </div>
 
-  </div>
-</section>
 
-<section class="section" style="margin-top: 0px;">
-  <div class="container">
-    
-    <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row" style="margin-top: 0px;">
-      <div class="col-12 mt-4 mt-md-0 my-md-auto">
-        <div>
-          <div class="titlenumber">01</div>
-          <div class="sectiontitle">毕业设计概念呈现</div>
-          <div class="sectiontitle-eng">summary</div>
+
+  <section class="section">
+    <div class="container">
+
+      <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
+        <div class="col-12 col-md-5 mt-4 mt-md-0 my-md-auto">
+          <span class="badge-2 rounded-pill" style="background-color:#F8D5FF!important;">智能硬件 </span>
+          <span class="badge-2 rounded-pill" style="background-color:#D5EDFF!important;">交互</span>
+          <h3 style="margin-top: 16px;">毕业设计 - 基于体感技术的残障人士产品服务系统研究</h3>
+          <p class="lead">
+            2016年1月<br />
+            本文阅读大约需要 15 mins
+          </p>
         </div>
-        
-        <div class="title4">概念介绍</div>
-        <p class="lead">
-          通过两大核心触点：体感交互智能硬件的设计以及软件交互设计，旨在帮助以聋哑人为典型代表的特殊人群，在生活场景中更自如的自我表达。例如出行时，帮助特殊人群熟悉身边环境，对危险情况进行有效干预，保证出行安全，同时帮助特殊人群在生活场景中进行交流。通过工具的设计纠正身体上物理的缺陷偏差。<br/>
-          <br/>
-          作为一个设计师，想要推动无障碍社会的进程，推动社会更具同理心、接受多元丰富，包容性与无障碍设计的演进。让每个个体都有机会充分进行自我表达，个性的彰显、个体平等甚至追求幸福，享受学习与创造所带来的快乐。<br/>
-          <br/>
-          以下视频演示了简单通用手语词汇，例如：我、认识、你、快乐、的、吃、人家。
-        </p>
-        <div class="embed-responsive embed-responsive-16by9">
-          <iframe class="embed-responsive-item" src="img/project6/毕业设计Demo演示视频 copy.mp4" allowfullscreen></iframe>
+        <div class="col-12 col-md-7 pl-md-0 text-right">
+          <img class='lozad img-responsive img-clip-left-backward'
+            src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
+            data-src="img/project6/Background Copy.png"
+            data-srcset="img/project6/Background Copy.png 1x, img/project6/Background Copy@2x.png 2x"
+            alt="This is banner." />
         </div>
-        <div class="imgsubtitle">残障人士产品服务系统研究demo演示<br/>
-          （ 为了流畅播放视频，请使用科学上网小方法 ）</div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section" style="margin-top: 0px;">
+    <div class="container">
+
+      <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
+        style="margin-top: 0px;">
+        <div class="col-12 mt-4 mt-md-0 my-md-auto">
+          <div>
+            <div class="titlenumber">01</div>
+            <div class="sectiontitle">毕业设计概念呈现</div>
+            <div class="sectiontitle-eng">summary</div>
+          </div>
+
+          <div class="title4">概念介绍</div>
+          <p class="lead">
+            通过两大核心触点：体感交互智能硬件的设计以及软件交互设计，旨在帮助以聋哑人为典型代表的特殊人群，在生活场景中更自如的自我表达。例如出行时，帮助特殊人群熟悉身边环境，对危险情况进行有效干预，保证出行安全，同时帮助特殊人群在生活场景中进行交流。通过工具的设计纠正身体上物理的缺陷偏差。<br />
+            <br />
+            作为一个设计师，想要推动无障碍社会的进程，推动社会更具同理心、接受多元丰富，包容性与无障碍设计的演进。让每个个体都有机会充分进行自我表达，个性的彰显、个体平等甚至追求幸福，享受学习与创造所带来的快乐。<br />
+            <br />
+            以下视频演示了简单通用手语词汇，例如：我、认识、你、快乐、的、吃、人家。
+          </p>
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="img/project6/毕业设计Demo演示视频 copy.mp4" allowfullscreen></iframe>
+          </div>
+          <div class="imgsubtitle">残障人士产品服务系统研究demo演示<br />
+            （ 为了流畅播放视频，请使用科学上网小方法 ）</div>
 
 
-        <div style="text-align: center;">
-          <img class="imgstyle" style="width: 800px;" src="img/project6/8ze7r-blgdp.gif">
+          <div style="text-align: center;">
+            <img class="imgstyle" style="width: 800px;" src="img/project6/8ze7r-blgdp.gif">
+          </div>
+          <div class="imgsubtitle">笔者使用LEAP MOTION 示范手势识别原理展示</div>
         </div>
-        <div class="imgsubtitle">笔者使用LEAP MOTION 示范手势识别原理展示</div>
       </div>
+
     </div>
-
-  </div>
-</section>
+  </section>
 
 
 
 
-<section class="section">
-  <div class="container">
-    
-    <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row" style="margin-top: 0px;">
-      <div class="col-12 mt-4 mt-md-0 my-md-auto">
-        <div>
-          <div class="titlenumber">02</div>
-          <div class="sectiontitle">概念概述及总结</div>
-          <div class="sectiontitle-eng">Desk research</div>
+  <section class="section">
+    <div class="container">
+
+      <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
+        style="margin-top: 0px;">
+        <div class="col-12 mt-4 mt-md-0 my-md-auto">
+          <div>
+            <div class="titlenumber">02</div>
+            <div class="sectiontitle">概念概述及总结</div>
+            <div class="sectiontitle-eng">Desk research</div>
+          </div>
+
+          <div class="title4">面向残障人士的产品服务系统设计中体感交互技术的价值</div>
+          <p class="lead">
+            产品服务系统是通过战略创新将商业活动焦点从只设计出售实物产品，转移到设计出售具有满足特定客户需求的综合能力的产品和服务。以可持续的方式进行实体产品的衍生。演变至后工业社会中的可预见的因素或成果。将无形的服务和有形的产品联系起来,
+            成为一个整合性的体系。这一过程的价值在于可以提升系统中相关由不同参与者、技术产物、服务、商业模式及诸如可持续发展及非物质化等驱动力构成的技术系统。<br />
+            <br />
+            体感交互技术满足了残障人士、感官体验需求、情感化需求、交互体验需求、社会需求以及残障人士自我个性。同时降低残障人士用户认知负荷、满足残障人士服务的多样情境、体感交互提高残障用户的参与度和情感体验。
+          </p>
+
+          <img class="imgstyle" src="img/project6/Group 6.svg">
+          <div class="imgsubtitle">产品服务系统三个导向以及八个类别（来源：笔者翻译自Tukker, A. 2004）</div>
+
+          <div class="title4">特殊人群体感设计目标及交互设计原则</div>
+          <p class="lead">
+            特殊人群的交互设计是典型的多通道自然用户体验设计（NUI, atural user
+            interface），NUI采用基于视线跟踪、语音识别、手势输入、面部识别、感觉反馈等多通道交互技术，使得用户可以运用自身感觉和认知能力，以并行以及非精确方式与计算机或者移动设备进行交互，旨在提高人机交互的自然性和效率。在理想的NUI
+            中，用户可将注意完全集中于所从事的活动而忽略界面的存在，即实现真正“自然”的交互。
+          </p>
+          <img class="imgstyle" src="img/project6/Group 7.svg">
+          <div class="imgsubtitle">多通道人机交互界面概念模型 （来源：笔者自绘）</div>
+          <p class="lead">
+            特殊人群体感交互设计原则：1）对于肢体健全的残障人士，无侵入式的体感交互 2）实物介质的运用 3）多通道结合上下文感知的融合 4）正确简单的概念模型 5）反馈和限制因素 6）考虑系统的扩展性。
+          </p>
+          <img class="imgstyle" src="img/project6/Group 8.svg">
+          <div class="imgsubtitle">CUE 模型- 用户体验组成</div>
+
+
+          <div class="title4">体感交互技术运用于产品服务系统设计中的研究关注点</div>
+          <p class="lead">
+            系统性，围绕统一的设计主体<br />
+            预见性，新技术的应用为用户带来更多可能性<br />
+            复杂性，在服务特征的多样化情境下确保服务可靠、优质<br />
+            便捷性，便于用户操作的系统设计
+          </p>
+
+          <div class="title4">残障人士产品服务系统设计的研究思路</div>
+          <p class="lead">
+            研究方法和工具的选择：1）残障人士作为研究客体的客观观察 2）模拟残障人士用户情景的体验原型法
+          </p>
+          <img class="imgstyle" src="img/project6/Group 9.svg">
+          <div class="imgsubtitle">用户研究方法与流程</div>
+
+          <div class="title4">用户体验研究目标</div>
+          <p class="lead">
+            1）针对聋哑人士日常生活中所遇到的问题，挖掘聋哑人士情感和心理需求，以及不同需求的具体内容和优先级，为下一步产品功能设计提供研究依据。2）了解聋哑人士对于智能手机、手机app和移动瓦联网的使用情况和操作建议，为下—步产品交互设计提供指导建议。3）进一步了解聋哑人士对于体感交互技术的了解以及可接受程度，为优化服务设计提供参考。
+          </p>
+
+          <div class="title4">研究对象以及目标用户定义</div>
+          <p class="lead">
+            调研对象为大多数学龄儿童至青年聋哑人士。因为此类人群已经掌握手语技能，并在现阶段处于生活经验以及知识的增长期。同时对于电子消费品以及手机应用等新兴事物怀有兴趣，可以促进产品软硬件的开发。大部分的生活中的不方便以及需求会主动涌现出来，更便于研究者的观察和记录，为产品的硬件开发和软件开发提供重要的设计依据。<br />
+            <br />
+            肢体残疾由于受伤的部位不可控，所以在人因工程内难以量化，在产品服务系统中所包含的不稳定因素太多，会造成系统复杂庞大且不可解决。而听力语言残疾患者，致残部位单一，缺失功能功能也相对明确与一致。成为残障人士产品服务系统设计非常好的切入口，也可以为日后相关领域学术研究奠定研究基础。
+          </p>
+
         </div>
-        
-        <div class="title4">面向残障人士的产品服务系统设计中体感交互技术的价值</div>
-        <p class="lead">
-          产品服务系统是通过战略创新将商业活动焦点从只设计出售实物产品，转移到设计出售具有满足特定客户需求的综合能力的产品和服务。以可持续的方式进行实体产品的衍生。演变至后工业社会中的可预见的因素或成果。将无形的服务和有形的产品联系起来, 成为一个整合性的体系。这一过程的价值在于可以提升系统中相关由不同参与者、技术产物、服务、商业模式及诸如可持续发展及非物质化等驱动力构成的技术系统。<br/>
-          <br/>
-          体感交互技术满足了残障人士、感官体验需求、情感化需求、交互体验需求、社会需求以及残障人士自我个性。同时降低残障人士用户认知负荷、满足残障人士服务的多样情境、体感交互提高残障用户的参与度和情感体验。
-        </p>
-
-        <img class="imgstyle" src="img/project6/Group 6.svg">
-        <div class="imgsubtitle">产品服务系统三个导向以及八个类别（来源：笔者翻译自Tukker, A. 2004）</div>
-        
-        <div class="title4">特殊人群体感设计目标及交互设计原则</div>
-        <p class="lead">
-          特殊人群的交互设计是典型的多通道自然用户体验设计（NUI, atural user interface），NUI采用基于视线跟踪、语音识别、手势输入、面部识别、感觉反馈等多通道交互技术，使得用户可以运用自身感觉和认知能力，以并行以及非精确方式与计算机或者移动设备进行交互，旨在提高人机交互的自然性和效率。在理想的NUI 中，用户可将注意完全集中于所从事的活动而忽略界面的存在，即实现真正“自然”的交互。
-        </p>
-        <img class="imgstyle" src="img/project6/Group 7.svg">
-        <div class="imgsubtitle">多通道人机交互界面概念模型 （来源：笔者自绘）</div>
-        <p class="lead">
-          特殊人群体感交互设计原则：1）对于肢体健全的残障人士，无侵入式的体感交互 2）实物介质的运用 3）多通道结合上下文感知的融合 4）正确简单的概念模型 5）反馈和限制因素 6）考虑系统的扩展性。
-        </p>
-        <img class="imgstyle" src="img/project6/Group 8.svg">
-        <div class="imgsubtitle">CUE 模型- 用户体验组成</div>
-        
-
-        <div class="title4">体感交互技术运用于产品服务系统设计中的研究关注点</div>
-        <p class="lead">
-          系统性，围绕统一的设计主体<br/>
-          预见性，新技术的应用为用户带来更多可能性<br/>
-          复杂性，在服务特征的多样化情境下确保服务可靠、优质<br/>
-          便捷性，便于用户操作的系统设计
-        </p>
-
-        <div class="title4">残障人士产品服务系统设计的研究思路</div>
-        <p class="lead">
-          研究方法和工具的选择：1）残障人士作为研究客体的客观观察 2）模拟残障人士用户情景的体验原型法
-        </p>
-        <img class="imgstyle" src="img/project6/Group 9.svg">
-        <div class="imgsubtitle">用户研究方法与流程</div>
-
-        <div class="title4">用户体验研究目标</div>
-        <p class="lead">
-          1）针对聋哑人士日常生活中所遇到的问题，挖掘聋哑人士情感和心理需求，以及不同需求的具体内容和优先级，为下一步产品功能设计提供研究依据。2）了解聋哑人士对于智能手机、手机app和移动瓦联网的使用情况和操作建议，为下—步产品交互设计提供指导建议。3）进一步了解聋哑人士对于体感交互技术的了解以及可接受程度，为优化服务设计提供参考。
-        </p>
-
-        <div class="title4">研究对象以及目标用户定义</div>
-        <p class="lead">
-          调研对象为大多数学龄儿童至青年聋哑人士。因为此类人群已经掌握手语技能，并在现阶段处于生活经验以及知识的增长期。同时对于电子消费品以及手机应用等新兴事物怀有兴趣，可以促进产品软硬件的开发。大部分的生活中的不方便以及需求会主动涌现出来，更便于研究者的观察和记录，为产品的硬件开发和软件开发提供重要的设计依据。<br/>
-          <br/>
-          肢体残疾由于受伤的部位不可控，所以在人因工程内难以量化，在产品服务系统中所包含的不稳定因素太多，会造成系统复杂庞大且不可解决。而听力语言残疾患者，致残部位单一，缺失功能功能也相对明确与一致。成为残障人士产品服务系统设计非常好的切入口，也可以为日后相关领域学术研究奠定研究基础。
-        </p>
-        
       </div>
+
     </div>
-
-  </div>
-</section>
+  </section>
 
 
 
 
-<section class="section">
-  <div class="container">
-    
-    <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row" style="margin-top: 0px;">
-      <div class="col-12 mt-4 mt-md-0 my-md-auto">
-        <div>
-          <div class="titlenumber">03</div>
-          <div class="sectiontitle">设计调研</div>
-          <div class="sectiontitle-eng">research</div>
+  <section class="section">
+    <div class="container">
+
+      <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
+        style="margin-top: 0px;">
+        <div class="col-12 mt-4 mt-md-0 my-md-auto">
+          <div>
+            <div class="titlenumber">03</div>
+            <div class="sectiontitle">设计调研</div>
+            <div class="sectiontitle-eng">research</div>
+          </div>
+
+          <div class="title4">特殊人群构成比例及活动特点</div>
+          <p class="lead">
+            根据2008年报告显示，特殊人群主要以听力语言残疾为主，且由于身体机能的不能，长时间会导致述情不能，会伴随一些心理及精神残疾，无法获得社会认同感。同时，特殊人群在不同阶段以及年龄造成的残疾，还会面临的不同程度知识与能力的分离、各式各样的生活障碍，从而显示出不同的社会生活形态。<br />
+            <br />
+            特殊人群的活动特点，首先表现为活动空间有限；其次为有效的活动时间短暂，另外便是活动的成本高、质量低。换而言之，特殊人群的体验构成中，工具型性能体现占主要评估指标，指标必须体现为高效。
+          </p>
+
+          <img class="imgstyle" src="img/project6/Group 10.svg">
+          <div class="imgsubtitle">残疾类型构成比例</div>
+
+          <div class="title4">用户观察总结</div>
+          <p class="lead">
+            通过细致周密的观察，可以获得用户使用产品的触发点、用户与环境的互动、用户对产品的重新改造（为满足自身需求对产品进行个性化改造）、产品的潜在属性以及隐匿的用户需求等。
+            研究者亲自进入用户使用产品的情境中，观察用户在真实的情境中如何与产品进行互动，更有助于研究者无损的接收用户的信息。<br />
+            <br />
+            1）用户观察中，三位聋哑人士由于听力不同程度的损伤，均表现出了在生活中需要家人照顾的情况。<br />
+            2）用户观察中主要集中地表现了社交焦虑。<br />
+            3）用户观察中，三位与直系亲属的沟通尚可，但是对于亲属或者朋友的交流效果就欠佳。
+          </p>
+          <img class="imgstyle" src="img/project6/Group 12.svg">
+          <div class="imgsubtitle">研究对象列表</div>
+
+          <div class="title4">体验原型法情景剧本</div>
+          <p class="lead">
+            生理模拟：是用耳塞以及口罩，以保证体验角色的听力丧失以及表达能力受限的生理限制。<br />
+            <br />
+            角色扮演：聋哑人士小A、小A妈妈、聋哑人士小B、聋哑人士小C、商店店员、司机
+          </p>
+          <img class="imgstyle" src="img/project6/Group 14.svg">
+          <div class="imgsubtitle">体验原型法情景剧本</div>
+
+
+          <div class="title4">体验原型法总结提出服务构想</div>
+          <p class="lead">
+            1）通过情景体验，研究员与设计师发现听障人士在复杂的交通环境中，同样面对不小的出行压力，进一步发现，由于聋哑人的自身生理限制，面对突发情况，无法良好表述自己的感受，无法阐述现场发生的情况，无法做到良好的求助。在此情景下，应须有正确的解决方式，帮助听障人士在突发情况下可以求救，给予出行的安全感。一个产品在场景下，则成为了听障人士的情感依托。<br />
+            2）手语是听障人士在平时生活中最常用到的交流方式，但面对常人却不奏效，所欲残障人士普遍具有社交恐惧。对此现象应该给予正确的解决方案。<br>
+            3）通过情景体验，手语翻译的服务应该通过APP从线下搬到线上，还原最自然地交流环境，帮助聋哑人体验交流的乐趣。
+          </p>
+
         </div>
-        
-        <div class="title4">特殊人群构成比例及活动特点</div>
-        <p class="lead">
-          根据2008年报告显示，特殊人群主要以听力语言残疾为主，且由于身体机能的不能，长时间会导致述情不能，会伴随一些心理及精神残疾，无法获得社会认同感。同时，特殊人群在不同阶段以及年龄造成的残疾，还会面临的不同程度知识与能力的分离、各式各样的生活障碍，从而显示出不同的社会生活形态。<br/>
-          <br/>
-          特殊人群的活动特点，首先表现为活动空间有限；其次为有效的活动时间短暂，另外便是活动的成本高、质量低。换而言之，特殊人群的体验构成中，工具型性能体现占主要评估指标，指标必须体现为高效。
-        </p>
-
-        <img class="imgstyle" src="img/project6/Group 10.svg">
-        <div class="imgsubtitle">残疾类型构成比例</div>
-        
-        <div class="title4">用户观察总结</div>
-        <p class="lead">
-          通过细致周密的观察，可以获得用户使用产品的触发点、用户与环境的互动、用户对产品的重新改造（为满足自身需求对产品进行个性化改造）、产品的潜在属性以及隐匿的用户需求等。 研究者亲自进入用户使用产品的情境中，观察用户在真实的情境中如何与产品进行互动，更有助于研究者无损的接收用户的信息。<br/>
-          <br/>
-          1）用户观察中，三位聋哑人士由于听力不同程度的损伤，均表现出了在生活中需要家人照顾的情况。<br/>
-          2）用户观察中主要集中地表现了社交焦虑。<br/>
-          3）用户观察中，三位与直系亲属的沟通尚可，但是对于亲属或者朋友的交流效果就欠佳。          
-        </p>
-        <img class="imgstyle" src="img/project6/Group 12.svg">
-        <div class="imgsubtitle">研究对象列表</div>
-
-        <div class="title4">体验原型法情景剧本</div>
-        <p class="lead">
-          生理模拟：是用耳塞以及口罩，以保证体验角色的听力丧失以及表达能力受限的生理限制。<br/>
-          <br/>
-          角色扮演：聋哑人士小A、小A妈妈、聋哑人士小B、聋哑人士小C、商店店员、司机
-        </p>
-        <img class="imgstyle" src="img/project6/Group 14.svg">
-        <div class="imgsubtitle">体验原型法情景剧本</div>
-        
-
-        <div class="title4">体验原型法总结提出服务构想</div>
-        <p class="lead">
-          1）通过情景体验，研究员与设计师发现听障人士在复杂的交通环境中，同样面对不小的出行压力，进一步发现，由于聋哑人的自身生理限制，面对突发情况，无法良好表述自己的感受，无法阐述现场发生的情况，无法做到良好的求助。在此情景下，应须有正确的解决方式，帮助听障人士在突发情况下可以求救，给予出行的安全感。一个产品在场景下，则成为了听障人士的情感依托。<br/>
-          2）手语是听障人士在平时生活中最常用到的交流方式，但面对常人却不奏效，所欲残障人士普遍具有社交恐惧。对此现象应该给予正确的解决方案。<br>
-          3）通过情景体验，手语翻译的服务应该通过APP从线下搬到线上，还原最自然地交流环境，帮助聋哑人体验交流的乐趣。
-        </p>
-        
       </div>
+
     </div>
-
-  </div>
-</section>
+  </section>
 
 
 
-<section class="section">
-  <div class="container">
-    
-    <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row" style="margin-top: 0px;">
-      <div class="col-12 mt-4 mt-md-0 my-md-auto">
-        <div>
-          <div class="titlenumber">04</div>
-          <div class="sectiontitle">设计研究成果转化</div>
-          <div class="sectiontitle-eng">ship out</div>
+  <section class="section">
+    <div class="container">
+
+      <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
+        style="margin-top: 0px;">
+        <div class="col-12 mt-4 mt-md-0 my-md-auto">
+          <div>
+            <div class="titlenumber">04</div>
+            <div class="sectiontitle">设计研究成果转化</div>
+            <div class="sectiontitle-eng">ship out</div>
+          </div>
+
+          <div class="title4">用户行为轨迹和关键场景总结</div>
+          <p class="lead">
+            用户行为轨迹和关键场景总结
+          </p>
+
+          <img class="imgstyle" src="img/project6/Group 15.svg">
+          <div class="imgsubtitle">用户行为轨迹和关键场景总结</div>
+
+          <div class="title4">用户体验地图（User Experience Journey Map）</div>
+          <p class="lead">
+            用户体验地图总结
+          </p>
+          <img class="imgstyle" src="img/project6/Group 16.svg">
+          <div class="imgsubtitle">用户体验地图总结</div>
+
+          <div class="title4">服务构想及设计策略（Design strategy）</div>
+          <p class="lead">
+            1) 帮助残疾人了解身边环境，保证出行安全<br />
+            2) 专业手语翻译，打破沟通障碍<br />
+            3) 视觉化语音录入<br />
+            4) 手语服务的家庭共享，构建和谐家庭<br />
+            5) 如遇突发状况，紧急报警
+          </p>
+
+          <div class="title4">服务触点硬件设计——手译产品设计</div>
+          <p class="lead">
+            “手译”产品设计采取了两种佩戴方式的设计，第一种是颈挂式，第二种为夹持式，满足了为特殊人群进行交互设计的便携性。此款满足了聋哑人士沟通障碍的显性需求，同时也满足了聋哑人士也追求个性的隐形需求。同时改款设计可以收集汽车鸣笛声，在手机端震动提示聋哑人行驶安全。技术支持是由Leap
+            Motion所提供的红外线传感器以及SDK接口，为无侵入式的体感交互技术，非常适合残障人士使用。主要功能则为，产品开关，紧急情况报警以及完成手语转译。为残疾人提供手语服务。还原听障人士与常人之间的自然交流情景，为听障人群营造良好沟通环境，打破沟通壁垒，使得听障人士逐渐回归社会，在社会以及精神领域创造财富。<br />
+            <br />
+            根据《GB／T24435--2009中华人民共和国国家标准中国手语基本手势》对打手势的位置定义：一般在额部以下，腰部以上，两肩以内，距胸前两掌宽的空间范围内(如下图所示)。有些手势动作按表达内容需要可在其他适当位置打出。=
+          </p>
+
+          <img class="imgstyle" src="img/project6/Group 18.svg">
+          <div class="imgsubtitle">根据《GB／T24435--2009中华人民共和国国家标准中国手语基本手势》对打手势的位置定义</div>
+
+          <img class="imgstyle" src="img/project6/Group 20.svg">
+          <div class="imgsubtitle">服务触点硬件设计——手译产品设计</div>
+
+          <div class="title4">服务触点软件设计——移动APP设计</div>
+          <p class="lead">
+            移动APP主要分为五大功能，首先为GPS追踪，实时追踪残障人士的位置信息，保证在意外情况发生下，能及时帮助听障人士。第二，在听障人士行走期间，能为听障人士收集行走环境中出现的车鸣笛，在手机端震动，以提示聋哑人出行安全。第三，视频通话。为聋哑人士提供手语转译语音传达服务以及语音转成文字服务。将自然环境下的面对面交流带到线上，还原自然的沟通方式，同时期望用户在完成视频通话之后，为app所提供的服务打分，让用户同时参与产品的开发，用户与服务协同成长与发展。同时还设计了系统升级，使得软硬件都能随着残障人士的需求的增长不断地拓宽而迭代。第四，为紧急报警系统。在残疾人遇到意外情况之时，紧急通知联系人，在第一时间为聋哑人士提供援助，同时聋哑人士也可以自动解除警报。并发送快速反馈，告知联系人当前情况。
+          </p>
+
+          <img class="imgstyle" src="img/project6/Group 21.svg">
+          <div class="imgsubtitle">服务触点软件设计——移动APP设计</div>
+
         </div>
-        
-        <div class="title4">用户行为轨迹和关键场景总结</div>
-        <p class="lead">
-          用户行为轨迹和关键场景总结
-        </p>
-
-        <img class="imgstyle" src="img/project6/Group 15.svg">
-        <div class="imgsubtitle">用户行为轨迹和关键场景总结</div>
-        
-        <div class="title4">用户体验地图（User Experience Journey Map）</div>
-        <p class="lead">
-          用户体验地图总结
-        </p>
-        <img class="imgstyle" src="img/project6/Group 16.svg">
-        <div class="imgsubtitle">用户体验地图总结</div>
-
-        <div class="title4">服务构想及设计策略（Design strategy）</div>
-        <p class="lead">
-          1) 帮助残疾人了解身边环境，保证出行安全<br/>
-          2) 专业手语翻译，打破沟通障碍<br/>
-          3) 视觉化语音录入<br/>
-          4) 手语服务的家庭共享，构建和谐家庭<br/>
-          5) 如遇突发状况，紧急报警
-        </p>
-
-        <div class="title4">服务触点硬件设计——手译产品设计</div>
-        <p class="lead">
-          “手译”产品设计采取了两种佩戴方式的设计，第一种是颈挂式，第二种为夹持式，满足了为特殊人群进行交互设计的便携性。此款满足了聋哑人士沟通障碍的显性需求，同时也满足了聋哑人士也追求个性的隐形需求。同时改款设计可以收集汽车鸣笛声，在手机端震动提示聋哑人行驶安全。技术支持是由Leap Motion所提供的红外线传感器以及SDK接口，为无侵入式的体感交互技术，非常适合残障人士使用。主要功能则为，产品开关，紧急情况报警以及完成手语转译。为残疾人提供手语服务。还原听障人士与常人之间的自然交流情景，为听障人群营造良好沟通环境，打破沟通壁垒，使得听障人士逐渐回归社会，在社会以及精神领域创造财富。<br/>
-          <br/>
-          根据《GB／T24435--2009中华人民共和国国家标准中国手语基本手势》对打手势的位置定义：一般在额部以下，腰部以上，两肩以内，距胸前两掌宽的空间范围内(如下图所示)。有些手势动作按表达内容需要可在其他适当位置打出。=
-        </p>
-
-        <img class="imgstyle" src="img/project6/Group 18.svg">
-        <div class="imgsubtitle">根据《GB／T24435--2009中华人民共和国国家标准中国手语基本手势》对打手势的位置定义</div>
-        
-        <img class="imgstyle" src="img/project6/Group 20.svg">
-        <div class="imgsubtitle">服务触点硬件设计——手译产品设计</div>
-        
-        <div class="title4">服务触点软件设计——移动APP设计</div>
-        <p class="lead">
-          移动APP主要分为五大功能，首先为GPS追踪，实时追踪残障人士的位置信息，保证在意外情况发生下，能及时帮助听障人士。第二，在听障人士行走期间，能为听障人士收集行走环境中出现的车鸣笛，在手机端震动，以提示聋哑人出行安全。第三，视频通话。为聋哑人士提供手语转译语音传达服务以及语音转成文字服务。将自然环境下的面对面交流带到线上，还原自然的沟通方式，同时期望用户在完成视频通话之后，为app所提供的服务打分，让用户同时参与产品的开发，用户与服务协同成长与发展。同时还设计了系统升级，使得软硬件都能随着残障人士的需求的增长不断地拓宽而迭代。第四，为紧急报警系统。在残疾人遇到意外情况之时，紧急通知联系人，在第一时间为聋哑人士提供援助，同时聋哑人士也可以自动解除警报。并发送快速反馈，告知联系人当前情况。
-        </p>
-
-        <img class="imgstyle" src="img/project6/Group 21.svg">
-        <div class="imgsubtitle">服务触点软件设计——移动APP设计</div>
-        
       </div>
+
     </div>
-
-  </div>
-</section>
+  </section>
 
 
 
 
 
 
-<section class="section" style="margin-top: 80px; margin-bottom: 100px;">
-  <div class="container">
-    <a type="button" class="btn btn-primary btn-lg buttom-link" style="float: left;width: 340px;height: 80px;" href="project5.html">上一篇：Python批量处理生命力评估模型</a>
-    <a type="button" class="btn btn-primary btn-lg buttom-link" style="float: right;width: 340px;height: 80px;"href="project7.html">下一篇：CoE Workshop专家讲座系列宣传物料视觉设计</a></div>
-</div>
-</section>
+  <section class="section" style="margin-top: 80px; margin-bottom: 100px;">
+    <div class="container">
+      <a type="button" class="btn btn-primary btn-lg buttom-link" style="float: left;width: 340px;height: 80px;"
+        href="project5.html">上一篇：Python批量处理生命力评估模型</a>
+      <a type="button" class="btn btn-primary btn-lg buttom-link" style="float: right;width: 340px;height: 80px;"
+        href="project7.html">下一篇：CoE Workshop专家讲座系列宣传物料视觉设计</a>
+    </div>
+    </div>
+  </section>
 
 
 
 
 
-	
 
-<footer class="footer">
-  <div class="container">
-    <div class="footer__left">
-      <div class="footer__copy">
-        Designed and coded by Yuwen. All rights reserved.
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__left">
+        <div class="footer__copy">
+          Designed and coded by Yuwen. All rights reserved.
+        </div>
       </div>
-    </div>
-    <div class="footer__links">
-      <ul class="navbar-nav ">
-        <li class="nav-item">
-          <a class="nav-link" href="index.html">主页</a>
-        </li>
-        
-        <li class="nav-item">
-          <a class="nav-link" href="index.html#about">技能</a>
-        </li>
-        
-        <li class="nav-item">
-          <a class="nav-link" href="index.html#portfolio">我的实践</a>
-        </li>
+      <div class="footer__links">
+        <ul class="navbar-nav ">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">主页</a>
+          </li>
 
-        <li class="nav-item">
-          <a class="nav-link" href="index.html#contact">联系方式</a>
-        </li>
-        
-        <!-- <li class="nav-item">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#about">技能</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#portfolio">我的实践</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#contact">联系方式</a>
+          </li>
+
+          <!-- <li class="nav-item">
           <a class="nav-link" href="#myfriend">行业口碑</a>
         </li> -->
-        
-      </ul>
-    </div>
-    <!-- <div class="footer__right">
+
+        </ul>
+      </div>
+      <!-- <div class="footer__right">
       <img
           src="img/general/design-and-code-radity.svg"
           srcset="https://raditian-hugo.radity.com/img/general/design-and-code-radity.png 1x, https://raditian-hugo.radity.com/img/general/design-and-code-radity@2x.png 2x"
           alt="Design &amp; Code - yuwen"
       />
     </div> -->
-  </div>
-</footer>
+    </div>
+  </footer>
 
-<script src='js/rad-animations.js'></script>
-<script src='js/library/lozad.min.js'></script>
-<script>
-  window.addEventListener("load", function() {
-    var observer = window.lozad(".lozad", {
-      rootMargin: window.innerHeight / 2 + "px 0px",
-      threshold: 0.01
-    }); 
-    observer.observe();
-  });
-</script>
-<script src='js/library/jquery-3.3.1.slim.min.js'></script>
-<script src='js/library/bootstrap.min.js'></script>
-<script src='js/sticky-header.js'></script>
-<script src='js/library/smooth-scroll.polyfills.min.js'></script>
-<script src='js/library/fontfaceobserver.js'></script>
-<script>
-  (function(w) {
-    
-    if (w.document.documentElement.className.indexOf("fonts-loaded") > -1) {
-      return;
-    }
-    var fontA = new w.FontFaceObserver("Inter", {
-      weight: 300
+  <script src='js/rad-animations.js'></script>
+  <script src='js/library/lozad.min.js'></script>
+  <script>
+    window.addEventListener("load", function () {
+      var observer = window.lozad(".lozad", {
+        rootMargin: window.innerHeight / 2 + "px 0px",
+        threshold: 0.01
+      });
+      observer.observe();
     });
-    var fontB = new w.FontFaceObserver("Inter", {
-      weight: 400
-    });
-    var fontC = new w.FontFaceObserver("Inter", {
-      weight: 500
-    });
-    var fontD = new w.FontFaceObserver("Inter", {
-      weight: 600
-    });
-    var fontE = new w.FontFaceObserver("Inter", {
-      weight: 700
-    });
-    var fontF = new w.FontFaceObserver("Inter", {
-      weight: 900
-    });
-    w.Promise.all([fontA.load(), fontC.load(), fontF.load()]).then(function() {
-      w.document.documentElement.className += " fonts-loaded";
-    });
-  })(this);
-</script>
-<script>
-  const scroll = new SmoothScroll('a[href*="#"]');
+  </script>
+  <script src='js/library/jquery-3.3.1.slim.min.js'></script>
+  <script src='js/library/bootstrap.min.js'></script>
+  <script src='js/sticky-header.js'></script>
+  <script src='js/library/smooth-scroll.polyfills.min.js'></script>
+  <script src='js/library/fontfaceobserver.js'></script>
+  <script>
+    (function (w) {
+
+      if (w.document.documentElement.className.indexOf("fonts-loaded") > -1) {
+        return;
+      }
+      var fontA = new w.FontFaceObserver("Inter", {
+        weight: 300
+      });
+      var fontB = new w.FontFaceObserver("Inter", {
+        weight: 400
+      });
+      var fontC = new w.FontFaceObserver("Inter", {
+        weight: 500
+      });
+      var fontD = new w.FontFaceObserver("Inter", {
+        weight: 600
+      });
+      var fontE = new w.FontFaceObserver("Inter", {
+        weight: 700
+      });
+      var fontF = new w.FontFaceObserver("Inter", {
+        weight: 900
+      });
+      w.Promise.all([fontA.load(), fontC.load(), fontF.load()]).then(function () {
+        w.document.documentElement.className += " fonts-loaded";
+      });
+    })(this);
+  </script>
+  <script>
+    const scroll = new SmoothScroll('a[href*="#"]');
     $('a.nav-link').on('click', () => {
       const navbar = $('.navbar-collapse');
       if (navbar && navbar.hasClass('show')) {
         $('.navbar-toggler').click();
       }
     })
-</script>
+  </script>
 
 </body>
 
