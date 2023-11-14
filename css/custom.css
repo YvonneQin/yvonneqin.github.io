@@ -28,7 +28,7 @@
 }
 
 .badge-2.rounded-pill{
-    font-size: 10px; font-weight: 400;padding:3px 16px ;
+    font-size: 12px; font-weight: 400;padding:3px 16px ;
 }
 
 .header::before{
@@ -92,7 +92,7 @@ h3{
 }
 
 .badge-2{
-    font-size: 10px;
+    font-size: 14px;
     font-weight: 600;
     padding: 6px 16px; 
     margin-right: 3px;
