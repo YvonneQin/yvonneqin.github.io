@@ -1,9 +1,9 @@
-.header .navbar .nav-item .nav-link{
+.header .navbar .nav-item .nav-link {
     font-weight: 600;
-    padding:0px 16px;
+    padding: 0px 16px;
 }
 
-.section--contact .container{
+.section--contact .container {
     box-shadow: 0 42px 34px -16px rgb(0 0 0 / 30%);
 }
 
@@ -23,23 +23,26 @@
     animation-direction: alternate-reverse;
 }
 
-.rad-showcase .platform-links{
-    margin-top:20px;
+.rad-showcase .platform-links {
+    margin-top: 20px;
 }
 
-.badge-2.rounded-pill{
-    font-size: 12px; font-weight: 400;padding:3px 16px ;
+.badge-2.rounded-pill {
+    font-size: 12px;
+    font-weight: 400;
+    padding: 3px 16px;
 }
 
-.header::before{
+.header::before {
     height: 70px;
 }
 
-.contact__info, .experience+.experience{
+.contact__info,
+.experience+.experience {
     padding-top: 30px;
 }
 
-.experience__title{
+.experience__title {
     font-size: 16px;
 }
 
@@ -49,56 +52,59 @@
     padding-left: 10px;
     padding-right: 10px;
 }
+
 .btn {
     font-size: 12px;
     font-weight: 400;
-    padding:10px 16px;
+    padding: 10px 16px;
 }
 
-.rad-showcase{
+.rad-showcase {
     min-height: 600px;
 }
 
-.rad-showcase__bg img{
+.rad-showcase__bg img {
     width: 340px;
     height: auto;
     margin-top: 0px;
 }
 
-.education__title{
+.education__title {
     font-size: 18px;
 }
-.education__degree, .experience__date{
+
+.education__degree,
+.experience__date {
     font-size: 10px;
 }
 
-h1.display-1{
+h1.display-1 {
     padding-top: 20px;
 }
 
-h2{
+h2 {
     font-size: 32px;
 }
 
-h3{
+h3 {
     font-size: 20px;
 }
 
-.badge{
+.badge {
     font-size: 14px;
     font-weight: 100;
     padding: 12px 24px 12px 24px;
     margin: 10px 5px 5px 0px;
 }
 
-.badge-2{
+.badge-2 {
     font-size: 14px;
     font-weight: 600;
-    padding: 6px 16px; 
+    padding: 6px 16px;
     margin-right: 3px;
 }
 
-.clients__item{
+.clients__item {
     background-color: #edf1f4;
     font-size: 16px;
     padding: 16px;
@@ -106,7 +112,7 @@ h3{
 }
 
 
-.section{
+.section {
     padding-top: 0px;
     padding-bottom: 0px;
     margin-top: 20px;
@@ -114,33 +120,33 @@ h3{
 }
 
 
-.section .row.row--padded{
-    margin-bottom:0px;
+.section .row.row--padded {
+    margin-bottom: 0px;
     margin-top: 60px;
 }
 
-.titlenumber{
-    font-size: 170px; 
+.titlenumber {
+    font-size: 170px;
     font-weight: 600;
-    color: #555555; 
+    color: #555555;
     opacity: 5%;
 }
 
-.sectiontitle{
+.sectiontitle {
     font-size: 36px;
     color: #000000;
-    font-weight: 600; 
+    font-weight: 600;
     margin-top: -100px;
 }
 
-.sectiontitle-eng{
+.sectiontitle-eng {
     font-size: 14px;
     color: #555555;
     font-weight: 600;
     text-transform: uppercase;
 }
 
-.title4{
+.title4 {
     font-size: 28px;
     color: #000000;
     letter-spacing: 0;
@@ -148,42 +154,40 @@ h3{
     margin-top: 66px;
 }
 
-.lead{
-    padding-top:40px; 
+.lead {
+    padding-top: 40px;
     font-size: 14px;
-    color: #555555;
+    color: #2b2525;
     letter-spacing: 0;
     text-align: justify;
     line-height: 30px;
     font-weight: 400;
 }
 
-.mb-0{
-    font-size: 20px;margin-top: 40px;
+.mb-0 {
+    font-size: 20px;
+    margin-top: 40px;
 }
 
-.carousel-indicators{
+.carousel-indicators {
     margin-bottom: 0;
 }
 
-.carousel-control-next-icon{
-    background-image: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" role="img" class="icon ">
-<rect x="5" y="5" width="13" height="15" fill="black" fill-opacity="0.2"></rect>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23ZM15.5003 11.9996L11.7341 15.7071C11.3386 16.0971 10.6936 16.0971 10.2976 15.7076C10.1056 15.5186 10.0001 15.2676 10.0001 15.0006C10.0001 14.7336 10.1056 14.4826 10.2976 14.2936L12.6272 12.0001L10.2976 9.70662C9.90159 9.31662 9.90159 8.68162 10.2976 8.29212C10.6936 7.90263 11.3381 7.90263 11.7341 8.29212L15.5003 11.9996Z" fill="white"></path>
-<circle cx="12" cy="12" r="11.5" stroke="black" stroke-opacity="0.1"></circle>
-</svg>
+.carousel-control-next-icon {
+    background-image: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" role="img" class="icon " > <rect x="5" y="5" width="13" height="15" fill="black" fill-opacity="0.2" ></rect> <path fill-rule="evenodd" clip-rule="evenodd" d="M12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23ZM15.5003 11.9996L11.7341 15.7071C11.3386 16.0971 10.6936 16.0971 10.2976 15.7076C10.1056 15.5186 10.0001 15.2676 10.0001 15.0006C10.0001 14.7336 10.1056 14.4826 10.2976 14.2936L12.6272 12.0001L10.2976 9.70662C9.90159 9.31662 9.90159 8.68162 10.2976 8.29212C10.6936 7.90263 11.3381 7.90263 11.7341 8.29212L15.5003 11.9996Z" fill="white" ></path> <circle cx="12" cy="12" r="11.5" stroke="black" stroke-opacity="0.1" ></circle> </svg>
 }
 
 
-.carousel-control-next-icon, .carousel-control-prev-icon{
-    border-radius:15px;
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+    border-radius: 15px;
     width: 10px;
     height: 10px;
     padding: 15px;
-    background-color:wheat;
+    background-color: wheat;
 }
 
-.subtitle{
+.subtitle {
     font-size: 14px;
     color: #555555;
     background-color: #ffffff;
@@ -191,34 +195,33 @@ h3{
     margin-bottom: 40px;
 }
 
-.carousel-indicators li{
-    background-color:#555555;
-    border-bottom:20px solid transparent;
+.carousel-indicators li {
+    background-color: #555555;
+    border-bottom: 20px solid transparent;
 }
 
-.section li::before{
+.section li::before {
     width: 0px;
-    height:0px;
+    height: 0px;
 }
 
-.mb-0{
+.mb-0 {
     color: black;
     font-weight: 600;
     padding-top: 40px;
     padding-bottom: 20px;
 }
 
-.imgsubtitle{
+.imgsubtitle {
     margin-top: 18px;
     font-size: 14px;
-    color: #A2A2A2;
+    color: #2b2525;
     letter-spacing: 0;
     text-align: center;
     line-height: 30px;
     font-weight: 400;
 }
 
-.imgstyle{
+.imgstyle {
     margin-top: 30px;
 }
-
