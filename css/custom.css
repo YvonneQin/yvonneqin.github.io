@@ -75,7 +75,7 @@
 
 .education__degree,
 .experience__date {
-    font-size: 10px;
+    font-size: 12px;
 }
 
 h1.display-1 {
@@ -126,7 +126,7 @@ h3 {
 }
 
 .titlenumber {
-    font-size: 170px;
+    font-size: 144px;
     font-weight: 600;
     color: #555555;
     opacity: 5%;
@@ -160,7 +160,7 @@ h3 {
     color: #2b2525;
     letter-spacing: 0;
     text-align: justify;
-    line-height: 30px;
+    line-height: 24px;
     font-weight: 400;
 }
 
