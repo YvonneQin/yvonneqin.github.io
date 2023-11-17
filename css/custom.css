@@ -126,7 +126,7 @@ h3 {
 }
 
 .titlenumber {
-    font-size: 144px;
+    font-size: 136px;
     font-weight: 600;
     color: #555555;
     opacity: 5%;
@@ -157,7 +157,7 @@ h3 {
 .lead {
     padding-top: 16px;
     font-size: 14px;
-    color: #2b2525;
+    color: #000000;
     letter-spacing: 0;
     text-align: justify;
     line-height: 24px;
