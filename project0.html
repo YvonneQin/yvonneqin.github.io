@@ -307,7 +307,7 @@
 
       <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
         <div class="col-12 col-md-5 mt-4 mt-md-0 my-md-auto">
-          <span class="badge-2 rounded-pill" style="background-color:#F4EDEE!important;">0to1</span>
+          <span class="badge-2 rounded-pill" style="background-color:#F4EDEE!important;">0 to 1</span>
           <span class="badge-2 rounded-pill" style="background-color:#D5EDFF!important;">Product Design</span>
           <br />
           <span class="badge-2 rounded-pill" style="background-color:#D5FFE9!important;">Product Strategy</span>
@@ -338,12 +338,9 @@
         <div class="col-12 mt-4 mt-md-0 my-md-auto">
           <div>
             <div class="titlenumber">01</div>
-            <div class="sectiontitle">Brief Intro</div>
-            <div class="sectiontitle-eng">Brief Intro</div>
+            <div class="sectiontitle">TLDR</div>
+            <div class="sectiontitle-eng">Too Long; Didn't Read</div>
           </div>
-          <p class="lead">
-            This article provides a brief retrospective on how the author, as an early-stage member, incubated a clinical database design tool from both top-down and bottom-up perspectives, building it from the ground up with the goal of disrupting the industry. This article reveals the deep involvement in pitching the product concept, gradually identifying the product-market fit, and progressively entering the market to acquire customers and users.
-          </p>
           <p class="lead">
             This article provides a brief retrospective on how the author, as an early-stage member, incubated a clinical database design tool from both top-down and bottom-up perspectives, building it from the ground up with the goal of disrupting the industry. This article reveals the deep involvement in pitching the product concept, gradually identifying the product-market fit, and progressively entering the market to acquire customers and users.
           </p>
@@ -479,6 +476,7 @@
             <img class="imgstyle" src="img/project0/ClinicalLogicEngine.jpeg">
             <div class="imgsubtitle">Clinical Logic Engine</div>
           </div>
+          <div class="title4">Challenges and pain points</div>
           <p class="lead">
             In the existing process, a challenging aspect was the writing of logic. DBD aimed to ensure that data complied with trial logic by rapidly creating Edit Checks. However, for complex logic such as time window comparisons (checking if the time is within a 5-minute absolute value of the administration time, triggering an EDC query otherwise), Custom Function Scripts needed to be written. This increased the entry barrier for industry professionals and slowed down the trial implementation process.
           </p>
@@ -489,8 +487,9 @@
           <p class="lead">
             Therefore, we aim to allow Database Designers to write such extensively reusable logic through a visual interface, opening up a Low code / No Code interface. We envision using declarative language to replace scripts, enabling practitioners to focus on understanding the business without being bound by code and facilitating trial deployment. Consequently, we have outlined the details of the Edit Check local innovation proof of concept (POC):
           </p>
+          <div class="title4">Design Proposal one</div>
           <p class="lead">
-            Design concept one: Functionality Design involves constructing logic statements by assembling modular components on the
+            Functionality Design involves constructing logic statements by assembling modular components on the
             left side. Different colored blocks are used to differentiate functional modules, achieving an intuitive construction
             of logic.
           </p>
@@ -508,11 +507,12 @@
             <img class="imgstyle" src="img/project0/Declarative Way to Complete Logic Check Writing.png">
             <div class="imgsubtitle">Declarative Way to Complete Logic Check Writing</div>
           </div>
+          <blockquote class="blockquote text-center">
+            <p class="mb-0">👀 Oberservation: While solving the pain point of making the writing process more intuitive, the drawbacks of the solution became apparent. The drag & drop approach, while making logic statement construction more intuitive, did not improve efficiency. This prompted the initiation of design solution iterations.</p>
+          </blockquote>
+          <div class="title4">Design Proposal two</div>
           <p class="lead">
-            While solving the pain point of making the writing process more intuitive, the drawbacks of the solution became apparent. The drag & drop approach, while making logic statement construction more intuitive, did not improve efficiency. This prompted the initiation of design solution iterations.
-          </p>
-          <p class="lead">
-            Design concept two: keyboard-only user experience, typing by composing。
+            Keyboard-only user experience, typing by composing。
           </p>
           <div>
             <img class="imgstyle" src="img/project0/Logic Composer.png">
@@ -523,6 +523,11 @@
             <div class="imgsubtitle">Syntax Recommendation</div>
             <img class="imgstyle" src="img/project0/Custom function composer.png">
             <div class="imgsubtitle">Custom function composer</div>
+          </div>
+          <div class="title4">Achievement Highlights</div>
+          <div>
+            <img class="imgstyle" src="img/project0/Logic Composer.png">
+            <div class="imgsubtitle">Efficient improvement</div>
           </div>
           <div class="title4">Validation & Measurement</div>
           <p class="lead">
@@ -557,6 +562,10 @@
           <p class="lead">
             After multiple rounds of validation and iterations, Logic Composer was successfully launched. It not only aligns with user intuition but also reduces the amount of code needed for logic writing, lowering the entry barrier. Simultaneously, the efficiency of writing individual logics has significantly improved. The Construct product line reached its first milestone with the introduction of self-built database users utilizing the product and tool, contributing to the company's revenue.
           </p>
+          <div>
+            <img class="imgstyle" src="img/project0/fast go-live.png">
+            <div class="imgsubtitle">Construct Fast go-live strategy effects</div>
+          </div>
 
 
   </section>
