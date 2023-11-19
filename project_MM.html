@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<SCRIPT language=JavaScript>
+<!-- <SCRIPT language=JavaScript>
   function password() {
     var testV = 1;
     var pass1 = prompt('Pls fill in password:', '');
@@ -23,7 +23,7 @@
 
   document.write(password());
 
-</SCRIPT>
+</SCRIPT> -->
 
 
 <head>
@@ -313,7 +313,7 @@
 
       <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
         <div class="col-12 col-md-5 mt-4 mt-md-0 my-md-auto">
-          <span class="badge-2 rounded-pill" style="background-color:#F4EDEE!important;">0to1</span>
+          <span class="badge-2 rounded-pill" style="background-color:#F4EDEE!important;">0 to 1</span>
           <span class="badge-2 rounded-pill" style="background-color:#D5EDFF!important;">Product Design</span>
           <br />
           <span class="badge-2 rounded-pill" style="background-color:#D5FFE9!important;">Product Strategy</span>
@@ -356,7 +356,7 @@
             <img class="imgstyle" src="img/project_MM/AuroraPrime Platform Overview.png">
             <div class="imgsubtitle">AuroraPrime Platform Overview</div>
           </div>
-          <p class="lead">
+          <!-- <p class="lead">
             Prime Compute is an application-oriented statistical analysis tool on the AuroraPrime clinical research
             platform. Designed for various roles in clinical trials, such as data management (DM), operations, med-
             ical, and statistical personnel, Compute offers a wide range of statistical analysis tools tailored to their
@@ -375,7 +375,7 @@
             third-party systems. Multiple data integration methods, including interface-based and variable data
             model-based import, are provided to ensure seamless integration with various systems, such as third-party
             EDC systems.
-          </p>
+          </p> -->
   </section>
 
   <section class="section" style="margin-top: 0px;">
@@ -386,7 +386,7 @@
         <div class="col-12 mt-4 mt-md-0 my-md-auto">
           <div>
             <div class="titlenumber">02</div>
-            <div class="sectiontitle">The selection of entry points and prerequisites.</div>
+            <div class="sectiontitle">Entry points and prerequisites.</div>
             <div class="sectiontitle-eng">The selection of entry points and prerequisites.</div>
           </div>
           <blockquote class="blockquote text-center">
@@ -406,47 +406,23 @@
             visualization plots such as bar, scattered, line, boxplot, and butterfly plot, more advanced data models
             have emerged to gain insights into the correlations between AEs. For example:
           </p>
-          <div>
-            <img class="imgstyle" src="img/project_MM/AE Volcano Plot.png">
-            <div class="imgsubtitle">AE Volcano Plot</div>
-          </div>
-          <div>
-            <img class="imgstyle" src="img/project_MM/ComplexHeatmap.png">
-            <div class="imgsubtitle">ComplexHeatmap</div>
-          </div>
-          <div>
-            <img class="imgstyle" src="img/project_MM/Swinlane Plot.png">
-            <div class="imgsubtitle">Swinlane Plot</div>
-          </div>
-          <div>
-            <img class="imgstyle" src="img/project_MM/shift polts.png">
-            <div class="imgsubtitle">shift polts</div>
-          </div>
-          <div>
-            <img class="imgstyle" src="img/project_MM/Hys Law Screening.png">
-            <div class="imgsubtitle">Hys Law Screening</div>
-          </div>
           <p class="lead">
             After integrating the R tidyverse, ggplotly, and Plotly into the platform, a solid foundation for
             presentation in medical monitoring scenarios has been established. The computational capabilities showcased
             here have initiated exploration and development in the realm of configurability.
           </p>
-          <p class="lead">
-            Develop and leverage prototype testing for better insight and feedback.
-          </p>
-
+          <div>
+            <img class="imgstyle" src="img/project_MM/Typical MM plot Example.png">
+            <div class="imgsubtitle">Typical MM Plot Example</div>
+          </div>
           <div>
             <img class="imgstyle" src="img/project_MM/Based on the Plotly R package.png">
             <div class="imgsubtitle">Based on the Plotly R package, a demo is presented for drawing error bars using
               data from the 'Gender' variable in the Demographic.</div>
           </div>
-          <div>
-            <img class="imgstyle" src="img/project_MM/Vital Sign Error Bar Plot1.png">
-            <img class="imgstyle" src="img/project_MM/Vital Sign Error Bar Plot2.png">
-            <img class="imgstyle" src="img/project_MM/Vital Sign Error Bar Plot3.png">
-            <div class="imgsubtitle">Vital Sign Error Bar Plot, Missing values are filled using the mean, visits are
-              displayed in a fixed order, and certain visits, such as unplanned visits, are excluded.</div>
-          </div>
+          <p class="lead">
+            Vital Sign Error Bar Plot, Missing values are filled using the mean, visits are displayed in a fixed order, and certain visits, such as unplanned visits, are excluded.
+          </p>
           <div>
             <img class="imgstyle" src="img/project_MM/Rapid prototype with R script.png">
             <div class="imgsubtitle">Rapid prototype with R script</div>
@@ -466,14 +442,11 @@
             <div class="sectiontitle-eng">Medical Monitoring Analysis purpose</div>
           </div>
           <p class="lead">
+            The analysis objectives are listed as follows.<br />
             1. Analyze the common functionalities of widely used medical monitoring tools.<br />
-            2. Organize the content of the Medical Monitoring page based on the R-PlotQ&ATracker and the foundational
-            business requirements of POC (Proof of Concept) in the medical monitoring field in both China and the United
-            States. Define how clinical data flow should be handled for an optimal data flow.<br />
-            3. Propose the optimal User Journey and User Flow for Medical Monitoring configuration, considering the
-            source-to-process pipeline.<br />
-            4. Research the possibilities and solutions for insights in other medical scenarios, exploring potential
-            insights and corresponding solutions.<br />
+            2. Organize the content of the Medical Monitoring page based on the R-PlotQ&ATracker and the foundational business requirements of POC (Proof of Concept) in the medical monitoring field in both China and the United States. Define how clinical data flow should be handled for an optimal data flow.<br />
+            3. Propose the optimal User Journey and User Flow for Medical Monitoring configuration, considering the source-to-process pipeline.<br />
+            4. Research the possibilities and solutions for insights in other medical scenarios, exploring potential insights and corresponding solutions.<br />
           </p>
   </section>
 
@@ -503,41 +476,57 @@
             2. Mainstream, well-developed, and widely applicable data insights are based on the lifecycle of data.
             Different
             product lines may have slight variations in their emphasis on features.<br />
-            &nbsp;&nbsp;&nbsp;&nbsp;a. SAS Viya stands as a versatile solution in the data product industry, providing
-            an
-            end-to-end solution for comprehensive data insight scenarios.<br />
-            &nbsp;&nbsp;&nbsp;&nbsp;b. SPSS PRO in fundamental analytical capabilities, demonstrating outstanding
-            performance in exploring data distribution and generating descriptive statistics with a focus on data
-            validity.<br />
-            &nbsp;&nbsp;&nbsp;&nbsp;c. Plotly, JMP_Clinical, and Tableau exhibit strong visualization capabilities,
-            prioritizing
-            data interpretation and expression, though they show relatively weaker data processing capabilities.<br />
-            &nbsp;&nbsp;&nbsp;&nbsp;d. Among the mentioned mainstream products, SAS Viya stands out in Modeling and
-            Decision,
-            while the others exhibit less comprehensive performance. This suggests one of the potential areas for future
-            improvement, which has not been thoroughly explored in this preliminary survey.<br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i.In the research of other products, certain products may
-            have
-            strengths in specific medical modeling scenarios, but they lack a good user experience and functional
-            applications.
-            Therefore, these aspects do not contribute to the core competitiveness of the products.<br />
-            &nbsp;&nbsp;&nbsp;&nbsp;e. Within the statistical ecosystem, open-source R packages provide visualization
-            solutions for
-            specific key medical scenarios. It may be worthwhile to explore and follow up on these R packages in the
-            future. This
-            consideration assumes that the technology stack is determined to be based entirely on the R ecosystem.<br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i. Focus on subgroup analysis.<br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ii. Pay attention to Adverse Event dynamics.<br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;iii.Pay attention to laboratory insights, and so on.<br />
-            3. The mainstream visualization configuration methods generally fall into two categories:<br />
-            &nbsp;&nbsp;&nbsp;&nbsp;a. Filling data through an object-oriented approach, using a Bottom-Up method. The
-            advantage lies in rapid generation, but the current technology stack is not easily adaptable to this model.
-            Derivatively, filling data is tailored to specific scenarios, enabling faster generation of plots.<br />
-            &nbsp;&nbsp;&nbsp;&nbsp;b. Based on data, recommending objects in a Top-Down approach. The advantage lies in
-            a well-initiated development with a favorable technology stack and good support for users sensitive to data.
-            However, the interaction may be extensive, which is not conducive to the rapid generation of plots using
-            Plotly.<br />
           </p>
+          <ul class="lead" style="padding-left: 0px;padding-top: 0px;margin-bottom: 20px;">
+            <li style="font-size: 14px;color: #000000;">a. SAS Viya stands as a versatile solution in the data product industry,
+              providing
+              an
+              end-to-end solution for comprehensive data insight scenarios.</li>
+            <li style="font-size: 14px;color: #000000;">b. SPSS PRO in fundamental analytical capabilities, demonstrating
+              outstanding
+              performance in exploring data distribution and generating descriptive statistics with a focus on data
+              validity.</li>
+            <li style="font-size: 14px;color: #000000;">c. Plotly, JMP_Clinical, and Tableau exhibit strong visualization
+              capabilities,
+              prioritizing
+              data interpretation and expression, though they show relatively weaker data processing capabilities.</li>
+            <li style="font-size: 14px;color: #000000;">d. Among the mentioned mainstream products, SAS Viya stands out in Modeling
+              and
+              Decision,
+              while the others exhibit less comprehensive performance. This suggests one of the potential areas for future
+              improvement, which has not been thoroughly explored in this preliminary survey.</li>
+              <ul class="lead" style="padding-left: 18px;padding-top: 0px;margin-bottom: 20px;">
+                <li style="font-size: 14px;color: #000000;">i.In the research of other products, certain products may
+                  have strengths in
+                  specific medical modeling scenarios, but they lack a good user experience and functional applications. Therefore,
+                  these aspects do not contribute to the core competitiveness of the products.</li>
+              </ul>
+            <li style="font-size: 14px;color: #000000;">e. Within the statistical ecosystem, open-source R packages provide
+              visualization
+              solutions for
+              specific key medical scenarios. It may be worthwhile to explore and follow up on these R packages in the
+              future. This
+              consideration assumes that the technology stack is determined to be based entirely on the R ecosystem.</li>
+              <ul class="lead" style="padding-left: 18px;padding-top: 0px;margin-bottom: 20px;">
+                <li style="font-size: 14px;color: #000000;">i. Focus on subgroup analysis.</li>
+                <li style="font-size: 14px;color: #000000;">ii. Pay attention to Adverse Event dynamics.</li>
+                <li style="font-size: 14px;color: #000000;">iii.Pay attention to laboratory insights, and so
+                  on.</li>
+              </ul>
+            </li>
+          </ul>
+          <p class="lead">
+            3. The mainstream visualization configuration methods generally fall into two categories:
+          </p>
+          <ul class="lead" style="padding-left: 0px;padding-top: 0px;margin-bottom: 20px;">
+            <li style="font-size: 14px;color: #000000;">a. Filling data through an object-oriented approach, using a Bottom-Up method. The
+              advantage lies in rapid generation, but the current technology stack is not easily adaptable to this model.
+              Derivatively, filling data is tailored to specific scenarios, enabling faster generation of plots.</li>
+            <li style="font-size: 14px;color: #000000;">b. Based on data, recommending objects in a Top-Down approach. The advantage lies in
+              a well-initiated development with a favorable technology stack and good support for users sensitive to data.
+              However, the interaction may be extensive, which is not conducive to the rapid generation of plots using
+              Plotly.</li>
+          </ul>
           <div class="title4">Data Life Span Functionality Details Comparison</div>
           <p class="lead">
             Dimension & Explanation:<br />
