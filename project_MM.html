@@ -439,16 +439,14 @@
         <div class="col-12 mt-4 mt-md-0 my-md-auto">
           <div>
             <div class="titlenumber">03</div>
-            <div class="sectiontitle">Medical Monitoring Analysis purpose</div>
-            <div class="sectiontitle-eng">Medical Monitoring Analysis purpose</div>
+            <div class="sectiontitle">Typical User</div>
+            <div class="sectiontitle-eng">Typical User</div>
           </div>
-          <p class="lead">
-            The analysis objectives are listed as follows.<br />
-            1. Analyze the common functionalities of widely used medical monitoring tools.<br />
-            2. Organize the content of the Medical Monitoring page based on the R-PlotQ&ATracker and the foundational business requirements of POC (Proof of Concept) in the medical monitoring field in both China and the United States. Define how clinical data flow should be handled for an optimal data flow.<br />
-            3. Propose the optimal User Journey and User Flow for Medical Monitoring configuration, considering the source-to-process pipeline.<br />
-            4. Research the possibilities and solutions for insights in other medical scenarios, exploring potential insights and corresponding solutions.<br />
-          </p>
+          <div>
+            <img class="imgstyle" src="img/project_MM/User.png">
+            <div class="imgsubtitle">Typical User</div>
+          </div>
+
   </section>
 
   <section class="section" style="margin-top: 0px;">
@@ -459,90 +457,20 @@
         <div class="col-12 mt-4 mt-md-0 my-md-auto">
           <div>
             <div class="titlenumber">04</div>
-            <div class="sectiontitle">Conclusion</div>
-            <div class="sectiontitle-eng">Conclusion</div>
+            <div class="sectiontitle">Analysis Goal & Scope</div>
+            <div class="sectiontitle-eng">Analysis Goal & Scope</div>
           </div>
-          <div class="title4">Competitive analysis summary</div>
           <p class="lead">
-            1. Through research, a comprehensive understanding of the complete lifecycle process of data has been
-            gained：ManageData -> Transformation (data cleansing) -> Data Transformation (Metadata) -> Exploratory Data
-            Analysis ->
-            Interactive Graph & Data Visualization -> Medical modeling -> Building Decision<br />
+            1. Research and analyze the commonly used functionalities of medical monitoring tools, understand the current and future business needs, and explore possible mechanisms to address the questions that may arise.<br />
+            2. Qualitative research and quantitative analysis.
           </p>
           <div>
-            <img class="imgstyle" src="img/project_MM/data exploration process.png">
-            <div class="imgsubtitle">Data exploration processs</div>
+            <img class="imgstyle" src="img/project_MM/Research Methodology.png">
+            <div class="imgsubtitle">Research Methodology</div>
           </div>
           <p class="lead">
-            2. Mainstream, well-developed, and widely applicable data insights are based on the lifecycle of data.
-            Different
-            product lines may have slight variations in their emphasis on features.<br />
+            3. Propose the optimal user journey and user flow for configuring the source of Medical Monitoring and explore possible solutions.
           </p>
-          <ul class="lead" style="padding-left: 0px;padding-top: 0px;margin-bottom: 20px;">
-            <li style="font-size: 14px;color: #000000;">a. SAS Viya stands as a versatile solution in the data product industry,
-              providing
-              an
-              end-to-end solution for comprehensive data insight scenarios.</li>
-            <li style="font-size: 14px;color: #000000;">b. SPSS PRO in fundamental analytical capabilities, demonstrating
-              outstanding
-              performance in exploring data distribution and generating descriptive statistics with a focus on data
-              validity.</li>
-            <li style="font-size: 14px;color: #000000;">c. Plotly, JMP_Clinical, and Tableau exhibit strong visualization
-              capabilities,
-              prioritizing
-              data interpretation and expression, though they show relatively weaker data processing capabilities.</li>
-            <li style="font-size: 14px;color: #000000;">d. Among the mentioned mainstream products, SAS Viya stands out in Modeling
-              and
-              Decision,
-              while the others exhibit less comprehensive performance. This suggests one of the potential areas for future
-              improvement, which has not been thoroughly explored in this preliminary survey.</li>
-              <ul class="lead" style="padding-left: 18px;padding-top: 0px;margin-bottom: 20px;">
-                <li style="font-size: 14px;color: #000000;">i.In the research of other products, certain products may
-                  have strengths in
-                  specific medical modeling scenarios, but they lack a good user experience and functional applications. Therefore,
-                  these aspects do not contribute to the core competitiveness of the products.</li>
-              </ul>
-            <li style="font-size: 14px;color: #000000;">e. Within the statistical ecosystem, open-source R packages provide
-              visualization
-              solutions for
-              specific key medical scenarios. It may be worthwhile to explore and follow up on these R packages in the
-              future. This
-              consideration assumes that the technology stack is determined to be based entirely on the R ecosystem.</li>
-              <ul class="lead" style="padding-left: 18px;padding-top: 0px;margin-bottom: 20px;">
-                <li style="font-size: 14px;color: #000000;">i. Focus on subgroup analysis.</li>
-                <li style="font-size: 14px;color: #000000;">ii. Pay attention to Adverse Event dynamics.</li>
-                <li style="font-size: 14px;color: #000000;">iii.Pay attention to laboratory insights, and so
-                  on.</li>
-              </ul>
-            </li>
-          </ul>
-          <p class="lead">
-            3. The mainstream visualization configuration methods generally fall into two categories:
-          </p>
-          <ul class="lead" style="padding-left: 0px;padding-top: 0px;margin-bottom: 20px;">
-            <li style="font-size: 14px;color: #000000;">a. Filling data through an object-oriented approach, using a Bottom-Up method. The
-              advantage lies in rapid generation, but the current technology stack is not easily adaptable to this model.
-              Derivatively, filling data is tailored to specific scenarios, enabling faster generation of plots.</li>
-            <li style="font-size: 14px;color: #000000;">b. Based on data, recommending objects in a Top-Down approach. The advantage lies in
-              a well-initiated development with a favorable technology stack and good support for users sensitive to data.
-              However, the interaction may be extensive, which is not conducive to the rapid generation of plots using
-              Plotly.</li>
-          </ul>
-          <div class="title4">Data Life Span Functionality Details Comparison</div>
-          <p class="lead">
-            Dimension & Explanation:<br />
-            1. ManageData: Data integration capability<br />
-            2. Transformation: Prepare data - Data transformation and processing capability<br />
-            3. Exploratory Data Analysis (EDA)<br />
-            4. Interactive Graph & Data Visualization: Data visualization capability<br />
-            5. Medical modeling: Build models and manage models - Accumulation of medical verification models<br />
-            6. Build Decisions: AI/ML/Fitting/Modeling scenarios - Data insight scenarios<br />
-          </p>
-          <div>
-            <img class="imgstyle" src="img/project_MM/Metrics.png">
-            <div class="imgsubtitle">Metrics</div>
-          </div>
-
   </section>
 
   <section class="section" style="margin-top: 0px;">
@@ -553,125 +481,16 @@
         <div class="col-12 mt-4 mt-md-0 my-md-auto">
           <div>
             <div class="titlenumber">05</div>
-            <div class="sectiontitle">Analysis Details</div>
-            <div class="sectiontitle-eng">Analysis Details</div>
+            <div class="sectiontitle">Qualitative Analysis</div>
+            <div class="sectiontitle-eng">Qualitative Analysis:</div>
           </div>
-          <div class="title4">SAS Viya</div>
           <p class="lead">
-            https://azureuse011456.my-trials.sas.com/SASDataExplorer/<br />
-            Product Concept: <br />
-            Pros:<br />
-            1. The model structure is fixed and clear, making it highly replicable.<br />
-            2. High and relatively comprehensive customization of visualization, supporting strong customer
-            customization of figures.<br />
-            Cons:<br />
-            1. Supports straightforward data processing workflows, allowing for direct analysis based on tables. <br />
-            2. However, lacks the accumulation of medical industry models and insights, as well as in-depth analyses
-            such as curve fitting, and model prediction analysis.<br />
+            The open-source R package can address the core concerns of DIA in medical scenarios, providing assistance in the design of product functionalities.
           </p>
           <div>
-            <img class="imgstyle" src="img/project_MM/sasviya.png">
-            <div class="imgsubtitle">SAS Viya</div>
+            <img class="imgstyle" src="img/project_MM/Research Methodology.png">
+            <div class="imgsubtitle">Research Methodology</div>
           </div>
-          <div class="title4">Plotly Dash</div>
-          <p class="lead">
-            https://chart-studio.plotly.com/create/?fid=plotly2_demo:417#/<br />
-            Product Concept: Low/No Code Mode. Interface configuration capabilities based on Plotly are essentially
-            equivalent to the capabilities of Plotly code.<br />
-            Pros:<br />
-            1. The model structure is fixed and clear, making it highly replicable.<br />
-            2. High and relatively comprehensive customization of visualization, supporting strong customer
-            customization of figures.<br />
-            Cons:<br />
-            1. Supports straightforward data processing workflows, allowing for direct analysis based on tables. <br />
-            2. However, lacks the accumulation of medical industry models and insights, as well as in-depth analyses
-            such as curve fitting, and model prediction analysis.<br />
-          </p>
-          <div>
-            <img class="imgstyle" src="img/project_MM/1All visualizations use this configuration framework.png">
-            <div class="imgsubtitle">All visualizations use this configuration framework</div>
-            <img class="imgstyle" src="img/project_MM/2Select analysis chart template.png">
-            <div class="imgsubtitle">Select analysis chart template</div>
-            <img class="imgstyle" src="img/project_MM/3per trace type per config.png">
-            <div class="imgsubtitle">Per trace type per config</div>
-            <img class="imgstyle" src="img/project_MM/4Simple data processing.png">
-            <div class="imgsubtitle">Simple data processing</div>
-            <img class="imgstyle" src="img/project_MM/5Simple analysis- Linear regression.png">
-            <div class="imgsubtitle">Simple analysis- Linear regression</div>
-          </div>
-          <div class="title4">SPSSPRO</div>
-          <p class="lead">
-            https://www.spsspro.com/prodraw/operation/4632787?name=AdverseR.csv<br />
-            Product Concept: There is a complete data processing workflow. The configuration process is user-friendly,
-            and one can learn a lot about data flows from the platform. The approach to plotting is similar to
-            Tableau.<br />
-            Pros:<br />
-            1. The model structure is fixed and clear, making it highly replicable.<br />
-            2. High and relatively comprehensive customization of visualization, supporting strong customer
-            customization of figures.<br />
-            Cons:<br />
-            1. Supports straightforward data processing workflows, allowing for direct analysis based on tables. <br />
-            2. However, lacks the accumulation of medical industry models and insights, as well as in-depth analyses
-            such as curve fitting, and model prediction analysis.<br />
-          </p>
-          <div>
-            <img class="imgstyle" src="img/project_MM/Rich data processing workflow1.png">
-            <img class="imgstyle" src="img/project_MM/Rich data processing workflow2.png">
-            <div class="imgsubtitle">Rich data processing workflow</div>
-            <img class="imgstyle" src="img/project_MM/Dataset processing and analysis1.png">
-            <img class="imgstyle" src="img/project_MM/Dataset processing and analysis2.png">
-            <div class="imgsubtitle">Dataset processing and analysis</div>
-            <img class="imgstyle" src="img/project_MM/Accumulation of medical models.png">
-            <div class="imgsubtitle">Accumulation of medical models</div>
-            <img class="imgstyle"
-              src="img/project_MM/User-friendly configuration process, recommending limited chart types based on data types and quantities.png">
-            <div class="imgsubtitle">User-friendly configuration process, recommending limited chart types based on data
-              types and
-              quantities</div>
-          </div>
-          <div class="title4">JMP clinical</div>
-          <p class="lead">
-            Product Concept: Emphasizes annotation in visualization generation and exploratory analysis, while not
-            prioritizing data processing and manipulation.<br />
-            Pros:<br />
-            1. The model structure is fixed and clear, making it highly replicable.<br />
-            2. High and relatively comprehensive customization of visualization, supporting strong customer
-            customization of figures.<br />
-            Cons:<br />
-            1. Supports straightforward data processing workflows, allowing for direct analysis based on tables. <br />
-            2. However, lacks the accumulation of medical industry models and insights, as well as in-depth analyses
-            such as curve fitting, and model prediction analysis.<br />
-          </p>
-          <div>
-            <img class="imgstyle" src="img/project_MM/jmpclinical.png">
-            <div class="imgsubtitle">JMP Clinical</div>
-          </div>
-          <div class="title4">Tableau</div>
-          <p class="lead">
-            Product Concept: The capability for data-driven visualization is very strong, but it performs weakly in
-            medical scenarios<br />
-            Pros:<br />
-            1. The model structure is fixed and clear, making it highly replicable.<br />
-            2. High and relatively comprehensive customization of visualization, supporting strong customer
-            customization of figures.<br />
-            Cons:<br />
-            1. Supports straightforward data processing workflows, allowing for direct analysis based on tables. <br />
-            2. However, lacks the accumulation of medical industry models and insights, as well as in-depth analyses
-            such as curve fitting, and model prediction analysis.<br />
-          </p>
-          <div>
-            <img class="imgstyle" src="img/project_MM/Join Dataset.png">
-            <div class="imgsubtitle">Join Dataset</div>
-            <img class="imgstyle" src="img/project_MM/Visualization1.gif">
-            <img class="imgstyle" src="img/project_MM/Visualization2.gif">
-            <div class="imgsubtitle">Data visualization</div>
-          </div>
-          <div class="title4">R Package Addressing Core Scenarios in Clinical Visualization, Exploration, and Analysis
-          </div>
-          <p class="lead">
-            Open-source R packages can address key medical scenarios of interest in Drug Information Association (DIA),
-            aiding in the design of product functionalities.
-          </p>
           <p class="lead">
             1. SubgroupExplorer / Subscreen<br />
             https://cran.r-project.org/web/packages/subscreen/index.html<br />
@@ -743,12 +562,242 @@
         <div class="col-12 mt-4 mt-md-0 my-md-auto">
           <div>
             <div class="titlenumber">06</div>
-            <div class="sectiontitle">Key page solutions for journey and flow diagrams</div>
-            <div class="sectiontitle-eng">Key page solutions for journey and flow diagrams</div>
+            <div class="sectiontitle">Quantative Analysis：Benchmarking analysis</div>
+            <div class="sectiontitle-eng">Quantative Analysis：Benchmarking analysis</div>
           </div>
-          <div class="title4">Proposal 1</div>
+          <blockquote class="blockquote text-center">
+            <p class="mb-0">Why I Use Benchmarking Analysis <br />
+              Benchmarking can provide an efficient and effective means for a firm to take the best ideas from other firms, integrate them into their own, and take actions that may provide it with a strong advantage over their competitors.</p>
+          </blockquote>
+          <div class="title4">1. Products need to Be Benchmarked</div>
           <p class="lead">
-            Drag a Gallery chart here to use it as your starting point.
+            In this quantitative research, I selected five representative products in the field of medical statistics, namely SAS Viya, Plotly Dash, SPSSPRO, JMP Clinical, and Tableau. I chose them individually because they have significant influence in the life science professionals' domain and are recognized by global associations such as DIA and software user groups in life science like PharmaSUG. The factors contributing to their influence include efficiency and speed, collaboration capabilities, scalability, advanced analytics, model deployment, integration with other tools, and user-friendly interfaces.
+          </p>
+          <div>
+            <img class="imgstyle" src="img/project_MM/benchmarking Products.png">
+            <div class="imgsubtitle">benchmarking Products</div>
+          </div>
+          <div class="title4">2. Statistics processes dimension that need to be benchmarked, and its explanation:</div>
+          <ul class="lead" style="padding-left: 0px;padding-top: 0px;margin-bottom: 20px;">
+            <li style="font-size: 14px;color: #000000;">a. Data Management: Utilize common methods such as merging, concatenating, or joining datasets based on shared variables. Choose the appropriate join type (e.g., inner join, outer join, left join, right join) depending on the analysis nature and data relationships.</li>
+            <li style="font-size: 14px;color: #000000;">b. Data Transformation: Convert data into a suitable format and normalize or standardize it if necessary.</li>
+            <li style="font-size: 14px;color: #000000;">c. Exploratory Data Analysis (EDA): Proficiency in exploratory analysis is crucial for data scientists. They employ EDA to analyze datasets, summarize key characteristics, and utilize data visualization methods. EDA helps in determining the best approach to manipulate the data source for desired insights, facilitating the identification of patterns, anomalies, hypothesis testing, and assumption examination.</li>
+            <li style="font-size: 14px;color: #000000;">d. Interactive Graphs & Data Visualization: Data visualization is pivotal for simplifying complex datasets and effectively communicating insights. It enables users to identify patterns, trends, and anomalies, fostering a deeper understanding of the data. Ultimately, it plays a crucial role in facilitating informed decision-making by transforming data into visual representations.</li>
+            <li style="font-size: 14px;color: #000000;">e. Medical Modeling Development: Statistical models like Kaplan-Meier Survival Curve, Ridit Analysis, and Chi-Square Test are commonly used in clinical research.</li>
+            <li style="font-size: 14px;color: #000000;">f. Decision Building with AI, ML, Modeling: Clinical statisticians can leverage these tools to gain deeper insights from clinical data, identify patterns, and enhance predictive modeling in areas such as patient outcomes and treatment efficacy.</li>
+          </ul>
+          <div class="title4">SAS Viya</div>
+          <p class="lead">
+            https://azureuse011456.my-trials.sas.com/SASDataExplorer/<br />
+            Product Concept: SAS Viya is a robust analytics platform designed to empower organizations with efficient, collaborative, and scalable data analysis, machine learning deployment, and advanced analytics capabilities.<br />
+            Pros:<br />
+            It offers advanced analytics, scalability, and efficient collaboration for diverse life science professionals.
+            customization of figures.<br />
+            Cons:<br />
+            Its extensive functionalities may require a steeper learning curve for some users.<br />
+          </p>
+          <div>
+            <img class="imgstyle" src="img/project_MM/sasviya.png">
+            <div class="imgsubtitle">SAS Viya</div>
+          </div>
+          <div class="title4">Plotly Dash</div>
+          <p class="lead">
+            https://chart-studio.plotly.com/create/?fid=plotly2_demo:417#/<br />
+            Product Concept: Low/No Code mode. The interface configuration capability based on Plotly is essentially equivalent to the coding ability in Plotly.<br />
+            Pros:<br />
+            1. The model structure is fixed and clear, making it highly replicable.<br />
+            2. High and relatively comprehensive customization of visualization, supporting strong customer
+            customization of figures.<br />
+            Cons:<br />
+            1. Supports straightforward data processing workflows, allowing for direct analysis based on tables. <br />
+            2. However, lacks the accumulation of medical industry models and insights, as well as in-depth analyses
+            such as curve fitting, and model prediction analysis.<br />
+          </p>
+          <div>
+            <img class="imgstyle" src="img/project_MM/1All visualizations use this configuration framework.png">
+            <div class="imgsubtitle">All visualizations use this configuration framework</div>
+            <img class="imgstyle" src="img/project_MM/2Select analysis chart template.png">
+            <div class="imgsubtitle">Select analysis chart template</div>
+            <img class="imgstyle" src="img/project_MM/3per trace type per config.png">
+            <div class="imgsubtitle">Per trace type per config</div>
+            <img class="imgstyle" src="img/project_MM/4Simple data processing.png">
+            <div class="imgsubtitle">Simple data processing</div>
+            <img class="imgstyle" src="img/project_MM/5Simple analysis- Linear regression.png">
+            <div class="imgsubtitle">Simple analysis- Linear regression</div>
+          </div>
+          <div class="title4">SPSSPRO</div>
+          <p class="lead">
+            https://www.spsspro.com/prodraw/operation/4632787?name=AdverseR.csv<br />
+            Product Concept: There is a complete data processing workflow. The configuration process is user-friendly,
+            and one can learn a lot about data flows from the platform. The approach to plotting is similar to
+            Tableau.<br />
+            Pros:<br />
+            1. The data flow processing is relatively comprehensive, providing essential data analysis workflows.
+            Cons:<br />
+            1. Visual interactivity is not very strong.<br />
+          </p>
+          <div>
+            <img class="imgstyle" src="img/project_MM/Rich data processing workflow1.png">
+            <img class="imgstyle" src="img/project_MM/Rich data processing workflow2.png">
+            <div class="imgsubtitle">Rich data processing workflow</div>
+            <img class="imgstyle" src="img/project_MM/Dataset processing and analysis1.png">
+            <img class="imgstyle" src="img/project_MM/Dataset processing and analysis2.png">
+            <div class="imgsubtitle">Dataset processing and analysis</div>
+            <img class="imgstyle" src="img/project_MM/Accumulation of medical models.png">
+            <div class="imgsubtitle">Accumulation of medical models</div>
+            <img class="imgstyle"
+              src="img/project_MM/User-friendly configuration process, recommending limited chart types based on data types and quantities.png">
+            <div class="imgsubtitle">User-friendly configuration process, recommending limited chart types based on data
+              types and
+              quantities</div>
+          </div>
+          <div class="title4">JMP clinical</div>
+          <p class="lead">
+            Product Concept: Offering advanced statistical analysis and visualization tools to streamline and enhance the analysis of clinical trial data, facilitating data-driven decision-making in the pharmaceutical and healthcare sectors.<br />
+            Pros:<br />
+            1. Emphasizing annotated visualization generation and exploratory analysis<br />
+            Cons:<br />
+            1. Do not emphasize data processing and manipulation.<br />
+          </p>
+          <div>
+            <img class="imgstyle" src="img/project_MM/jmpclinical.png">
+            <div class="imgsubtitle">JMP Clinical</div>
+          </div>
+          <div class="title4">Tableau</div>
+          <p class="lead">
+            Product concept: A powerful data visualization tool that enables users to create interactive and shareable dashboards, allowing for intuitive exploration and understanding of complex datasets.<br />
+            Pros:<br />
+            1. Has basic dataset processing capabilities and strong capabilities in visualizing data.<br />
+            Cons:<br />
+            1. However, it performs weakly in medical scenarios and lacks accumulated experience in medical modeling.<br />
+          </p>
+          <div>
+            <img class="imgstyle" src="img/project_MM/Join Dataset.png">
+            <div class="imgsubtitle">Join Dataset</div>
+            <img class="imgstyle" src="img/project_MM/Visualization1.gif">
+            <img class="imgstyle" src="img/project_MM/Visualization2.gif">
+            <div class="imgsubtitle">Data visualization</div>
+          </div>
+          <div class="title4">Conclusion</div>
+          <p class="lead">
+            1. The current research has not assessed the effectiveness of data results, only evaluating the product layout from a functional and process perspective. Further in-depth research is needed to reveal the professionalism presented by each product in the dimension of data analysis effectiveness.<br />
+            2. Through research, an understanding of the complete life cycle process of data has been gained, and the business flows generated based on this data cycle are widely recognized in the industry.<br />
+          </p>
+          <div>
+            <img class="imgstyle" src="img/project_MM/Statistics Process.png">
+            <div class="imgsubtitle">Statistics Process</div>
+            <img class="imgstyle" src="img/project_MM/Measurement Matrix.png">
+            <div class="imgsubtitle">Measurement Matrix</div>
+          </div>
+          <p class="lead">
+            3. Mainstream, well-developed, and widely applicable data insights are based on the lifecycle of data.
+            Different
+            product lines may have slight variations in their emphasis on features.<br />
+          </p>
+          <ul class="lead" style="padding-left: 0px;padding-top: 0px;margin-bottom: 20px;">
+            <li style="font-size: 14px;color: #000000;">a. SAS Viya stands as a versatile solution in the data product industry,
+              providing
+              an
+              end-to-end solution for comprehensive data insight scenarios.</li>
+            <li style="font-size: 14px;color: #000000;">b. SPSS PRO in fundamental analytical capabilities, demonstrating
+              outstanding
+              performance in exploring data distribution and generating descriptive statistics with a focus on data
+              validity.</li>
+            <li style="font-size: 14px;color: #000000;">c. Plotly, JMP_Clinical, and Tableau exhibit strong visualization
+              capabilities,
+              prioritizing
+              data interpretation and expression, though they show relatively weaker data processing capabilities.</li>
+            <li style="font-size: 14px;color: #000000;">d. Among the mentioned mainstream products, SAS Viya stands out in Modeling
+              and
+              Decision,
+              while the others exhibit less comprehensive performance. This suggests one of the potential areas for future
+              improvement, which has not been thoroughly explored in this preliminary survey.</li>
+              <ul class="lead" style="padding-left: 18px;padding-top: 0px;margin-bottom: 20px;">
+                <li style="font-size: 14px;color: #000000;">i.In the research of other products, certain products may
+                  have strengths in
+                  specific medical modeling scenarios, but they lack a good user experience and functional applications. Therefore,
+                  these aspects do not contribute to the core competitiveness of the products.</li>
+              </ul>
+            <li style="font-size: 14px;color: #000000;">e. Within the statistical ecosystem, open-source R packages provide
+              visualization
+              solutions for
+              specific key medical scenarios. It may be worthwhile to explore and follow up on these R packages in the
+              future. This
+              consideration assumes that the technology stack is determined to be based entirely on the R ecosystem.</li>
+              <ul class="lead" style="padding-left: 18px;padding-top: 0px;margin-bottom: 20px;">
+                <li style="font-size: 14px;color: #000000;">i. Focus on subgroup analysis.</li>
+                <li style="font-size: 14px;color: #000000;">ii. Pay attention to Adverse Event dynamics.</li>
+                <li style="font-size: 14px;color: #000000;">iii.Pay attention to laboratory insights, and so
+                  on.</li>
+              </ul>
+            </li>
+          </ul>
+          <p class="lead">
+            4. The mainstream visualization configuration methods generally fall into two categories:
+          </p>
+          <ul class="lead" style="padding-left: 0px;padding-top: 0px;margin-bottom: 20px;">
+            <li style="font-size: 14px;color: #000000;">a. Filling data through an object-oriented approach, using a Bottom-Up method. The
+              advantage lies in rapid generation, but the current technology stack is not easily adaptable to this model.
+              Derivatively, filling data is tailored to specific scenarios, enabling faster generation of plots.</li>
+            <li style="font-size: 14px;color: #000000;">b. Based on data, recommending objects in a Top-Down approach. The advantage lies in
+              a well-initiated development with a favorable technology stack and good support for users sensitive to data.
+              However, the interaction may be extensive, which is not conducive to the rapid generation of plots using
+              Plotly.</li>
+          </ul>
+          
+
+  </section>
+
+  <section class="section" style="margin-top: 0px;">
+    <div class="container">
+
+      <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
+        style="margin-top: 0px;">
+        <div class="col-12 mt-4 mt-md-0 my-md-auto">
+          <div>
+            <div class="titlenumber">07</div>
+            <div class="sectiontitle">Potential Product Positioning Strategy</div>
+            <div class="sectiontitle-eng">Potential Product Positioning Strategy</div>
+          </div>
+          <blockquote class="blockquote text-center">
+            <p class="mb-0">No Firm Does Everything the Best</p>
+          </blockquote>
+          <p class="lead">
+            1. Based on scenario templates for rapid generation, not open for user configuration, only for initialization. At a coarse granularity, to discover significant security data issues. 
+          </p>
+          <ul class="lead" style="padding-left: 0px;padding-top: 0px;margin-bottom: 20px;">
+            <li style="font-size: 14px;color: #000000;">a. During the customer pitch process, we learned that medical monitoring always accompanies the progress of clinical trials. However, there is no need to submit code, and there is not a strong dependency on data validity checks.</li>
+            <li style="font-size: 14px;color: #000000;">b. Opportunity points and breakthrough points: Improve insight speed. Help enhance business volume for increased user engagement and revenue growth.</li>
+            <li style="font-size: 14px;color: #000000;">c. Low Barriers to Entry: As is well known, configuring functionality can be a very lengthy process, involving numerous details. Therefore, providing a coarse-grained template encapsulation solution is currently the best choice. It can avoid the detailed design and development of the configuration process and bypass the validation of data effectiveness.</li>
+            <li style="font-size: 14px;color: #000000;">d. Not reinventing the wheel, leaving time and opportunities to discover better industry best practices.</li>
+          </ul>
+          <p class="lead">
+            2. Leveraging the interface-equivalent coding capability based on the R ecosystem, providing users with a basic plot configuration end is the optimal solution while offering the capability for configuration.
+          </p>
+
+  </section>
+
+
+  <section class="section" style="margin-top: 0px;">
+    <div class="container">
+
+      <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
+        style="margin-top: 0px;">
+        <div class="col-12 mt-4 mt-md-0 my-md-auto">
+          <div>
+            <div class="titlenumber">08</div>
+            <div class="sectiontitle">Journey Maps and User Flow Proposal</div>
+            <div class="sectiontitle-eng">TJourney Maps and User Flow Proposal</div>
+          </div>
+          <p class="lead">
+            1. Positioning Strategy 1: Quick launch and setup of MM plots are based on the encapsulation of business scenarios,
+            reducing data exploration and increasing verification efficiency.
+          </p>
+          <p class="lead">
+            2. Positioning Strategy 2: MM Config
+          </p>
+          <p class="lead">
+            Proposal 1: Drag a Gallery chart here to use it as your starting point.
           </p>
           <div>
             <img class="imgstyle" src="img/project_MM/Proposal 1 E2E.png">
@@ -756,20 +805,18 @@
             <img class="imgstyle" src="img/project_MM/Proposal 1 Config concept draft.png">
             <div class="imgsubtitle">Proposal 1 Config concept draft</div>
           </div>
-          <div class="title4">Proposal 2</div>
+          <div class="title4"></div>
           <p class="lead">
-            Click on the Basic Elements tab to build a chart element by element.
+            Proposal 2: Click on the Basic Elements tab to build a chart element by element.
           </p>
           <div>
-            <img class="imgstyle" src="img/project_MM/Proposal 2.png">
+            <img class="imgstyle" src="img/project_MM/Proposal 2 E2E.png">
             <div class="imgsubtitle">Proposal 2 E2E</div>
           </div>
-          <div class="title4">Proposal 3</div>
-          <p class="lead">
-            MM (Medical Monitoring) Plots Quick Launch & Setup: A packaging based on business scenarios to reduce data exploration and enhance verification efficiency.
-          </p>
-          
+        </div>
+        
   </section>
+  
 
 
 
