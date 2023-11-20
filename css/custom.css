@@ -156,6 +156,7 @@ h3 {
 
 .lead {
     padding-top: 16px;
+    padding-bottom: 0px;
     font-size: 14px;
     color: #000000;
     letter-spacing: 0;
