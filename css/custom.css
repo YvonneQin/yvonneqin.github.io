@@ -226,3 +226,13 @@ h3 {
 .imgstyle {
     margin-top: 24px;
 }
+
+.imgstyle2 {
+    margin-top: 24px;
+    display:flex;
+    justify-content:center;
+}
+
+.body {
+    background-color: rgb(253, 253, 253);
+}
