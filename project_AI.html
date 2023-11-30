@@ -351,9 +351,6 @@
     <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7087824072063008769" height="640" width="1080"
             frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
   </div>
-  
-
-
 
   <section class="section" style="margin-top: 0px;">
     <div class="container">
@@ -365,40 +362,35 @@
           </p>
           <div>
             <div class="titlenumber">02</div>
-            <div class="sectiontitle">Product Strategy - How we construct our AI Feature set</div>
+            <div class="sectiontitle">Understanding of LLM</div>
+            <div class="sectiontitle-eng">Understanding of LLM</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="margin-top: 0px;">
+    <div class="container">
+      <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
+        style="margin-top: 0px;">
+        <div class="col-12 mt-4 mt-md-0 my-md-auto">
+          <div>
+            <div class="titlenumber">03</div>
+            <div class="sectiontitle">Product Strategy - Construct AI Feature Set</div>
             <div class="sectiontitle-eng">Product Strategy - How we construct our AI Feature set</div>
           </div>
-          <div class="title4">2.1 Clinical LLM Trend</div>
+          <div class="title4">3.1 Clinical LLM Trend</div>
           <p class="lead">
-            The application of large language models in medicine encompasses various aspects. They are widely utilized for knowledge retrieval, research support, automation of clinical workflows, and diagnostic assistance. These models assist healthcare professionals in timely access to medical information, including disease progression, treatment methods, and drug interactions. Operating as medical educators, they provide real-time information and offer customized consultation services for activities like online medical consultations. Moreover, large language models aid medical researchers in managing vast amounts of medical literature, accelerating experiment design, and advancing disease research. In clinical workflows, these models can automate patient information recording and clinical document writing, providing data-driven recommendations to support doctors in formulating treatment plans and making diagnostic decisions.
+            The application of large language models in medicine encompasses various aspects. They are widely utilized for knowledge retrieval, research support, automation of clinical workflows, and diagnostic assistance. These models assist healthcare professionals in timely access to medical information, including disease progression, treatment methods, and drug interactions. Operating as medical educators, they provide real-time information and offer customized consultation services for activities like online medical consultations. Moreover, large language models aid medical researchers in managing vast amounts of medical literature, accelerating clinical study design, and advancing disease research. In clinical workflows, these models can automate patient information recording and clinical document writing, providing data-driven recommendations to support doctors in formulating treatment plans and making diagnostic decisions.
           </p>
-          <div class="title4">2.2 The Trade-offs Among Three Methods</div>
-          
+          <div class="title4">3.2 Why We Use Vertical Slicing？</div>
           <p class="lead">
-            There are currently three methods that can be used to enhance the AI capabilities of the product.
+            We decided to use vertical Slicing. The goal of AI Features embedded in product systems is to deliver the most value with as little effort as possible. This implies building products and services in short iterations in order to learn together with stakeholders on the outcome and to further improve them. Therefore, we plan to excavate AI scenarios within each product line, creating closed-loop scenario paths to drive the flywheel of AI product growth.
           </p>
-          <p class="lead">
-            - Prompt Engineering only: Focus on improving the model output by just engineering the prompts used in the models and by potentially selecting different vendors for different prompts. It should be possible to employ a strategy of using different prompts based on different tasks, providing diverse interaction support for users to obtain better answers.
-          </p>
-          <ul class="lead" style="padding-left: 0px;padding-top: 0px;margin-bottom: 20px;">
-            <li style="font-size: 14px;color: #000000;">  - Soft Prompt tuning both in algorithm and user face</li>
-            <li style="font-size: 14px;color: #000000;">  - Maga Prompt</li>
-            <li style="font-size: 14px;color: #000000;">  - And Other Prompt techniques.</li>
-          </ul>
-          <p class="lead">
-            We are aware of the following two methods, but they are not currently being implemented in the current stage.
-          </p>
-          <p class="lead">
-            - Fine-tuning: Improve the model by fine-tuning it with feedback and input/output data from a dataset or real usage
-          </p>
-          <p class="lead">
-            - Train own models: Over time, potentially train very specialized models for specific use cases using all the data collected from the application in production.
-          </p>
-          <div class="title4">2.3 Why We Use Vertical Slicing？</div>
-          <p class="lead">
-            The goal of AI Features embedded in product systems is to deliver the most value with as little effort as possible. This implies building products and services in short iterations in order to learn together with stakeholders on the outcome and to further improve them. Therefore, we plan to excavate AI scenarios within each product line, creating closed-loop scenario paths to drive the flywheel of AI product growth.
-          </p>
-          
+        </div>
+      </div>
+    </div>        
   </section>
 
   
@@ -411,77 +403,40 @@
       <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
         style="margin-top: 0px;">
         <div class="col-12 mt-4 mt-md-0 my-md-auto">
+          <div class="title4">3.3 The Trade-offs among UX and Technology Selection</div>
           <p class="lead">
-            Meanwhile, using the designing logic engine tool as an example, the article provides specific insights into
-            detailed description of the process of refining product details.
+            As is well known, there are various methods to enhance the effectiveness and utility of LLM (Large Language Model). The main approaches include three types: Prompt Engineering, Fine-Tuning, and training custom models. Given the technological constraints of the company, currently, only Prompt Engineering is employed. User experience is also built upon this technological foundation, creatively applying various feasible Prompt Engineering techniques to deliver the optimal user.
+          </p>
+          <p class="lead">
+            Prompt Engineering only: Focus on improving the model output by just engineering the prompts used in the models and by potentially selecting different vendors for different prompts. It should be possible to employ a strategy of using different prompts based on different tasks, providing diverse interaction support for users to obtain better answers.
           </p>
         </div>
+      </div>
+    </div>
   </section>
+
+  <div class="imgstyle2" >
+    <img src="img/project_AI/The Trade-offs among UX and Technology Selection.svg">
+  </div>
 
   <section class="section" style="margin-top: 0px;">
     <div class="container">
       <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
         style="margin-top: 0px;">
-        <div class="col-12 mt-4 mt-md-0 my-md-auto">
-          <div class="title4">2.4 Tasks that Large Language Models (LLMs) excel at include</div>
+        <div class="col-12 mt-4 mt-md-0 my-md-auto">      
+          <div class="title4">3.4 Tasks that Large Language Models (LLMs) excel at include</div>
           <p class="lead">
-            - We are aware that LLMs can perform useful and more advanced tasks, as listed below:
+            We are aware that LLMs can perform useful and more advanced tasks, as listed below:
           </p>
-          <ul class="lead" style="padding-left: 0px;padding-top: 0px;margin-bottom: 20px;">
-            <li style="font-size: 14px;color: #000000;">  1. PAL (Program-Aided Language Models)</li>
-            <li style="font-size: 14px;color: #000000;">  2. Text Summarization. Extracting key points from articles and documents.</li>
-            <li style="font-size: 14px;color: #000000;">  3. Answering questions (interacting with databases to obtain knowledge).</li>
-            <li style="font-size: 14px;color: #000000;">  4. Generating Dataset</li>
-            <li style="font-size: 14px;color: #000000;">  5. Generating Code</li>
-            <li style="font-size: 14px;color: #000000;">  6. Text Classification</li>
-            <li style="font-size: 14px;color: #000000;">  7. Prompt Function</li>
-          </ul>
         </div>
-        </div>
+      </div>
+    </div>
   </section>
 
+  <div class="imgstyle2" >
+    <img src="img/project_AI/Tasks that Large Language Models (LLMs) excel at include.svg">
+  </div>
 
-
-  <section class="section" style="margin-top: 0px;">
-    <div class="container">
-      <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
-        style="margin-top: 0px;">
-        <div class="col-12 mt-4 mt-md-0 my-md-auto">
-          <div>
-            <div class="titlenumber">03</div>
-            <div class="sectiontitle">Design Design considerations and Its stategy</div>
-            <div class="sectiontitle-eng">Design Design considerations and Its stategy</div>
-          </div>
-          <p class="lead">
-            1. Artificial Intelligence Hallucinations： The unpredictability and non-determinism of LLM pose challenges for user experience. In healthcare, what are the key strategies for dealing with the illusionary phenomena of LLM? In healthcare applications, several critical strategies can be employed to mitigate the illusions of LLM. 
-          </p>
-          <ul class="lead" style="padding-left: 0px;padding-top: 0px;margin-bottom: 20px;">
-            <li style="font-size: 14px;color: #000000;">  1. Firstly, there is Human-in-the-Loop (HITL), involving individuals with domain expertise in the model development process, which can play a crucial role in reducing illusions. </li>
-            <li style="font-size: 14px;color: #000000;">  2. Secondly, algorithmic corrections can be applied using traditional machine learning techniques (such as regularization and loss function penalties) to improve the generalization ability of LLM, reducing the occurrence of illusions. </li>
-            <li style="font-size: 14px;color: #000000;">  3. Thirdly, fine-tuning involves adapting LLM for specific tasks or domains, thereby lowering the risk of the model producing false information. Lastly, improved prompts can be used to reduce illusions when the model outputs uncertain results, providing prompts such as "I don't know."</li>
-          </ul>
-          <p class="lead">
-            2. When designing user experiences, one key fact to consider is that LLMs are not perfect. It is necessary to devise a pattern that prevents users from noticing this 'imperfection.'
-          </p>
-          <ul class="lead" style="padding-left: 0px;padding-top: 0px;margin-bottom: 20px;">
-            <li style="font-size: 14px;color: #000000;">  1. Assisting users with auto-fill suggestions by predicting what they may want based on historical data </li>
-            <li style="font-size: 14px;color: #000000;">  2. Providing users with predefined options through templates based on commo</li>
-          </ul>
-          <p class="lead">
-            3. Accuracy is more important than sensitivity
-          </p>
-          <ul class="lead" style="padding-left: 0px;padding-top: 0px;margin-bottom: 20px;">
-            <li style="font-size: 14px;color: #000000;">  1. Edge small models are a solution to cloud model latency: </li>
-            <li style="font-size: 14px;color: #000000;">  2. Traditional methods, such as caching, can be employed to address the issue of cloud model latency.</li>
-            <li style="font-size: 14px;color: #000000;">  3. Limitations related to model latency and performance issues can be managed through monitoring, user-friendly interface prompts, and the selection of backup models.</li>
-          </ul>
-          <p class="lead">
-            4. Responsible AI : Incentivize users to provide feedback
-          </p>
-          
-          
-        </div>
-  </section>
 
   <section class="section" style="margin-top: 0px;">
     <div class="container">
@@ -490,18 +445,26 @@
         <div class="col-12 mt-4 mt-md-0 my-md-auto">
           <div>
             <div class="titlenumber">04</div>
-            <div class="sectiontitle">Clinical  Implementation Scenario</div>
-            <div class="sectiontitle-eng">Clinical  Implementation Scenario</div>
+            <div class="sectiontitle">LLM-Based General Design Considerations and Its Design Tactics</div>
+            <div class="sectiontitle-eng">LLM-Based General Design Considerations and Its Design Tactics</div>
           </div>
-          <div class="title4">4.1 Construct</div>
-          <div class="title5">4.1.1 Automatically Constructing Laboratory Forms through Matrix Recognition</div>
+          <div class="title4">1. Artificial Intelligence Hallucinations</div>
           <p class="lead">
-            In Construct, end-users always pursue the speed and quality of database construction. In the clinical DM production process of generating Mock CRFs, a more intelligent workflow for the automatic generation of Mock CRFs is provided.
+            The unpredictability and non-determinism of LLM pose challenges for user experience. In healthcare, what are the key strategies for dealing with the illusionary phenomena of LLM? In healthcare applications, several critical strategies can be employed to mitigate the illusions of LLM. 
           </p>
+          <div class="title5">Algorithm-wise</div>
+          <ul class="lead" style="padding-left: 0px;padding-top: 0px;margin-bottom: 20px;">
+            <li style="font-size: 14px;color: #000000;">  1. Firstly, there is Human-in-the-Loop (HITL), involving individuals with domain expertise in the model development process, which can play a crucial role in reducing illusions. </li>
+            <li style="font-size: 14px;color: #000000;">  2. Secondly, algorithmic corrections can be applied using traditional machine learning techniques (such as regularization and loss function penalties) to improve the generalization ability of LLM, reducing the occurrence of illusions. </li>
+            <li style="font-size: 14px;color: #000000;">  3. Thirdly, fine-tuning involves adapting LLM for specific tasks or domains, thereby lowering the risk of the model producing false information. Lastly, improved prompts can be used to reduce illusions when the model outputs uncertain results, providing prompts such as "I don't know."</li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </section>
 
   <div class="imgstyle2" >
-    <img src="img/project_AI/Work Flow.svg">
+    <img src="img/project_AI/Artificial Intelligence Hallucinations - UX wise.svg">
   </div>
 
   <section class="section" style="margin-top: 0px;">
@@ -509,21 +472,21 @@
       <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
         style="margin-top: 0px;">
         <div class="col-12 mt-4 mt-md-0 my-md-auto">
-          <div>
-            <img class="imgstyle" src="img/project_AI/20231126113035_rec_.gif">
-            <div class="imgsubtitle">NER Demo</div>
-          </div>
+          <div class="title5">2. UX-wise</div>
+          <ul class="lead" style="padding-left: 0px;padding-top: 0px;margin-bottom: 20px;">
+            <li style="font-size: 14px;color: #000000;">  1. Transparency and Interpretability: Provide transparent information about the model's workings, data sources, and uncertainties. Present the model's reasoning process to users, enabling them to understand how the model arrives at specific conclusions.</li>
+            <li style="font-size: 14px;color: #000000;">  2. Feedback Mechanism: Offer timely feedback to users, especially when the model's outputs are uncertain or may lead to misconceptions. This can be achieved through pop-up messages, labeling uncertain areas, or providing additional hints. Encourage users to provide feedback, particularly in cases where the model's output is questionable. User feedback is crucial for improving the model and reducing misconceptions.</li>
+            <li style="font-size: 14px;color: #000000;">  3. User Education: Include concise and clear elements of user education in the interface, explaining the limitations of the model, explicitly pointing out potential misconceptions the model may generate, and reminding users to exercise caution with the output results.</li>
+            <li style="font-size: 14px;color: #000000;">  4. Confidence Indicator: Display confidence indicators for the model's output results. If the model has low confidence in its output, users will find it easier to understand the uncertainty of the results and take appropriate actions.</li>
+          </ul>
         </div>
       </div>
     </div>
   </section>
 
-
+  
   <div class="imgstyle2" >
-    <img src="img/project_AI/Initial CRF.svg">
-  </div>
-  <div class="imgstyle2" >
-    <img src="img/project_AI/Mock CRF Initializing.svg">
+    <img src="img/project_AI/Artificial Intelligence Hallucinations - UX Detail.svg">
   </div>
 
   <section class="section" style="margin-top: 0px;">
@@ -531,16 +494,39 @@
       <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
         style="margin-top: 0px;">
         <div class="col-12 mt-4 mt-md-0 my-md-auto">
-          <div class="title4">4.2 Compute</div>
-          <div class="title5">4.2.1 Empowering better data and analysis with help from AI.</div>
-          <div>
-            <img class="imgstyle" src="img/project_AI/compute.gif">
-            <div class="imgsubtitle">Compare Custom Function Sript with Logic Engines</div>
-          </div>
+          <div class="title4">2. Another key fact to consider is that LLMs are not perfect. It is necessary to devise a pattern that prevents users from noticing this 'imperfection.'</div>
+          <ul class="lead" style="padding-left: 0px;padding-top: 0px;margin-bottom: 20px;">
+            <li style="font-size: 14px;color: #000000;">  1. Avoiding inefficient Prompt utilization.</li>
+            <li style="font-size: 14px;color: #000000;">  2. Assisting users with auto-fill suggestions by predicting what they may want based on historical data</li>
+            <li style="font-size: 14px;color: #000000;">  3. Providing users with predefined options through templates based on commonly used prompts</li>
+          </ul>
         </div>
       </div>
     </div>
   </section>
+
+  <div class="imgstyle2" >
+    <img src="img/project_AI/Prevents users from noticing this imperfection.svg">
+  </div>
+
+  <section class="section" style="margin-top: 0px;">
+    <div class="container">
+      <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
+        style="margin-top: 0px;">
+        <div class="col-12 mt-4 mt-md-0 my-md-auto">
+          <div class="title4">3. Accuracy is more important than sensitivity</div>
+          <ul class="lead" style="padding-left: 0px;padding-top: 0px;margin-bottom: 20px;">
+            <li style="font-size: 14px;color: #000000;">  1. Interactive Feedback: In the event of delays, provide feedback to users through animations, loading indicators, etc., letting them know that the system is processing their requests. This helps prevent users from feeling stuck or frustrated.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="imgstyle2" >
+    <img src="img/project_AI/Accuracy is more important than sensitivity.svg">
+  </div>
+
 
   <section class="section" style="margin-top: 0px;">
     <div class="container">
@@ -549,22 +535,118 @@
         <div class="col-12 mt-4 mt-md-0 my-md-auto">
           <div>
             <div class="titlenumber">05</div>
-            <div class="sectiontitle">How we Evaluate our ExperiencrHuman-AI eXperience (HAX) Toolkit - teach us what is a good AI - experience</div>
-            <div class="sectiontitle-eng">How we Evaluate our ExperiencrHuman-AI eXperience (HAX) Toolkit - teach us what is a good AI - experience</div>
+            <div class="sectiontitle">Clinical  Implementation Scenario</div>
+            <div class="sectiontitle-eng">Clinical  Implementation Scenario</div>
           </div>
+          <div class="title4">5.1 AI Use Cases</div>
+          <div>
+            <img class="imgstyle" src="img/project_AI/AI Use Cases.svg">
+            <div class="imgsubtitle">AI Use Cases</div>
+          </div>  
+          <div class="title4">5.2 Who Are Main Audience？</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="imgstyle2" >
+    <img src="img/project0/User.png.svg">
+  </div>
+
+  <section class="section" style="margin-top: 0px;">
+    <div class="container">
+      <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
+        style="margin-top: 0px;">
+        <div class="col-12 mt-4 mt-md-0 my-md-auto">
+          <div class="title4">5.3 AI Functionality Design</div>
           <p class="lead">
-            We draw inspiration from the following guidelines to create a seamless user experience.
+            Use the design to incorporate distinctive identifiers for each product line.
           </p>
           <div>
-            <img class="imgstyle" src="img/project_AI/HAX Toolkit.svg">
-            <div class="imgsubtitle">AI systems should behave during interaction. Use them to guide your AI product planning.</div>
-            <img class="imgstyle" src="img/project_AI/HAX Playbook.svg">
-            <div class="imgsubtitle">For applications using natural language processing, identify common failures so you can plan for mitigating them.</div>
+            <img class="imgstyle" src="img/project_AI/AI Functionality.svg">
+            <div class="imgsubtitle">AI Functionality</div>
+          </div>  
+          <div class="title4">5.4 Clinical ChatBot Design</div>
+          <div class="title5">5.4.1 Personality:</div>
+          <p class="lead">
+            The initial goals for the Chatbot on the Aurora platform were to achieve a moderate level of clinical trial consultation and system-guided functionalities. Therefore, the Chatbot's personality should strike a balance between professionalism and humanization to provide effective, trustworthy, and comfortable consultation services. The main focus includes:
+          </p>
+          <ul class="lead" style="padding-left: 0px;padding-top: 0px;margin-bottom: 20px;">
+            <li style="font-size: 14px;color: #000000;">  1. Professionalism and Credibility:The Chatbot's personality should project a professional and credible image to establish user trust in its expertise in the medical field.</li>
+            <li style="font-size: 14px;color: #000000;">  2. Clarity and Simplicity:The language of the personality should be clear and simple, avoiding overly technical or obscure medical terms to ensure easy understanding by users.</li>
+            <li style="font-size: 14px;color: #000000;">  3. Privacy Emphasis:When dealing with personal health information, the personality should demonstrate respect and protection for user privacy, clearly stating the security measures in place for information handling.</li>
+            <li style="font-size: 14px;color: #000000;">  4. Interactivity:The Chatbot's personality can enhance the user experience through friendly and approachable interactions, making users feel more comfortable and reassured.</li>
+            <li style="font-size: 14px;color: #000000;">  5. Empathy and Care:Considering the sensitive nature of medical matters involving users' health and emotions, Chatbot's personality should exhibit empathy and care to provide a more humanized user experience.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+
+  <section class="section" style="margin-top: 0px;">
+    <div class="container">
+      <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
+        style="margin-top: 0px;">
+        <div class="col-12 mt-4 mt-md-0 my-md-auto">
+          <div class="title4">5.5 Compute</div>
+          <div class="title5">5.5.1 Empowering better data and analysis with help from AI</div>
+          <p class="lead">
+            Security considerations are incorporated into the design to assure customers that data is not leaving the system. Role-playing is also employed in the prompt engineering to enhance the accuracy of data requests.
+          </p>
+          <p class="lead">
+            In the interaction with ChatGPT, we prefer not to send data directly to it and request immediate results. This is because data may be substantial, and there is a risk of leakage. The more ideal approach is to have ChatGPT return data processing methods, and then execute these methods on our end to generate the desired results. This addresses a key concern for businesses in their day-to-day communications.
+          </p>
+          <div>
+            <img class="imgstyle" src="img/project_AI/compute.gif">
+            <div class="imgsubtitle">NER Demo</div>
+          </div>  
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="imgstyle2" >
+    <img src="img/project_AI/AI Powered Compute for Medical Plot.svg">
+  </div>
+
+  <section class="section" style="margin-top: 0px;">
+    <div class="container">
+      <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row" style="margin-top: 0px;">
+        <div class="col-12 mt-4 mt-md-0 my-md-auto">
+          <p class="lead">
+            Taking a few shots at enhancing performance, we aim to emulate the writing style of organizational structures and adjust the narrative style accordingly.
+          </p>
+          <div class="title4">5.6 Construct</div>
+          <p class="lead">
+            In Construct, end-users always pursue the speed and quality of database construction. In the clinical DM production process of generating Mock CRFs, a more intelligent workflow for the automatic generation of Mock CRFs is provided.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="imgstyle2" >
+    <img src="img/project_AI/Protocol Lab Form.svg">
+  </div>
+
+  <section class="section" style="margin-top: 0px;">
+    <div class="container">
+      <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row" style="margin-top: 0px;">
+        <div class="col-12 mt-4 mt-md-0 my-md-auto">
+          <div>
+            <img class="imgstyle" src="img/project_AI/20231126113035_rec_.gif">
+            <div class="imgsubtitle">Overview of NER Principles</div>
           </div>
         </div>
       </div>
     </div>
   </section>
+
+  <div class="imgstyle2" >
+    <img src="img/project_AI/Construct.svg">
+  </div>
 
   <section class="section" style="margin-top: 0px;">
     <div class="container">
@@ -573,17 +655,42 @@
         <div class="col-12 mt-4 mt-md-0 my-md-auto">
           <div>
             <div class="titlenumber">06</div>
+            <div class="sectiontitle">How we Evaluate our ExperiencrHuman</div>
+            <div class="sectiontitle-eng">How we Evaluate our ExperiencrHuman</div>
+            <p class="lead">
+              We draw inspiration from the following guidelines to create a seamless user experience.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="imgstyle2" >
+    <img src="img/project_AI/How We Evaluate Human-AI Experience.svg">
+  </div>
+
+  <section class="section" style="margin-top: 0px;">
+    <div class="container">
+      <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
+        style="margin-top: 0px;">
+        <div class="col-12 mt-4 mt-md-0 my-md-auto">
+          <div>
+            <div class="titlenumber">07</div>
             <div class="sectiontitle">What I think is the AI  Future</div>
             <div class="sectiontitle-eng">What I think is the AI  Future</div>
           </div>
+          <div class="title4">7.1 AI-native application</div>
           <p class="lead">
-            1. AI-native application
+            1. AI Native refers to products with AI embedded into their core. In other words, if AI wasn’t a part of the product, the product wouldn’t exist.
           </p>
           <p class="lead">
-            2. AI Agents
+            2. AI-based refers to existing products that implement AI to offer new features to users. It’s basically an add-on. 
           </p>
+          <div class="title4">7.2 Agents & Multi Modal</div>
           <p class="lead">
-            2. Multimodal: The sole means of communication with large models is through prompts, utilizing this mode of communication. This method of communication is temporary and will undoubtedly be replaced by UI and multimodal interaction methods to reduce the cost of interaction with humans. Eventually, we will move away from using the prompt-based approach to communicate with large models.
+            Multi-Modal Approach:
+The sole means of communication with a unique and large model is currently through prompts, utilizing this mode of interaction. For internal corporate data, prompts serve as a temporary communication method. However, the goal is to ultimately reduce the cost of interacting with humans through the use of UI and multi-modal interaction methods. It's anticipated that, one day, we won't rely on the prompt-based approach to communicate with large models.
           </p>
         </div>
         
@@ -591,361 +698,7 @@
     </div>
   </section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
   
-<!-- <section class="section" style="margin-top: 0px;">
-    <div class="container">
-  
-      <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
-        style="margin-top: 0px;">
-        <div class="col-12 mt-4 mt-md-0 my-md-auto">
-  
-  
-          <div>
-            <img class="imgstyle" src="img/project0/BCG matrix The performance of the business and product series.svg">
-            <div class="imgsubtitle">Big Logo brings the cash flow
-            </div>
-          </div>
-          <div class="title4" style="padding-bottom: 36px;">A 1.1.2 Quick Glance at How Construct Works</div>
-          <div>
-            <div class="imgsubtitle">Construct E2E Demo - Displayed at US DIA 2023 Exhibition</div>
-          </div>
-          <div class="title4">Construct Key Page Showreel</div>
-            <div>
-              <img class="imgstyle" src="img/project0/CRF builder.png">
-              <div class="imgsubtitle">CRF builder</div>
-              <img class="imgstyle" src="img/project0/Scheduler.png">
-              <div class="imgsubtitle">Scheduler</div>
-              <img class="imgstyle" src="img/project0/CRF mgmt.png">
-              <div class="imgsubtitle">CRF mgmt</div>
-              <img class="imgstyle" src="img/project0/study info.png">
-              <div class="imgsubtitle">Study Info</div>
-              <img class="imgstyle" src="img/project0/Deployment mgmt.png">
-              <div class="imgsubtitle">Deployment mgmt</div>
-            </div>
-</section> -->
-  
-  <!-- <section class="section" style="margin-top: 0px;">
-    <div class="container">
-  
-      <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
-        style="margin-top: 0px;">
-        <div class="col-12 mt-4 mt-md-0 my-md-auto">
-          <div>
-            <div class="titlenumber">02</div>
-            <div class="sectiontitle">Designing Thinking Process</div>
-            <div class="sectiontitle-eng">Designing Thinking Process</div>
-          </div>
-          <div>
-            <img class="imgstyle" src="img/project0/Design Strategy.svg">
-            <div class="imgsubtitle">Building blocks of a design strategy.</div>
-          </div>
-  
-  
-  </section> -->
-  
-  <!-- <section class="section" style="margin-top: 0px;">
-    <div class="container">
-  
-      <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
-        style="margin-top: 0px;">
-        <div class="col-12 mt-4 mt-md-0 my-md-auto">
-          <div>
-            <div class="titlenumber">02</div>
-            <div class="sectiontitle">Construct 0 to 1 retro</div>
-            <div class="sectiontitle-eng">Construct 0 to 1 retro</div>
-          </div>
-          <div class="title4">Vision</div>
-            <blockquote class="blockquote text-center">
-              <p class="mb-0">One-line pitch: The goal is to become an innovative software services company centered around the Life Science industry.</p>
-            </blockquote>
-            <p class="lead">
-              Challenge: "As clinical trials become increasingly complex, how can we enable personnel involved in the design of clinical trials to intuitively design and construct trials?" Simultaneously, established companies like Medidata, Veeva, Clinflash, and others have already formed substantial competitive advantages in the industry. Finding a foothold in this competitive landscape, shifting from data collection to database design to drive the growth of the product matrix, is the primary challenge that needs to be addressed.
-            </p>
-          <div class="title4">As-is Experience: Business Growth Objectives</div>
-          <div class="title4">As-is Experience: User Study</div>
-          <div>
-            <img class="imgstyle" src="img/project0/User.png.svg">
-            <img class="imgstyle" src="img/project0/BusinessGoal.svg">
-            <div class="imgsubtitle">Construct Target User and Mainstream Workflow</div>
-          </div>
-  
-          <div class="title4">Top-down perspective</div>
-          <p class="lead">
-            Entering this industry, we realize that it is facing increasingly complex trial designs. The industry trend is
-            moving towards simplifying Clinical Study Design through Computer-Aided Design (CAD). This shift is actively
-            transforming the clinical industry towards digitization while complying with regulations. This appears to
-            offer entry points for startup companies new to the industry.
-          </p>
-          <p class="lead">
-            A growing number of pharmaceutical and biotechnology companies and contract research organizations have taken
-            steps to optimize their protocol designs in order to improve feasibility, ease site and subject participation
-            burden, reduce the number of unplanned and unbudgeted protocol amendments, and gather more meaningfuI clinical
-            data. These initiatives include protocol review committees, protocol-authoring practices connecting procedures
-            to primary and key secondary end points, common protocol-authoring templates, and soliciting feedback on draft
-            protocol designs frorm patients and investigative site staff before approval and execution.
-          </p>
-  
-          <p class="lead">
-            Additionally, from a user perspective, we often observe that those involved in the design and implementation
-            of clinical trials frequently use flowcharts to explain the logical sequence and processes of the trials to
-            relevant personnel.
-          </p>
-          <div class="title4">To-be Experience</div>
-  
-          <div class="title4">Bottom-up perspective</div>
-          <p class="lead">
-            This vision is very promising. We recognize industry trends, identify unresolved needs, and believe that, in
-            the field of Computer Science, we excel at addressing such issues. While being a technology-driven startup, we
-            currently lack the industry-specific knowledge and experience to quickly identify the best practice solutions
-            for industry pain points. In the early stages of going from 0 to 1, we are re-immersing ourselves to continue
-            finding the Product-Market Fit and establish a solid foundation for the product. Through multiple rounds of
-            pitching with clients, we have adjusted our criteria for opportunities and alignment with clients: focusing on
-            what startups excel at - driving industries with technology, meeting the immediate needs of existing clients,
-            and addressing some of the unresolved needs with innovative solutions.
-          </p>
-          <p class="lead">
-            Therefore, we propose: Identify unmet product needs for the lower-end market, utilize pricing advantages to
-            gain development space, and enhance product performance and services. Subsequently, migrate towards higher-end
-            market customers.
-          </p>
-          <div class="title4">In-depth Observation: challenges, pain points and opportunity areas</div>
-          <p class="lead">
-            In the existing process, a challenging aspect was the writing of logic. DBD aimed to ensure that data complied
-            with trial logic by rapidly creating Edit Checks. However, for complex logic such as time window comparisons
-            (checking if the time is within a 5-minute absolute value of the administration time, triggering an EDC query
-            otherwise), Custom Function Scripts needed to be written. This increased the entry barrier for industry
-            professionals and slowed down the trial implementation process.
-          </p>
-  
-          <div class="title4">Micro innovation of Logic Engine</div>
-          <p class="lead">
-            Opportunity: We aim to provide standardization of processes for professionals in the clinical industry,
-            particularly those who in Data Management (DM) and Database Designer (DBD). By employing multi-dimensional
-            tool selection, we aim to lower the entry barriers for practitioners, starting from the lower end of the
-            market, and address unresolved needs. The primary objective is to significantly reduce the development cycle
-            of clinical trials, creating more value for Clinical Contract Research Organizations (CROs) and pharmaceutical
-            companies while securing profit margins in the clinical industry.
-          </p>
-          <p class="lead">
-            Therefore, we aim to allow Database Designers to write such extensively reusable logic through a visual
-            interface, opening up a Low code / No Code interface. We envision using declarative language to replace
-            scripts, enabling practitioners to focus on understanding the business without being bound by code and
-            facilitating trial deployment. Consequently, we have outlined the details of the Edit Check local innovation
-            proof of concept (POC):
-          </p>
-          <div class="title4">Design Proposal</div>
-          <p class="lead">
-            Functionality Design involves constructing logic statements by assembling modular components on the
-            left side. Different colored blocks are used to differentiate functional modules, achieving an intuitive
-            construction
-            of logic.
-          </p>
-          <p class="lead">
-            Oberservation: While solving the pain point of making the writing process more intuitive, the drawbacks of the
-            solution became apparent. The drag & drop approach, while composing logic becomes more intuitive, but did not
-            improve efficiency. This prompted design solution iterations.
-          </p>
-          <div class="title4">Design Proposal Revamp</div>
-          <p class="lead">
-            Keyboard-only user experience, typing by composing. I always strive to deliver intuitive and user-centered
-            solutions to our end users.
-          </p>
-  
-  
-          <div class="title4">Achievement Highlights</div>
-  
-  
-  
-  
-          <div class="title4">Longitudinal research: Validation & Measurement</div>
-          <p class="lead">
-            Construct measurement priority roadmap early phase
-          </p>
-          <ul class="lead" style="padding-left: 0px;padding-top: 0px;margin-bottom: 20px;">
-            <li style="font-size: 14px;color: #000000;">Time Span: It involves the collection of data at multiple points
-              in time, spanning weeks, months, years, or even decades.</li>
-            <li style="font-size: 14px;color: #000000;">Repeated Measurements: Participants are measured or observed on
-              multiple occasions, providing insights into how they change or remain stable over time.</li>
-            <li style="font-size: 14px;color: #000000;">Tracking Changes: The primary focus is on studying the patterns
-              and trajectories of variables, behaviors, or characteristics over the course of the study.</li>
-          </ul>
-  
-          <p class="lead">
-            In order to ensure that the designed tool aligns with intuition, achieves the goal of enabling users to
-            quickly get started, and significantly improves efficiency, we conducted various validation methods and
-            activities:
-          </p>
-          <p class="lead">
-            After multiple rounds of validation and iterations, Logic Composer was successfully launched. It not only
-            aligns with user intuition but also reduces the amount of code needed for logic writing, lowering the entry
-            barrier. Simultaneously, the efficiency of writing individual logics has significantly improved. The Construct
-            product line reached its first milestone with the introduction of self-built database users utilizing the
-            product and tool, contributing to the company's revenue.
-          </p>
-  
-  
-  </section> -->
-  
-  <!-- <section class="section" style="margin-top: 0px;">
-    <div class="container">
-  
-      <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
-        style="margin-top: 0px;">
-        <div class="col-12 mt-4 mt-md-0 my-md-auto">
-          <div>
-            <div class="titlenumber">03</div>
-            <div class="sectiontitle">Logic Engine 2.0 Product Strategy</div>
-            <div class="sectiontitle-eng">Logic Engine 2.0 Product Strategy</div>
-          </div>
-          <blockquote class="blockquote text-center">
-            <p class="mb-0">In just one year, we have confirmed that no-code/low-code serves as the starting point for the
-              logic engine, and this has been validated in terms of customers, projects, and revenue. The upcoming
-              question is: Where should we focus on the experience design to retain existing users?</p>
-          </blockquote>
-          <p class="lead">
-            The product has reached the 2.0 stage: consistently providing a better and faster database-building experience
-            has always been the ultimate experience for Construct. Meanwhile, templates are established to facilitate the
-            rapid transition of the product end-to-end to the EDC data collection stage.
-          </p>
-          <div>
-            <img class="imgstyle" src="img/project0/Construct 24 Fiscal Year H1 Planing.png">
-            <div class="imgsubtitle">Construct 24 Fiscal Year H1 Planing</div>
-          </div>
-          <p class="lead">
-            Regularly User Interview Validation - 23 Fiscal Year H1 Keyword
-          </p>
-  
-  
-          <div>
-            <img class="imgstyle" src="img/project0/construct metric.png">
-            <div class="imgsubtitle">Measurements adjustion</div>
-          </div>
-          <p class="lead">
-            The process of thinking is always accompanied by hands-on experience. It involves continuously experiencing
-            and refining through practical use. Through hands-on experience with 1054 ECs in actual projects, we have
-            further summarized the optimization ideas for the Logic Engine experience that hinder the above goals.
-          </p>
-          <div>
-            <img class="imgstyle" src="img/project0/dogfood.png">
-            <div class="imgsubtitle">Dogfood</div>
-          </div>
-  
-          <div class="title4">Logic Engine 2.0 Features and Interaction Optimization Proposal</div>
-          <p class="lead">
-            1. From a business perspective: further enhance the initial automation of the EC (electronic commerce).
-            Experiments involve several thousand EC entries. If all can be initialized and verified according to P21
-            compliance requirements, it will signify a qualitative leap in both data quality and speed, bringing
-            significant value to the product line.
-          </p>
-          <p class="lead">
-            2. From a foundational architecture perspective: maintaining a high degree of encapsulation and templating to
-            provide a unified verification solution for C products that require verification capabilities. Tailored for
-            customers with different proficiency levels, open components for assembling various verification conditions.
-          </p>
-          <p class="lead">
-            "Construct - Compute" should collaboratively implement a set of verification mechanisms and computational
-            logic. Tailored for different customers, it provides varying assembly capabilities, arranged from low to high
-            encapsulation capabilities, from left to right. The objects used are also categorized as DBD (Database Design)
-            and DM/MM (Data Management/Machine Learning), aiming to reduce the maintenance burden on the technology stack.
-            The distinction lies in:
-          </p>
-          <div>
-              <img class="imgstyle" src="img/project0/DBD (Database Design)- Offers a higher level of open-ended customization for verification capabilities1.png">
-              <img class="imgstyle" src="img/project0/DBD (Database Design)- Offers a higher level of open-ended customization for verification capabilities2.png">
-              <div class="imgsubtitle">DBD (Database Design)- Offers a higher level of open-ended customization for verification capabilities</div>
-            </div>
-          <p class="lead">
-            3. From a user experience perspective: Due to the use of the same underlying architecture within the same
-            matrix, different products under the same framework exhibit a closer resemblance in the form of verification
-            data and Look & Feel, ensuring a consistent user experience. This contributes to a sustained enhancement of a
-            unified product feel. Improvements in usability and accessibility for Construct's logic engine operations have
-            a meaningful impact, offering valuable insights for related data line products as well.
-          </p>
-          <ul class="lead" style="padding-left: 0px;padding-top: 0px;margin-bottom: 20px;">
-            <li style="font-size: 14px;color: #000000;">a. "Perceivable" in the context of data structures refers to the
-              quality of being able to be perceived or sensed.</li>
-            <li style="font-size: 14px;color: #000000;">b. "Operable" in the context of interactive operations means that
-              the system or interface is designed in a way that allows users to easily operate and interact with it.</li>
-            <li style="font-size: 14px;color: #000000;">c. "Understandable" in the context of functions and expressions
-              refers to the quality of being able to be comprehended or understood by users or programmers.</li>
-            <li style="font-size: 14px;color: #000000;">d. "Robust" in the context of a system refers to its ability to
-              maintain stability and functionality even in the face of errors or unexpected situations.</li>
-            <li style="font-size: 14px;color: #000000;">e. Optimizing the interactive performance of certain existing
-              logical expressions and enhancing the user interface for writing expressions by incorporating more intuitive
-              workarounds.</li>
-          </ul>
-          <div class="title4">[What if] we were to optimize the logic engine once again, how would we go about it?</div>
-          <div>
-            <img class="imgstyle"
-              src="img/project0/Design process by Liedtka and Ogilvie (2011). what if an ultimate logic engine should be.png">
-            <div class="imgsubtitle">Design process by Liedtka and Ogilvie (2011). what if an ultimate logic engine should
-              be?
-            </div>
-          </div>
-          <p class="lead">
-            1. Is it possible to visualize the logic and attempt to initialize EC? This could potentially bring added
-            value:
-          </p>
-          <ul class="lead" style="padding-left: 0px;padding-top: 0px;margin-bottom: 20px;">
-            <li style="font-size: 14px;color: #000000;">a. Enhance logic visualization to clearly display various chained
-              logical relationships. (Primary scenario: logic verification hidden behind dynamic logic)</li>
-            <li style="font-size: 14px;color: #000000;">b. Prepare initialization for logic related to the time window,
-              further shortening the implementation cycle of clinical data warehouse construction and improving data
-              quality.</li>
-            <li style="font-size: 14px;color: #000000;">c. Lay the groundwork for fine-grained initialization of test
-              cases. Based on the control of the number of chained reaction logics, the range for generating test cases
-              can be selected, further enhancing quality control for database QA.</li>
-          </ul>
-          <div>
-            <img class="imgstyle" src="img/project0/Touch designer.png">
-            <div class="imgsubtitle">Touch designer - a visual development platform</div>
-          </div>
-          <div>
-            <img class="imgstyle" src="img/project0/Logic Tree.png">
-            <div class="imgsubtitle">Logic Tree</div>
-          </div>
-          <p class="lead">
-            2. Whether the metaphor of "Pritter" can be used to enhance the readability of encapsulated code？
-          </p>
-          <div>
-            <img class="imgstyle" src="img/project0/Prettier.gif">
-            <div class="imgsubtitle">Prettier</div>
-            <img class="imgstyle" src="img/project0/Provide hints for nested struxtures using parentheses.png">
-            <div class="imgsubtitle">Provide hints for nested structures using parentheses</div>
-            <img class="imgstyle"
-              src="img/project0/How does the logic engine optimize the expression of nested structures.png">
-            <div class="imgsubtitle">How does the logic engine optimize the expression of nested structures?</div>
-          </div>
-          <p class="lead">
-            3. Whether increase the illustration of restrictions on data could help to improve readibility?
-          </p>
-          <div>
-            <img class="imgstyle" src="img/project0/Hidden path.png">
-            <div class="imgsubtitle">Hidden path</div>
-  
-          </div>
-          <p class="lead">
-            4. Increase categorization to enhance the accuracy of object selection?
-          </p>
-          <div>
-            <img class="imgstyle" src="img/project0/Categorize and provide explanations for functions.png">
-            <div class="imgsubtitle">Categorize and provide explanations for functions?</div>
-          </div>
-  </section> -->
-
   <section class="section" style="margin-top: 80px; margin-bottom: 100px;">
     <div class="container">
       <a type="button" class="btn btn-primary btn-lg buttom-link" style="float: left;width: 340px;height: 80px;"
