@@ -152,6 +152,7 @@ h3 {
     letter-spacing: 0;
     font-weight: 600;
     margin-top: 32px;
+    text-transform: capitalize;
 }
 
 .title5 {
@@ -160,16 +161,17 @@ h3 {
     letter-spacing: 0;
     font-weight: 600;
     margin-top: 32px;
+    text-transform: capitalize;
 }
 
 .lead {
     padding-top: 16px;
     padding-bottom: 0px;
-    font-size: 14px;
+    font-size: 16px;
     color: #000000;
     letter-spacing: 0;
     text-align: justify;
-    line-height: 24px;
+    line-height: 30px;
     font-weight: 400;
 }
 
