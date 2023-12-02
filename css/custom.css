@@ -189,7 +189,6 @@ h3 {
     background-image: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" role="img" class="icon " > <rect x="5" y="5" width="13" height="15" fill="black" fill-opacity="0.2" ></rect> <path fill-rule="evenodd" clip-rule="evenodd" d="M12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23ZM15.5003 11.9996L11.7341 15.7071C11.3386 16.0971 10.6936 16.0971 10.2976 15.7076C10.1056 15.5186 10.0001 15.2676 10.0001 15.0006C10.0001 14.7336 10.1056 14.4826 10.2976 14.2936L12.6272 12.0001L10.2976 9.70662C9.90159 9.31662 9.90159 8.68162 10.2976 8.29212C10.6936 7.90263 11.3381 7.90263 11.7341 8.29212L15.5003 11.9996Z" fill="white" ></path> <circle cx="12" cy="12" r="11.5" stroke="black" stroke-opacity="0.1" ></circle></svg>
 }
 
-
 .carousel-control-prev-icon {
     border-radius: 15px;
     width: 10px;
