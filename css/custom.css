@@ -138,6 +138,7 @@ h3 {
     color: #000000;
     font-weight: 600;
     margin-top: -100px;
+    text-transform: capitalize;
 }
 
 .sectiontitle-eng {
