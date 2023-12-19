@@ -32,7 +32,7 @@
 <pattern id="pattern2" patternContentUnits="objectBoundingBox" width="1" height="1">
 <use xlink:href="#image2_653_8003" transform="matrix(0.000366032 0 0 0.00069532 0 -0.000630316)"/>
 </pattern>
-<linearGradient id="paint0_linear_653_8003" x1="2256.8" y1="79.8718" x2="-57.8925" y2="259.096" gradientUnits="userSpaceOnUse">
+<linearGradient id="paint0_linear_653_8003" x1="1522" y1="80" x2="18.9926" y2="196.258" gradientUnits="userSpaceOnUse">
 <stop stop-color="#3EB7A1"/>
 <stop offset="1" stop-color="#1E2187"/>
 </linearGradient>

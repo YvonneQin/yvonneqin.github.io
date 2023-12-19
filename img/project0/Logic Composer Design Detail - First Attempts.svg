@@ -42,7 +42,7 @@
 <pattern id="pattern4" patternContentUnits="objectBoundingBox" width="1" height="1">
 <use xlink:href="#image4_714_9491" transform="matrix(0.00078125 0 0 0.00125111 0 -0.000444865)"/>
 </pattern>
-<linearGradient id="paint0_linear_714_9491" x1="2256.8" y1="86.8718" x2="-57.8925" y2="266.096" gradientUnits="userSpaceOnUse">
+<linearGradient id="paint0_linear_714_9491" x1="1522" y1="87" x2="18.9926" y2="203.258" gradientUnits="userSpaceOnUse">
 <stop stop-color="#3EB7A1"/>
 <stop offset="1" stop-color="#1E2187"/>
 </linearGradient>
@@ -62,7 +62,7 @@
 <stop stop-color="#3EB7A1"/>
 <stop offset="1" stop-color="#1E2187"/>
 </linearGradient>
-<linearGradient id="paint5_linear_714_9491" x1="1143.72" y1="807.442" x2="563.976" y2="829.827" gradientUnits="userSpaceOnUse">
+<linearGradient id="paint5_linear_714_9491" x1="1143.72" y1="807.443" x2="563.976" y2="829.828" gradientUnits="userSpaceOnUse">
 <stop stop-color="#3EB7A1"/>
 <stop offset="1" stop-color="#1E2187"/>
 </linearGradient>

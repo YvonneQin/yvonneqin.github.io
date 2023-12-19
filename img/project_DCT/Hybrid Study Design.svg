@@ -34,7 +34,7 @@
 <pattern id="pattern3" patternContentUnits="objectBoundingBox" width="1" height="1">
 <use xlink:href="#image3_778_31698" transform="matrix(0.000390625 0 0 0.000696435 0 -0.00143348)"/>
 </pattern>
-<linearGradient id="paint0_linear_778_31698" x1="2256.8" y1="81.8718" x2="-57.8925" y2="261.096" gradientUnits="userSpaceOnUse">
+<linearGradient id="paint0_linear_778_31698" x1="1522" y1="82" x2="18.9926" y2="198.258" gradientUnits="userSpaceOnUse">
 <stop stop-color="#3EB7A1"/>
 <stop offset="1" stop-color="#1E2187"/>
 </linearGradient>
