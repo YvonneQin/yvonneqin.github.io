@@ -185,7 +185,22 @@ h3 {
     text-align: justify;
     line-height: 14px;
     font-weight: 400;
+    margin-bottom: 0px；
+}
+
+.gradient {
+    padding-top: 16px;
+    padding-bottom: 0px;
+    font-size: 14px;
+    letter-spacing: 0;
+    text-align: justify;
+    line-height: 14px;
+    font-weight: 400;
     margin-bottom: 0px;
+    background: linear-gradient(45deg, #FFE500, #C44F4A);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; /* 使文字本身透明，显示背景的渐变色 */
 }
 
 
