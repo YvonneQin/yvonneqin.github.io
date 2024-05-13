@@ -11855,10 +11855,10 @@ span a:hover {
   align-items: center;
   border-radius: 0;
   white-space: nowrap;
-  line-height: 1;
-  font-weight: 700;
-  font-size: 14px;
-  padding: 14px 15px;
+  font-weight: 400;
+  font-size: 12px;
+  padding: 10px var(--l);
+  border-radius: 50rem;
 }
 
 .btn [class^="icon-"] {

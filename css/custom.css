@@ -55,12 +55,6 @@
     padding-right: 10px;
 }
 
-.btn {
-    font-size: 12px;
-    font-weight: 400;
-    padding: 10px var(--l);
-    border-radius: 50rem;
-}
 
 .rad-showcase {
     min-height: 600px;
