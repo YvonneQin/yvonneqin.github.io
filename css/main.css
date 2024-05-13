@@ -12020,9 +12020,9 @@ textarea {
   border-bottom: 1px solid #dbe0e4;
 }
 
-.education__date,
 .experience__date {
   line-height: 1.57;
+  font-size: 12px;
 }
 
 input[type="text"]::-webkit-input-placeholder,
@@ -12153,7 +12153,7 @@ input[type="email"]::placeholder {
 
 .education__date {
   position: relative;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 300;
   color: #333;
   z-index: 2;
@@ -12169,7 +12169,8 @@ input[type="email"]::placeholder {
 
 .education__degree,
 .experience__date {
-  font-size: 14px;
+    padding-top: var(--xs);
+  font-size: 12px;
   font-weight: 300;
   color: var(--grey-text-45-description);
   z-index: 2;
