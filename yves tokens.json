@@ -1,0 +1,50 @@
+{
+  "XS": {
+    "value": "0.25rem",
+    "type": "dimension",
+    "parent": "Space&Radius/Mode 1",
+    "description": ""
+  },
+  "M": {
+    "value": "0.75rem",
+    "type": "dimension",
+    "parent": "Space&Radius/Mode 1",
+    "description": ""
+  },
+  "L": {
+    "value": "1rem",
+    "type": "dimension",
+    "parent": "Space&Radius/Mode 1",
+    "description": ""
+  },
+  "XXL": {
+    "value": "1.25rem",
+    "type": "dimension",
+    "parent": "Space&Radius/Mode 1",
+    "description": ""
+  },
+  "S": {
+    "value": "0.5rem",
+    "type": "dimension",
+    "parent": "Space&Radius/Mode 1",
+    "description": ""
+  },
+  "XXXL": {
+    "value": "1.5rem",
+    "type": "dimension",
+    "parent": "Space&Radius/Mode 1",
+    "description": ""
+  },
+  "XXXXL": {
+    "value": "2rem",
+    "type": "dimension",
+    "parent": "Space&Radius/Mode 1",
+    "description": ""
+  },
+  "Pill": {
+    "value": "62.4375rem",
+    "type": "dimension",
+    "parent": "Space&Radius/Mode 1",
+    "description": ""
+  }
+}

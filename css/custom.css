@@ -1,6 +1,6 @@
 .header .navbar .nav-item .nav-link {
     font-weight: 600;
-    padding: 0px 16px;
+    padding: 0px var(--l);
 }
 
 .section--contact .container {
@@ -30,7 +30,8 @@
 .badge-2.rounded-pill {
     font-size: 14px;
     font-weight: 400;
-    padding: 4px 16px;
+    padding: 4px var(--l);
+    color: var(--grey-text-85-primary);
 }
 
 .header::before {
@@ -43,7 +44,7 @@
 }
 
 .experience__title {
-    font-size: 16px;
+    font-size: var(--base-en-16);
 }
 
 
@@ -56,7 +57,7 @@
 .btn {
     font-size: 12px;
     font-weight: 400;
-    padding: 10px 16px;
+    padding: 10px var(--l);
 }
 
 .rad-showcase {
@@ -89,6 +90,7 @@ h2 {
 h3 {
     font-size: 20px;
     text-transform: capitalize;
+    margin-top: var(--l);
 }
 
 .badge {
@@ -101,14 +103,15 @@ h3 {
 .badge-2 {
     font-size: 14px;
     font-weight: 600;
-    padding: 6px 16px;
+    padding: 6px var(--l);
     margin-right: 3px;
 }
 
 .clients__item {
-    background-color: #edf1f4;
-    font-size: 16px;
-    padding: 16px;
+    background-color: var(--grey-text-03-hover-fill);
+    color: var(--grey-text-85-primary);
+    font-size: var(--base-en-16);
+    padding: var(--l);
     margin-right: 8px;
 }
 
@@ -129,13 +132,13 @@ h3 {
 .titlenumber {
     font-size: 136px;
     font-weight: 600;
-    color: #555555;
+    color: var(--grey-text-28-disabled);
     opacity: 5%;
 }
 
 .sectiontitle {
     font-size: 36px;
-    color: #000000;
+    color: var(--grey-text-85-primary);
     font-weight: 600;
     margin-top: -100px;
     text-transform: capitalize;
@@ -143,14 +146,14 @@ h3 {
 
 .sectiontitle-eng {
     font-size: 14px;
-    color: #555555;
+    color: var(--grey-text-28-disabled);
     font-weight: 600;
     text-transform: uppercase;
 }
 
 .title4 {
     font-size: 28px;
-    color: #000000;
+    color: var(--grey-text-85-primary);
     letter-spacing: 0;
     font-weight: 600;
     margin-top: 32px;
@@ -158,8 +161,8 @@ h3 {
 }
 
 .title5 {
-    font-size: 16px;
-    color: #000000;
+    font-size: var(--base-en-16);
+    color: var(--grey-text-85-primary);
     letter-spacing: 0;
     font-weight: 600;
     margin-top: 32px;
@@ -167,17 +170,17 @@ h3 {
 }
 
 .lead {
-    padding-top: 16px;
+    padding-top: var(--l);
     padding-bottom: 0px;
-    font-size: 16px;
-    color: #000000;
+    font-size: 1rem;
+    color: var(--grey-text-85-primary);
     letter-spacing: 0;
     text-align: justify;
     line-height: 30px;
     font-weight: 400;
 }
 .lead2 {
-    padding-top: 16px;
+    padding-top: var(--l);
     padding-bottom: 0px;
     font-size: 14px;
     color: #5f5f5f;
@@ -189,7 +192,7 @@ h3 {
 }
 
 .gradient {
-    padding-top: 16px;
+    padding-top: var(--l);
     padding-bottom: 0px;
     font-size: 14px;
     letter-spacing: 0;
@@ -205,7 +208,7 @@ h3 {
 
 
 .mb-0 {
-    font-size: 20px;
+    font-size: var(--xxl);
     margin-top: 40px;
 }
 
@@ -227,14 +230,14 @@ h3 {
 
 .subtitle {
     font-size: 14px;
-    color: #555555;
+    color: var(--grey-text-28-disabled);
     background-color: #ffffff;
     opacity: 80%;
     margin-bottom: 40px;
 }
 
 .carousel-indicators li {
-    background-color: #555555;
+    background-color: var(--grey-text-28-disabled);
     border-bottom: 20px solid transparent;
 }
 
