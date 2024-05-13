@@ -28,10 +28,11 @@
 }
 
 .badge-2.rounded-pill {
-    font-size: 14px;
-    font-weight: 400;
-    padding: 4px var(--l);
-    color: var(--grey-text-85-primary);
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--palette-neutral-neural-8);
+    background-color: var(--palette-neutral-neural-1);
+    padding: var(--s) var(--m);
 }
 
 .header::before {
@@ -58,6 +59,7 @@
     font-size: 12px;
     font-weight: 400;
     padding: 10px var(--l);
+    border-radius: 50rem;
 }
 
 .rad-showcase {
@@ -85,7 +87,7 @@ h1.display-1 {
 }
 
 h2 {
-    font-size: 32px;
+    font-size: 28px;
 }
 
 h3 {
@@ -97,15 +99,12 @@ h3 {
 .badge {
     font-size: 14px;
     font-weight: 100;
-    padding: 12px 24px 12px 24px;
+    padding: 12px 24px;
     margin: 10px 5px 5px 0px;
 }
 
 .badge-2 {
-    font-size: 14px;
-    font-weight: 600;
-    padding: 6px var(--l);
-    margin-right: 3px;
+    margin-right: 2px;
 }
 
 .clients__item {
@@ -120,7 +119,7 @@ h3 {
 .section {
     padding-top: 0px;
     padding-bottom: 0px;
-    margin-top: 20px;
+    margin-top: var(--xxxxl);
     margin-bottom: 0px;
 }
 
@@ -171,13 +170,14 @@ h3 {
 }
 
 .lead {
+    font-family: var(--font-families-inter);
     padding-top: var(--l);
-    padding-bottom: 0px;
+    padding-bottom: 8px;
     font-size: 1rem;
     color: var(--grey-text-85-primary);
     letter-spacing: 0;
     text-align: justify;
-    line-height: 30px;
+    line-height: 28px;
     font-weight: 400;
 }
 .lead2 {
