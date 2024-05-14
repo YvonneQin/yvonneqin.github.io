@@ -12270,8 +12270,8 @@ input[type="email"]::placeholder {
   height: 100%;
   z-index: 1;
   background-color: var(--grey-text-05-pressing-border);
-  -webkit-transform: skew(-13deg);
-  transform: skew(-13deg);
+  -webkit-transform: skew(-18deg);
+  transform: skew(-18deg);
 }
 
 .education__date {
