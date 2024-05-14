@@ -273,3 +273,8 @@ h3 {
 .body {
     background-color: rgb(253, 253, 253);
 }
+
+.iconfont {
+    font-size: 20px !important;
+    color: var(--grey-text-85-primary);
+}
