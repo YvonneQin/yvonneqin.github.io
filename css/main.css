@@ -12963,7 +12963,7 @@ textarea:focus {
 }
 
 .header .navbar-light .navbar-nav .nav-link {
-  color: #000;
+  color: var(--grey-text-85-primary);
 }
 
 .header--sticky-triggered {
