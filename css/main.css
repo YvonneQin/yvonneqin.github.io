@@ -11857,7 +11857,7 @@ span a:hover {
   white-space: nowrap;
   font-weight: 400;
   font-size: 12px;
-  padding: 10px var(--l);
+  padding: 6px var(--l);
   border-radius: 50rem;
 }
 
