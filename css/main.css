@@ -1110,7 +1110,7 @@ input[type="date"],
 input[type="datetime-local"],
 input[type="month"],
 input[type="time"] {
-  -webkit-appearance: listbox;
+  /* -webkit-appearance: listbox; */
 }
 
 textarea {
@@ -7646,7 +7646,7 @@ a.close.disabled {
 }
 
 .bg-primary {
-  background-color: var(--grey-text-03-hover-fill) !important;
+  background-color: var(--palette-neutral-neural-1) !important;
 }
 
 a.bg-primary:focus,
@@ -11857,13 +11857,13 @@ span a:hover {
   white-space: nowrap;
   font-weight: 400;
   font-size: 12px;
-  padding: 6px var(--l);
+  padding: 2px var(--l);
   border-radius: 50rem;
 }
 
 .btn [class^="icon-"] {
   font-size: 16px;
-  margin-right: 9px;
+  margin-right: 8px;
 }
 
 .btn [class^="icon-"]::before {
@@ -11872,7 +11872,8 @@ span a:hover {
 }
 
 .btn [class^="icon-arrow-right"] {
-  margin-left: 6px;
+    
+    margin-left: 8px;
   margin-right: 0;
 }
 
@@ -12378,7 +12379,7 @@ html body {
 }
 
 .clients__item {
-  opacity: 0.5;
+  /* opacity: 0.5; */
   margin-bottom: 30px;
   margin-left: 20px;
   -webkit-transition-property: opacity;
@@ -13200,7 +13201,7 @@ textarea:focus {
 
 .rad-showcase .platform-links [class^="icon-"] {
   margin-right: 5px;
-  font-size: 17px;
+  font-size: 16px;
   color: #000;
 }
 
@@ -13219,7 +13220,7 @@ textarea:focus {
 
 @media (min-width: 992px) {
   .rad-showcase .platform-links [class^="icon-"] {
-    font-size: 19px;
+    font-size: 20px;
     margin-right: 10px;
   }
 }
