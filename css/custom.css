@@ -169,16 +169,34 @@ h3 {
   line-height: 26px;
   font-weight: 400;
 }
+
+.insightlead {
+  font-family: var(--font-families-inter);
+  padding-top: var(--l);
+  margin-bottom:32px;
+  font-size: 18px;
+  color: var(--grey-text-85-primary);
+  letter-spacing: 0;
+  text-align: justify;
+  line-height: 24px;
+  font-weight: 600;
+}
+
 .lead2 {
   padding-top: var(--l);
-  padding-bottom: 0px;
+  margin-bottom: 20px;
   font-size: 14px;
-  color: #5f5f5f;
+  color: var(--grey-text-85-primary);
   letter-spacing: 0;
   text-align: justify;
   line-height: 14px;
-  font-weight: 400;
+  font-weight: 600;
   margin-bottom: 0px；;
+}
+
+.article {
+  margin-top: 0px;
+  margin-bottom: 48px;;
 }
 
 .mb-0 {
