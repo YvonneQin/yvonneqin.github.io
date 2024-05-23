@@ -11887,10 +11887,30 @@ span a:hover {
   min-width: 140px;
 }
 
+.btn-sm {
+  font-size: 14px!important;
+  padding-left: 12px!important;
+  padding-right: 12px!important;
+  position: relative;
+  color: #fff;
+  background-color: #000;
+  height: 28px;
+  border-color: #000;
+  will-change: border-color, color, background-color;
+  -webkit-transition: border-color, color, background-color;
+  transition: border-color, color, background-color;
+  -webkit-transition-duration: 0.35s;
+  transition-duration: 0.35s;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+}
+
+
 .btn-primary {
   position: relative;
   color: #fff;
   background-color: #000;
+  height: 36px;
   border-color: #000;
   will-change: border-color, color, background-color;
   -webkit-transition: border-color, color, background-color;
