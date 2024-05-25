@@ -4010,8 +4010,8 @@ fieldset:disabled a.btn {
 .btn-frameless:not(:disabled):not(.disabled):active,
 .show > .btn-frameless.dropdown-toggle:focus {
   background-color: white;
-  border-color: #000;
-  color: #000;
+  border-color: var(--text-85-primary);
+  color: var(--text-85-primary);
 }
 
 .btn-frameless.focus,
