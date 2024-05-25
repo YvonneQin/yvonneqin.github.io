@@ -1491,8 +1491,8 @@ pre code {
 .col-xl-auto {
   position: relative;
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: var(--l);
+  padding-left: var(--l);
 }
 
 .col {
@@ -4029,7 +4029,7 @@ fieldset:disabled a.btn {
 .show > .btn-frameless.dropdown-toggle:focus,
 .show > .btn-primary.dropdown-toggle:focus
 .show > .btn-sm.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0.2rem rgba(233, 62, 52, 0.5);
+  box-shadow: 0 0 0 2px rgba(233, 62, 52, 0.5);
 }
 
 .btn-block {
