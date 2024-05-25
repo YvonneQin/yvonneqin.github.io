@@ -4003,6 +4003,29 @@ fieldset:disabled a.btn {
   border-radius: 0.2rem;
 }
 
+
+.btn-frameless.focus,
+.btn-frameless:focus,
+.btn-frameless:not(:disabled):not(.disabled).active:focus,
+.btn-frameless:not(:disabled):not(.disabled):active:focus,
+.btn-primary.focus,
+.btn-primary:focus,
+.btn-primary:not(:disabled):not(.disabled).active:focus,
+.btn-primary:not(:disabled):not(.disabled):active:focus,
+.btn-sm.disabled,
+.btn-sm.disabled,
+.btn-sm.focus,
+.btn-sm.focus,
+.btn-sm:hover,
+.btn-sm:hover,
+.btn-frameless:not(:disabled):not(.disabled).active,
+.btn-frameless:not(:disabled):not(.disabled):active,
+.show > .btn-frameless.dropdown-toggle:focus
+.show > .btn-frameless.dropdown-toggle:focus,
+.show > .btn-primary.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(233, 62, 52, 0.5);
+}
+
 .btn-block {
   width: 100%;
 }
@@ -11833,18 +11856,7 @@ span a:hover {
   box-shadow: none;
 }
 
-.btn-frameless.focus,
-.btn-frameless:focus,
-.btn-frameless:not(:disabled):not(.disabled).active:focus,
-.btn-frameless:not(:disabled):not(.disabled):active:focus,
-.btn-primary.focus,
-.btn-primary:focus,
-.btn-primary:not(:disabled):not(.disabled).active:focus,
-.btn-primary:not(:disabled):not(.disabled):active:focus,
-.show > .btn-frameless.dropdown-toggle:focus,
-.show > .btn-primary.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0.2rem rgba(233, 62, 52, 0.5);
-}
+
 
 .btn {
   display: -webkit-inline-box;
@@ -11870,16 +11882,12 @@ span a:hover {
   margin-left: 0;
   margin-right: 0;
 }
-
-.btn [class^="icon-arrow-right"] {
-    
-    margin-left: 8px;
-  margin-right: 0;
-}
-
-.btn [class^="icon-arrow-right"]::before {
-  margin-left: 0;
-  margin-right: 0;
+.btn [class^="icon-arrow-right"],
+.btn [class^="icon-arrow-down-F"],
+.btn [class^="icon-arrow-up-F"]
+{
+  margin-left: 8px;
+  margin-right: -4px;
 }
 
 .btn-lg {
@@ -11923,7 +11931,7 @@ span a:hover {
 
 .btn-primary:hover {
   color: #000;
-  background-color: transparent;
+  background-color: white;
   border-color: #000;
 }
 
@@ -11955,13 +11963,11 @@ span a:hover {
 
 .btn-frameless.disabled,
 .btn-frameless.focus,
-.btn-frameless:disabled,
-.btn-frameless:focus,
 .btn-frameless:hover,
 .btn-frameless:not(:disabled):not(.disabled).active,
 .btn-frameless:not(:disabled):not(.disabled):active,
 .show > .btn-frameless.dropdown-toggle {
-  background-color: transparent;
+  background-color: white;
   border-color: #000;
   color: #000;
 }

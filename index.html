@@ -38,7 +38,7 @@
   <!-- <link rel="stylesheet" href="css/rad-icons.css" />   -->
   <link rel="stylesheet" href="css/custom.css" />
   <!-- 我自己的iconfont -->
-  <link rel="stylesheet" href="https://at.alicdn.com/t/c/font_4545731_kh9vcz51die.css" />
+  <link rel="stylesheet" href="https://at.alicdn.com/t/c/font_4545731_be5bq1djbwt.css" />
 
 
   <script>
@@ -56,6 +56,26 @@
         'https://www.googletagmanager.com/gtm.js?id=GTM-000000' + i + dl;
       f.parentNode.insertBefore(j, f);
     })(window, document, 'script', 'dataLayer', 'GTM-000000');
+  </script>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const toggleButton = document.getElementById('toggleButton');
+      const expandableDiv = document.getElementById('expandableDiv');
+      const gradientOverlay = document.getElementById('gradientOverlay');
+
+      toggleButton.addEventListener('click', function () {
+        if (expandableDiv.classList.contains('expanded')) {
+          expandableDiv.classList.remove('expanded');
+          toggleButton.innerHTML = 'Expand All<i class="icon-arrow-down-F iconfont"></i>';
+          gradientOverlay.style.display = 'flex';
+        } else {
+          expandableDiv.classList.add('expanded');
+          toggleButton.innerHTML = 'Collapsed <i class="icon-arrow-up-F iconfont"></i>';
+          gradientOverlay.style.display = 'flex';
+        }
+      });
+    });
   </script>
 
   <title>Yuwen‘s Portfolio</title>
@@ -271,8 +291,47 @@
     }
   </style>
 
+  <style>
+    #expandableDiv {
+      width: 100%;
+      height: 300px;
+      overflow: hidden;
+      transition: height 0.3s ease-out;
+      position: relative;
+      padding-bottom: 64px;
+    }
+  
+    #expandableDiv.expanded {
+      height: auto;
+    }å
+  
+    #toggleButton {
+      left: 50%;
+      transform: translateX(-50%); 
+      cursor: pointer;
+    }
 
+    .buttonPosition {
+      height: 36px; 
+      border-radius: 50rem;
+      color: var(--grey-text-85-primary);
+      background-color: white;
+      border-color: var(--grey-text-28-disabled);
+    }
 
+    #gradientOverlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 64px;
+      background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%,  rgba(255, 255, 255, 1) 50% ,rgba(255, 255, 255, 1) 100%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+        }
+
+  </style>
 
 
 </head>
@@ -398,39 +457,40 @@
           alt="Profile Picture"
         />
       </div> -->
-        <div class="col-12">
+        <div class="col-12 collapsed" id="expandableDiv">
           <h2>Skills & Certifications</h2>
-          <p class="lead">
-            <p style="font-weight: 500;margin-bottom: var(--m)">Coding</p>
-            <span class="badge rounded-pill bg-primary">HTML5 · CSS3 · JS</span>
-            <span class="badge rounded-pill bg-primary">R Studio / Plotly</span>
-            <span class="badge rounded-pill bg-primary">Python</span>
-            <span class="badge rounded-pill bg-primary">SPSS</span>
-            <p style="font-weight: 500;margin-top: var(--l);margin-bottom: var(--m)">Methodology</p>
-            <span class="badge rounded-pill bg-primary">Product Strategy</span>
-            <span class="badge rounded-pill bg-primary">Strategic Thinking</span>
-            <span class="badge rounded-pill bg-primary">Design Thingking</span>
-            <span class="badge rounded-pill bg-primary">Digital Innovation</span>
-            <span class="badge rounded-pill bg-primary">Design Innovation</span>
-            <span class="badge rounded-pill bg-primary">Design Strategy</span>
-            <span class="badge rounded-pill bg-primary">Design Leadership</span>
-            <span class="badge rounded-pill bg-primary">Data Visualization</span>
-            <span class="badge rounded-pill bg-primary">Information Architecture</span>
-            <span class="badge rounded-pill bg-primary">Rapid Prototyping</span>
-            <span class="badge rounded-pill bg-primary">Usability Testing</span>
-            <span class="badge rounded-pill bg-primary">Design Ops</span>
-            <span class="badge rounded-pill bg-primary">Data Analysis</span>
-            <span class="badge rounded-pill bg-primary">Creative Problem Solving</span>
-            <span class="badge rounded-pill bg-primary">Customer Service</span>
-            <!-- <span class="badge rounded-pill bg-primary">Qualitative & quantitative</span>
-            <span class="badge rounded-pill bg-primary">Cross-sectional study</span>
-            <span class="badge rounded-pill bg-primary">Experimental research</span>
-            <span class="badge rounded-pill bg-primary">Cohort study</span>
-            <span class="badge rounded-pill bg-primary">Trend study</span>
-            <span class="badge rounded-pill bg-primary">Panel study</span>
-            <span class="badge rounded-pill bg-primary">Retrospective study</span> -->
-
-          </p>
+          <p style="font-size: 14px;font-weight: 500;margin: var(--xs) 0">Certifications</p>
+          <p style="font-size: 14px;font-weight: 500;margin: var(--xs) 0">Coding</p>
+          <span class="badge rounded-pill bg-primary">HTML5 · CSS3 · JS</span>
+          <span class="badge rounded-pill bg-primary">R Studio / Plotly</span>
+          <span class="badge rounded-pill bg-primary">Python</span>
+          <span class="badge rounded-pill bg-primary">SPSS</span>
+          <p style="font-size: 14px;font-weight: 500;margin: var(--xs) 0">Methodology</p>
+          <span class="badge rounded-pill bg-primary">Product Strategy</span>
+          <span class="badge rounded-pill bg-primary">Strategic Thinking</span>
+          <span class="badge rounded-pill bg-primary">Design Thingking</span>
+          <span class="badge rounded-pill bg-primary">Digital Innovation</span>
+          <span class="badge rounded-pill bg-primary">Design Innovation</span>
+          <span class="badge rounded-pill bg-primary">Design Strategy</span>
+          <span class="badge rounded-pill bg-primary">Design Leadership</span>
+          <span class="badge rounded-pill bg-primary">Data Visualization</span>
+          <span class="badge rounded-pill bg-primary">Information Architecture</span>
+          <span class="badge rounded-pill bg-primary">Rapid Prototyping</span>
+          <span class="badge rounded-pill bg-primary">Usability Testing</span>
+          <span class="badge rounded-pill bg-primary">Design Ops</span>
+          <span class="badge rounded-pill bg-primary">Data Analysis</span>
+          <span class="badge rounded-pill bg-primary">Creative Problem Solving</span>
+          <span class="badge rounded-pill bg-primary">Customer Service</span>
+          <span class="badge rounded-pill bg-primary">Qualitative & quantitative</span>
+          <span class="badge rounded-pill bg-primary">Cross-sectional study</span>
+          <span class="badge rounded-pill bg-primary">Experimental research</span>
+          <span class="badge rounded-pill bg-primary">Cohort study</span>
+          <span class="badge rounded-pill bg-primary">Trend study</span>
+          <span class="badge rounded-pill bg-primary">Panel study</span>
+          <span class="badge rounded-pill bg-primary">Retrospective study</span>
+          <div id="gradientOverlay">
+            <button id="toggleButton" class="btn btn-sm buttonPosition">Expand All<i class="icon-arrow-down-F iconfont"></i></button>
+          </div>
           <div class="hero_footer-svg">
             <img src="img/figure-svg.svg" alt="">
           </div>
@@ -564,7 +624,7 @@
             <i class="icon-linkedin-fill iconfont"></i>
             Linkedin
             </a>
-          <a href="file/yuwenqin 13162435185 - Designer.pdf" class="btn btn-frameless" target="_blank">
+          <a href="file/yuwenqin 13162435185 - Designer.pdf" class="btn btn-frameless" style="height: 36px;" target="_blank">
             
             <i class="icon-profile-fill iconfont"></i>
             My Resume
@@ -605,7 +665,7 @@
             2022.12 - 2023.11<br />
             Researcher & Designer<br />
           </p>
-          <a href="project_DCT.html" class="btn btn-primary">Check it out<i class="icon-arrow-right iconfont"></i></a>
+          <a href="project_DCT.html" class="btn btn-primary">Check it out<i class="icon-arrow-right-sm iconfont"></i></a>
         </div>
         <div class="col-12 col-md-7 pl-md-0 text-right">
           <img class='lozad img-responsive img-clip-left-backward'
@@ -630,7 +690,7 @@
             2021.04 - 2023.11<br />
             Researcher & Designer<br />
           </p>
-          <a href="project_Construct.html" class="btn btn-primary">Check it out<i class="icon-arrow-right iconfont"></i></a>
+          <a href="project_Construct.html" class="btn btn-primary">Check it out<i class="icon-arrow-right-sm iconfont"></i></a>
         </div>
       </div>
 
@@ -647,7 +707,7 @@
             2022.12 - 2023.11<br />
             Designer & Researher<br />
           </p>
-          <a href="project_AI.html" class="btn btn-primary">Check it out<i class="icon-arrow-right iconfont"></i></a>
+          <a href="project_AI.html" class="btn btn-primary">Check it out<i class="icon-arrow-right-sm iconfont"></i></a>
         </div>
         <div class="col-12 col-md-7 pl-md-0 text-right">
           <img class='lozad img-responsive img-clip-left-backward'
@@ -672,7 +732,7 @@
             2022.12 - 2023.11<br />
             Researcher & Designer<br />
           </p>
-          <a href="project_MM.html" class="btn btn-primary">Check it out<i class="icon-arrow-right iconfont"></i></a>
+          <a href="project_MM.html" class="btn btn-primary">Check it out<i class="icon-arrow-right-sm iconfont"></i></a>
         </div>
       </div>
 
@@ -691,7 +751,7 @@
             2022.12 - 2023.11<br />
             Researcher & Designer<br />
           </p>
-          <a href="project_POC.html" class="btn btn-primary">Check it out<i class="icon-arrow-right iconfont"></i></a>
+          <a href="project_POC.html" class="btn btn-primary">Check it out<i class="icon-arrow-right-sm iconfont"></i></a>
         </div>
         <div class="col-12 col-md-7 pl-md-0 text-right">
           <img class='lozad img-responsive img-clip-left-backward'
@@ -715,7 +775,7 @@
               2020年6月 - 2021年3月<br />
               项目负责人<br />
                15 min</p>
-            <a href="project1.html" class="btn btn-primary">Check it out<i class="icon-arrow-right iconfont"></i></a>
+            <a href="project1.html" class="btn btn-primary">Check it out<i class="icon-arrow-right-sm iconfont"></i></a>
           </div>
           <div class="col-12 col-md-7 pl-md-0 text-right">
             <img class='lozad img-responsive img-clip-left-backward'
@@ -741,7 +801,7 @@
             2020年3月 - 2020年7月<br />
             Product Designer<br />
           </p>
-          <a href="project_Law.html" class="btn btn-primary">Check it out<i class="icon-arrow-right iconfont"></i></a>
+          <a href="project_Law.html" class="btn btn-primary">Check it out<i class="icon-arrow-right-sm iconfont"></i></a>
         </div>
 
       </div>
@@ -759,7 +819,7 @@
             2019年1月 - 2020年3月<br />
             Product Designer<br />
           </p>
-          <a href="project_Askbob.html" class="btn btn-primary">Check it out<i class="icon-arrow-right iconfont"></i></a>
+          <a href="project_Askbob.html" class="btn btn-primary">Check it out<i class="icon-arrow-right-sm iconfont"></i></a>
         </div>
         <div class="col-12 col-md-7 pl-md-0 text-right">
           <img class='lozad img-responsive img-clip-left-backward'
@@ -784,7 +844,7 @@
             2019年10月 - 2020年1月<br />
             Product Designer<br />
              8 min</p>
-          <a href="project4.html" class="btn btn-primary">Check it out<i class="icon-arrow-right iconfont"></i></a>
+          <a href="project4.html" class="btn btn-primary">Check it out<i class="icon-arrow-right-sm iconfont"></i></a>
         </div>
 
       </div> -->
@@ -803,7 +863,7 @@
             2019年10月 - 2020年1月<br />
             码农<br />
              8 min</p>
-          <a href="project5.html" class="btn btn-primary">Check it out<i class="icon-arrow-right iconfont"></i></a>
+          <a href="project5.html" class="btn btn-primary">Check it out<i class="icon-arrow-right-sm iconfont"></i></a>
         </div>
         <div class="col-12 col-md-7 pl-md-0 text-right">
           <img class='lozad img-responsive img-clip-left-backward'
@@ -828,7 +888,7 @@
             2016年1月<br />
           </p>
           <a href="project_Gradute.html" class="btn btn-primary">Check it out ( Video included )
-            <i class="icon-arrow-right iconfont"></i></a>
+            <i class="icon-arrow-right-sm iconfont"></i></a>
         </div>
 
       </div>
@@ -846,7 +906,7 @@
             2019年10月 - 2020年1月<br />
             Product Designer<br />
           </p>
-          <a href="project_COE.html" class="btn btn-primary">Check it out<i class="icon-arrow-right iconfont"></i></a>
+          <a href="project_COE.html" class="btn btn-primary">Check it out<i class="icon-arrow-right-sm iconfont"></i></a>
         </div>
         <div class="col-12 col-md-7 pl-md-0 text-right">
           <img class='lozad img-responsive img-clip-left-backward'

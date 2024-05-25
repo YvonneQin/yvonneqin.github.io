@@ -1,55 +1,100 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>文章列表</title>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expandable Div with Icon</title>
     <style>
-      body {
-        font-family: Arial, sans-serif;
-      }
-      .category-buttons {
-        margin-bottom: 20px;
-      }
-      .category-buttons button {
-        margin-right: 10px;
-        padding: 10px;
-        cursor: pointer;
-      }
-      .article {
-        margin-bottom: 15px;
-        padding: 10px;
-        border: 1px solid #ddd;
-      }
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            margin: 20px;
+            position: relative;
+        }
+
+        #expandableDiv {
+            width: 100%;
+            height: 100px;
+            overflow: hidden;
+            transition: height 0.3s ease-out;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            padding: 10px;
+            position: relative;
+        }
+
+        #expandableDiv.expanded {
+            height: auto;
+        }
+
+        .overlay {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 100px;
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+        }
+
+        #toggleButton {
+            padding: 10px 20px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+        }
+
+        #toggleButton .icon {
+            margin-left: 8px;
+        }
     </style>
-  </head>
-  <body>
-    <div class="category-buttons">
-      <button onclick="filterArticles('all')">All</button>
-      <button onclick="filterArticles('A')">类别A</button>
-      <button onclick="filterArticles('B')">类别B</button>
+</head>
+<body>
+    <div class="container">
+        <div id="expandableDiv" class="collapsed">
+            <p>这里是需要展示的内容。</p>
+            <p>更多的内容...更多的内容...更多的内容...更多的内容...更多的内容...更多的内容...</p>
+            <p>更多的内容...更多的内容...更多的内容...更多的内容...更多的内容...更多的内容...</p>
+            <p>更多的内容...更多的内容...更多的内容...更多的内容...更多的内容...更多的内容...</p>
+            <p>更多的内容...更多的内容...更多的内容...更多的内容...更多的内容...更多的内容...</p>
+            <p>更多的内容...更多的内容...更多的内容...更多的内容...更多的内容...更多的内容...</p>
+            <p>更多的内容...更多的内容...更多的内容...更多的内容...更多的内容...更多的内容...</p>
+            <p>更多的内容...更多的内容...更多的内容...更多的内容...更多的内容...更多的内容...</p>
+            <p>更多的内容...更多的内容...更多的内容...更多的内容...更多的内容...更多的内容...</p>
+            <p>更多的内容...更多的内容...更多的内容...更多的内容...更多的内容...更多的内容...</p>
+            <p>更多的内容...更多的内容...更多的内容...更多的内容...更多的内容...更多的内容...</p>
+            <div class="overlay">
+                <button id="toggleButton">
+                    展开
+                    <span class="icon">⬇️</span>
+                </button>
+            </div>
+        </div>
     </div>
-
-    <div id="articles">
-      <div class="article" data-category="A">文章1 - 类别A</div>
-      <div class="article" data-category="A">文章2 - 类别A</div>
-      <div class="article" data-category="B">文章3 - 类别B</div>
-    </div>
-
     <script>
-      function filterArticles(category) {
-        var articles = document.querySelectorAll(".article");
-        articles.forEach(function (article) {
-          if (
-            category === "all" ||
-            article.getAttribute("data-category") === category
-          ) {
-            article.style.display = "block";
-          } else {
-            article.style.display = "none";
-          }
+        document.addEventListener('DOMContentLoaded', function() {
+            const toggleButton = document.getElementById('toggleButton');
+            const expandableDiv = document.getElementById('expandableDiv');
+            const icon = document.querySelector('#toggleButton .icon');
+
+            toggleButton.addEventListener('click', function() {
+                if (expandableDiv.classList.contains('expanded')) {
+                    expandableDiv.classList.remove('expanded');
+                    toggleButton.textContent = '展开';
+                    icon.textContent = '⬇️';
+                } else {
+                    expandableDiv.classList.add('expanded');
+                    toggleButton.textContent = '收起';
+                    icon.textContent = '⬆️';
+                }
+            });
         });
-      }
     </script>
-  </body>
+</body>
 </html>
