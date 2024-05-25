@@ -4004,6 +4004,16 @@ fieldset:disabled a.btn {
 }
 
 
+.btn-sm:hover,
+.btn-sm:hover,
+.btn-frameless:not(:disabled):not(.disabled).active,
+.btn-frameless:not(:disabled):not(.disabled):active,
+.show > .btn-frameless.dropdown-toggle:focus {
+  background-color: white;
+  border-color: #000;
+  color: #000;
+}
+
 .btn-frameless.focus,
 .btn-frameless:focus,
 .btn-frameless:not(:disabled):not(.disabled).active:focus,
@@ -4012,17 +4022,13 @@ fieldset:disabled a.btn {
 .btn-primary:focus,
 .btn-primary:not(:disabled):not(.disabled).active:focus,
 .btn-primary:not(:disabled):not(.disabled):active:focus,
-.btn-sm.disabled,
-.btn-sm.disabled,
 .btn-sm.focus,
-.btn-sm.focus,
-.btn-sm:hover,
-.btn-sm:hover,
-.btn-frameless:not(:disabled):not(.disabled).active,
-.btn-frameless:not(:disabled):not(.disabled):active,
-.show > .btn-frameless.dropdown-toggle:focus
+.btn-sm:focus,
+.btn-sm:not(:disabled):not(.disabled).active:focus,
+.btn-sm:not(:disabled):not(.disabled):active:focus,
 .show > .btn-frameless.dropdown-toggle:focus,
-.show > .btn-primary.dropdown-toggle:focus {
+.show > .btn-primary.dropdown-toggle:focus
+.show > .btn-sm.dropdown-toggle:focus {
   box-shadow: 0 0 0 0.2rem rgba(233, 62, 52, 0.5);
 }
 
