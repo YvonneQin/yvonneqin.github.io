@@ -109,7 +109,7 @@ h3 {
 .section {
   padding-top: 0px;
   padding-bottom: 0px;
-  margin-top: var(--xxl_20);
+  margin-top: var(--xxxl_24);
   margin-bottom: 0px;
 }
 
@@ -162,7 +162,7 @@ h3 {
   font-family: var(--font-families-inter);
   padding-top: var(--l_16);
   padding-bottom: 8px;
-  font-size: var(--font-size-14);
+  font-size: 16px;
   color: var(--grey-text-85-primary);
   letter-spacing: 0;
   text-align: justify;
@@ -185,7 +185,7 @@ h3 {
 .lead2 {
   padding-top: var(--l_16);
   margin-bottom: 20px;
-  font-size: var(--font-size-14);
+  font-size: 12px;
   color: var(--grey-text-85-primary);
   letter-spacing: 0;
   text-align: justify;
