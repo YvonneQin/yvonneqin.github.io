@@ -134,7 +134,7 @@ h3 {
 }
 
 .sectiontitle-eng {
-  font-size: 14px;
+  font-size: var(--font-size-14);
   color: var(--grey-text-28-disabled);
   font-weight: 600;
   text-transform: uppercase;
@@ -162,7 +162,7 @@ h3 {
   font-family: var(--font-families-inter);
   padding-top: var(--l_16);
   padding-bottom: 8px;
-  font-size: 14px;
+  font-size: var(--font-size-14);
   color: var(--grey-text-85-primary);
   letter-spacing: 0;
   text-align: justify;
@@ -185,7 +185,7 @@ h3 {
 .lead2 {
   padding-top: var(--l_16);
   margin-bottom: 20px;
-  font-size: 14px;
+  font-size: var(--font-size-14);
   color: var(--grey-text-85-primary);
   letter-spacing: 0;
   text-align: justify;
@@ -221,7 +221,7 @@ h3 {
 }
 
 .subtitle {
-  font-size: 14px;
+  font-size: var(--font-size-14);
   color: var(--grey-text-28-disabled);
   background-color: #ffffff;
   opacity: 80%;
@@ -247,7 +247,7 @@ h3 {
 
 .imgsubtitle {
   margin-top: 18px;
-  font-size: 14px;
+  font-size: var(--font-size-14);
   color: #958e8e;
   letter-spacing: 0;
   text-align: center;
