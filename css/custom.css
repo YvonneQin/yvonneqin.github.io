@@ -1,6 +1,6 @@
 .header .navbar .nav-item .nav-link {
   font-weight: 600;
-  padding: 0px var(--l);
+  padding: 0px var(--l_16);
 }
 
 .section--contact .container {
@@ -32,7 +32,7 @@
   font-weight: 500;
   color: var(--palette-neutral-neural-8);
   background-color: var(--palette-neutral-neural-1);
-  padding: var(--s) var(--m);
+  padding: var(--s_8) var(--m_12);
 }
 
 .header::before {
@@ -65,7 +65,7 @@
 }
 
 .education__title {
-  padding-top: var(--xs);
+  padding-top: var(--xs_4);
   font-size: 18px;
 }
 
@@ -84,7 +84,7 @@ h2 {
 h3 {
   font-size: 20px;
   text-transform: capitalize;
-  margin-top: var(--l);
+  margin-top: var(--l_16);
 }
 
 .badge {
@@ -102,14 +102,14 @@ h3 {
   background-color: var(--grey-text-03-hover-fill);
   color: var(--grey-text-67-paragraph);
   font-size: var(--base-en-16);
-  padding: var(--s) var(--l);
+  padding: var(--s_8) var(--l_16);
   margin-right: 8px;
 }
 
 .section {
   padding-top: 0px;
   padding-bottom: 0px;
-  margin-top: var(--xxl);
+  margin-top: var(--xxl_20);
   margin-bottom: 0px;
 }
 
@@ -160,7 +160,7 @@ h3 {
 
 .lead {
   font-family: var(--font-families-inter);
-  padding-top: var(--l);
+  padding-top: var(--l_16);
   padding-bottom: 8px;
   font-size: 14px;
   color: var(--grey-text-85-primary);
@@ -172,7 +172,7 @@ h3 {
 
 .insightlead {
   font-family: var(--font-families-inter);
-  padding-top: var(--l);
+  padding-top: var(--l_16);
   margin-bottom:32px;
   font-size: 18px;
   color: var(--grey-text-85-primary);
@@ -183,7 +183,7 @@ h3 {
 }
 
 .lead2 {
-  padding-top: var(--l);
+  padding-top: var(--l_16);
   margin-bottom: 20px;
   font-size: 14px;
   color: var(--grey-text-85-primary);
@@ -200,7 +200,7 @@ h3 {
 }
 
 .mb-0 {
-  font-size: var(--xxl);
+  font-size: var(--xxl_20);
   margin-top: 40px;
 }
 
