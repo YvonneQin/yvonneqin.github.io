@@ -223,7 +223,7 @@ h3 {
 .subtitle {
   font-size: var(--font-size-14);
   color: var(--grey-text-28-disabled);
-  background-color: #ffffff;
+  background-color: var(--grey-grey-white);
   opacity: 80%;
   margin-bottom: 40px;
 }
