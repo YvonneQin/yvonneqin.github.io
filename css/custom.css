@@ -1,3 +1,4 @@
+
 .header .navbar .nav-item .nav-link {
   font-weight: 600;
   padding: 0px var(--l_16);
@@ -30,8 +31,8 @@
 .badge-2.rounded-pill {
   font-size: 12px;
   font-weight: 500;
-  color: var(--palette-neutral-neural-8);
-  background-color: var(--palette-neutral-neural-1);
+  color: var(--palette-light-neutral-neutral-8);
+  background-color: var(--palette-light-neutral-neutral-1);
   padding: var(--s_8) var(--m_12);
 }
 
@@ -99,8 +100,8 @@ h3 {
 }
 
 .clients__item {
-  background-color: var(--grey-text-03-hover-fill);
-  color: var(--grey-text-67-paragraph);
+  background-color: var(--mode-light-text-03-hover-fill-opacity);
+  color: var(--mode-light-text-67-paragraph);
   font-size: var(--base-en-16);
   padding: var(--s_8) var(--l_16);
   margin-right: 8px;
@@ -121,13 +122,13 @@ h3 {
 .titlenumber {
   font-size: 136px;
   font-weight: 600;
-  color: var(--grey-text-28-disabled);
+  color: var(--mode-light-text-28-disabled);
   opacity: 5%;
 }
 
 .sectiontitle {
   font-size: 36px;
-  color: var(--grey-text-85-primary);
+  color: var(--mode-light-text-85-primary);
   font-weight: 600;
   margin-top: -100px;
   text-transform: capitalize;
@@ -135,14 +136,14 @@ h3 {
 
 .sectiontitle-eng {
   font-size: var(--font-size-14);
-  color: var(--grey-text-28-disabled);
+  color: var(--mode-dark-text-28-disabled);
   font-weight: 600;
   text-transform: uppercase;
 }
 
 .title4 {
   font-size: 28px;
-  color: var(--grey-text-85-primary);
+  color: var(--mode-light-text-85-primary);
   letter-spacing: 0;
   font-weight: 600;
   margin-top: 32px;
@@ -151,7 +152,7 @@ h3 {
 
 .title5 {
   font-size: var(--base-en-16);
-  color: var(--grey-text-85-primary);
+  color: var(--mode-light-text-85-primary);
   letter-spacing: 0;
   font-weight: 600;
   margin-top: 32px;
@@ -163,7 +164,7 @@ h3 {
   padding-top: var(--l_16);
   padding-bottom: 8px;
   font-size: var(--font-size-14);
-  color: var(--grey-text-85-primary);
+  color: var(--mode-light-text-85-primary);
   letter-spacing: 0;
   text-align: justify;
   line-height: 26px;
@@ -175,7 +176,7 @@ h3 {
   padding-top: var(--l_16);
   margin-bottom:32px;
   font-size: 18px;
-  color: var(--grey-text-85-primary);
+  color: var(--mode-light-text-85-primary);
   letter-spacing: 0;
   text-align: justify;
   line-height: 24px;
@@ -186,7 +187,7 @@ h3 {
   padding-top: var(--l_16);
   margin-bottom: 20px;
   font-size: 12px;
-  color: var(--grey-text-85-primary);
+  color: var(--mode-light-text-85-primary);
   letter-spacing: 0;
   text-align: justify;
   line-height: 14px;
@@ -222,14 +223,14 @@ h3 {
 
 .subtitle {
   font-size: var(--font-size-14);
-  color: var(--grey-text-28-disabled);
-  background-color: var(--grey-grey-white);
+  color: var(--mode-dark-text-28-disabled);
+  background-color: var(--mode-light-grey-light-white-dark-black);
   opacity: 80%;
   margin-bottom: 40px;
 }
 
 .carousel-indicators li {
-  background-color: var(--grey-text-28-disabled);
+  background-color: var(--mode-dark-text-28-disabled);
   border-bottom: 20px solid transparent;
 }
 
@@ -306,6 +307,6 @@ h3 {
 
 .insight {
   border-radius: 0rem;
-  background-color: var(--grey-text-02-disabled);
-  border-color:var(--grey-text-28-disabled);
+  background-color: var(--mode-light-text-02-disabled-opacity);
+  border-color:var(--mode-dark-text-28-disabled);
 }
