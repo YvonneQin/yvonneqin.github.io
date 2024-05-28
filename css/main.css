@@ -678,17 +678,17 @@ legend {
   --font-families-pingfang-sc: PingFang SC;
   --font-families-inter: Inter;
   --font-families-menlo: Menlo;
-  --line-heights-20: 20;
-  --line-heights-22: 22;
-  --line-heights-24: 24;
-  --line-heights-26: 26;
-  --line-heights-28: 28;
-  --line-heights-32: 32;
-  --line-heights-36: 36;
-  --line-heights-40: 40;
-  --line-heights-44: 44;
-  --line-heights-52: 52;
-  --line-heights-56: 56;
+  --line-heights-20: 20px;
+  --line-heights-22: 22px;
+  --line-heights-24: 24px;
+  --line-heights-26: 26px;
+  --line-heights-28: 28px;
+  --line-heights-32: 32px;
+  --line-heights-36: 36px;
+  --line-heights-40: 40px;
+  --line-heights-44: 44px;
+  --line-heights-52: 52px;
+  --line-heights-56: 56px;
   --font-weights-pingfang-sc-regular: Regular;
   --font-weights-pingfang-sc-medium: Medium;
   --font-weights-inter-regular: Regular;
@@ -699,17 +699,17 @@ legend {
   --font-weights-inter-medium: Medium;
   --font-weights-menlo-regular: Regular;
   --font-weights-menlo-bold: Bold;
-  --font-size-12: 12;
-  --font-size-13: 13;
-  --font-size-14: 14;
-  --font-size-15: 15;
-  --font-size-16: 16;
-  --font-size-18: 18;
-  --font-size-20: 20;
-  --font-size-24: 24;
-  --font-size-28: 28;
-  --font-size-36: 36;
-  --font-size-48: 48;
+  --font-size-12: 12px;
+  --font-size-13: 13px;
+  --font-size-14: 14px;
+  --font-size-15: 15px;
+  --font-size-16: 16px;
+  --font-size-18: 18px;
+  --font-size-20: 20px;
+  --font-size-24: 24px;
+  --font-size-28: 28px;
+  --font-size-36: 36px;
+  --font-size-48: 48px;
   --letter-spacing-0: 0%;
   --paragraph-spacing-0: 0;
   --base-cn-12: [object Object];
@@ -759,7 +759,7 @@ legend {
   --text-decoration-none: none;
   --paragraph-indent-0: 0px;
 
-  
+
   --xs_4: 0.25rem;
   --s_8: 0.5rem;
   --m_12: 0.75rem;

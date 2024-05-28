@@ -162,7 +162,7 @@ h3 {
   font-family: var(--font-families-inter);
   padding-top: var(--l_16);
   padding-bottom: 8px;
-  font-size: 14px;
+  font-size: var(--font-size-14);
   color: var(--grey-text-85-primary);
   letter-spacing: 0;
   text-align: justify;
