@@ -308,5 +308,5 @@ h3 {
 .insight {
   border-radius: 0rem;
   background-color: var(--mode-light-text-02-disabled-opacity);
-  border-color:var(--mode-dark-text-28-disabled);
+  border-color:var(--mode-light-text-12-table-line-opacity);
 }
