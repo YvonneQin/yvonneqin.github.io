@@ -174,7 +174,7 @@ h3 {
 .insightlead {
   font-family: var(--font-families-inter);
   padding-top: var(--l_16);
-  margin-bottom:32px;
+  margin-bottom:16px;
   font-size: 18px;
   color: var(--mode-light-text-85-primary);
   letter-spacing: 0;
@@ -197,7 +197,7 @@ h3 {
 
 .article {
   margin-top: 0px;
-  margin-bottom: 48px;;
+  margin-bottom: 24px;;
 }
 
 .mb-0 {
