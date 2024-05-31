@@ -12213,7 +12213,7 @@ span a:hover {
 .btn-primary {
   position: relative;
   color: #fff;
-  background-color: #000;
+  background-color: var(--palette-light-neutral-neutral-10);
   height: 36px;
   border-color: #000;
   will-change: border-color, color, background-color;
