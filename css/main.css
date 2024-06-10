@@ -12825,8 +12825,8 @@ textarea:focus {
   bottom: 0;
   width: 100%;
   height: 1px;
-  max-width: 1170px;
-  background-color: #dbe0e4;
+  max-width: 1168px;
+  background-color: var(--palette-light-neutral-neutral-1);
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
 }
