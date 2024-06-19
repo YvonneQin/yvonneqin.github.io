@@ -3,96 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Expandable Div with Icon</title>
+    <title>Anchor Example</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            height: 2000px;
+            margin: 0;
+            padding: 0;
         }
 
-        .container {
-            margin: 20px;
-            position: relative;
-        }
-
-        #expandableDiv {
-            width: 100%;
-            height: 100px;
-            overflow: hidden;
-            transition: height 0.3s ease-out;
-            background-color: #f0f0f0;
-            border: 1px solid #ccc;
-            padding: 10px;
-            position: relative;
-        }
-
-        #expandableDiv.expanded {
-            height: auto;
-        }
-
-        .overlay {
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            height: 100px;
-            background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
-            display: flex;
-            justify-content: center;
-            align-items: flex-end;
-        }
-
-        #toggleButton {
-            padding: 10px 20px;
+        .anchor-icon {
+            position: fixed;
+            top: 20%;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            background: url('icon.png') no-repeat center center;
+            background-size: contain;
             cursor: pointer;
-            background: none;
-            border: none;
-            font-size: 16px;
-            display: flex;
-            align-items: center;
+            transition: all 0.3s ease;
         }
 
-        #toggleButton .icon {
-            margin-left: 8px;
+        .anchor {
+            position: fixed;
+            top: 20%;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            background-color: #007BFF;
+            color: white;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: none;
+        }
+
+        .anchor:hover {
+            display: block;
+            width: 80px;
+            height: 80px;
+            line-height: 80px;
+            border-radius: 50%;
+            font-size: 18px;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div id="expandableDiv" class="collapsed">
-            <p>这里是需要展示的内容。</p>
-            <p>更多的内容...更多的内容...更多的内容...更多的内容...更多的内容...更多的内容...</p>
-            <p>更多的内容...更多的内容...更多的内容...更多的内容...更多的内容...更多的内容...</p>
-            <p>更多的内容...更多的内容...更多的内容...更多的内容...更多的内容...更多的内容...</p>
-            <p>更多的内容...更多的内容...更多的内容...更多的内容...更多的内容...更多的内容...</p>
-            <p>更多的内容...更多的内容...更多的内容...更多的内容...更多的内容...更多的内容...</p>
-            <p>更多的内容...更多的内容...更多的内容...更多的内容...更多的内容...更多的内容...</p>
-            <p>更多的内容...更多的内容...更多的内容...更多的内容...更多的内容...更多的内容...</p>
-            <p>更多的内容...更多的内容...更多的内容...更多的内容...更多的内容...更多的内容...</p>
-            <p>更多的内容...更多的内容...更多的内容...更多的内容...更多的内容...更多的内容...</p>
-            <p>更多的内容...更多的内容...更多的内容...更多的内容...更多的内容...更多的内容...</p>
-            <div class="overlay">
-                <button id="toggleButton">
-                    展开
-                    <span class="icon">⬇️</span>
-                </button>
-            </div>
-        </div>
-    </div>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const toggleButton = document.getElementById('toggleButton');
-            const expandableDiv = document.getElementById('expandableDiv');
-            const icon = document.querySelector('#toggleButton .icon');
+    <div class="anchor-icon" id="anchor-icon"></div>
+    <div class="anchor" id="anchor">Top</div>
 
-            toggleButton.addEventListener('click', function() {
-                if (expandableDiv.classList.contains('expanded')) {
-                    expandableDiv.classList.remove('expanded');
-                    toggleButton.textContent = '展开';
-                    icon.textContent = '⬇️';
-                } else {
-                    expandableDiv.classList.add('expanded');
-                    toggleButton.textContent = '收起';
-                    icon.textContent = '⬆️';
-                }
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const anchorIcon = document.getElementById('anchor-icon');
+            const anchor = document.getElementById('anchor');
+
+            anchorIcon.addEventListener('mouseover', function () {
+                anchor.style.display = 'block';
+            });
+
+            anchorIcon.addEventListener('mouseout', function () {
+                anchor.style.display = 'none';
+            });
+
+            anchor.addEventListener('click', function () {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
             });
         });
     </script>

@@ -262,8 +262,51 @@ h3 {
 
 .imgstyle2 {
   margin-top: 24px;
-  display: flex;
   justify-content: center;
+  display:flex;
+}
+
+
+
+.fixed-anchor {
+  position: fixed;
+  color: var(--mode-light-text-85-primary);
+  right: 20px;
+  padding-top: 160px;
+  padding-left: 8px;
+  padding-bottom: 600px;
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  width: 100px; /* 初始宽度 */
+  overflow: hidden;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.fixed-anchor:hover {
+  width: 200px; /* 悬浮时的宽度 */
+  padding-left: 16px;
+  padding-bottom: 600px;
+  background-image: linear-gradient(to right,(255, 255, 255, 1) 80%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 100%);
+}
+
+.fixed-anchor a {
+  text-decoration: none;
+  padding: 4px 12px;
+  color: var(--palette-light-neutral-neutral-4);
+  border-radius: 8px;
+  text-align: left;
+  transition: all 0.3s ease;
+  white-space: nowrap; /* 防止文本换行 */
+  overflow: hidden; /* 隐藏溢出的文本 */
+  text-overflow: ellipsis; /* 添加省略号 */
+}
+
+.fixed-anchor a:hover {
+  color:var(--mode-light-text-85-primary);
+  background-color: var(--mode-light-text-03-hover-fill-opacity);
+  font-weight: 800px;
 }
 
 .body {
