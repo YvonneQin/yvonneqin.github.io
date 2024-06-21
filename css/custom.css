@@ -271,7 +271,7 @@ h3 {
 .fixed-anchor {
   position: fixed;
   font-size: 14px;
-  color: var(--mode-light-text-85-primary);
+  /* color: var(--mode-light-text-85-primary); */
   right: 20px;
   padding-top: 120px;
   padding-left: 8px;
@@ -287,6 +287,7 @@ h3 {
 
 .fixed-anchor:hover {
   width: 200px; /* 悬浮时的宽度 */
+  
   padding-left: 16px;
   padding-bottom: 680px;
   background-image: linear-gradient(to right,(255, 255, 255, 1) 80%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 100%);
@@ -306,6 +307,7 @@ h3 {
 
 .fixed-anchor a:hover {
   color:var(--mode-light-text-85-primary);
+  font-weight: 700;
   background-color: var(--mode-light-text-03-hover-fill-opacity);
   font-weight: 800px;
 }
