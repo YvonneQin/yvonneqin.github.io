@@ -280,7 +280,7 @@ h3 {
   flex-direction: column;
   z-index: 1000;
   transition: all 0.3s ease;
-  width: 100px; /* 初始宽度 */
+  width: 180px; /* 初始宽度 */
   overflow: hidden;
   background-image: linear-gradient(to right, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 100%);
 }
