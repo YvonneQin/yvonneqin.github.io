@@ -270,7 +270,7 @@ h3 {
 
 .fixed-anchor {
   position: fixed;
-  font-size: 14px;
+  font-size: 12px;
   /* color: var(--mode-light-text-85-primary); */
   right: 20px;
   top: 0px;
