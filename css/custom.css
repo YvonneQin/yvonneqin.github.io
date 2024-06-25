@@ -282,27 +282,25 @@ h3 {
   flex-direction: column;
   z-index: 1000;
   transition: all 0.3s ease;
-  width: 160px; /* 初始宽度 */
+  width: 140px; /* 初始宽度 */
   overflow-y: auto; /* 溢出时滚动 */
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 100%);
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.8) 0%,  rgba(255, 255, 255, 0.2) 100%);
 }
 
 .fixed-anchor:hover {
   width: 200px; /* 悬浮时的宽度 */
-  padding-left: 16px;
-  background-image: linear-gradient(to right,(255, 255, 255, 1) 80%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 100%);
+  padding-left: 8px;
 }
 
 .fixed-anchor a {
   text-decoration: none;
-  width: 100%;
+  width: 95%;
   padding: 6px 12px;
   color: var(--palette-light-neutral-neutral-6);
   border-radius: 8px;
-  display: inline-flex;
-  align-items: center; /* 垂直居中对齐 */
   text-align: left;
   transition: all 0.3s ease;
+  align-items: center; /* 垂直居中对齐 */
   white-space: nowrap; /* 防止文本换行 */
   overflow: hidden; /* 隐藏溢出的文本 */
   text-overflow: ellipsis; /* 添加省略号 */
