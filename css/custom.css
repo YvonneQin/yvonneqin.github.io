@@ -299,6 +299,8 @@ h3 {
   padding: 6px 12px;
   color: var(--palette-light-neutral-neutral-6);
   border-radius: 8px;
+  display: inline-flex;
+  align-items: center; /* 垂直居中对齐 */
   text-align: left;
   transition: all 0.3s ease;
   white-space: nowrap; /* 防止文本换行 */
