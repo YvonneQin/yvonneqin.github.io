@@ -3,75 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anchor Example</title>
+    <title>Anchor Highlighting</title>
     <style>
         body {
-            height: 2000px;
-            margin: 0;
-            padding: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
         }
-
-        .anchor-icon {
-            position: fixed;
-            top: 20%;
-            right: 20px;
-            width: 40px;
-            height: 40px;
-            background: url('icon.png') no-repeat center center;
-            background-size: contain;
-            cursor: pointer;
-            transition: all 0.3s ease;
+        .content {
+            float: left;
+            width: 70%;
+            padding: 20px;
         }
-
-        .anchor {
+        .sidebar {
+            float: right;
+            width: 25%;
             position: fixed;
-            top: 20%;
+            top: 20px;
             right: 20px;
-            width: 40px;
-            height: 40px;
+        }
+        .sidebar a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: black;
+        }
+        .sidebar a.active {
             background-color: #007BFF;
             color: white;
-            text-align: center;
-            line-height: 40px;
-            border-radius: 50%;
-            cursor: pointer;
-            display: none;
         }
-
-        .anchor:hover {
-            display: block;
-            width: 80px;
-            height: 80px;
-            line-height: 80px;
-            border-radius: 50%;
-            font-size: 18px;
+        .section {
+            padding: 20px;
+            border-bottom: 1px solid #ddd;
         }
     </style>
 </head>
 <body>
-    <div class="anchor-icon" id="anchor-icon"></div>
-    <div class="anchor" id="anchor">Top</div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const anchorIcon = document.getElementById('anchor-icon');
-            const anchor = document.getElementById('anchor');
+<div class="content">
+    <div id="section1" class="section">
+        <h2>Section 1</h2>
+        <p>This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.</p>
+    </div>
+    <div id="section2" class="section">
+        <h2>Section 2</h2>
+        <p>This is content for section 2.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.</p>
+    </div>
+    <div id="section3" class="section">
+        <h2>Section 3</h2>
+        <p>This is content for section 3.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.</p>
+    </div>
+    <div id="section4" class="section">
+        <h2>Section 4</h2>
+        <p>This is content for section 4.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.This is content for section 1.</p>
+    </div>
+</div>
 
-            anchorIcon.addEventListener('mouseover', function () {
-                anchor.style.display = 'block';
-            });
+<div class="sidebar">
+    <a href="#section1">Section 1</a>
+    <a href="#section2">Section 2</a>
+    <a href="#section3">Section 3</a>
+    <a href="#section4">Section 4</a>
+</div>
 
-            anchorIcon.addEventListener('mouseout', function () {
-                anchor.style.display = 'none';
-            });
+<script>
+    document.addEventListener("scroll", function() {
+        var sections = document.querySelectorAll(".section");
+        var sidebarLinks = document.querySelectorAll(".sidebar a");
 
-            anchor.addEventListener('click', function () {
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
+        sections.forEach(function(section, index) {
+            var rect = section.getBoundingClientRect();
+            if (rect.top >= 0 && rect.top <= window.innerHeight / 2) {
+                sidebarLinks.forEach(function(link) {
+                    link.classList.remove("active");
                 });
-            });
+                sidebarLinks[index].classList.add("active");
+            }
         });
-    </script>
+    });
+</script>
+
 </body>
 </html>
