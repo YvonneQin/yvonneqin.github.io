@@ -69,6 +69,25 @@
         });
       }
     </script>
+    
+    <script>
+      function openProtectedLink() {
+        var testV = 1;
+        var pass1 = prompt('Hi there! Welcome to my site and portfolio! Due to the use of portfolio is for my job hunting, I have to set a password requirement for access. If you need to visit, please contact me on WeChat at 131 6243 5185. Kindly fill in the password:', '');
+        while (testV < 3) {
+          if (!pass1)
+            history.go(-1);
+          if (pass1 == "qyw1") {
+            break;
+          }
+          testV += -1;
+          var pass1 = prompt('Error, pls fill in again:');
+        }
+        if (pass1 != "password" & testV == 3)
+          history.go(-1);
+        return " ";
+      }
+    </script>
 
     <title>my_insight</title>
 
@@ -378,7 +397,7 @@
           class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
         >
           <div class="col-12 mt-4 mt-md-0 my-md-auto">
-            <a 
+            <a onclick="openProtectedLink()"  
               href="https://yuwen.notion.site/B-52308b64614746c4b1426ddf5383ce19?pvs=4"
               class="insight btn btn-frameless"
               target="_blank"
@@ -404,7 +423,7 @@
           class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
         >
           <div class="col-12 mt-4 mt-md-0 my-md-auto">
-            <a 
+            <a onclick="openProtectedLink()" 
               href="https://yuwen.notion.site/for-Human-Resources-Product-Line-a6c389ba541c42c9aa0834d5abf8239a?pvs=4"
               class="insight btn btn-frameless"
               target="_blank"
@@ -430,7 +449,7 @@
           class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
         >
           <div class="col-12 mt-4 mt-md-0 my-md-auto">
-            <a 
+            <a onclick="openProtectedLink()"
               href="https://yuwen.notion.site/for-E-commerce-Product-Line-0e91a66633a94248bc0ea63507d17a6a?pvs=4"
               class="insight btn btn-frameless"
               target="_blank"

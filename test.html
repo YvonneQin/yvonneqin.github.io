@@ -1,31 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Password Protected Links</title>
+    <title>密码验证页面</title>
+    <script>
+        let attempt = 0;
+        const maxAttempts = 3;
+        const correctPassword = "your_password";  // 请替换为正确的密码
+
+        function checkPassword() {
+            let password = prompt("请输入密码：");
+            attempt++;
+
+            if (password === null) {  // 用户点击取消
+                window.history.back();  // 返回上一页
+                return;
+            }
+
+            if (password === correctPassword) {
+                alert("密码正确，进入网页。");
+                window.location.href = "your_target_page.html";  // 请替换为目标页面的URL
+            } else {
+                if (attempt < maxAttempts) {
+                    alert("密码错误，请重新输入。");
+                    checkPassword();
+                } else {
+                    alert("密码错误次数超过限制，返回上一页。");
+                    window.history.back();  // 返回上一页
+                }
+            }
+        }
+
+        function openPageWithPassword() {
+            attempt = 0;  // 重置尝试次数
+            checkPassword();
+        }
+
+        window.onload = openPageWithPassword;  // 页面加载完成后弹出密码验证框
+    </script>
 </head>
 <body>
-    <h2>Password Protected Links</h2>
-    <a href="protectedLink1.html" class="protected-link">Link 1</a><br>
-    <a href="protectedLink2.html" class="protected-link">Link 2</a><br>
-    <a href="protectedLink3.html" class="protected-link">Link 3</a><br>
-
-    <script>
-        const correctPassword = "yourPassword"; // Replace this with your actual password
-
-        document.querySelectorAll('.protected-link').forEach(link => {
-            link.addEventListener('click', function(event) {
-                event.preventDefault(); // Prevent the default link action
-                const userPassword = prompt("Please enter the password:");
-                if (userPassword === correctPassword) {
-                    window.location.href = this.href;
-                } else {
-                    alert("Incorrect password. Please try again.");
-                    return " ";
-                }
-            });
-        });
-    </script>
+    <h1>欢迎访问</h1>
 </body>
 </html>
