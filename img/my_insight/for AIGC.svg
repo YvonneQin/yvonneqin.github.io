@@ -15,10 +15,10 @@
 </g>
 <rect x="319" y="68" width="31.25" height="31.25" rx="10" fill="white"/>
 <rect x="319" y="68" width="31.25" height="31.25" rx="10" fill="url(#pattern0_728_33233)"/>
-<rect x="355.25" y="68" width="31.25" height="31.25" rx="10" fill="white"/>
-<rect x="360.875" y="73.625" width="20" height="20" fill="url(#pattern1_728_33233)"/>
-<rect x="391.5" y="68" width="31.25" height="31.25" rx="10" fill="white"/>
-<rect x="397.75" y="73" width="18.75" height="21.25" fill="url(#pattern2_728_33233)"/>
+<rect x="358.25" y="68" width="31.25" height="31.25" rx="10" fill="white"/>
+<rect x="363.875" y="73.625" width="20" height="20" fill="url(#pattern1_728_33233)"/>
+<rect x="397.5" y="68" width="31.25" height="31.25" rx="10" fill="white"/>
+<rect x="403.75" y="73" width="18.75" height="21.25" fill="url(#pattern2_728_33233)"/>
 </g>
 <path d="M12 2H674C679.523 2 684 6.47715 684 12V108C684 113.523 679.523 118 674 118H12C6.47715 118 2 113.523 2 108V12C2 6.47716 6.47715 2 12 2Z" stroke="url(#paint3_linear_728_33233)" stroke-width="4"/>
 <defs>
@@ -31,7 +31,7 @@
 <pattern id="pattern2_728_33233" patternContentUnits="objectBoundingBox" width="1" height="1">
 <use xlink:href="#image2_728_33233" transform="matrix(0.0012522 0 0 0.00111899 -0.716402 -0.110637)"/>
 </pattern>
-<linearGradient id="paint0_linear_728_33233" x1="0" y1="0" x2="682" y2="115" gradientUnits="userSpaceOnUse">
+<linearGradient id="paint0_linear_728_33233" x1="0" y1="0" x2="1006" y2="163.5" gradientUnits="userSpaceOnUse">
 <stop stop-color="#247BFE"/>
 <stop offset="0.0625" stop-color="#227BFE"/>
 <stop offset="0.125" stop-color="#157DFF"/>
