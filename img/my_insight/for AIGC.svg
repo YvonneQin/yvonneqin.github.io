@@ -1,7 +1,7 @@
 <svg width="686" height="120" viewBox="0 0 686 120" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g clip-path="url(#clip0_728_33233)">
 <path d="M0 12C0 5.37259 5.37258 0 12 0H674C680.627 0 686 5.37258 686 12V108C686 114.627 680.627 120 674 120H12C5.37258 120 0 114.627 0 108V12Z" fill="white"/>
-<path d="M0 12C0 5.37259 5.37258 0 12 0H674C680.627 0 686 5.37258 686 12V108C686 114.627 680.627 120 674 120H12C5.37258 120 0 114.627 0 108V12Z" fill="url(#paint0_linear_728_33233)" fill-opacity="0.2"/>
+<path d="M0 12C0 5.37259 5.37258 0 12 0H674C680.627 0 686 5.37258 686 12V108C686 114.627 680.627 120 674 120H12C5.37258 120 0 114.627 0 108V12Z" fill="url(#paint0_linear_728_33233)"/>
 <path d="M0 12C0 5.37259 5.37258 0 12 0H674C680.627 0 686 5.37258 686 12V108C686 114.627 680.627 120 674 120H12C5.37258 120 0 114.627 0 108V12Z" fill="url(#pattern0_728_33233)" fill-opacity="0.8"/>
 <g clip-path="url(#clip1_728_33233)">
 <path d="M466.593 330.151C408.824 240.67 412.633 141.868 450.723 67.3002C488.812 -7.26788 518.015 -63.8171 519.92 -68.1669C521.824 -72.5167 526.268 -74.9999 530.711 -74.9999H674.181C683.069 -74.9999 689.418 -65.6801 684.974 -57.6019C684.974 -57.6019 491.986 320.208 486.907 329.529C483.098 338.85 472.307 338.851 466.593 330.151Z" fill="white" fill-opacity="0.2"/>
@@ -22,7 +22,7 @@
 <path d="M12 2H674C679.523 2 684 6.47715 684 12V108C684 113.523 679.523 118 674 118H12C6.47715 118 2 113.523 2 108V12C2 6.47716 6.47715 2 12 2Z" stroke="url(#paint2_linear_728_33233)" stroke-width="4"/>
 <defs>
 <pattern id="pattern0_728_33233" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image0_728_33233" transform="matrix(0.000718391 0 0 0.0041068 0 -1.27414)"/>
+<use xlink:href="#image0_728_33233" transform="matrix(0.000718391 0 0 0.0041068 -0.00241461 -2.17137)"/>
 </pattern>
 <pattern id="pattern1_728_33233" patternContentUnits="objectBoundingBox" width="1" height="1">
 <use xlink:href="#image1_728_33233" transform="scale(0.000976562)"/>
