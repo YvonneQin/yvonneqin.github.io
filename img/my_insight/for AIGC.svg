@@ -19,7 +19,6 @@
 <rect x="581.5" y="72" width="31.25" height="31.25" rx="10" fill="white"/>
 <rect x="587.75" y="77" width="18.75" height="21.25" fill="url(#pattern3_728_33233)"/>
 </g>
-<path d="M12 2H674C679.523 2 684 6.47715 684 12V108C684 113.523 679.523 118 674 118H12C6.47715 118 2 113.523 2 108V12C2 6.47716 6.47715 2 12 2Z" stroke="url(#paint2_linear_728_33233)" stroke-width="4"/>
 <defs>
 <pattern id="pattern0_728_33233" patternContentUnits="objectBoundingBox" width="1" height="1">
 <use xlink:href="#image0_728_33233" transform="matrix(0.000718391 0 0 0.0041068 -0.00241461 -2.17137)"/>
@@ -55,25 +54,6 @@
 <linearGradient id="paint1_linear_728_33233" x1="81.9157" y1="29.2577" x2="76.6485" y2="19.9443" gradientUnits="userSpaceOnUse">
 <stop stop-opacity="0.4"/>
 <stop offset="0.9228"/>
-</linearGradient>
-<linearGradient id="paint2_linear_728_33233" x1="686" y1="112.5" x2="-1.13352e-06" y2="6.91197e-06" gradientUnits="userSpaceOnUse">
-<stop stop-color="#247BFE"/>
-<stop offset="0.0625" stop-color="#227BFE"/>
-<stop offset="0.125" stop-color="#157DFF"/>
-<stop offset="0.1875" stop-color="#0080FF"/>
-<stop offset="0.25" stop-color="#0087FF"/>
-<stop offset="0.3125" stop-color="#0093FF"/>
-<stop offset="0.375" stop-color="#00A2FF"/>
-<stop offset="0.4375" stop-color="#00B6FF"/>
-<stop offset="0.5" stop-color="#00CEFA"/>
-<stop offset="0.5625" stop-color="#00E2CE"/>
-<stop offset="0.625" stop-color="#00EFA6"/>
-<stop offset="0.6875" stop-color="#00F786"/>
-<stop offset="0.75" stop-color="#00FB70"/>
-<stop offset="0.8125" stop-color="#00FD62"/>
-<stop offset="0.875" stop-color="#00FF5A"/>
-<stop offset="0.9375" stop-color="#00FF57"/>
-<stop offset="1" stop-color="#03FF57"/>
 </linearGradient>
 <clipPath id="clip0_728_33233">
 <path d="M0 12C0 5.37259 5.37258 0 12 0H674C680.627 0 686 5.37258 686 12V108C686 114.627 680.627 120 674 120H12C5.37258 120 0 114.627 0 108V12Z" fill="white"/>
