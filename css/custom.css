@@ -360,7 +360,7 @@ h3 {
 }
 
 .insight {
-  border-radius: 0rem;
+  border-radius: 0.5rem;
   background-color: var(--mode-light-text-02-disabled-opacity);
-  border-color:var(--mode-light-text-12-table-line-opacity);
+  border-color:var(--palette-light-neutral-neutral-1);
 }

@@ -20,7 +20,7 @@
 <stop offset="0.9228" stop-color="white"/>
 </linearGradient>
 <clipPath id="clip0_710_4742">
-<rect width="686" height="120" fill="white"/>
+<rect width="686" height="120" rx="4" fill="white"/>
 </clipPath>
 <clipPath id="clip1_710_4742">
 <rect width="686" height="411.6" fill="white" transform="translate(0 -75)"/>

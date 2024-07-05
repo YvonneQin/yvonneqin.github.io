@@ -1,7 +1,7 @@
 <svg width="686" height="120" viewBox="0 0 686 120" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_323_29194)">
 <g clip-path="url(#clip1_323_29194)">
-<rect width="686" height="411.6" transform="translate(0 -75)" fill="#FF7436"/>
+<rect width="686" height="411.6" transform="translate(0 -75)" fill="#068960"/>
 <g opacity="0.2">
 <path d="M466.593 330.151C408.824 240.67 412.633 141.868 450.723 67.3002C488.812 -7.26788 518.015 -63.8171 519.92 -68.1669C521.824 -72.5167 526.268 -74.9999 530.711 -74.9999H674.181C683.069 -74.9999 689.418 -65.6801 684.975 -57.6019C684.975 -57.6019 491.986 320.208 486.908 329.529C483.099 338.85 472.307 338.851 466.593 330.151Z" fill="white"/>
 </g>
@@ -21,7 +21,7 @@
 <stop offset="0.9228" stop-color="white"/>
 </linearGradient>
 <clipPath id="clip0_323_29194">
-<rect width="686" height="120" fill="white"/>
+<path d="M0 12C0 5.37259 5.37258 0 12 0H674C680.627 0 686 5.37258 686 12V108C686 114.627 680.627 120 674 120H12C5.37258 120 0 114.627 0 108V12Z" fill="white"/>
 </clipPath>
 <clipPath id="clip1_323_29194">
 <rect width="686" height="411.6" fill="white" transform="translate(0 -75)"/>
