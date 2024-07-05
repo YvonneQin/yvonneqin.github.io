@@ -21,7 +21,7 @@
 <stop offset="0.9228" stop-color="white"/>
 </linearGradient>
 <clipPath id="clip0_122_20948">
-<rect width="686" height="120" rx="4" fill="white"/>
+<path d="M0 12C0 5.37259 5.37258 0 12 0H674C680.627 0 686 5.37258 686 12V108C686 114.627 680.627 120 674 120H12C5.37258 120 0 114.627 0 108V12Z" fill="white"/>
 </clipPath>
 <clipPath id="clip1_122_20948">
 <rect width="686" height="411.6" fill="white" transform="translate(0 -76)"/>
