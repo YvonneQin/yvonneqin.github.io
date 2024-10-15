@@ -16,7 +16,7 @@ jobs:
 
     steps:
     # 第一步，检查项目代码
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
 
     # 设置 Ruby 环境，确保 Jekyll 运行所需的 Ruby 版本
     - name: Set up Ruby
