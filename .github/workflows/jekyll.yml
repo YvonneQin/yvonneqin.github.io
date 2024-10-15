@@ -1,0 +1,41 @@
+name: Jekyll Site CI
+
+# 触发器，指当推送到主分支（main）时触发构建
+on:
+  push:
+    branches:
+      - master  # 监听 main 分支的代码推送事件
+  pull_request:
+    branches:
+      - master  # 监听 pull request 提交到 main 分支的事件
+
+# 定义作业
+jobs:
+  build:
+    runs-on: ubuntu-latest  # 使用最新的 Ubuntu 作为运行环境
+
+    steps:
+    # 第一步，检查项目代码
+    - uses: actions/checkout@v2
+
+    # 设置 Ruby 环境，确保 Jekyll 运行所需的 Ruby 版本
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: 3.0  # 指定 Ruby 版本，确保与 Jekyll 兼容
+
+    # 安装 bundler，用于管理 Ruby 依赖
+    - run: gem install bundler
+
+    # 安装项目依赖（包括 Jekyll 及插件）
+    - run: bundle install
+
+    # 执行 Jekyll 构建任务
+    - run: bundle exec jekyll build --incremental
+
+    # 可选：将构建的静态文件上传到 GitHub Actions 的构建产物中
+    - name: Upload _site
+      uses: actions/upload-artifact@v2
+      with:
+        name: site
+        path: ./_site  # 上传 _site 文件夹，它是 Jekyll 生成的静态网站
