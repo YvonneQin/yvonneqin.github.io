@@ -9,6 +9,11 @@ print(f"Current working directory: {os.getcwd()}")
 
 app = Flask(__name__)
 
+if __name__ == "__main__":
+    app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 5002)))
+
+
+
 # 从环境变量中隐式获取 Azure OpenAI API 的配置信息
 openai.api_key = os.getenv("AZURE_OPENAI_API_KEY")  # 从环境变量获取 API Key
 openai.api_base = os.getenv("AZURE_OPENAI_API_BASE")  # 从环境变量获取 API 终结点
