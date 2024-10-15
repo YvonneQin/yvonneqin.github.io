@@ -1,0 +1,1220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- <SCRIPT language=JavaScript>
+  function password() {
+    var testV = 1;
+    var pass1 = prompt('Hi there! Welcome to my site and portfolio! Due to the use of portfolio is for my job hunting, I have to set a password requirement for access. If you need to visit, please contact me on WeChat at 131 6243 5185. Kindly fill in the password:','');
+    while (testV < 3) {
+      if (!pass1)
+        history.go(-1);
+      if (pass1 == "qyw") {
+        alert('Welcome to my site!');
+        break;
+      }
+      testV += -1;
+      var pass1 = prompt('Error, pls fill in again:');
+    }
+    if (pass1 != "password" & testV == 3)
+      history.go(-1);
+    return " ";
+  }
+
+  document.write(password());
+
+</SCRIPT> -->
+
+<head>
+  <meta name="author" content="yuwen">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta property="og:title" content="yuwen-site" />
+  <meta property="og:description" content="This is yuwen's site, whatever you wonder is here." />
+  <meta property="og:image" content="img/meta/web Logo.png" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="stylesheet" href="css/main.css" />
+  <!-- <link rel="stylesheet" href="css/rad-icons.css" />   -->
+  <link rel="stylesheet" href="css/custom.css" />
+  <!-- 我自己的iconfont -->
+  <link rel="stylesheet" href="https://at.alicdn.com/t/c/font_4545731_3pnlmzv33e7.css" />
+
+
+  <script>
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src =
+        'https://www.googletagmanager.com/gtm.js?id=GTM-000000' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-000000');
+  </script>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const toggleButton = document.getElementById('toggleButton');
+      const expandableDiv = document.getElementById('expandableDiv');
+      const gradientOverlay = document.getElementById('gradientOverlay');
+
+      toggleButton.addEventListener('click', function () {
+        if (expandableDiv.classList.contains('expanded')) {
+          expandableDiv.classList.remove('expanded');
+          toggleButton.innerHTML = 'Expand All<i class="icon-arrow-down-F iconfont"></i>';
+          gradientOverlay.style.display = 'flex';
+        } else {
+          expandableDiv.classList.add('expanded');
+          toggleButton.innerHTML = 'Collapsed <i class="icon-arrow-up-F iconfont"></i>';
+          gradientOverlay.style.display = 'flex';
+        }
+      });
+    });
+  </script>
+
+  
+
+  <title>Yuwen‘s Portfolio</title>
+
+  <style>
+    .rad-fade-in {
+      will-change: opacity, transform;
+      animation-name: rad-fade-in-fallback;
+      animation-duration: 5s;
+      animation-fill-mode: both;
+    }
+
+    @keyframes rad-fade-in-fallback {
+      0% {
+        opacity: 0;
+      }
+
+      75% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+
+    .fonts-loaded .rad-fade-in.rad-waiting {
+      animation-name: none;
+      opacity: 0;
+    }
+
+    .fonts-loaded .rad-fade-in.rad-animate {
+      animation-name: rad-fade-in;
+      animation-duration: 1.1s;
+      animation-fill-mode: both;
+    }
+
+    @keyframes rad-fade-in {
+      0% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+
+
+    .rad-fade-in-long {
+      will-change: opacity, transform;
+      animation-name: rad-fade-in-long-fallback;
+      animation-duration: 8s;
+      animation-fill-mode: both;
+    }
+
+    @keyframes rad-fade-in-long-fallback {
+      0% {
+        opacity: 0;
+      }
+
+      75% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+
+    .fonts-loaded .rad-fade-in-long.rad-waiting {
+      animation-name: none;
+      opacity: 0;
+    }
+
+    .fonts-loaded .rad-fade-in-long.rad-animate {
+      animation-name: rad-fade-in-long;
+      animation-duration: 2s;
+      animation-fill-mode: both;
+    }
+
+    @keyframes rad-fade-in-long {
+      0% {
+        opacity: 0;
+      }
+
+      20% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+
+
+    .rad-fade-down {
+      will-change: opacity, transform;
+      animation-name: rad-fade-down-fallback;
+      animation-duration: 5s;
+      animation-fill-mode: both;
+      transform: translateY(-30px);
+    }
+
+    @keyframes rad-fade-down-fallback {
+      0% {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+
+      75% {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .fonts-loaded .rad-fade-down.rad-waiting {
+      animation-name: none;
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+
+    .fonts-loaded .rad-fade-down.rad-animate {
+      animation-name: rad-fade-down;
+      animation-duration: 1.1s;
+    }
+
+    @keyframes rad-fade-down {
+      0% {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+
+    .rad-scale-down {
+      will-change: opacity, transform;
+      animation-name: rad-scale-down-fallback;
+      animation-duration: 5s;
+      animation-fill-mode: both;
+      transform-origin: 50% 0;
+    }
+
+    @keyframes rad-scale-down-fallback {
+      0% {
+        opacity: 0;
+        transform: scaleY(0.95);
+      }
+
+      75% {
+        opacity: 0;
+        transform: scaleY(0.95);
+      }
+
+      100% {
+        opacity: 1;
+        transform: scaleY(1);
+      }
+    }
+
+    .fonts-loaded .rad-scale-down.rad-waiting {
+      animation-name: none;
+      opacity: 0;
+      transform: scaleY(0.95);
+    }
+
+    .fonts-loaded .rad-scale-down.rad-animate {
+      animation-name: rad-scale-down;
+      animation-duration: 1.1s;
+      animation-fill-mode: both;
+    }
+
+    @keyframes rad-scale-down {
+      0% {
+        opacity: 0;
+        transform: scaleY(0.95);
+      }
+
+      100% {
+        opacity: 1;
+        transform: scaleY(1);
+      }
+
+    }
+
+    @keyframes move_left {
+      from {
+        left: -430px;
+      }
+
+      to {
+        left: -380px;
+      }
+    }
+
+    @keyframes move_right {
+      from {
+        left: 930px;
+      }
+
+      to {
+        left: 980px;
+      }
+    }
+  </style>
+
+  <style>
+    #expandableDiv {
+      width: 100%;
+      height: 218px;
+      overflow: hidden;
+      transition: height 0.3s ease-out;
+      position: relative;
+      padding-bottom: 64px;
+    }
+  
+    #expandableDiv.expanded {
+      height: auto;
+    }å
+  
+    #toggleButton {
+      left: 50%;
+      transform: translateX(-50%); 
+      cursor: pointer;
+    }
+
+    .buttonPosition {
+      height: 36px; 
+      border-radius: 50rem;
+      color: var(--mode-light-text-85-primary);
+      background-color: white;
+    }
+
+    #gradientOverlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 64px;
+      background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%,  rgba(255, 255, 255, 1) 50% ,rgba(255, 255, 255, 1) 100%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+        }
+
+  </style>
+
+
+</head>
+
+<body>
+
+  <header class="header fixed-top rad-animation-group" id="header">
+    <div class="container rad-fade-in">
+      <nav class="navbar navbar-expand-lg navbar-light p-0">
+        <a class="navbar-brand" href="index.html">
+          <span style="font-size: 24px;">Yuwen</span>
+          <span style="font-size: 24px;">Qin</span>
+          
+
+
+
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+          data-target="#navbarSupportedContent, #header" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-lg-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Homepage</a>
+            </li>
+            <li class="nav-item">
+              <a data-scroll class="nav-link" href="#about">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a data-scroll class="nav-link" href="#portfolio">👉 Projects</a>
+            </li>
+            <li class="nav-item">
+              <a data-scroll class="nav-link" href="my_insight.html">Insights</a>
+            </li>
+            <li class="nav-item">
+              <a data-scroll class="nav-link" href="#contact">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="http://127.0.0.1:5002">Yuwen Bot</a>
+            </li>
+            
+            
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+
+
+
+  <section class="rad-showcase rad-showcase--index rad-animation-group rad-fade-down">
+    <div class="rad-showcase__bg">
+      <img class="lozad img-responsive"
+        src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
+        data-src="img/showcase/showcase2.png"
+        data-srcset="img/showcase/showcase2.png 1x, img/showcase/showcase2@2x.png 2x" alt="这里yuwen portfolio的头图背景图" />
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-sm-12 col-md-8 col-lg-6 col-xl-6">
+          <h1 class="display-1" style="font-size: 20px;">
+            Hi, this is Yuwen.
+            <br />
+            An <div style="color: var(--mode-dark-primary-brand-default);display: contents;">Experience Imagineer</div>,
+            <br />
+            an Individual <div style="color: var(--mode-dark-primary-brand-default);display: contents;">Developer</div>.
+            <!-- <br />
+            and an Spontaneous <a href="my_insight.html" target="_blank" style="color: var(--mode-dark-primary-brand-default);">Writer</a>. -->
+          </h1>
+          <ul class="lead" style="padding-top: 0px;margin-bottom: 20px;">
+            <li>Tel: &#43;86 131 6243 5185</li>
+            <li>Mail: tatamato811@gmail.com</li>
+            <li>Location: Shanghai</li>
+          </ul>
+          
+          <div class="row platform-links">
+            <div class="col-12">
+              <a href="https://www.linkedin.com/in/yuwen-qin-275864114/" target="_blank">
+                <i class="icon-linkedin-line iconfont"></i>
+              </a>
+              <a href="https://github.com/YvonneQin" target="_blank">
+                <i class="icon-github-line iconfont"></i>
+              </a>
+              <a href="file/yuwenqin 13162435185 - Designer.pdf" target="blank">
+                <i class="icon-profile-fill iconfont"></i>
+              </a>
+              <a href="https://www.figma.com/community/file/1372032938337980594/community-test" target="_blank">
+                <i class="icon-a-Yvesicon iconfont"></i>
+              </a>
+              
+              <!-- <a href="https://twitter.com/Qinyuwen" target="_blank">
+              <i class="icon-twitter-line"></i>
+            </a>
+            <a href="https://www.instagram.com/qin_yvonne/" target="_blank"
+              ><i class="icon-instagram-line"></i
+            ></a>
+            <a href="https://www.facebook.com/tata.qin.9/" target="_blank"
+              ><i class="icon-facebook-line"></i
+            ></a> -->
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  
+  
+  
+
+  
+
+
+  <section id="about" class="section rad-animation-group pb-0" style="margin-top: -60px;">
+    <div class="container rad-fade-down">
+      <div class="row d-flex flex-column-reverse flex-md-row">
+        <!-- <div class="about__profile-picture col-12 col-md-6">
+        <img
+          class="lozad img-responsive image-left-overflow"
+          src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
+          data-src="img/who-am-i/user-picture.png"
+          data-srcset="img/who-am-i/user-picture.png 1x, img/who-am-i/user-picture@2x.png 2x"
+          alt="Profile Picture"
+        />
+      </div> -->
+        <div class="col-12 collapsed" id="expandableDiv">
+          <h2>Skills & Certifications</h2>
+          <p style="font-size: 14px;font-weight: 500;margin: var(--s_8) 0">Coding & AI</p>
+          <div style="margin-bottom: 4px;">
+            <a href="https://www.coursera.org/account/accomplishments/verify/UNBWWV5QR4FY"
+              class="btn btn-frameless" style="border-radius: 8px!important;border-radius: 0;padding: 0;margin-right: 4px;">
+              <img class="imgstyle" style="margin-top: 0px" src="img/frontpage/Supervised Machine Learning.svg" />
+            </a>
+            <a href="https://www.coursera.org/account/accomplishments/verify/UNBWWV5QR4FY"
+              class="btn btn-frameless" style="border-radius: 8px!important;border-radius: 0;padding: 0;margin-right: 4px;">
+              <img class="imgstyle" style="margin-top: 0px" src="img/frontpage/Unsupervised Learning.svg" />
+            </a>
+            <a href="https://www.coursera.org/account/accomplishments/verify/UNBWWV5QR4FY"
+              class="btn btn-frameless" style="border-radius: 8px!important;border-radius: 0;padding: 0;">
+              <img class="imgstyle" style="margin-top: 0px" src="img/frontpage/Advanced Learning Algorithms.svg" />
+            </a>
+          </div>
+          <span class="badge rounded-pill bg-primary">AI / Stable Diffusion</span>
+          <span class="badge rounded-pill bg-primary">Machine Learning / Python</span>
+          <span class="badge rounded-pill bg-primary">Front-End / HTML5 · CSS3 · JS</span>
+          <span class="badge rounded-pill bg-primary">R Studio / Plotly</span>
+          <p style="font-size: 14px;font-weight: 500;margin: var(--s_8) 0">Design Methodology</p>
+          <span class="badge rounded-pill bg-primary">Product Strategy</span>
+          <span class="badge rounded-pill bg-primary">Strategic Thinking</span>
+          <span class="badge rounded-pill bg-primary">Design Thingking</span>
+          <span class="badge rounded-pill bg-primary">Digital Innovation</span>
+          <span class="badge rounded-pill bg-primary">Design Innovation</span>
+          <span class="badge rounded-pill bg-primary">Design Strategy</span>
+          <span class="badge rounded-pill bg-primary">Design Leadership</span>
+          <span class="badge rounded-pill bg-primary">Data Visualization</span>
+          <span class="badge rounded-pill bg-primary">Information Architecture</span>
+          <span class="badge rounded-pill bg-primary">Rapid Prototyping</span>
+          <span class="badge rounded-pill bg-primary">Usability Testing</span>
+          <span class="badge rounded-pill bg-primary">Design Ops</span>
+          <span class="badge rounded-pill bg-primary">Data Analysis</span>
+          <span class="badge rounded-pill bg-primary">Creative Problem Solving</span>
+          <span class="badge rounded-pill bg-primary">Customer Service</span>
+          <span class="badge rounded-pill bg-primary">Qualitative & quantitative</span>
+          <span class="badge rounded-pill bg-primary">Cross-sectional study</span>
+          <span class="badge rounded-pill bg-primary">Experimental research</span>
+          <span class="badge rounded-pill bg-primary">Cohort study</span>
+          <span class="badge rounded-pill bg-primary">Trend study</span>
+          <span class="badge rounded-pill bg-primary">Panel study</span>
+          <span class="badge rounded-pill bg-primary">Retrospective study</span>
+          <div id="gradientOverlay">
+            <button id="toggleButton" class="btn btn-sm buttonPosition">Expand All<i class="icon-arrow-down-F iconfont"></i></button>
+          </div>
+          <div class="hero_footer-svg">
+            <img src="img/figure-svg.svg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <section class="section section--border-bottom rad-animation-group">
+    <div class="container">
+      <div class="row rad-fade-down">
+        <div class="col-12">
+          <h2>Education</h2>
+          <div class="row pt-2 pt-md-4" style="margin-bottom: 56px">
+            <div class="col-12 col-sm-6 mb-4 mb-sm-0">
+              <div class="education">
+                <div class="education__date">2014.09 - 2017.04</div>
+                <div class="education__title">Donghua University · Shanghai</div>
+                <div class="education__degree">
+                  School of Art and Design<br />
+                  Master / Product system design (Direct Admission)<br />
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 mb-4 mb-sm-0">
+              <div class="education">
+                <div class="education__date">2016.09 - 2016.12</div>
+                <div class="education__title">Chiba University ·<br /> Tokyo</div>
+                <div class="education__degree">
+                  School of Art and Design<br />
+                  Exchange<br />
+                  <br />
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 mb-4 mb-sm-0">
+              <div class="education">
+                <div class="education__date">2010.09 - 2014.07</div>
+                <div class="education__title">Shenyang University of Technology</div>
+                <div class="education__degree">
+                  School of Mechanical Engineering<br />
+                  Bachelor / Industrial Design / Top 5 & Provincial Outstanding Graduates<br />
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <section id="experience" class="section section--border-bottom rad-animation-group">
+    <div class="container">
+      <div class="row flex-column-reverse flex-md-row rad-fade-down" style="margin-bottom: 48px;">
+        <div class="col-12 mt-5 mt-sm-0" style="-webkit-box-flex:0;flex:0 0 50%;max-width:50% ">
+          
+          <div class="experience" >
+            <img src="img/frontpage/Xiaohongshu.svg" style="width: 70px; float: left;margin-right: 24px;">
+            <div class="experience__date">2024.01 - 2024.05</div>
+            <div class="experience__title">Product Designer</div>
+            <div class="experience__company">Xiaohongshu @ Productivity Dept</div>
+          </div>
+          
+          <div class="experience" >
+            <img src="img/frontpage/Yaocheng.svg" style="width: 70px; float: left;margin-right: 24px;">
+            <div class="experience__date">2021.04 - 2023.11</div>
+            <div class="experience__title">CX Designer</div>
+            <div class="experience__company">AlphaLife Science @ Product Dept</div>
+          </div>
+
+          <div class="experience">
+            <img src="img/frontpage/Pingan technology.svg" style="width: 70px; float: left;margin-right: 24px;">
+            <div class="experience__date">2017.04 - 2021.04</div>
+            <div class="experience__title">Product Designer</div>
+            <div class="experience__company">Pingan Tech @ Strategy Dept</div>
+          </div>
+
+          <div class="experience">
+            <img src="img/frontpage/Microsoft.svg" style="width: 70px; float: left;margin-right: 24px;">
+            <div class="experience__date">2016.04 – 2017.03</div>
+            <div class="experience__title">Interaction Design Intern</div>
+            <div class="experience__company">Microsoft @ CSS OS & USTC</div>
+          </div>
+
+          <!-- <div class="experience">
+            <img src="img/frontpage/Schneider.svg" style="width: 70px; float: left;margin-right: 24px;">
+            <div class="experience__date">2015.10 – 2016.04</div>
+            <div class="experience__title">Marketing Intern</div>
+            <div class="experience__company">Schneider @ IOC LoB</div>
+          </div>
+
+          <div class="experience">
+            <img src="img/frontpage/Honeywell.svg" style="width: 70px; float: left;margin-right: 24px;">
+            <div class="experience__date">2015.01 – 2016.01</div>
+            <div class="experience__title">Product Manager Intern</div>
+            <div class="experience__company">Honeywell @ HSP</div>
+          </div> -->
+
+        </div>
+        <div class="col-6">
+          <h2>Work Experience</h2>
+          <p class="lead" style="text-align: left;">
+            I have worked at several well-known tech companies, including  <a target='_blank'
+            href='https://www.linkedin.com/company/xiaohongshu/'>Xiaohongshu</a> and <a target='_blank'
+              href='https://www.linkedin.com/company/%E4%B8%8A%E6%B5%B7%E8%80%80%E4%B9%98%E5%81%A5%E5%BA%B7%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8/'>AlphaLife
+              Science</a>, serving as a full-stack product designer, responsible for the
+            entire process from conceptual pitch to landing prototype MVPs. Maintaining a user-centric approach and scrutinizing overall product
+            quality and experience, contributing to business success. Meanwhile, I enjoy documenting my design experiences in <a target='_blank'
+            href='my_insight.html'>My Insight</a>.
+          </p>
+          <!-- <ul style="padding-left: 10px; padding-bottom: 10px;list-style:square!important;">
+            <li style="font-size: 14px;color: #555555;">Experience designing across multiple platforms including
+              Android, multiple form factors, phones, and tablets.</li>
+            <li style="font-size: 14px;color: #555555;">Experience collaborating with multidisciplinary teams of
+              Designers, Researchers, Engineers, Content Strategists, and Product Managers throughout the design
+              process.</li>
+            <li style="font-size: 14px;color: #555555;">Understanding of technical requirements and limitations</li>
+            <li style="font-size: 14px;color: #555555;">Ability to have a strategic and critical thinking mindset.</li>
+            <li style="font-size: 14px;color: #555555;">Strong hybrid design skills including: interaction, visual,
+              prototyping.</li>
+            <li style="font-size: 14px;color: #555555;">Excellent verbal and written communication, presentation, and
+              problem-solving skills with attention to detail.</li>
+          </ul> -->
+          <a href="https://www.linkedin.com/in/yuwen-qin-275864114/" class="btn btn-primary"target="_blank">
+            <i class="icon-linkedin-fill iconfont"></i>
+            Linkedin
+            </a>
+          <a href="file/yuwenqin 13162435185 - Designer.pdf" class="btn btn-frameless" style="height: 36px;" target="_blank">
+            
+            <i class="icon-profile-fill iconfont"></i>
+            My Resume
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="portfolio" class="section section--border-bottom">
+    <div class="container" style="margin-bottom: 80px;">
+      <h2>Projects</h2>
+      <!-- <div class="row row--padded rad-animation-group rad-fade-down">
+        <div class="col-12">
+          <div class="clients">
+            <div class="clients__item">Clinical Trial</div>
+            <div class="clients__item">Knowledge Graph</div>
+            <div class="clients__item">CRM</div>
+            <div class="clients__item">OA</div>
+            <div class="clients__item">AI Legal</div>
+            <div class="clients__item">Banking</div>
+          </div>
+        </div>
+      </div> -->
+
+      <div class="row row--padded rad-animation-group rad-fade-down " style="margin-top: 32px;">
+        <div class="col-12 col-md-7 pl-md-0 text-right">
+          <img class='lozad img-responsive img-clip-right-backward' data-src="img/works/Redcity-banner.gif"
+            data-srcset="img/works/Redcity-banner.gif" />
+        </div>
+        <div class="col-12 col-md-5 mt-4 mt-md-0 my-md-auto" style="line-height: 32px;">
+          <span class="badge-2 rounded-pill">0 to 1</span>
+          <span class="badge-2 rounded-pill">Framework</span>
+          <span class="badge-2 rounded-pill">Guidelines</span>
+          <h3>小红书企业效率套件REDcity v1.0 IM/AI/框架设计</h3>
+          <p class="lead" style="padding-top: 0px;margin-bottom: 8px;">
+            2024.01 - 2024.05<br />
+            Researcher & Designer<br />
+          </p>
+          <a href="project_Redcity.html" class="btn btn-primary">Check it out<i
+              class="icon-arrow-right-sm iconfont"></i></a>
+        </div>
+      </div>
+
+
+      <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
+      
+        <div class="hero_footer-svg_right">
+          <img src="img/figure-svg.svg" alt="">
+        </div>
+      
+        <div class="col-12 col-md-5 mt-4 mt-md-0 my-md-auto" style="line-height: 32px;">
+          <span class="badge-2 rounded-pill">0 to 1</span>
+          <span class="badge-2 rounded-pill">Product Design & Strategy</span>
+          <h3>Construct Product design 0 to 1 Case Retro sharing</h3>
+          <p class="lead" style="padding-top: 0px;margin-bottom: 8px;">
+            2021.04 - 2023.11<br />
+            Researcher & Designer<br />
+          </p>
+          <a href="project_Construct.html" class="btn btn-primary">Check it out<i class="icon-arrow-right-sm iconfont"></i></a>
+        </div>
+      
+        <div class="col-12 col-md-7 pl-md-0 text-right">
+          <img class='lozad img-responsive img-clip-left-backward'
+            src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
+            data-src="img/works/construct-banner.svg" />
+        </div>
+      
+      </div>
+      
+      <div class="row row--padded rad-animation-group rad-fade-down ">
+        <div class="col-12 col-md-7 pl-md-0 text-right">
+          <img class='lozad img-responsive img-clip-right-backward' data-src="img/works/Best Practice For CX Management On DCT.svg"
+            data-srcset="img/works/Best Practice For CX Management On DCT.svg" />
+        </div>
+        <div class="col-12 col-md-5 mt-4 mt-md-0 my-md-auto" style="line-height: 32px;">
+          <span class="badge-2 rounded-pill">Service Design</span>
+          <span class="badge-2 rounded-pill">Hardware Design</span>
+          <h3>Comprehensive CX Solution For Clinical Trials</h3>
+          <p class="lead" style="padding-top: 0px;margin-bottom: 8px;">
+            2022.12 - 2023.11<br />
+            Researcher & Designer<br />
+          </p>
+          <a href="project_DCT.html" class="btn btn-primary">Check it out<i
+              class="icon-arrow-right-sm iconfont"></i></a>
+        </div>
+      </div>
+      
+      <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row customhover\\">
+        <div class="hero_footer-svg">
+          <img src="img/figure-svg.svg" alt="">
+        </div>
+      
+        <div class="col-12 col-md-5 mt-4 mt-md-0 my-md-auto" style="line-height: 32px;">
+          <span class="badge-2 rounded-pill">Product Design & Strategy</span>
+          <h3>LLM-Based Experience Design</h3>
+          <p class="lead" style="padding-top: 0px;margin-bottom: 8px;">
+            2022.12 - 2023.11<br />
+            Designer & Researher<br />
+          </p>
+          <a href="project_AI.html" class="btn btn-primary">Check it out<i class="icon-arrow-right-sm iconfont"></i></a>
+        </div>
+        <div class="col-12 col-md-7 pl-md-0 text-right">
+          <img class='lozad img-responsive img-clip-left-backward'
+            src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
+            data-src="img/works/AI - Powered Experience Design.svg" />
+        </div>
+      
+      </div>
+      
+      <div class="row row--padded rad-animation-group rad-fade-down ">
+      
+        <div class="col-12 col-md-7 pl-md-0 text-right">
+          <img class='lozad img-responsive img-clip-right-backward' data-src="img/works/compute-banner.svg"
+            data-srcset="img/works/compute-banner.svg" />
+        </div>
+        <div class="col-12 col-md-5 mt-4 mt-md-0 my-md-auto" style="line-height: 32px;">
+          <span class="badge-2 rounded-pill">Benchmarking
+            Analysis</span><br />
+          <span class="badge-2 rounded-pill">Product Design</span>
+          <h3>Medical Monitoring Config Benchmarking Analysis</h3>
+          <p class="lead" style="padding-top: 0px;margin-bottom: 8px;">
+            2022.12 - 2023.11<br />
+            Researcher & Designer<br />
+          </p>
+          <a href="project_MM.html" class="btn btn-primary">Check it out<i class="icon-arrow-right-sm iconfont"></i></a>
+        </div>
+      </div>
+      
+      <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
+      
+        <div class="hero_footer-svg_right">
+          <img src="img/figure-svg.svg" alt="">
+        </div>
+      
+        <div class="col-12 col-md-5 mt-4 mt-md-0 my-md-auto" style="line-height: 32px;">
+          <span class="badge-2 rounded-pill">Product Design</span>
+          <span class="badge-2 rounded-pill">Rapid Prototype</span>
+          <h3>Spinning the wheel of Product Growth by Design & Insight - Sneak Peak to
+            Narratives POC demo</h3>
+          <p class="lead" style="padding-top: 0px;margin-bottom: 8px;">
+            2022.12 - 2023.11<br />
+            Researcher & Designer<br />
+          </p>
+          <a href="project_POC.html" class="btn btn-primary">Check it out<i class="icon-arrow-right-sm iconfont"></i></a>
+        </div>
+        <div class="col-12 col-md-7 pl-md-0 text-right">
+          <img class='lozad img-responsive img-clip-left-backward'
+            src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
+            data-src="img/works/Group 1.svg" />
+        </div>
+      
+      </div>
+
+      <!-- <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row customhover\\">
+        <div class="hero_footer-svg">
+          <img src="img/figure-svg.svg" alt="">
+        </div>
+
+          <div class="col-12 col-md-5 mt-4 mt-md-0 my-md-auto" style="line-height: 32px;">
+            <span class="badge-2 rounded-pill" style="background-color:#F4EDEE!important;">产品</span>
+            <span class="badge-2 rounded-pill" style="background-color:#D5EDFF!important;">交互</span>
+            <span class="badge-2 rounded-pill" style="background-color:#D5FFE9!important;">项目管理</span>
+            <h3>智慧党建平台前后台系统搭建与设计</h3>
+            <p class="lead" style="padding-top: 0px;margin-bottom: 8px;">
+              2020年6月 - 2021年3月<br />
+              项目负责人<br />
+               15 min</p>
+            <a href="project1.html" class="btn btn-primary">Check it out<i class="icon-arrow-right-sm iconfont"></i></a>
+          </div>
+          <div class="col-12 col-md-7 pl-md-0 text-right">
+            <img class='lozad img-responsive img-clip-left-backward'
+              src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
+              data-src="img/works/Smart Party Management Platform Construction Copy.svg"/>
+
+        </div>
+
+      </div> -->
+
+      <div class="row row--padded rad-animation-group rad-fade-down ">
+
+        <div class="col-12 col-md-7 pl-md-0 text-right">
+          <img class='lozad img-responsive img-clip-right-backward' data-src="img/works/ifa-banner.png"
+            data-srcset="img/works/ifa-banner.png 1x, img/works/ifa-banner@2x.png 2x" />
+        </div>
+        <div class="col-12 col-md-5 mt-4 mt-md-0 my-md-auto" style="line-height: 32px;">
+          <span class="badge-2 rounded-pill">产品</span>
+          <span class="badge-2 rounded-pill">交互</span>
+          <span class="badge-2 rounded-pill">用户研究</span>
+          <h3>从0到1平安智慧法律产品体验系统构建</h3>
+          <p class="lead" style="padding-top: 0px;margin-bottom: 8px;">
+            2020年3月 - 2020年7月<br />
+            Product Designer<br />
+          </p>
+          <a href="project_Law.html" class="btn btn-primary">Check it out<i class="icon-arrow-right-sm iconfont"></i></a>
+        </div>
+
+      </div>
+
+      <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row customhover\\">
+        <div class="hero_footer-svg">
+          <img src="img/figure-svg.svg" alt="">
+        </div>
+
+        <div class="col-12 col-md-5 mt-4 mt-md-0 my-md-auto" style="line-height: 32px;">
+          <span class="badge-2 rounded-pill">交互</span>
+          <span class="badge-2 rounded-pill">用户研究</span>
+          <h3>AskBob智能办公机器人语音会话能力提升设计</h3>
+          <p class="lead" style="padding-top: 0px;margin-bottom: 8px;">
+            2019年1月 - 2020年3月<br />
+            Product Designer<br />
+          </p>
+          <a href="project_Askbob.html" class="btn btn-primary">Check it out<i class="icon-arrow-right-sm iconfont"></i></a>
+        </div>
+        <div class="col-12 col-md-7 pl-md-0 text-right">
+          <img class='lozad img-responsive img-clip-left-backward'
+            src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
+            data-src="img/works/Group 6@2x.png" />
+        </div>
+
+      </div>
+
+      <!-- <div class="row row--padded rad-animation-group rad-fade-down ">
+
+        <div class="col-12 col-md-7 pl-md-0 text-right">
+          <img class='lozad img-responsive img-clip-right-forward'
+            src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
+            data-src="img/works/Background Copy.svg" />
+        </div>
+        <div class="col-12 col-md-5 mt-4 mt-md-0 my-md-auto" style="line-height: 32px;">
+          <span class="badge-2 rounded-pill" style="background-color:#F4EDEE!important;">交互</span>
+          <span class="badge-2 rounded-pill" style="background-color:#FFE8D5!important;">用户研究</span>
+          <h3>PC语音输入方案可用性测试及设计提升</h3>
+          <p class="lead" style="padding-top: 0px;margin-bottom: 8px;">
+            2019年10月 - 2020年1月<br />
+            Product Designer<br />
+             8 min</p>
+          <a href="project4.html" class="btn btn-primary">Check it out<i class="icon-arrow-right-sm iconfont"></i></a>
+        </div>
+
+      </div> -->
+
+      <!-- <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
+
+        <div class="hero_footer-svg">
+          <img src="img/figure-svg.svg" alt="">
+        </div>
+
+        <div class="col-12 col-md-5 mt-4 mt-md-0 my-md-auto" style="line-height: 32px;">
+          <span class="badge-2 rounded-pill" style="background-color:#FFD5D5!important;">编程</span>
+          <span class="badge-2 rounded-pill" style="background-color:#FFE8D5!important;">用户研究</span>
+          <h3>Python批量处理生命力评估模型</h3>
+          <p class="lead" style="padding-top: 0px;margin-bottom: 8px;">
+            2019年10月 - 2020年1月<br />
+            码农<br />
+             8 min</p>
+          <a href="project5.html" class="btn btn-primary">Check it out<i class="icon-arrow-right-sm iconfont"></i></a>
+        </div>
+        <div class="col-12 col-md-7 pl-md-0 text-right">
+          <img class='lozad img-responsive img-clip-left-backward'
+            src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
+            data-src="img/works/Background Copy2.svg" />
+        </div>
+
+      </div> -->
+
+      <div class="row row--padded rad-animation-group rad-fade-down ">
+
+        <div class="col-12 col-md-7 pl-md-0 text-right">
+          <img class='lozad img-responsive img-clip-right-forward'
+            src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
+            data-src="img/works/Background Copy 3.svg" />
+        </div>
+        <div class="col-12 col-md-5 mt-4 mt-md-0 my-md-auto" style="line-height: 32px;">
+          <span class="badge-2 rounded-pill">智能硬件</span>
+          <span class="badge-2 rounded-pill">交互</span>
+          <h3>毕业设计 - 基于体感技术的残障人士产品服务系统研究</h3>
+          <p class="lead" style="padding-top: 0px;margin-bottom: 8px;">
+            2016年1月<br />
+          </p>
+          <a href="project_Gradute.html" class="btn btn-primary">Check it out ( Video included )
+            <i class="icon-arrow-right-sm iconfont"></i></a>
+        </div>
+
+      </div>
+
+      <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
+
+        <div class="hero_footer-svg_right">
+          <img src="img/figure-svg.svg" alt="">
+        </div>
+
+        <div class="col-12 col-md-5 mt-4 mt-md-0 my-md-auto" style="line-height: 32px;">
+          <span class="badge-2 rounded-pill">视觉</span>
+          <h3>CoE Workshop专家讲座系列宣传物料视觉设计</h3>
+          <p class="lead" style="padding-top: 0px;margin-bottom: 8px;">
+            2019年10月 - 2020年1月<br />
+            Product Designer<br />
+          </p>
+          <a href="project_COE.html" class="btn btn-primary">Check it out<i class="icon-arrow-right-sm iconfont"></i></a>
+        </div>
+        <div class="col-12 col-md-7 pl-md-0 text-right">
+          <img class='lozad img-responsive img-clip-left-backward'
+            src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
+            data-src="img/works/Background Copy 4.svg" />
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+
+
+  <!-- <section  id="mytestimony" class="section rad-animation-group section--border-bottom">
+    <div class="container" style="margin-bottom: 80px;">
+        <h2 class="rad-fade-down">行业口碑</h2>
+        <div class="row row--padded mb-0 rad-fade-down">
+            
+            <div class="col-12 col-md-4 mb-5 mb-md-0 testimonial">
+                <i class="icon-quote"></i>
+                <p>
+                    Cold calling can be a great way to generate quality leads. You get to speak to the gatekeepers and stakeholders, and you get a great insight into their requirements and influences. But cold calling is an art-form. It can be daunting, it’s always a lot of work, and you always need to make a good impression.
+                </p>
+                <div class="testimonial__author">
+                    <img class="lozad testimonial__author-image"
+                         src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
+                         data-src="img/testimonials/daniel-jordan.jpg"
+                         data-srcset="img/testimonials/daniel-jordan.jpg 1x, https://raditian-hugo.radity.com/img/testimonials/daniel-jordan@2x.jpg 2x"
+                         alt="Daniel Jordan"/>
+                    <div class="testimonial__author-info">
+                        <h4>Daniel Jordan</h4>
+                        <span>Phonet, CEO</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-12 col-md-4 mb-5 mb-md-0 testimonial">
+                <i class="icon-quote"></i>
+                <p>
+                    Whether you or your loved one is encountering the natural decrease in mobility that occurs with the passing of time, or deals with an illness-related lack of physical agility, a stair lift can be the ideal way to put you in charge of your home again. Regardless of the shape or make of your living accommodation.
+                </p>
+                <div class="testimonial__author">
+                    <img class="lozad testimonial__author-image"
+                         src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
+                         data-src="https://raditian-hugo.radity.com/img/testimonials/jonathan-peters.jpg"
+                         data-srcset="https://raditian-hugo.radity.com/img/testimonials/jonathan-peters.jpg 1x, https://raditian-hugo.radity.com/img/testimonials/jonathan-peters@2x.jpg 2x"
+                         alt="Jonathan Peters"/>
+                    <div class="testimonial__author-info">
+                        <h4>Jonathan Peters</h4>
+                        <span>Textic, CEO</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-12 col-md-4 mb-5 mb-md-0 testimonial">
+                <i class="icon-quote"></i>
+                <p>
+                    In this digital generation where information can be easily obtained within seconds, business cards still have retained their importance in the achievement of increased business exposure and business sales. If your business already has a bunch of printed cards distributed to a number of potential customers and yet.
+                </p>
+                <div class="testimonial__author">
+                    <img class="lozad testimonial__author-image"
+                         src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
+                         data-src="https://raditian-hugo.radity.com/img/testimonials/antonio-willis.jpg"
+                         data-srcset="https://raditian-hugo.radity.com/img/testimonials/antonio-willis.jpg 1x, https://raditian-hugo.radity.com/img/testimonials/antonio-willis@2x.jpg 2x"
+                         alt="Antonio Willis"/>
+                    <div class="testimonial__author-info">
+                        <h4>Antonio Willis</h4>
+                        <span>Cyberse, CEO</span>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section> -->
+
+
+
+
+  <section id="contact" class="section section--contact pt-0">
+    <div class="container">
+      <div class="contact">
+        <h2>Contact Me</h2>
+        <div class="row pt-2">
+          <div class="col-12 col-lg-6">
+            <img src="img/WechatIMG1314.jpeg"
+              style="border-radius: 10px;box-shadow: 0 42px 34px -16px rgb(0 0 0 / 30%);">
+            <!-- <form action="#" method="">
+                        <div class="row">
+                            <div class="col-12 col-sm-6">
+                                <input type="text" name="" id="full_name"
+                                       placeholder="Full Name"/>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <input type="text" name="" id="email"
+                                       placeholder="Email Address"/>
+                            </div>
+                        </div>
+                        <div class="row pt-4">
+                            <div class="col-12">
+                                <textarea name="" id="message"
+                                          cols="30" rows="3" placeholder="Type Your Message Here"></textarea>
+                            </div>
+                        </div>
+                        <div class="row pt-4">
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="icon-mail-fill"></i>
+                                    Send Message
+                                </button>
+                            </div>
+                        </div>
+                    </form> -->
+          </div>
+          <div class="col-12 col-lg-6 contact__info">
+            <h4>Tel</h4>
+            <span>&#43;86 131 6243 5185</span>
+            <h4>Email</h4>
+            <span><a href="mailto:tatamato811@gmail.com">tatamato811@gmail.com</a></span>
+            <h4>Current Location</h4>
+            <span>Shanghai</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <!-- <section class="section section--cta">
+<div class="container">
+  <div class="row">
+    <div class="col-12 text-center">
+      <h2>Newsletter subscription</h2>
+      <div class="rad-subscription-group">
+        <form id="rad-subscription" action="">
+          <input
+            id="rad-subscription-email"
+            type="email"
+            class="form-control"
+            aria-describedby="emailHelp"
+            placeholder="Email Address..."
+            aria-label="Email Address"
+          />
+          <button type="submit" id="rad-subscription-submit" class="btn btn-light btn-rounded">
+            Sign Up
+          </button>
+        </form>
+        <div id="rad-subscription-success" class="d-none">
+          <p class="lead">Successfully subscribed</p>
+        </div>
+        <div id="rad-subscription-fail" class="d-none">
+          <p>Error while subscribing.</p>
+        </div>
+        <script src="/js/subscription.js"></script>
+      </div>
+      <small id="emailHelp" class="form-text text-muted"
+        >We&#39;ll never share your email with anyone else.</small
+      >
+    </div>
+  </div>
+</div>
+</section> -->
+
+
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__left">
+        <div class="footer__copy">
+          Designed and coded by Yuwen. All rights reserved.
+        </div>
+      </div>
+      <div class="footer__links">
+        <ul class="navbar-nav ">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Homepage</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#about">Skills</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#portfolio">👉Projects</a>
+          </li>
+
+          <li class="nav-item">
+            <a data-scroll class="nav-link" href="my_insight.html">Insights</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+
+          <!-- <li class="nav-item">
+          <a class="nav-link" href="#myfriend">行业口碑</a>
+        </li> -->
+
+        </ul>
+      </div>
+      <!-- <div class="footer__right">
+      <img
+          src="img/general/design-and-code-radity.svg"
+          srcset="https://raditian-hugo.radity.com/img/general/design-and-code-radity.png 1x, https://raditian-hugo.radity.com/img/general/design-and-code-radity@2x.png 2x"
+          alt="Design &amp; Code - yuwen"
+      />
+    </div> -->
+    </div>
+  </footer>
+
+  <script src='js/rad-animations.js'></script>
+  <script src='js/library/lozad.min.js'></script>
+  <script>
+    window.addEventListener("load", function () {
+      var observer = window.lozad(".lozad", {
+        rootMargin: window.innerHeight / 2 + "px 0px",
+        threshold: 0.01
+      });
+      observer.observe();
+    });
+  </script>
+  <script src='js/library/jquery-3.3.1.slim.min.js'></script>
+  <script src='js/library/bootstrap.min.js'></script>
+  <script src='js/sticky-header.js'></script>
+  <script src='js/library/smooth-scroll.polyfills.min.js'></script>
+  <script src='js/library/fontfaceobserver.js'></script>
+  <script>
+    (function (w) {
+
+      if (w.document.documentElement.className.indexOf("fonts-loaded") > -1) {
+        return;
+      }
+      var fontA = new w.FontFaceObserver("Inter", {
+        weight: 300
+      });
+      var fontB = new w.FontFaceObserver("Inter", {
+        weight: 400
+      });
+      var fontC = new w.FontFaceObserver("Inter", {
+        weight: 500
+      });
+      var fontD = new w.FontFaceObserver("Inter", {
+        weight: 600
+      });
+      var fontE = new w.FontFaceObserver("Inter", {
+        weight: 700
+      });
+      var fontF = new w.FontFaceObserver("Inter", {
+        weight: 900
+      });
+      w.Promise.all([fontA.load(), fontC.load(), fontF.load()]).then(function () {
+        w.document.documentElement.className += " fonts-loaded";
+      });
+    })(this);
+  </script>
+  <script>
+    const scroll = new SmoothScroll('a[href*="#"]');
+    $('a.nav-link').on('click', () => {
+      const navbar = $('.navbar-collapse');
+      if (navbar && navbar.hasClass('show')) {
+        $('.navbar-toggler').click();
+      }
+    })
+  </script>
+
+</body>
+
+</html>

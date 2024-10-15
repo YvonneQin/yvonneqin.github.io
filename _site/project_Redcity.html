@@ -1,0 +1,1059 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<SCRIPT language=JavaScript>
+  function password() {
+    var testV = 1;
+    var pass1 = prompt('Hi there! Welcome to my site and portfolio! Due to the use of portfolio is for my job hunting, I have to set a password requirement for access. If you need to visit, please contact me on WeChat at 131 6243 5185. Kindly fill in the password:','');
+    while (testV < 3) {
+      if (!pass1)
+        history.go(-1);
+      if (pass1 == "qyw") {
+        alert('Welcome to my site!');
+        break;
+      }
+      testV += -1;
+      var pass1 = prompt('Error, pls fill in again:');
+    }
+    if (pass1 != "password" & testV == 3)
+      history.go(-1);
+    return " ";
+  }
+
+  document.write(password());
+
+</SCRIPT>
+
+
+<head>
+  <meta name="author" content="yuwen">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="stylesheet" href="css/main.css" />
+  <!-- <link rel="stylesheet" href="css/rad-icons.css" /> -->
+  <link rel="stylesheet" href="css/custom.css" />
+  <!-- 我自己的iconfont -->
+  <link rel="stylesheet" href="https://at.alicdn.com/t/c/font_4545731_3pnlmzv33e7.css" />
+
+  <script>
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src =
+        'https://www.googletagmanager.com/gtm.js?id=GTM-000000' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-000000');
+  </script>
+
+<script>
+  document.addEventListener("scroll", function() {
+      var sections = document.querySelectorAll(".section");
+      var sidebarLinks = document.querySelectorAll(".fixed-anchor a");
+
+      sections.forEach(function(section, index) {
+          var rect = section.getBoundingClientRect();
+          if (rect.top >= 0 && rect.top <= window.innerHeight / 2) {
+              sidebarLinks.forEach(function(link) {
+                  link.classList.remove("active");
+              });
+              sidebarLinks[index].classList.add("active");
+          }
+      });
+  });
+</script>
+
+
+  <title>Redcity Project</title>
+
+
+
+  <style>
+    .rad-fade-in {
+      will-change: opacity, transform;
+      animation-name: rad-fade-in-fallback;
+      animation-duration: 5s;
+      animation-fill-mode: both;
+    }
+
+    @keyframes rad-fade-in-fallback {
+      0% {
+        opacity: 0;
+      }
+
+      75% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+
+    .fonts-loaded .rad-fade-in.rad-waiting {
+      animation-name: none;
+      opacity: 0;
+    }
+
+    .fonts-loaded .rad-fade-in.rad-animate {
+      animation-name: rad-fade-in;
+      animation-duration: 1.1s;
+      animation-fill-mode: both;
+    }
+
+    @keyframes rad-fade-in {
+      0% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+
+
+    .rad-fade-in-long {
+      will-change: opacity, transform;
+      animation-name: rad-fade-in-long-fallback;
+      animation-duration: 8s;
+      animation-fill-mode: both;
+    }
+
+    @keyframes rad-fade-in-long-fallback {
+      0% {
+        opacity: 0;
+      }
+
+      75% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+
+    .fonts-loaded .rad-fade-in-long.rad-waiting {
+      animation-name: none;
+      opacity: 0;
+    }
+
+    .fonts-loaded .rad-fade-in-long.rad-animate {
+      animation-name: rad-fade-in-long;
+      animation-duration: 2s;
+      animation-fill-mode: both;
+    }
+
+    @keyframes rad-fade-in-long {
+      0% {
+        opacity: 0;
+      }
+
+      20% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+
+
+    .rad-fade-down {
+      will-change: opacity, transform;
+      animation-name: rad-fade-down-fallback;
+      animation-duration: 5s;
+      animation-fill-mode: both;
+      transform: translateY(-30px);
+    }
+
+    @keyframes rad-fade-down-fallback {
+      0% {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+
+      75% {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .fonts-loaded .rad-fade-down.rad-waiting {
+      animation-name: none;
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+
+    .fonts-loaded .rad-fade-down.rad-animate {
+      animation-name: rad-fade-down;
+      animation-duration: 1.1s;
+    }
+
+    @keyframes rad-fade-down {
+      0% {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+
+    .rad-scale-down {
+      will-change: opacity, transform;
+      animation-name: rad-scale-down-fallback;
+      animation-duration: 5s;
+      animation-fill-mode: both;
+      transform-origin: 50% 0;
+    }
+
+    @keyframes rad-scale-down-fallback {
+      0% {
+        opacity: 0;
+        transform: scaleY(0.95);
+      }
+
+      75% {
+        opacity: 0;
+        transform: scaleY(0.95);
+      }
+
+      100% {
+        opacity: 1;
+        transform: scaleY(1);
+      }
+    }
+
+    .fonts-loaded .rad-scale-down.rad-waiting {
+      animation-name: none;
+      opacity: 0;
+      transform: scaleY(0.95);
+    }
+
+    .fonts-loaded .rad-scale-down.rad-animate {
+      animation-name: rad-scale-down;
+      animation-duration: 1.1s;
+      animation-fill-mode: both;
+    }
+
+    @keyframes rad-scale-down {
+      0% {
+        opacity: 0;
+        transform: scaleY(0.95);
+      }
+
+      100% {
+        opacity: 1;
+        transform: scaleY(1);
+      }
+
+    }
+  </style>
+
+
+
+</head>
+
+<body class="body">
+
+  <header class="header fixed-top rad-animation-group" id="header">
+    <div class="container rad-fade-in">
+      <nav class="navbar navbar-expand-lg navbar-light p-0">
+        <a class="navbar-brand" href="index.html">
+          <span style="font-size: 24px;">Yuwen</span>
+          <span style="font-size: 24px;">Qin</span>
+
+
+
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+          data-target="#navbarSupportedContent, #header" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-lg-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Homepage</a>
+            </li>
+
+            <li class="nav-item">
+              <a data-scroll class="nav-link" href="index.html#about">Skills</a>
+            </li>
+
+            <li class="nav-item">
+              <a data-scroll class="nav-link" href="index.html#portfolio">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a data-scroll class="nav-link" href="my_insight.html">Insights</a>
+            </li>
+            <li class="nav-item">
+              <a data-scroll class="nav-link" href="index.html#contact">Contact</a>
+            </li>
+<!-- 
+            <li class="nav-item">
+              <a data-scroll class="nav-link" href="more me.html">More Me</a>
+            </li> -->
+
+            <!-- <li class="nav-item">
+              <a data-scroll class="nav-link" href="#mytestimony">行业口碑</a>
+            </li> -->
+
+
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  
+
+  <div class="fixed-anchor row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
+    <a style="font-weight: 600;font-size: 16px; color: var(--mode-light-text-85-primary);">大纲</a>
+    <a href="#section1">1. REDcity是什么？</a>
+    <a href="#section2"><i class="icon-bullet-point iconfont"></i>1.1 Demo: 方案概览</a>
+    <a href="#section3"><i class="icon-bullet-point iconfont"></i>1.2 项目思路</a>
+    <a href="#section4"><i class="icon-bullet-point iconfont"></i>1.3 用户摸底调研与用户故事</a>
+    <a href="#section5"><i class="icon-bullet-point iconfont"></i>1.4 IM消费及AI赋能产品架构 · 设计机会点总结</a>
+    <a href="#section6">2. 解构机会点1: IM降噪</a>
+    <a href="#section7"><i class="icon-bullet-point iconfont"></i>2.1 竞品分析</a>
+    <a href="#section8"><i class="icon-bullet-point iconfont"></i>2.2 设计解法</a>
+    <a href="#section9"><i class="icon-bullet-point iconfont"></i>2.3 低保真原型</a>
+    <a href="#section10"><i class="icon-bullet-point iconfont"></i>2.4 UAT测试</a>
+    <a href="#section25"><i class="icon-bullet-point iconfont"></i>2.4 动线规划</a>
+    <a href="#section11"><i class="icon-bullet-point iconfont"></i>2.5 方案确认及关键页面</a>
+    <a href="#section12"><i class="icon-bullet-point iconfont"></i>2.6 Demo: 完整方案Demo</a>
+    <a href="#section13">3. 解构机会点2: 多线程任务方案</a>
+    <a href="#section14"><i class="icon-bullet-point iconfont"></i>3.1 调研与探索</a>
+    <a href="#section15">4. 解构机会点3: AI体验</a>
+    <a href="#section17"><i class="icon-bullet-point iconfont"></i>4.1 AI体验打造</a>
+    <!-- <a href="#section16"><i class="icon-bullet-point iconfont"></i>4.2 Demo: IM/AI双端框架交互方案演示</a> -->
+    <a href="#section18"><i class="icon-bullet-point iconfont"></i>4.3 IM/AI组件规范抽象</a>
+    <a href="#section19"><i class="icon-bullet-point iconfont"></i>4.4 情感化设计</a>
+    <a href="#section20">5. 落地PC框架架构</a>
+    <a href="#section21"><i class="icon-bullet-point iconfont"></i>5.1 PC框架</a>
+    <a href="#section22"><i class="icon-bullet-point iconfont"></i>5.2 双端框架断点规范及说明</a>
+    <a href="#section23"><i class="icon-bullet-point iconfont"></i>5.3 Icon组件规范优化</a>
+    <a href="#section24"><i class="icon-bullet-point iconfont"></i>5.4 色彩系统优化</a>
+  </div>
+
+  
+
+  
+  
+
+  <section class="section">
+    <div class="container">
+      <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row" style="line-height: 32px;">
+        <div class="col-12 col-md-5 mt-4 mt-md-0 my-md-auto">
+          <span class="badge-2 rounded-pill">0 to 1</span>
+          <span class="badge-2 rounded-pill">Framework</span>
+          <span class="badge-2 rounded-pill">Guidelines</span>
+          <h3 style="margin-top: 16px;">小红书企业效率套件REDcity v1.0 IM/AI/框架设计</h3>
+          <p class="lead">
+            2024.01 - 2024.05<br />
+            Researcher & Designer<br />
+            20 mins
+          </p>
+        </div>
+        <div class="col-12 col-md-7 pl-md-0 text-right">
+          <img class='lozad img-responsive img-clip-left-backward'
+            src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
+            data-src="img/project_redcity/Redcity-banner.svg"
+            data-srcset="img/project_redcity/Redcity-banner.svg 1x" alt="This is ifa-banner." />
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <div class="imgstyle2 row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row" style="margin-top: 32px;">
+    <img src="img/project_redcity/小红书 All-in-one 企业套件.svg">
+  </div>
+
+  <div style="display:flex;justify-content:center;margin-top: 32px;" >
+    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);border-radius: 32px;pointer-events: none;" width="1280" height="354" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fp8No3KmkWF2WSsVTE0uw2K%2FPortfolio-for-Redcity%3Fpage-id%3D2385%253A97009%26node-id%3D5074-112718%26viewport%3D1838%252C5142%252C0.56%26t%3DZAF50w68yqvg8JO9-1%26scaling%3Dmin-zoom%26content-scaling%3Dfixed%26starting-point-node-id%3D5069%253A110899?embed_host=share&hide-ui=1" allowfullscreen></iframe>
+  </div>
+
+  <section id="section1" class="section" style="margin-top: 0px;">
+    <div class="container">
+      <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
+        style="margin-top: 0px;">
+        <div class="col-12 mt-4 mt-md-0 my-md-auto">
+          <div>
+            <div class="titlenumber">01</div>
+            <div class="sectiontitle">1. REDcity是什么？</div>
+            <div class="sectiontitle-eng">what is Redcity</div>
+          </div>
+        </div>
+  </section>
+
+  
+
+
+  <!-- <div class="imgstyle2 row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row ">
+    <img src="img/project_redcity/关于Redcity与顶层设计 About Redcity.svg">
+  </div> -->
+
+
+  <div style="display:flex;justify-content:center;margin-top: 32px;" >
+    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);border-radius: 32px;pointer-events: none;" width="1280" height="706" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fp8No3KmkWF2WSsVTE0uw2K%2FPortfolio-V2%3Fpage-id%3D2385%253A97009%26node-id%3D6546-151484%26viewport%3D1886%252C5065%252C0.46%26t%3DlgWN5h8VD2U2m19a-1%26scaling%3Dmin-zoom%26content-scaling%3Dfixed%26starting-point-node-id%3D6546%253A151347%26show-proto-sidebar%3D1?embed_host=share&hide-ui=1" allowfullscreen></iframe>
+  </div>
+
+  
+
+  <!-- <div class="imgstyle2 row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row ">
+    <img src="img/project_redcity/Profile Avatar Profile Avatar.svg">
+  </div> -->
+
+  
+
+  <section id="section2" class="section" style="margin-top: 0px;">
+    <div class="container">
+      <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
+        style="margin-top: 0px;">
+        <div class="col-12 mt-4 mt-md-0 my-md-auto">
+          <div class="title4">1.1 方案概览</div>
+          <p class="lead">
+            以下是MVP完整方案，可以快速看到我所设计的PC套件界面。可以看到基于异步协同理念与Design Token搭建的，双色IM及PC框架套件Light与Dark Mode方案。
+          </p>
+        </div>
+  </section>
+
+  
+ 
+
+  <div style="display:flex;justify-content:center;margin-top: 32px;" >
+    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);border-radius: 32px;pointer-events: none;" width="1280" height="640" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fp8No3KmkWF2WSsVTE0uw2K%2FPortfolio-for-Redcity%3Fpage-id%3D2385%253A97009%26node-id%3D2385-97077%26viewport%3D1063%252C1419%252C0.26%26t%3DN8WFFchJAmPnRmgo-1%26scaling%3Dmin-zoom%26content-scaling%3Dfixed%26starting-point-node-id%3D2385%253A97054%26show-proto-sidebar%3D1?embed_host=share&hide-ui=1" allowfullscreen></iframe>
+  </div>
+
+  
+
+  <!-- youtube示例 -->
+  <!-- <div class="imgstyle2 row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row" >
+    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);border-radius: 32px;" width="1280" height="706" src="https://www.youtube.com/embed/KbiUfrcOcdk?si=tJxscr1n4m_bYCmR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div> -->
+
+
+  <section id="section3" class="section" style="margin-top: 0px;">
+    <div class="container">
+      <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
+        style="margin-top: 0px;">
+        <div class="col-12 mt-4 mt-md-0 my-md-auto">
+          <div class="title4">1.2 项目思路</div>
+          <p class="lead">
+            加入这个项目时，我基于以下思路对项目进行了梳理，分析目前项目面临的情况，依照出项目设计的突破口。
+          </p>
+        </div>
+  </section>
+
+  <div class="imgstyle2 row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
+    <img src="img/project_redcity/项目思路 Structure.svg">
+  </div>
+
+  <section id="section4" class="section" style="margin-top: 0px;">
+    <div class="container">
+      <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
+        style="margin-top: 0px;">
+        <div class="col-12 mt-4 mt-md-0 my-md-auto">
+          <div class="title4">1.3 用户摸底调研与用户故事</div>
+          <p class="lead">
+            基于以上情况，基于现有应用中的IM套件，粗颗粒度调研了存量IM工具使用现状与用户原声。收获了含有表现层级的，例如图文排版等问题以及框架体验层级的问题。MVP阶段，只针对<b>框架体验层</b>问题，梳理产品设计的突破点。
+          </p>
+        </div>
+  </section>
+
+  <div class="imgstyle2 row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
+    <img src="img/project_redcity/用户摸底调研与用户故事 User Research Design Opportunity.svg">
+  </div>
+
+  <section id="section5" class="section" style="margin-top: 0px;">
+    <div class="container">
+      <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
+        style="margin-top: 0px;">
+        <div class="col-12 mt-4 mt-md-0 my-md-auto">
+          <div class="title4">1.4 IM消费及AI赋能产品架构 · 设计机会点总结</div>
+          <p class="lead">
+            结合顶层独特的组织协同理念，以及想为小红书员工带来的办公体验，梳理出以下产品设计机会点。分别为：
+          </p>
+          <div class="title5">1.4.1 机会点1: 让REDers自主工作,提升FocusTime至2小时/人</div>
+        </div>
+  </section>
+
+  <div  class="imgstyle2 row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
+    <img src="img/project_redcity/IM消费及AI赋能产品架构 · 设计机会点总结 Design Opportunity_1.svg">
+  </div>
+
+  <section class="section" style="margin-top: 0px;">
+    <div class="container">
+      <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
+        style="margin-top: 0px;">
+        <div class="col-12 mt-4 mt-md-0 my-md-auto">
+          <div class="title5">1.4.2 机会点2: 缩短交互路径，多线程处理任务，打造沉浸专注办公体验</div>
+          <div class="title5">1.4.3 机会点3: Context not Control: 最全上下文，智能Agent赋能REDers智慧工作</div>
+        </div>
+  </section>
+
+  <div id="section1" class="imgstyle2 row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
+    <img src="img/project_redcity/IM消费及AI赋能产品架构 · 设计机会点总结 Design Opportunity_2.svg">
+  </div>
+
+  <section id="section6" class="section" style="margin-top: 0px;">
+    <div class="container">
+      <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
+        style="margin-top: 0px;">
+        <div class="col-12 mt-4 mt-md-0 my-md-auto">
+          <div>
+            <div class="titlenumber">02</div>
+            <div class="sectiontitle">2. 解构机会点1: IM降噪</div>
+            <div class="sectiontitle-eng">IM Noise Reduction</div>
+          </div>
+        </div>
+  </section>
+
+  <section id="section7" class="section" style="margin-top: 0px;">
+    <div class="container">
+      <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
+        style="margin-top: 0px;">
+        <div class="col-12 mt-4 mt-md-0 my-md-auto">
+          <div class="title4">2.1 竞品分析</div>
+          <p class="lead">
+            着手对竞品是如何进行降噪设计，分析其降噪的理念，以及通过对降噪的产品设计路径分析产品降噪的权重。同时基于异步协同的理念，在设计中也挑选了偏异步协同的邮件产品。分析，此类产品是如何进行信息分类，帮助用户聚焦，达到提高他们单位时间内的准确处理消息的能力。
+          </p>
+          <p class="lead">
+            在过程中，反复应用设计取舍原则，在分析竞品所有的功能点与体验路径解法，用最少的交互设计功能为用户组合出<b>最佳的降噪体验路，径达到最大的用户体验。</b>。
+          </p>
+        </div>
+  </section>
+
+  <div class="imgstyle2 row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
+    <img src="img/project_redcity/设计机会点1_ 消息优先级 - 竞品分析 Competitive Analysis.svg">
+  </div>
+  
+
+  <section id="section8" class="section" style="margin-top: 0px;">
+    <div class="container">
+      <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
+        style="margin-top: 0px;">
+        <div class="col-12 mt-4 mt-md-0 my-md-auto">
+          <div class="title4">2.2 设计解法</div>
+          <p class="lead">
+            基于竞品调研的结果，用户IM单点功能用户反馈，以及新的组织协同理念。提出设计解法预设。
+          </p>
+        </div>
+  </section>
+
+  <div class="imgstyle2 row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
+    <img src="img/project_redcity/设计机会点1_ IM消息消费使用习惯调研 · 设计解法 Researh and Design Proposal.svg">
+  </div>
+
+  <section id="section9" class="section" style="margin-top: 0px;">
+    <div class="container">
+      <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
+        style="margin-top: 0px;">
+        <div class="col-12 mt-4 mt-md-0 my-md-auto">
+          <div class="title4">2.3 低保真原型</div>
+          <p class="lead">
+            基于以上设计解法，推导出了3条IM消费与降噪体验路径原型。3个方案都基于既定的区分：重要不重要、临时加急会话场景、左侧推出Filter消息分类管理器、以及定时清理的理念，进行理念设计。目的是找出区分已读未读，以及更清爽的Feed流消费路径，保护着用户的心智。
+          </p>
+        </div>
+  </section>
+
+  <div class="imgstyle2 row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
+    <img src="img/project_redcity/设计机会点1_ Happy Path 低保真方案原型 Design Prototype.svg">
+  </div>
+
+  
+
+  <section id="section10" class="section" style="margin-top: 0px;">
+    <div class="container">
+      <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
+        style="margin-top: 0px;">
+        <div class="col-12 mt-4 mt-md-0 my-md-auto">
+          <div class="title4">2.4 UAT测试</div>
+          <p class="lead">
+            同时发放UAT测试至用户群，搜集用户反馈。
+          </p>
+        </div>
+  </section>
+
+  
+
+  <div class="imgstyle2 row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
+    <img src="img/project_redcity/设计机会点1：UAT测试 User Acceptance Test.svg">
+  </div>
+
+  <section id="section25" class="section" style="margin-top: 0px;">
+    <div class="container">
+      <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
+        style="margin-top: 0px;">
+        <div class="col-12 mt-4 mt-md-0 my-md-auto">
+          <div class="title4">2.4 动线规划</div>
+          <p class="lead">
+            核心架构页面心智动线规划验证。
+          </p>
+        </div>
+  </section>
+
+  <div  class="imgstyle2 row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
+    <img src="img/project_redcity/核心架构页面心智动线规划 Core Architecture Page Mental Flow Planning.svg">
+  </div>
+
+  <section id="section11" class="section" style="margin-top: 0px;">
+    <div class="container">
+      <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
+        style="margin-top: 0px;">
+        <div class="col-12 mt-4 mt-md-0 my-md-auto">
+          <div class="title4">2.5 方案确认及关键页面</div>
+          <p class="lead">
+            完整方案呈现，（打造IM的a-ha Moment）
+          </p>
+        </div>
+  </section>
+
+
+  <div  class="imgstyle2 row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
+    <img src="img/project_redcity/关键核心页面 Key Page.svg">
+  </div>
+
+  <div  class="imgstyle2 row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
+    <img src="img/project_redcity/AI 赋能 AI Empowerment.svg">
+  </div>
+  
+
+  <section id="section12" class="section" style="margin-top: 0px;">
+    <div class="container">
+      <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
+        style="margin-top: 0px;">
+        <div class="col-12 mt-4 mt-md-0 my-md-auto">
+          <div class="title4">2.6 Demo: 完整方案Demo</div>
+          <p class="lead">
+            基于用户反馈，调整了设计方案，最后完成最优IM消费路径。达成了以下的方案设计MVP IM产品方案设计。
+          </p>
+
+        </div>
+  </section>
+
+  <div style="display:flex;justify-content:center;" >
+    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);border-radius: 32px;pointer-events: none;" width="1280" height="576" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fp8No3KmkWF2WSsVTE0uw2K%2FPortfolio-for-Redcity%3Fpage-id%3D2385%253A97009%26node-id%3D2385-97439%26viewport%3D2699%252C4566%252C0.77%26t%3DaiNmUIhuc4fdzWzq-1%26scaling%3Dmin-zoom%26content-scaling%3Dfixed%26starting-point-node-id%3D2385%253A97268%26show-proto-sidebar%3D1?embed_host=share&hide-ui=1" allowfullscreen></iframe>
+  </div>
+
+
+
+  <section id="section13" class="section" style="margin-top: 0px;">
+    <div class="container">
+      <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
+        style="margin-top: 0px;">
+        <div class="col-12 mt-4 mt-md-0 my-md-auto">
+          <div>
+            <div class="titlenumber">03</div>
+            <div class="sectiontitle">3. 解构机会点2: 多线程任务方案</div>
+            <div class="sectiontitle-eng">Multithreading Tasks</div>
+          </div>
+        </div>
+  </section>
+
+  <section id="section14" class="section" style="margin-top: 0px;">
+    <div class="container">
+      <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
+        style="margin-top: 0px;">
+        <div class="col-12 mt-4 mt-md-0 my-md-auto">
+          <div class="title4">3.1 调研与探索</div>
+          <p class="lead">
+            在IM的消费路径上，我们做了多方的调研与验证，另外在设计机会点上，我们也做了多方的桌面调研以及竞品调研。在做了调研后，我们预设了两个设计解法，从当前的产品形态，以及更好的用户体验来看，预设方案1以及预设方案2，无论在All-in-one的体感上以及对存量产品都有非常明显的优劣势，还需更多的用户数据验证。另外从体感上来说，方案1的体感会更轻量。
+          </p>
+        </div>
+  </section>
+
+  <div class="imgstyle2 row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
+    <img src="img/project_redcity/设计机会点 2_ 多线程任务方案调研与探索 Multithreading tasks.svg">
+  </div>
+
+  <section id="section15" class="section" style="margin-top: 0px;">
+    <div class="container">
+      <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
+        style="margin-top: 0px;">
+        <div class="col-12 mt-4 mt-md-0 my-md-auto">
+          <div>
+            <div class="titlenumber">04</div>
+            <div class="sectiontitle">4. 解构机会点3: AI体验</div>
+            <div class="sectiontitle-eng">AI Experience</div>
+          </div>
+        </div>
+  </section>
+
+
+  <section id="section17" class="section" style="margin-top: 0px;">
+    <div class="container">
+      <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
+        style="margin-top: 0px;">
+        <div class="col-12 mt-4 mt-md-0 my-md-auto">
+          <div class="title4">4.1 AI体验打造</div>
+          <p class="lead">
+            从薯名小地瓜项目，衔接到知识库，落地了双端AI会话框架，同时对标了主站AI达芬奇会话体验，打通了企业效率AI会话的体验体感。
+          </p>
+        </div>
+  </section>
+
+  <div class="imgstyle2 row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
+    <img src="img/project_redcity/设计机会点 3_ AI 横向薯名与知识库AI Background.svg">
+  </div>
+
+  <div class="imgstyle2 row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
+    <img src="img/project_redcity/设计机会点 3_ AI 薯名体验亮点 Background.svg">
+  </div>
+
+  <div class="imgstyle2 row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
+    <img src="img/project_redcity/设计机会点 3_ AI 薯名体验亮点 Background 4.svg">
+  </div>
+
+  <div class="imgstyle2 row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
+    <img src="img/project_redcity/设计机会点 3_ AI 薯名体验亮点 Background 1.svg">
+  </div>
+  
+  <div class="imgstyle2 row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
+    <img src="img/project_redcity/设计机会点 3_ AI 薯名体验亮点 Background 2.svg">
+  </div>
+
+  <div class="imgstyle2 row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
+    <img src="img/project_redcity/设计机会点 3_ AI 体验优化 Experience Optimization 1.svg">
+  </div>
+
+  <div class="imgstyle2 row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
+    <img src="img/project_redcity/设计机会点 3_ AI 体验优化 Experience Optimization 2.svg">
+  </div>
+
+  <!-- <div class="imgstyle2 row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
+    <img src="img/project_redcity/设计机会点 3_ Chat UI 组件 Chat UI组件.svg">
+  </div> -->
+
+  <div class="imgstyle2 row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
+    <img src="img/project_redcity/设计机会点 3_ 框架层级 - AI大搜体验对齐 AI Experience Consistency.svg ">
+  </div>
+
+  <!-- <section id="section16" class="section" style="margin-top: 0px;">
+    <div class="container">
+      <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
+        style="margin-top: 0px;">
+        <div class="col-12 mt-4 mt-md-0 my-md-auto">
+          <div class="title4">4.2 Demo: IM/AI双端框架交互方案演示</div>
+          <p class="lead">
+            以下是MVP完整方案
+          </p>
+        </div>
+  </section>
+
+  <div style="display:flex;justify-content:center;" >
+    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);border-radius: 32px;pointer-events: none;" width="1280" height="690" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fp8No3KmkWF2WSsVTE0uw2K%2FPortfolio-for-Redcity%3Fpage-id%3D2385%253A97009%26node-id%3D2452-126023%26viewport%3D1063%252C1419%252C0.26%26t%3DeO0LiJbdDQhFD15l-1%26scaling%3Dmin-zoom%26content-scaling%3Dfixed%26starting-point-node-id%3D2452%253A124750%26show-proto-sidebar%3D1?embed_host=share&hide-ui=1" allowfullscreen></iframe>
+  </div> -->
+  
+  <section id="section18" class="section" style="margin-top: 0px;">
+    <div class="container">
+      <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
+        style="margin-top: 0px;">
+        <div class="col-12 mt-4 mt-md-0 my-md-auto">
+          <div class="title4">4.3 IM/AI组件规范抽象</div>
+          <p class="lead">
+            落地了AI会话场景，以及各个状态下的AI会话体验框架组件，包括：气泡题，卡片，引用，异常情况，会话阻断模式，停止生成，等重要AI会话组件，容器规则。随着业务拓展，未来也为引入更多的体验度量模型与优化标准。
+          </p>
+        </div>
+  </section>
+
+  <div class="imgstyle2 row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
+    <img src="img/project_redcity/设计机会点 3_ LUI 框架层级 - 初版IMAI组件抽象 Components.svg">
+  </div>
+
+  <section id="section19" class="section" style="margin-top: 0px;">
+    <div class="container">
+      <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
+        style="margin-top: 0px;">
+        <div class="col-12 mt-4 mt-md-0 my-md-auto">
+          <div class="title4">4.4 情感化设计</div>
+          <p class="lead">
+            同时，在企业效率产品的设计上，也更注重，情感化交互设计。<b>不仅仅是工具</b>。在Red city中主打人感与社区感。在已有产品设计单点上，也非常强调互动感。
+          </p>
+        </div>
+  </section>
+
+  <div style="display:flex;justify-content:center;" >
+    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);border-radius: 32px;pointer-events: none;" width="1280" height="600" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fp8No3KmkWF2WSsVTE0uw2K%2FPortfolio-for-Redcity%3Fpage-id%3D2385%253A97009%26node-id%3D2547-102604%26viewport%3D2018%252C1178%252C0.52%26t%3DPniZ6XIF1PfKGi56-1%26scaling%3Dmin-zoom%26content-scaling%3Dfixed%26starting-point-node-id%3D2547%253A102604%26show-proto-sidebar%3D1?embed_host=share&hide-ui=1" allowfullscreen></iframe>
+  </div>
+
+  <section id="section20" class="section" style="margin-top: 0px;">
+    <div class="container">
+      <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
+        style="margin-top: 0px;">
+        <div class="col-12 mt-4 mt-md-0 my-md-auto">
+          <div>
+            <div class="titlenumber">05</div>
+            <div class="sectiontitle">5. 落地PC框架架构</div>
+            <div class="sectiontitle-eng">PC Framework</div>
+          </div>
+        </div>
+  </section>
+
+  <section id="section21" class="section" style="margin-top: 0px;">
+    <div class="container">
+      <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
+        style="margin-top: 0px;">
+        <div class="col-12 mt-4 mt-md-0 my-md-auto">
+          <div class="title4">5.1 PC框架</div>
+          <p class="lead">
+            在这里需要补充AI体验设计的容器的框架、以及补充是如何推导至改框架的。没那么简单。效率理论 + Redoc已有尺寸
+          </p>
+        </div>
+  </section>
+
+  <div class="imgstyle2 row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
+    <img src="img/project_redcity/PC框架 PC Framework.svg">
+  </div>
+
+  <section id="section22" class="section" style="margin-top: 0px;">
+    <div class="container">
+      <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
+        style="margin-top: 0px;">
+        <div class="col-12 mt-4 mt-md-0 my-md-auto">
+          <div class="title4">5.2 双端框架断点规范及说明</div>
+          <p class="lead">
+            框架断点说明以及导航交互规范
+          </p>
+        </div>
+  </section>
+
+  <div  class="imgstyle2 row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
+    <img src="img/project_redcity/双端框架断点规范及说明 Framework Guidelines.svg">
+  </div>
+
+  <section id="section23" class="section" style="margin-top: 0px;">
+    <div class="container">
+      <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
+        style="margin-top: 0px;">
+        <div class="col-12 mt-4 mt-md-0 my-md-auto">
+          <div class="title4">5.3 Icon组件规范优化</div>
+          <p class="lead">
+            关于项目沉淀，我已经开了我的site，用于知识沉淀，可点击访问。<a target='_blank' href='my_insight.html'>My Insight</a>
+          </p>
+          <p class="lead">
+            在落地项目的过程中，发现了存量产品线存在的Icon组件不规范的问题。在B端系统中，常用的线性Icon上，我发起了一次线性Icon的优化对齐，并沉淀至文档。
+          </p>
+        </div>
+  </section>
+
+  <div class="article" data-category="best_practice">
+    <div class="container">
+      <div
+        class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
+      >
+        <div class="col-12 mt-4 mt-md-0 my-md-auto">
+          <a
+            href="https://mp.weixin.qq.com/s?__biz=MzIyNzQ4NDc4NA==&mid=2247483850&idx=1&sn=c1bcd27961e50ca4986b83b81d27f5d6&chksm=e86134d5df16bdc31c801402e0e7a5c6afd49104af755ad0cec84e1573b4cc522401d63c7fd4#rd"
+            class="insight btn btn-frameless"
+            target="_blank"
+          >
+            <div>
+              <p class="lead2">Updated Date: 2024-05-22</p>
+              <img
+                class="imgstyle"
+                style="margin-top: 0px"
+                src="img/my_insight/Icon绘制规范最佳实践.svg"
+              />
+              <p class="insightlead">B端 Icon 规范最佳实践沉淀</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section id="section24" class="section" style="margin-top: 0px;">
+    <div class="container">
+      <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
+        style="margin-top: 0px;">
+        <div class="col-12 mt-4 mt-md-0 my-md-auto">
+          <div class="title4">5.4 色彩系统优化</div>
+          <p class="lead">
+            关于项目沉淀，我已经开了我的site，用于知识沉淀，可点击访问。<a target='_blank' href='my_insight.html'>My Insight</a>
+          </p>
+          <p class="lead">
+            在落地项目的过程中，也发现了存量色彩系统中，颜色易用性不够等问题。特此执行了色彩优化。一方面更加柔和了色彩，运用HCT色彩空间，统一了前端的色彩明度。另一方面优化了色彩的易用性，与生成了对应的双色Design Token。
+          </p>
+        </div>
+  </section>
+
+  <div class="article" data-category="best_practice">
+    <div class="container">
+      <div
+        class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
+      >
+        <div class="col-12 mt-4 mt-md-0 my-md-auto">
+          <a
+            href="https://mp.weixin.qq.com/s?__biz=MzIyNzQ4NDc4NA%3D%3D&mid=2247483998&idx=1&sn=521507d8078eb8a8eb36a5400b1c2ab9&chksm=e8613741df16be57f61c8293af8ba9de4b88c40648460d4a60582b34dba5fb7f68b0196bba56&token=1474122979&lang=zh_CN#rd"
+            class="insight btn btn-frameless"
+            target="_blank"
+          >
+            <div>
+              <p class="lead2">Updated Date: 2024-05-31</p>
+              <img
+                class="imgstyle"
+                style="margin-top: 0px"
+                src="img/my_insight/Design Token 最佳实践沉淀.svg"
+              />
+              <p class="insightlead">Design Token 最佳实践沉淀</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="section" style="margin-top: 0px;">
+    <div class="container">
+      <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
+        style="margin-top: 0px;">
+        <div class="col-12 mt-4 mt-md-0 my-md-auto">
+          <p class="lead">
+            如果可以的话，加上项目反思。
+          </p>
+        </div>
+  </section>
+
+
+
+
+  <section class="section" style="margin-top: 80px; margin-bottom: 100px;">
+    <div class="container">
+      <a type="button" class="btn btn-primary btn-lg buttom-link" style="float: left;width: 340px;height: 80px;"
+        href="index.html">Back to Homepage</a>
+      <a type="button" class="btn btn-primary btn-lg buttom-link" style="float: right;width: 340px;height: 80px;"
+        href="project_Construct.html">Next:<br>Construct Product Design<br/> 0 to 1 Case Retro Sharing</a>
+    </div>
+  </section>
+
+
+
+
+
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__left">
+        <div class="footer__copy">
+          Designed and coded by Yuwen. All rights reserved.
+        </div>
+      </div>
+      <div class="footer__links">
+        <ul class="navbar-nav ">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Homepage</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#about">Skills</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#portfolio">Projects</a>
+          </li>
+          
+          <li class="nav-item">
+            <a data-scroll class="nav-link" href="my_insight.html">Insights</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#contact">Contact</a>
+          </li>
+
+          <!-- <li class="nav-item">
+          <a class="nav-link" href="#myfriend">行业口碑</a>
+        </li> -->
+
+        </ul>
+      </div>
+      <!-- <div class="footer__right">
+      <img
+          src="img/general/design-and-code-radity.svg"
+          srcset="https://raditian-hugo.radity.com/img/general/design-and-code-radity.png 1x, https://raditian-hugo.radity.com/img/general/design-and-code-radity@2x.png 2x"
+          alt="Design &amp; Code - yuwen"
+      />
+    </div> -->
+    </div>
+  </footer>
+
+  <script src='js/rad-animations.js'></script>
+  <script src='js/library/lozad.min.js'></script>
+  <script>
+    window.addEventListener("load", function () {
+      var observer = window.lozad(".lozad", {
+        rootMargin: window.innerHeight / 2 + "px 0px",
+        threshold: 0.01
+      });
+      observer.observe();
+    });
+  </script>
+  <script src='js/library/jquery-3.3.1.slim.min.js'></script>
+  <script src='js/library/bootstrap.min.js'></script>
+  <script src='js/sticky-header.js'></script>
+  <script src='js/library/smooth-scroll.polyfills.min.js'></script>
+  <script src='js/library/fontfaceobserver.js'></script>
+  <script>
+    (function (w) {
+
+      if (w.document.documentElement.className.indexOf("fonts-loaded") > -1) {
+        return;
+      }
+      var fontA = new w.FontFaceObserver("Inter", {
+        weight: 300
+      });
+      var fontB = new w.FontFaceObserver("Inter", {
+        weight: 400
+      });
+      var fontC = new w.FontFaceObserver("Inter", {
+        weight: 500
+      });
+      var fontD = new w.FontFaceObserver("Inter", {
+        weight: 600
+      });
+      var fontE = new w.FontFaceObserver("Inter", {
+        weight: 700
+      });
+      var fontF = new w.FontFaceObserver("Inter", {
+        weight: 900
+      });
+      w.Promise.all([fontA.load(), fontC.load(), fontF.load()]).then(function () {
+        w.document.documentElement.className += " fonts-loaded";
+      });
+    })(this);
+  </script>
+  <script>
+    const scroll = new SmoothScroll('a[href*="#"]');
+    $('a.nav-link').on('click', () => {
+      const navbar = $('.navbar-collapse');
+      if (navbar && navbar.hasClass('show')) {
+        $('.navbar-toggler').click();
+      }
+    })
+  </script>
+
+</body>
+
+</html>
