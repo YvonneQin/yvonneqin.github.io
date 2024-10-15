@@ -39,3 +39,9 @@ jobs:
       with:
         name: site
         path: ./_site  # 上传 _site 文件夹，它是 Jekyll 生成的静态网站
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.12'
+
