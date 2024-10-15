@@ -7,6 +7,9 @@ load_dotenv()
 
 print(f"Current working directory: {os.getcwd()}")
 
+if __name__ == "__main__":
+    app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 5002)))
+
 app = Flask(__name__)
 
 # 从环境变量中隐式获取 Azure OpenAI API 的配置信息
