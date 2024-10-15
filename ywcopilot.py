@@ -9,8 +9,7 @@ print(f"Current working directory: {os.getcwd()}")
 
 app = Flask(__name__)
 
-if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 5002)))
+
 
 
 
@@ -55,5 +54,6 @@ def index():
     return render_template('bot.html')  # 渲染你创建的HTML页面
 
 # 启动 Flask 服务器，放在文件最后
+
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=5002, debug=True)
+    app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 5002)),debug=True)
