@@ -2,6 +2,9 @@ import os  # 添加这一行以导入 os 模块
 import openai  # 使用 OpenAI Python 客户端
 from flask import Flask, request, jsonify, render_template
 
+from dotenv import load_dotenv
+load_dotenv()
+
 print(f"Current working directory: {os.getcwd()}")
 
 app = Flask(__name__)
