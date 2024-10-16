@@ -1,3 +1,0 @@
-Flask
-openai
-python-dotenv  # 如果你使用 dotenv 来加载环境变量
