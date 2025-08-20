@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1152px" height="702px" viewBox="0 0 1152 702" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group</title>
+    <g id="我的网页" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="project-4" transform="translate(-415.000000, -1054.000000)">
+            <g id="Group" transform="translate(415.000000, 1054.000000)">
+                <rect id="Rectangle-Copy-11" fill="#F6F7F7" x="0" y="0" width="1152" height="702"></rect>
+                <polygon id="Fill-1" fill-opacity="0.8" fill="#FFFFFF" points="56 93 319 93 319 639 56 639"></polygon>
+                <polygon id="Fill-2" fill-opacity="0.8" fill="#FFFFFF" points="339 93 637 93 637 267 339 267"></polygon>
+                <polygon id="Fill-2-Copy" fill-opacity="0.8" fill="#FFFFFF" points="657 93 1096 93 1096 639 657 639"></polygon>
+                <polygon id="Fill-3" fill-opacity="0.8" fill="#FFFFFF" points="339 284 637 284 637 639 339 639"></polygon>
+                <g id="Group-2" transform="translate(80.000000, 115.000000)" font-size="20">
+                    <text id="鲁棒性" font-family="MicrosoftYaHeiUI-Bold, Microsoft YaHei UI" font-weight="bold" fill="#0059FD">
+                        <tspan x="0" y="20">鲁棒性</tspan>
+                    </text>
+                    <text id="情境变化的设置一致性-在键盘导航期间不会" font-family="PingFangSC-Regular, PingFang SC" font-weight="normal" fill="#595353">
+                        <tspan x="0" y="70">情境变化的设置一致性</tspan>
+                        <tspan x="0" y="98">在键盘导航期间不会触发</tspan>
+                        <tspan x="0" y="126">其他操作</tspan>
+                        <tspan x="0" y="154"></tspan>
+                        <tspan x="0" y="182">初始焦点位置</tspan>
+                        <tspan x="0" y="210">焦点通常首先与之交互的</tspan>
+                        <tspan x="0" y="238">控件</tspan>
+                        <tspan x="0" y="266"></tspan>
+                        <tspan x="0" y="294">焦点一致</tspan>
+                        <tspan x="0" y="322">当打开或关闭对话框或导</tspan>
+                        <tspan x="0" y="350">航到页面并返回时，焦点</tspan>
+                        <tspan x="0" y="378">保持在相同的控件上</tspan>
+                    </text>
+                </g>
+                <g id="Group-3" transform="translate(359.000000, 119.000000)" font-size="20">
+                    <text id="视觉聚焦" font-family="MicrosoftYaHeiUI-Bold, Microsoft YaHei UI" font-weight="bold" fill="#0059FD">
+                        <tspan x="0" y="20">视觉聚焦</tspan>
+                    </text>
+                    <text id="易识别-一致的视觉线索-总是在可见的区域" font-family="PingFangSC-Regular, PingFang SC" font-weight="normal" fill="#595353">
+                        <tspan x="0" y="67.3203125">易识别</tspan>
+                        <tspan x="0" y="95.3203125">一致的视觉线索</tspan>
+                        <tspan x="0" y="123.320312">总是在可见的区域</tspan>
+                    </text>
+                </g>
+                <g id="Group-3-Copy" transform="translate(359.000000, 306.000000)" font-size="20">
+                    <text id="Tab切换阅顺序" font-family="MicrosoftYaHeiUI-Bold, Microsoft YaHei UI" font-weight="bold" fill="#0059FD">
+                        <tspan x="0" y="20">Tab切换阅顺序</tspan>
+                    </text>
+                    <text id="符合阅读顺序-所有可交互可编辑的组件可以" font-family="PingFangSC-Regular, PingFang SC" font-weight="normal" fill="#595353">
+                        <tspan x="0" y="67">符合阅读顺序</tspan>
+                        <tspan x="0" y="95"></tspan>
+                        <tspan x="0" y="123">所有可交互可编辑的组件可</tspan>
+                        <tspan x="0" y="151">以被触达</tspan>
+                        <tspan x="0" y="179">· input fields · check </tspan>
+                        <tspan x="0" y="207">boxes · buttons</tspan>
+                        <tspan x="0" y="235"></tspan>
+                        <tspan x="0" y="263">左至右</tspan>
+                        <tspan x="0" y="291">Right-to-left: 阿拉伯地区</tspan>
+                    </text>
+                </g>
+                <text id="Tab" font-family="PingFangSC-Regular, PingFang SC" font-size="20" font-weight="normal" letter-spacing="0.001" fill="#595353">
+                    <tspan x="674" y="197">T</tspan>
+                    <tspan x="686.381" y="197" letter-spacing="-0.099">a</tspan>
+                    <tspan x="697.462" y="197">b</tspan>
+                </text>
+                <text id="Shift" font-family="PingFangSC-Regular, PingFang SC" font-size="20" font-weight="normal" letter-spacing="0.07" fill="#595353">
+                    <tspan x="674" y="285">S</tspan>
+                    <tspan x="686.71" y="285">h</tspan>
+                    <tspan x="697.83" y="285" letter-spacing="-0.08">i</tspan>
+                    <tspan x="702.87" y="285" letter-spacing="-0.1">f</tspan>
+                    <tspan x="710.23" y="285">t</tspan>
+                </text>
+                <text id="Crtl-或-CMD" font-family="PingFangSC-Regular, PingFang SC" font-size="20" font-weight="normal" letter-spacing="0.009" fill="#595353">
+                    <tspan x="674" y="250">C</tspan>
+                    <tspan x="688.569" y="250" letter-spacing="-0.071">r</tspan>
+                    <tspan x="695.798" y="250" letter-spacing="-0.031">t</tspan>
+                    <tspan x="702.867" y="250">l  或 CMD</tspan>
+                </text>
+                <text id="↑/↓/←/→" font-family="PingFangSC-Regular, PingFang SC" font-size="20" font-weight="normal" fill="#595353">
+                    <tspan x="674" y="371">↑/↓/←/→</tspan>
+                </text>
+                <text id="ESC" font-family="PingFangSC-Regular, PingFang SC" font-size="20" font-weight="normal" letter-spacing="-0.001" fill="#595353">
+                    <tspan x="674" y="406">E</tspan>
+                    <tspan x="686.739" y="406" letter-spacing="0.079">S</tspan>
+                    <tspan x="699.458" y="406">C</tspan>
+                </text>
+                <text id="Alt-或-Option" font-family="PingFangSC-Regular, PingFang SC" font-size="20" font-weight="normal" letter-spacing="-0.008" fill="#595353">
+                    <tspan x="674" y="320">Alt  或  Option</tspan>
+                </text>
+                <text id="Command-作为主修饰键" font-family="PingFangSC-Light, PingFang SC" font-size="20" font-weight="300" letter-spacing="0.008" fill="#0059FD">
+                    <tspan x="853.9311" y="251">Command 作为主修饰键</tspan>
+                </text>
+                <text id="Shift-作为次修饰键" font-family="PingFangSC-Light, PingFang SC" font-size="20" font-weight="300" letter-spacing="0.001" fill="#0059FD">
+                    <tspan x="853.9312" y="286">Shift 作为次修饰键</tspan>
+                </text>
+                <text id="Option-作为备选修饰键" font-family="PingFangSC-Light, PingFang SC" font-size="20" font-weight="300" letter-spacing="0.006" fill="#0059FD">
+                    <tspan x="853.9312" y="321">Option 作为备选修饰键</tspan>
+                </text>
+                <text id="在界面元素中切换" font-family="PingFangSC-Light, PingFang SC" font-size="20" font-weight="300" letter-spacing="0.006" fill="#0059FD">
+                    <tspan x="853.9312" y="375">在界面元素中切换</tspan>
+                </text>
+                <text id="从聚焦界面中退出" font-family="PingFangSC-Light, PingFang SC" font-size="20" font-weight="300" letter-spacing="0.006" fill="#0059FD">
+                    <tspan x="853.9312" y="406">从聚焦界面中退出</tspan>
+                </text>
+                <text id="Tab切换阅读元素" font-family="PingFangSC-Light, PingFang SC" font-size="20" font-weight="300" letter-spacing="-0.004" fill="#0059FD">
+                    <tspan x="853.9311" y="195">Tab切换阅读元素</tspan>
+                </text>
+                <text id="物理键加成-炼成手感，键程短，最大程度上" font-family="PingFangSC-Regular, PingFang SC" font-size="20" font-weight="normal">
+                    <tspan x="674" y="491" fill="#595353">物理键加成</tspan>
+                    <tspan x="774" y="491" fill="#FFFFFF"></tspan>
+                    <tspan x="674" y="519" font-family="PingFangSC-Light, PingFang SC" font-weight="300" fill="#6AF0D5"></tspan>
+                    <tspan x="674" y="547" font-family="PingFangSC-Light, PingFang SC" font-weight="300" fill="#0059FD">炼成手感，键程短，最大程度上避免出错和</tspan>
+                    <tspan x="674" y="575" font-family="PingFangSC-Light, PingFang SC" font-weight="300" fill="#0059FD">提升效率</tspan>
+                </text>
+                <text id="快捷键基本操作" font-family="MicrosoftYaHeiUI-Bold, Microsoft YaHei UI" font-size="20" font-weight="bold" fill="#0059FD">
+                    <tspan x="674" y="139">快捷键基本操作</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

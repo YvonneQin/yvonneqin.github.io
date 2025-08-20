@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1152px" height="265px" viewBox="0 0 1152 265" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 32</title>
+    <g id="我的网页" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="project-1" transform="translate(-414.000000, -5146.000000)">
+            <g id="Group-32" transform="translate(414.000000, 5146.000000)">
+                <rect id="Rectangle-Copy-15" fill="#F6F7F7" x="0" y="0" width="1152" height="265"></rect>
+                <g id="Group-23" transform="translate(197.000000, 51.000000)">
+                    <g id="Group-16">
+                        <rect id="Rectangle" stroke="#555555" x="0" y="0" width="150" height="48" rx="24"></rect>
+                        <text id="产品定位" font-family="PingFangSC-Regular, PingFang SC" font-size="18" font-weight="normal" line-spacing="30" fill="#555555">
+                            <tspan x="39" y="29">产品定位</tspan>
+                        </text>
+                    </g>
+                    <text id="传达用户-映射用户的“心像”" font-family="PingFangSC-Regular, PingFang SC" font-size="18" font-weight="normal" line-spacing="30" fill="#555555">
+                        <tspan x="39" y="102">传达用户</tspan>
+                        <tspan x="2.334" y="132">映射用户的“心像”</tspan>
+                    </text>
+                </g>
+                <g id="Group-24" transform="translate(400.000000, 51.000000)">
+                    <g id="Group-16-Copy">
+                        <rect id="Rectangle" stroke="#555555" x="0" y="0" width="150" height="48" rx="24"></rect>
+                        <text id="角色" font-family="PingFangSC-Regular, PingFang SC" font-size="18" font-weight="normal" line-spacing="30" fill="#555555">
+                            <tspan x="57" y="29">角色</tspan>
+                        </text>
+                    </g>
+                    <text id="深入移情理解多重角色间协作关系" font-family="PingFangSC-Regular, PingFang SC" font-size="18" font-weight="normal" line-spacing="30" fill="#555555">
+                        <tspan x="3" y="102">深入移情理解多重</tspan>
+                        <tspan x="12" y="132">角色间协作关系</tspan>
+                    </text>
+                </g>
+                <g id="Group-25" transform="translate(602.000000, 51.000000)">
+                    <text id="导航架构模式-流程页面模板-表单" font-family="PingFangSC-Regular, PingFang SC" font-size="18" font-weight="normal" line-spacing="30" fill="#555555">
+                        <tspan x="21" y="102">导航架构模式</tspan>
+                        <tspan x="21" y="132">流程页面模板</tspan>
+                        <tspan x="57" y="162">表单</tspan>
+                    </text>
+                    <g id="Group-15">
+                        <rect id="Rectangle" stroke="#555555" x="0" y="0" width="150" height="48" rx="24"></rect>
+                        <text id="前后端" font-family="PingFangSC-Regular, PingFang SC" font-size="18" font-weight="normal" line-spacing="30" fill="#555555">
+                            <tspan x="48" y="29">前后端</tspan>
+                        </text>
+                    </g>
+                </g>
+                <g id="Group-26" transform="translate(805.000000, 51.000000)">
+                    <text id="设计全景图-设计组件-设计文档" font-family="PingFangSC-Regular, PingFang SC" font-size="18" font-weight="normal" line-spacing="30" fill="#555555">
+                        <tspan x="30" y="102">设计全景图</tspan>
+                        <tspan x="39" y="132">设计组件</tspan>
+                        <tspan x="39" y="162">设计文档</tspan>
+                    </text>
+                    <g id="Group-15-Copy">
+                        <rect id="Rectangle" stroke="#555555" x="0" y="0" width="150" height="48" rx="24"></rect>
+                        <text id="工具组" font-family="PingFangSC-Regular, PingFang SC" font-size="18" font-weight="normal" line-spacing="30" fill="#555555">
+                            <tspan x="48" y="29">工具组</tspan>
+                        </text>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

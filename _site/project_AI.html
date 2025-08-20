@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<SCRIPT language=JavaScript>
+  function password() {
+    var testV = 1;
+    var pass1 = prompt('Hi there! Welcome to my site and portfolio! Due to the use of portfolio is for my job hunting, I have to set a password requirement for access. If you need to visit, please contact me on WeChat at 131 6243 5185. Kindly fill in the password:','');
+    while (testV < 3) {
+      if (!pass1)
+        history.go(-1);
+      if (pass1 == "qyw") {
+        alert('Welcome to my site!');
+        break;
+      }
+      testV += -1;
+      var pass1 = prompt('Error, pls fill in again:');
+    }
+    if (pass1 != "password" & testV == 3)
+      history.go(-1);
+    return " ";
+  }
+
+  document.write(password());
+
+</SCRIPT>
+
+
+<head>
+  <meta name="author" content="yuwen">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/rad-icons.css" />
+  <link rel="stylesheet" href="css/custom.css" />
+
+  <script>
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src =
+        'https://www.googletagmanager.com/gtm.js?id=GTM-000000' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-000000');
+  </script>
+
+  <title>Construct Product Design 0 to 1 Case Retro Sharing</title>
+  <style>
+    .rad-fade-in {
+      will-change: opacity, transform;
+      animation-name: rad-fade-in-fallback;
+      animation-duration: 5s;
+      animation-fill-mode: both;
+    }
+
+    @keyframes rad-fade-in-fallback {
+      0% {
+        opacity: 0;
+      }
+
+      75% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+
+    .fonts-loaded .rad-fade-in.rad-waiting {
+      animation-name: none;
+      opacity: 0;
+    }
+
+    .fonts-loaded .rad-fade-in.rad-animate {
+      animation-name: rad-fade-in;
+      animation-duration: 1.1s;
+      animation-fill-mode: both;
+    }
+
+    @keyframes rad-fade-in {
+      0% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+
+
+    .rad-fade-in-long {
+      will-change: opacity, transform;
+      animation-name: rad-fade-in-long-fallback;
+      animation-duration: 8s;
+      animation-fill-mode: both;
+    }
+
+    @keyframes rad-fade-in-long-fallback {
+      0% {
+        opacity: 0;
+      }
+
+      75% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+
+    .fonts-loaded .rad-fade-in-long.rad-waiting {
+      animation-name: none;
+      opacity: 0;
+    }
+
+    .fonts-loaded .rad-fade-in-long.rad-animate {
+      animation-name: rad-fade-in-long;
+      animation-duration: 2s;
+      animation-fill-mode: both;
+    }
+
+    @keyframes rad-fade-in-long {
+      0% {
+        opacity: 0;
+      }
+
+      20% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+
+
+    .rad-fade-down {
+      will-change: opacity, transform;
+      animation-name: rad-fade-down-fallback;
+      animation-duration: 5s;
+      animation-fill-mode: both;
+      transform: translateY(-30px);
+    }
+
+    @keyframes rad-fade-down-fallback {
+      0% {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+
+      75% {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .fonts-loaded .rad-fade-down.rad-waiting {
+      animation-name: none;
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+
+    .fonts-loaded .rad-fade-down.rad-animate {
+      animation-name: rad-fade-down;
+      animation-duration: 1.1s;
+    }
+
+    @keyframes rad-fade-down {
+      0% {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+
+    .rad-scale-down {
+      will-change: opacity, transform;
+      animation-name: rad-scale-down-fallback;
+      animation-duration: 5s;
+      animation-fill-mode: both;
+      transform-origin: 50% 0;
+    }
+
+    @keyframes rad-scale-down-fallback {
+      0% {
+        opacity: 0;
+        transform: scaleY(0.95);
+      }
+
+      75% {
+        opacity: 0;
+        transform: scaleY(0.95);
+      }
+
+      100% {
+        opacity: 1;
+        transform: scaleY(1);
+      }
+    }
+
+    .fonts-loaded .rad-scale-down.rad-waiting {
+      animation-name: none;
+      opacity: 0;
+      transform: scaleY(0.95);
+    }
+
+    .fonts-loaded .rad-scale-down.rad-animate {
+      animation-name: rad-scale-down;
+      animation-duration: 1.1s;
+      animation-fill-mode: both;
+    }
+
+    @keyframes rad-scale-down {
+      0% {
+        opacity: 0;
+        transform: scaleY(0.95);
+      }
+
+      100% {
+        opacity: 1;
+        transform: scaleY(1);
+      }
+
+    }
+  </style>
+
+
+
+
+
+</head>
+
+<body class="body">
+
+  <header class="header fixed-top rad-animation-group" id="header">
+    <div class="container rad-fade-in">
+      <nav class="navbar navbar-expand-lg navbar-light p-0">
+        <a class="navbar-brand" href="index.html">
+          <span style="font-size: 24px;">Yuwen</span>
+          <span style="font-size: 24px;">Qin</span>
+
+
+
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+          data-target="#navbarSupportedContent, #header" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-lg-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Homepage</a>
+            </li>
+
+            <li class="nav-item">
+              <a data-scroll class="nav-link" href="index.html#about">Skills</a>
+            </li>
+
+            <li class="nav-item">
+              <a data-scroll class="nav-link" href="index.html#portfolio">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a data-scroll class="nav-link" href="my_insight.html">Insights</a>
+            </li>
+            <li class="nav-item">
+              <a data-scroll class="nav-link" href="index.html#contact">Contact</a>
+            </li>
+<!-- 
+            <li class="nav-item">
+              <a data-scroll class="nav-link" href="more me.html">More Me</a>
+            </li> -->
+
+            <!-- <li class="nav-item">
+              <a data-scroll class="nav-link" href="#mytestimony">行业口碑</a>
+            </li> -->
+
+
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+
+      <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row" style="line-height: 32px;">
+        <div class="col-12 col-md-5 mt-4 mt-md-0 my-md-auto">
+          <span class="badge-2 rounded-pill">Product Design</span>
+          <span class="badge-2 rounded-pill">Product Strategy</span>
+          <h3 style="margin-top: 16px;">LLM-Based Experience  Design</h3>
+          <p class="lead">
+            2021.04 - 2023.11<br />
+            Researcher & Designer<br />
+            20 mins
+          </p>
+        </div>
+        <div class="col-12 col-md-7 pl-md-0 text-right">
+          <img class='lozad img-responsive img-clip-left-backward'
+            src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
+            data-src="img/project_AI/AI - Powered Experience Design.svg"
+            data-srcset="img/project_AI/AI - Powered Experience Design.svg 1x" alt="This is ifa-banner." />
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <section class="section" style="margin-top: 0px;">
+    <div class="container">
+      <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
+        style="margin-top: 0px;">
+        <div class="col-12 mt-4 mt-md-0 my-md-auto">
+          <div>
+            <div class="titlenumber">01</div>
+            <div class="sectiontitle">TLDR</div>
+            <div class="sectiontitle-eng">Too Long; Didn't Read</div>
+          </div>
+          <p class="lead">
+            AlphaPrime’s technology is powered by Microsoft Azure, which provides the startup with the infrastructure and tools they need to develop and deploy their products quickly and efficiently. As a member of the Microsoft for Startups Pegasus Program, Azure also gives AlphaPrime access to Microsoft’s vast ecosystem of partners and resources, which helps them to stay ahead of the curve in the rapidly evolving clinical trials industry.
+          </p>
+          <p class="lead" style="text-align: left;">
+            <a target='_blank' href='https://startups.microsoft.com/blog/how-alphaprime-uses-ai-automation-to-modernize-the-life-sciences-industry/'>👇🏻 Check the press media below</a>
+          </p>
+        </div>
+  </section>
+
+  <div style="display:flex;justify-content:center;" >
+    <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7087824072063008769" height="640" width="1080"
+            frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+  </div>
+
+  <section class="section" style="margin-top: 0px;">
+    <div class="container">
+      <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
+        style="margin-top: 0px;">
+        <div class="col-12 mt-4 mt-md-0 my-md-auto">
+          <p class="lead">
+            We believe that in our two years of practice in the service industry, we have accumulated a substantial amount of know-how . We are the people who tinker with them the most in a way understand them better than the people who built them. because we know what we are good at and how to interact with them.
+          </p>
+          <div>
+            <div class="titlenumber">02</div>
+            <div class="sectiontitle">Understanding of LLM</div>
+            <div class="sectiontitle-eng">Understanding of LLM</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="imgstyle2 row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
+    <img src="img/project_AI/Understanding of LLM.svg">
+  </div>
+
+  <section class="section" style="margin-top: 0px;">
+    <div class="container">
+      <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
+        style="margin-top: 0px;">
+        <div class="col-12 mt-4 mt-md-0 my-md-auto">
+          <div>
+            <div class="titlenumber">03</div>
+            <div class="sectiontitle">Product Strategy - AI Feature Set</div>
+            <div class="sectiontitle-eng">Product Strategy - How we construct our AI Feature set</div>
+          </div>
+          <div class="title4">3.1 Clinical LLM Trend</div>
+          <p class="lead">
+            The application of large language models in medicine encompasses various aspects. They are widely utilized for knowledge retrieval, research support, automation of clinical workflows, and diagnostic assistance. These models assist healthcare professionals in timely access to medical information, including disease progression, treatment methods, and drug interactions. Operating as medical educators, they provide real-time information and offer customized consultation services for activities like online medical consultations. Moreover, large language models aid medical researchers in managing vast amounts of medical literature, <b>accelerating clinical study design, and advancing disease research. </b>In clinical workflows, these models can automate patient information recording and clinical document writing, providing data-driven recommendations to support doctors in formulating treatment plans and making diagnostic decisions.
+          </p>
+          <p class="lead">
+            <a target='_blank' href='https://arxiv.org/abs/2311.01918'>Reference: Large Language Models Illuminate a Progressive Pathway to Artificial Healthcare Assistant: A Review 3 Nov 2023</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="margin-top: 0px;">
+    <div class="container">
+      <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
+        style="margin-top: 0px;">
+        <div class="col-12 mt-4 mt-md-0 my-md-auto">
+          <div class="title4">3.2 Why We Use Vertical Slicing？</div>
+          <p class="lead">
+            We decided to use vertical Slicing. The goal of AI Features embedded in product systems is to deliver the most value with as little effort as possible. This implies building products and services in short iterations in order to learn together with stakeholders on the outcome and to further improve them. Therefore, we plan to excavate AI scenarios within each product line, creating closed-loop scenario paths to drive the flywheel of AI product growth.
+          </p>
+        </div>
+      </div>
+    </div>        
+  </section>
+
+  
+  <div class="imgstyle2 row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
+    <img src="img/project_AI/Why We Use Vertical Slicing.svg">
+  </div>
+
+  <section class="section" style="margin-top: 0px;">
+    <div class="container">
+      <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
+        style="margin-top: 0px;">
+        <div class="col-12 mt-4 mt-md-0 my-md-auto">
+          <div class="title4">3.3 The Trade-offs among UX and Technology Selection</div>
+          <p class="lead">
+            As is well known, there are various methods to enhance the effectiveness and utility of LLM (Large Language Model). The main approaches include three types: <b>Prompt Engineering, Fine-Tuning, and training custom models.</b> Given the technological constraints of the company, currently, only Prompt Engineering is employed. User experience is also built upon this technological foundation, creatively applying various feasible Prompt Engineering techniques to deliver the optimal user.
+          </p>
+          <p class="lead">
+            Prompt Engineering only: Focus on improving the model output by just engineering the prompts used in the models and by potentially selecting different vendors for different prompts. It should be possible to employ a strategy of using different prompts based on different tasks, providing diverse interaction support for users to obtain better answers.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="imgstyle2 row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
+    <img src="img/project_AI/The Trade-offs among UX and Technology Selection.svg">
+  </div>
+
+  <section class="section" style="margin-top: 0px;">
+    <div class="container">
+      <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
+        style="margin-top: 0px;">
+        <div class="col-12 mt-4 mt-md-0 my-md-auto">      
+          <div class="title4">3.4 Tasks that Large Language Models (LLMs) excel at include</div>
+          <p class="lead">
+            We are aware that LLMs can perform useful and more advanced tasks, as listed below:
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="imgstyle2 row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
+    <img src="img/project_AI/Tasks that Large Language Models (LLMs) excel at include.svg">
+  </div>
+
+
+  <section class="section" style="margin-top: 0px;">
+    <div class="container">
+      <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
+        style="margin-top: 0px;">
+        <div class="col-12 mt-4 mt-md-0 my-md-auto">
+          <div>
+            <div class="titlenumber">04</div>
+            <div class="sectiontitle">LLM-Based General Design Considerations and Its Design Tactics</div>
+            <div class="sectiontitle-eng">LLM-Based General Design Considerations and Its Design Tactics</div>
+          </div>
+          <div class="title4">1. Artificial Intelligence Hallucinations</div>
+          <p class="lead">
+            The unpredictability and non-determinism of LLM pose challenges for user experience. In healthcare, what are the key strategies for dealing with the illusionary phenomena of LLM? In healthcare applications, several critical strategies can be employed to mitigate the illusions of LLM. 
+          </p>
+          <div class="title5">Algorithm-wise</div>
+          <p class="lead">
+            <b>1. Firstly, there is Human-in-the-Loop (HITL): </b>involving individuals with domain expertise in the model development process, which can play a crucial role in reducing illusions.
+          </p>
+          <p class="lead">
+            <b>2. Secondly, algorithmic corrections can be applied</b> using traditional machine learning techniques (such as regularization and loss function penalties) to improve the generalization ability of LLM, reducing the occurrence of illusions.
+          </p>
+          <p class="lead">
+            <b>3. Thirdly, fine-tuning involves adapting LLM for specific tasks or domains, </b>thereby lowering the risk of the model producing false information. Lastly, improved prompts can be used to reduce illusions when the model outputs uncertain results, providing prompts such as "I don't know."
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="imgstyle2 row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
+    <img src="img/project_AI/Artificial Intelligence Hallucinations - UX wise.svg">
+  </div>
+
+  <section class="section" style="margin-top: 0px;">
+    <div class="container">
+      <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
+        style="margin-top: 0px;">
+        <div class="col-12 mt-4 mt-md-0 my-md-auto">
+          <div class="title5">2. UX-wise</div>
+          <p class="lead">
+            <b>1. Transparency and Interpretability: </b>Provide transparent information about the model's workings, data sources, and uncertainties. Present the model's reasoning process to users, enabling them to understand how the model arrives at specific conclusions.
+          </p>
+          <p class="lead">
+            <b>2. Feedback Mechanism: </b>Offer timely feedback to users, especially when the model's outputs are uncertain or may lead to misconceptions. This can be achieved through pop-up messages, labeling uncertain areas, or providing additional hints. Encourage users to provide feedback, particularly in cases where the model's output is questionable. User feedback is crucial for improving the model and reducing misconceptions.
+          </p>
+          <p class="lead">
+            <b>3. User Education: </b>Include concise and clear elements of user education in the interface, explaining the limitations of the model, explicitly pointing out potential misconceptions the model may generate, and reminding users to exercise caution with the output results.
+          </p>
+          <p class="lead">
+            <b>4. Confidence Indicator: </b>Display confidence indicators for the model's output results. If the model has low confidence in its output, users will find it easier to understand the uncertainty of the results and take appropriate actions.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <div class="imgstyle2 row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
+    <img src="img/project_AI/Artificial Intelligence Hallucinations - UX Detail.svg">
+  </div>
+
+  <section class="section" style="margin-top: 0px;">
+    <div class="container">
+      <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
+        style="margin-top: 0px;">
+        <div class="col-12 mt-4 mt-md-0 my-md-auto">
+          <div class="title4">2. Another key fact to consider is that LLMs are not perfect. It is necessary to devise a pattern that prevents users from noticing this 'imperfection.'</div>
+          <p class="lead">
+            1. Avoiding inefficient Prompt utilization.
+          </p>
+          <p class="lead">
+            2. Assisting users with auto-fill suggestions by predicting what they may want based on historical data
+          </p>
+          <p class="lead">
+            3. Providing users with predefined options through templates based on commonly used prompts
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="imgstyle2 row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
+    <img src="img/project_AI/Prevents users from noticing this imperfection.svg">
+  </div>
+
+  <section class="section" style="margin-top: 0px;">
+    <div class="container">
+      <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
+        style="margin-top: 0px;">
+        <div class="col-12 mt-4 mt-md-0 my-md-auto">
+          <div class="title4">3. Accuracy is more important than sensitivity</div>
+          <p class="lead">
+            <b>1. Interactive Feedback: </b>In the event of delays, provide feedback to users through animations, loading indicators, etc., letting them know that the system is processing their requests. This helps prevent users from feeling stuck or frustrated.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="imgstyle2 row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
+    <img src="img/project_AI/Accuracy is more important than sensitivity.svg">
+  </div>
+  <div class="imgstyle2 row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
+    <img src="img/project_AI/E2E Walk Through.svg">
+  </div>
+
+  <section class="section" style="margin-top: 0px;">
+    <div class="container">
+      <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
+        style="margin-top: 0px;">
+        <div class="col-12 mt-4 mt-md-0 my-md-auto">
+          <div>
+            <div class="titlenumber">05</div>
+            <div class="sectiontitle">Clinical  Implementation Scenario</div>
+            <div class="sectiontitle-eng">Clinical  Implementation Scenario</div>
+          </div>
+          <div class="title4">5.1 AI Use Cases</div>
+          <p class="lead">
+            Both structured text and tabular (Clinical Raw Data) LLM-based scenario are provided in Aurora product line.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="imgstyle2 row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
+    <img src="img/project_AI/Structured text + Tabular (Clinical Raw Data) Scenario.svg">
+  </div>
+
+  <section class="section" style="margin-top: 0px;">
+    <div class="container">
+      <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
+        style="margin-top: 0px;">
+        <div class="col-12 mt-4 mt-md-0 my-md-auto">
+          <div class="title4">5.2 Who Are Main Audience？</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="imgstyle2 row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
+    <img src="img/project0/User.png.svg">
+  </div>
+
+  <section class="section" style="margin-top: 0px;">
+    <div class="container">
+      <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
+        style="margin-top: 0px;">
+        <div class="col-12 mt-4 mt-md-0 my-md-auto">
+          <div class="title4">5.3 Clinical ChatBot Design</div>
+          <div class="title5">5.3.1 Personality:</div>
+          <p class="lead">
+            The initial goals for the Chatbot on the Aurora platform were to achieve a moderate level of clinical trial consultation and system-guided functionalities. Therefore, the Chatbot's personality should strike a balance between professionalism and humanization to provide effective, trustworthy, and comfortable consultation services. The main focus includes:
+          </p>
+          <p class="lead">
+            <b>1. Professionalism and Credibility: </b>The Chatbot's personality should project a professional and credible image to establish user trust in its expertise in the medical field.
+          </p>
+          <p class="lead">
+            <b>2. Clarity and Simplicity: </b>The language of the personality should be clear and simple, avoiding overly technical or obscure medical terms to ensure easy understanding by users.
+          </p>
+          <p class="lead">
+            <b>3. Privacy Emphasis: </b>When dealing with personal health information, the personality should demonstrate respect and protection for user privacy, clearly stating the security measures in place for information handling.
+          </p>
+          <p class="lead">
+            <b>4. Interactivity: </b>The Chatbot's personality can enhance the user experience through friendly and approachable interactions, making users feel more comfortable and reassured.
+          </p>
+          <p class="lead">
+            <b>5. Empathy and Care: </b>Considering the sensitive nature of medical matters involving users' health and emotions, Chatbot's personality should exhibit empathy and care to provide a more humanized user experience.
+          </p>
+          <div class="title4">5.4 AI Functionality Design</div>
+          <p class="lead">
+            Use the design to incorporate distinctive identifiers for each product line.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="imgstyle2 row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
+    <img src="img/project_AI/AI Functionality Distinctive Identifiers.svg">
+  </div>
+
+  
+  <section class="section" style="margin-top: 0px;">
+    <div class="container">
+      <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
+        style="margin-top: 0px;">
+        <div class="col-12 mt-4 mt-md-0 my-md-auto">
+          <div class="title4">5.5 Compute</div>
+          <div class="title5">5.5.1 Empowering better data and analysis with help from AI</div>
+          <p class="lead">
+            Security considerations are incorporated into the design to assure customers that data is not leaving the system. Role-playing is also employed in the prompt engineering to enhance the accuracy of data requests.
+          </p>
+          <p class="lead">
+            In the interaction with ChatGPT, we prefer not to send data directly to it and request immediate results. This is because data may be substantial, and there is a risk of leakage. The more ideal approach is to have ChatGPT return data processing methods, and then execute these methods on our end to generate the desired results. This addresses a key concern for businesses in their day-to-day communications.
+          </p>
+          <div>
+            <img class="imgstyle" src="img/project_AI/compute.gif">
+            <div class="imgsubtitle">Prompt Plot Demo</div>
+          </div>  
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="imgstyle2 row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
+    <img src="img/project_AI/AI Powered Compute for Medical Plot.svg">
+  </div>
+  <div class="imgstyle2 row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
+    <img src="img/project_AI/AI Powered Compute for Medical Plot_02.svg">
+  </div>
+
+  <section class="section" style="margin-top: 0px;">
+    <div class="container">
+      <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row" style="margin-top: 0px;">
+        <div class="col-12 mt-4 mt-md-0 my-md-auto">
+          <p class="lead">
+            Taking a few shots at enhancing performance, we aim to emulate the writing style of organizational structures and adjust the narrative style accordingly.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <div class="imgstyle2 row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
+    <img src="img/project_AI/AI Powered Compute for Patient Narratives Optimizer.svg">
+  </div>
+
+  <section class="section" style="margin-top: 0px;">
+    <div class="container">
+      <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row" style="margin-top: 0px;">
+        <div class="col-12 mt-4 mt-md-0 my-md-auto">
+          <div class="title4">5.6 Construct</div>
+          <p class="lead">
+            In Construct, end-users always pursue the speed and quality of database construction. In the clinical DM production process of generating Mock CRFs, a more intelligent workflow for the automatic generation of Mock CRFs is provided.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="imgstyle2 row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
+    <img src="img/project_AI/Protocol Lab Form.svg">
+  </div>
+
+  <section class="section" style="margin-top: 0px;">
+    <div class="container">
+      <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row" style="margin-top: 0px;">
+        <div class="col-12 mt-4 mt-md-0 my-md-auto">
+          <div>
+            <img class="imgstyle" src="img/project_AI/20231126113035_rec_.gif">
+            <div class="imgsubtitle">Overview of NER Demo</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="imgstyle2 row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
+    <img src="img/project_AI/Construct.svg">
+  </div>
+
+  <section class="section" style="margin-top: 0px;">
+    <div class="container">
+      <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row" style="margin-top: 0px;">
+        <div class="col-12 mt-4 mt-md-0 my-md-auto">
+          <p class="lead">
+            Offer custom function generator functionality to reduce coding barriers
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <div class="imgstyle2 row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
+    <img src="img/project_AI/AI Powered Construct for DB Builder.svg">
+  </div>
+
+  <section class="section" style="margin-top: 0px;">
+    <div class="container">
+      <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
+        style="margin-top: 0px;">
+        <div class="col-12 mt-4 mt-md-0 my-md-auto">
+          <div>
+            <div class="titlenumber">06</div>
+            <div class="sectiontitle">How we Evaluate our AI Experience</div>
+            <div class="sectiontitle-eng">How we Evaluate our AI Experience</div>
+            <p class="lead">
+              We draw inspiration from the following guidelines to create a seamless user experience.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="imgstyle2 row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
+    <img src="img/project_AI/How We Evaluate Human-AI Experience.svg">
+  </div>
+
+  <section class="section" style="margin-top: 0px;">
+    <div class="container">
+      <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
+        style="margin-top: 0px;">
+        <div class="col-12 mt-4 mt-md-0 my-md-auto">
+          <p class="lead">
+            AI systems should behave during interaction. Use them to guide your AI product planning.
+          </p>
+          <p class="lead">
+            For applications using natural language processing, identify common failures so you can plan for mitigating them.
+          </p>
+          <div>
+            <div class="titlenumber">07</div>
+            <div class="sectiontitle">What I think is the AI  Future</div>
+            <div class="sectiontitle-eng">What I think is the AI  Future</div>
+          </div>
+          <div class="title4">7.1 AI-native application & Agents</div>
+          <p class="lead">
+            1. AI Native refers to products with AI embedded into their core. In other words, if AI wasn’t a part of the product, the product wouldn’t exist.
+          </p>
+          <p class="lead">
+            2. AI-based refers to existing products that implement AI to offer new features to users. It’s basically an add-on. 
+          </p>
+          <div class="title4">7.2 Multi Modal</div>
+          <p class="lead">
+            Multi-Modal Approach:
+The sole means of communication with a unique and large model is currently through prompts, utilizing this mode of interaction. For internal corporate data, prompts serve as a temporary communication method. However, the goal is to ultimately reduce the cost of interacting with humans through the use of UI and multi-modal interaction methods. It's anticipated that, one day, we won't rely on the prompt-based approach to communicate with large models.
+          </p>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="section" style="margin-top: 80px; margin-bottom: 100px;">
+    <div class="container">
+      <a type="button" class="btn btn-primary btn-lg buttom-link" style="float: left;width: 340px;height: 80px;"
+        href="project_DCT.html">Previous:<br>Comprehensive CX Solution for Clinical Trials</a>
+      <a type="button" class="btn btn-primary btn-lg buttom-link" style="float: right;width: 340px;height: 80px;"
+        href="project_MM.html">Next:<br>Medical Monitoring Config Benchmarking Analysis</a>
+    </div>
+  </section>
+
+
+
+
+
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__left">
+        <div class="footer__copy">
+          Designed and coded by Yuwen. All rights reserved.
+        </div>
+      </div>
+      <div class="footer__links">
+        <ul class="navbar-nav ">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Homepage</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#about">Skills</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#portfolio">Projects</a>
+          </li>
+          
+          <li class="nav-item">
+            <a data-scroll class="nav-link" href="my_insight.html">Insights</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#contact">Contact</a>
+          </li>
+
+          <!-- <li class="nav-item">
+          <a class="nav-link" href="#myfriend">行业口碑</a>
+        </li> -->
+
+        </ul>
+      </div>
+      <!-- <div class="footer__right">
+      <img
+          src="img/general/design-and-code-radity.svg"
+          srcset="https://raditian-hugo.radity.com/img/general/design-and-code-radity.png 1x, https://raditian-hugo.radity.com/img/general/design-and-code-radity@2x.png 2x"
+          alt="Design &amp; Code - yuwen"
+      />
+    </div> -->
+    </div>
+  </footer>
+
+  <script src='js/rad-animations.js'></script>
+  <script src='js/library/lozad.min.js'></script>
+  <script>
+    window.addEventListener("load", function () {
+      var observer = window.lozad(".lozad", {
+        rootMargin: window.innerHeight / 2 + "px 0px",
+        threshold: 0.01
+      });
+      observer.observe();
+    });
+  </script>
+  <script src='js/library/jquery-3.3.1.slim.min.js'></script>
+  <script src='js/library/bootstrap.min.js'></script>
+  <script src='js/sticky-header.js'></script>
+  <script src='js/library/smooth-scroll.polyfills.min.js'></script>
+  <script src='js/library/fontfaceobserver.js'></script>
+  <script>
+    (function (w) {
+
+      if (w.document.documentElement.className.indexOf("fonts-loaded") > -1) {
+        return;
+      }
+      var fontA = new w.FontFaceObserver("Inter", {
+        weight: 300
+      });
+      var fontB = new w.FontFaceObserver("Inter", {
+        weight: 400
+      });
+      var fontC = new w.FontFaceObserver("Inter", {
+        weight: 500
+      });
+      var fontD = new w.FontFaceObserver("Inter", {
+        weight: 600
+      });
+      var fontE = new w.FontFaceObserver("Inter", {
+        weight: 700
+      });
+      var fontF = new w.FontFaceObserver("Inter", {
+        weight: 900
+      });
+      w.Promise.all([fontA.load(), fontC.load(), fontF.load()]).then(function () {
+        w.document.documentElement.className += " fonts-loaded";
+      });
+    })(this);
+  </script>
+  <script>
+    const scroll = new SmoothScroll('a[href*="#"]');
+    $('a.nav-link').on('click', () => {
+      const navbar = $('.navbar-collapse');
+      if (navbar && navbar.hasClass('show')) {
+        $('.navbar-toggler').click();
+      }
+    })
+  </script>
+
+</body>
+
+</html>
