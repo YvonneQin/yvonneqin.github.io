@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta name="author" content="yuwen">
   <meta charset="UTF-8" />
@@ -10,7 +9,6 @@
   <link rel="stylesheet" href="css/main.css" />
   <link rel="stylesheet" href="css/rad-icons.css" />
   <link rel="stylesheet" href="css/custom.css" />
-
   <script>
     (function (w, d, s, l, i) {
       w[l] = w[l] || [];
@@ -27,7 +25,6 @@
       f.parentNode.insertBefore(j, f);
     })(window, document, 'script', 'dataLayer', 'GTM-000000');
   </script>
-
   <title>CoE Workshop专家讲座系列宣传物料视觉设计</title>
   <style>
     .rad-fade-in {
@@ -36,90 +33,71 @@
       animation-duration: 5s;
       animation-fill-mode: both;
     }
-
     @keyframes rad-fade-in-fallback {
       0% {
         opacity: 0;
       }
-
       75% {
         opacity: 0;
       }
-
       100% {
         opacity: 1;
       }
     }
-
     .fonts-loaded .rad-fade-in.rad-waiting {
       animation-name: none;
       opacity: 0;
     }
-
     .fonts-loaded .rad-fade-in.rad-animate {
       animation-name: rad-fade-in;
       animation-duration: 1.1s;
       animation-fill-mode: both;
     }
-
     @keyframes rad-fade-in {
       0% {
         opacity: 0;
       }
-
       100% {
         opacity: 1;
       }
     }
-
-
     .rad-fade-in-long {
       will-change: opacity, transform;
       animation-name: rad-fade-in-long-fallback;
       animation-duration: 8s;
       animation-fill-mode: both;
     }
-
     @keyframes rad-fade-in-long-fallback {
       0% {
         opacity: 0;
       }
-
       75% {
         opacity: 0;
       }
-
       100% {
         opacity: 1;
       }
     }
-
     .fonts-loaded .rad-fade-in-long.rad-waiting {
       animation-name: none;
       opacity: 0;
     }
-
     .fonts-loaded .rad-fade-in-long.rad-animate {
       animation-name: rad-fade-in-long;
       animation-duration: 2s;
       animation-fill-mode: both;
     }
-
     @keyframes rad-fade-in-long {
       0% {
         opacity: 0;
       }
-
       20% {
         opacity: 0;
       }
-
       100% {
         opacity: 1;
       }
     }
-
-
     .rad-fade-down {
       will-change: opacity, transform;
       animation-name: rad-fade-down-fallback;
@@ -127,48 +105,39 @@
       animation-fill-mode: both;
       transform: translateY(-30px);
     }
-
     @keyframes rad-fade-down-fallback {
       0% {
         opacity: 0;
         transform: translateY(-30px);
       }
-
       75% {
         opacity: 0;
         transform: translateY(-30px);
       }
-
       100% {
         opacity: 1;
         transform: translateY(0);
       }
     }
-
     .fonts-loaded .rad-fade-down.rad-waiting {
       animation-name: none;
       opacity: 0;
       transform: translateY(-30px);
     }
-
     .fonts-loaded .rad-fade-down.rad-animate {
       animation-name: rad-fade-down;
       animation-duration: 1.1s;
     }
-
     @keyframes rad-fade-down {
       0% {
         opacity: 0;
         transform: translateY(-30px);
       }
-
       100% {
         opacity: 1;
         transform: translateY(0);
       }
     }
-
-
     .rad-scale-down {
       will-change: opacity, transform;
       animation-name: rad-scale-down-fallback;
@@ -176,125 +145,56 @@
       animation-fill-mode: both;
       transform-origin: 50% 0;
     }
-
     @keyframes rad-scale-down-fallback {
       0% {
         opacity: 0;
         transform: scaleY(0.95);
       }
-
       75% {
         opacity: 0;
         transform: scaleY(0.95);
       }
-
       100% {
         opacity: 1;
         transform: scaleY(1);
       }
     }
-
     .fonts-loaded .rad-scale-down.rad-waiting {
       animation-name: none;
       opacity: 0;
       transform: scaleY(0.95);
     }
-
     .fonts-loaded .rad-scale-down.rad-animate {
       animation-name: rad-scale-down;
       animation-duration: 1.1s;
       animation-fill-mode: both;
     }
-
     @keyframes rad-scale-down {
       0% {
         opacity: 0;
         transform: scaleY(0.95);
       }
-
       100% {
         opacity: 1;
         transform: scaleY(1);
       }
-
     }
   </style>
-
-
-
-
-
 </head>
-
 <body class="body">
-
   <script src="js/components/header.js"></script>
   <script src="js/components/footer.js"></script>
   <script src="js/components/badge-tag.js"></script>
   <script src="js/components/footer.js"></script>
   <script src="js/components/badge-tag.js"></script>
   <site-header></site-header>
-
-  <!-- <header class="header fixed-top rad-animation-group" id="header">
-    <div class="container rad-fade-in">
-      <nav class="navbar navbar-expand-lg navbar-light p-0">
-        <a class="navbar-brand" href="index.html">
-          <span style="font-size: 24px;">Yuwen</span>
-          <span style="font-size: 24px;">Qin</span>
-
-
-
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse"
-          data-target="#navbarSupportedContent, #header" aria-controls="navbarSupportedContent" aria-expanded="false"
-          aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-lg-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Homepage</a>
-            </li>
-
-            <li class="nav-item">
-              <a data-scroll class="nav-link" href="index.html#about">Skills</a>
-            </li>
-
-            <li class="nav-item">
-              <a data-scroll class="nav-link" href="index.html#portfolio">Projects</a>
-            </li>
-            <li class="nav-item">
-              <a data-scroll class="nav-link" href="my_insight.html">Insights</a>
-            </li>
-            <li class="nav-item">
-              <a data-scroll class="nav-link" href="index.html#contact">Contact</a>
-            </li>
-
-            <!-- <li class="nav-item">
-              <a data-scroll class="nav-link" href="more me.html">More Me</a>
-            </li> -->
-
-            <!-- <li class="nav-item">
-              <a data-scroll class="nav-link" href="#mytestimony">行业口碑</a>
-            </li> -->
-
-
           </ul>
         </div>
       </nav>
     </div>
   </header> -->
-
-
-
-
-
-
-
   <section class="section">
     <div class="container">
-
       <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row" style="line-height: 32px;">
         <div class="col-12 col-md-5 mt-4 mt-md-0 my-md-auto">
           <badge-tag>视觉</badge-tag>
@@ -313,13 +213,10 @@
             alt="This is banner." />
         </div>
       </div>
-
     </div>
   </section>
-
   <section class="section" style="margin-top: 0px;">
     <div class="container">
-
       <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
         style="margin-top: 0px;">
         <div class="col-12 mt-4 mt-md-0 my-md-auto">
@@ -328,7 +225,6 @@
             <div class="sectiontitle">主要设计元素</div>
             <div class="sectiontitle-eng">design Element</div>
           </div>
-
           <div class="title4">主题形象</div>
           <p class="lead">
             2020
@@ -340,19 +236,12 @@
           </p>
           <img class="imgstyle" src="img/project7/Group 4534.svg">
           <div class="imgsubtitle">像素积木块堆积的COE主题形象，重塑专家服务。引领数字转型的未来趋势</div>
-
         </div>
       </div>
-
     </div>
   </section>
-
-
-
-
   <section class="section">
     <div class="container">
-
       <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
         style="margin-top: 0px;">
         <div class="col-12 mt-4 mt-md-0 my-md-auto">
@@ -361,44 +250,25 @@
             <div class="sectiontitle">宣传物料设计</div>
             <div class="sectiontitle-eng">Design material</div>
           </div>
-
           <div class="title4">易拉宝设计</div>
           <img class="imgstyle" src="img/project7/Group.svg">
           <div class="imgsubtitle">易拉宝设计</div>
-
           <div class="title4">电子邀请函</div>
           <img class="imgstyle" src="img/project7/Group 2.svg">
           <div class="imgsubtitle">电子邀请函</div>
-
           <div class="title4">客梯电子屏幕</div>
           <img class="imgstyle" src="img/project7/Group 4.svg">
           <div class="imgsubtitle">客梯电子屏幕</div>
-
-
         </div>
       </div>
-
     </div>
   </section>
-
-
-
-
-
-
   <section class="section" style="margin-top: 80px; margin-bottom: 100px;">
     <div class="container">
       <a type="button" class="btn btn-primary btn-lg buttom-link" style="float: left;width: 340px;height: 80px;"
         href="project_Gradute.html">Previous:<br>毕业设计 - 基于体感技术的残障人士产品服务系统研究</a>
     </div>
   </section>
-
-
-
-
-
-
-
   <site-footer></site-footer>
   <script src='js/rad-animations.js'></script>
   <script src='js/library/lozad.min.js'></script>
@@ -418,7 +288,6 @@
   <script src='js/library/fontfaceobserver.js'></script>
   <script>
     (function (w) {
-
       if (w.document.documentElement.className.indexOf("fonts-loaded") > -1) {
         return;
       }
@@ -454,7 +323,5 @@
       }
     })
   </script>
-
 </body>
-
 </html>

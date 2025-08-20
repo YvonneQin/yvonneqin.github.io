@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <script>
   (function () {
     var MAX_TRY = 3;
@@ -24,8 +23,6 @@
     }
   })();
 </script>
-
-
 <head>
   <meta name="author" content="yuwen">
   <meta charset="UTF-8" />
@@ -33,11 +30,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <link rel="icon" type="image/x-icon" href="favicon.ico" />
   <link rel="stylesheet" href="css/main.css" />
-  <!-- <link rel="stylesheet" href="css/rad-icons.css" /> -->
   <link rel="stylesheet" href="css/custom.css" />
-  <!-- 我自己的iconfont -->
   <link rel="stylesheet" href="https://at.alicdn.com/t/c/font_4545731_3pnlmzv33e7.css" />
-
   <script>
     (function (w, d, s, l, i) {
       w[l] = w[l] || [];
@@ -54,7 +48,6 @@
       f.parentNode.insertBefore(j, f);
     })(window, document, 'script', 'dataLayer', 'GTM-000000');
   </script>
-
 <script>
   (function () {
     var sections = document.querySelectorAll('.section');
@@ -83,12 +76,7 @@
     sections.forEach(function (section) { observer.observe(section); });
   })();
 </script>
-
-
   <title>Redcity Project</title>
-
-
-
   <style>
     .embed-center {
       display: flex;
@@ -101,90 +89,71 @@
       animation-duration: 5s;
       animation-fill-mode: both;
     }
-
     @keyframes rad-fade-in-fallback {
       0% {
         opacity: 0;
       }
-
       75% {
         opacity: 0;
       }
-
       100% {
         opacity: 1;
       }
     }
-
     .fonts-loaded .rad-fade-in.rad-waiting {
       animation-name: none;
       opacity: 0;
     }
-
     .fonts-loaded .rad-fade-in.rad-animate {
       animation-name: rad-fade-in;
       animation-duration: 1.1s;
       animation-fill-mode: both;
     }
-
     @keyframes rad-fade-in {
       0% {
         opacity: 0;
       }
-
       100% {
         opacity: 1;
       }
     }
-
-
     .rad-fade-in-long {
       will-change: opacity, transform;
       animation-name: rad-fade-in-long-fallback;
       animation-duration: 8s;
       animation-fill-mode: both;
     }
-
     @keyframes rad-fade-in-long-fallback {
       0% {
         opacity: 0;
       }
-
       75% {
         opacity: 0;
       }
-
       100% {
         opacity: 1;
       }
     }
-
     .fonts-loaded .rad-fade-in-long.rad-waiting {
       animation-name: none;
       opacity: 0;
     }
-
     .fonts-loaded .rad-fade-in-long.rad-animate {
       animation-name: rad-fade-in-long;
       animation-duration: 2s;
       animation-fill-mode: both;
     }
-
     @keyframes rad-fade-in-long {
       0% {
         opacity: 0;
       }
-
       20% {
         opacity: 0;
       }
-
       100% {
         opacity: 1;
       }
     }
-
-
     .rad-fade-down {
       will-change: opacity, transform;
       animation-name: rad-fade-down-fallback;
@@ -192,48 +161,39 @@
       animation-fill-mode: both;
       transform: translateY(-30px);
     }
-
     @keyframes rad-fade-down-fallback {
       0% {
         opacity: 0;
         transform: translateY(-30px);
       }
-
       75% {
         opacity: 0;
         transform: translateY(-30px);
       }
-
       100% {
         opacity: 1;
         transform: translateY(0);
       }
     }
-
     .fonts-loaded .rad-fade-down.rad-waiting {
       animation-name: none;
       opacity: 0;
       transform: translateY(-30px);
     }
-
     .fonts-loaded .rad-fade-down.rad-animate {
       animation-name: rad-fade-down;
       animation-duration: 1.1s;
     }
-
     @keyframes rad-fade-down {
       0% {
         opacity: 0;
         transform: translateY(-30px);
       }
-
       100% {
         opacity: 1;
         transform: translateY(0);
       }
     }
-
-
     .rad-scale-down {
       will-change: opacity, transform;
       animation-name: rad-scale-down-fallback;
@@ -241,65 +201,49 @@
       animation-fill-mode: both;
       transform-origin: 50% 0;
     }
-
     @keyframes rad-scale-down-fallback {
       0% {
         opacity: 0;
         transform: scaleY(0.95);
       }
-
       75% {
         opacity: 0;
         transform: scaleY(0.95);
       }
-
       100% {
         opacity: 1;
         transform: scaleY(1);
       }
     }
-
     .fonts-loaded .rad-scale-down.rad-waiting {
       animation-name: none;
       opacity: 0;
       transform: scaleY(0.95);
     }
-
     .fonts-loaded .rad-scale-down.rad-animate {
       animation-name: rad-scale-down;
       animation-duration: 1.1s;
       animation-fill-mode: both;
     }
-
     @keyframes rad-scale-down {
       0% {
         opacity: 0;
         transform: scaleY(0.95);
       }
-
       100% {
         opacity: 1;
         transform: scaleY(1);
       }
-
     }
   </style>
-
-
-
 </head>
-
 <body class="body">
-
   <script src="js/components/header.js"></script>
   <script src="js/components/footer.js"></script>
   <script src="js/components/badge-tag.js"></script>
   <script src="js/components/footer.js"></script>
   <script src="js/components/badge-tag.js"></script>
   <site-header></site-header>
-
-  
-
   <div class="fixed-anchor row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
     <a style="font-weight: 600;font-size: 16px; color: var(--mode-light-text-85-primary);">大纲</a>
     <a href="#section1">1. REDcity是什么？</a>
@@ -319,7 +263,6 @@
     <a href="#section14"><i class="icon-bullet-point iconfont"></i>3.1 调研与探索</a>
     <a href="#section15">4. 解构机会点3: AI体验</a>
     <a href="#section17"><i class="icon-bullet-point iconfont"></i>4.1 AI体验打造</a>
-    <!-- <a href="#section16"><i class="icon-bullet-point iconfont"></i>4.2 Demo: IM/AI双端框架交互方案演示</a> -->
     <a href="#section18"><i class="icon-bullet-point iconfont"></i>4.3 IM/AI组件规范抽象</a>
     <a href="#section19"><i class="icon-bullet-point iconfont"></i>4.4 情感化设计</a>
     <a href="#section20">5. 落地PC框架架构</a>
@@ -328,12 +271,6 @@
     <a href="#section23"><i class="icon-bullet-point iconfont"></i>5.3 Icon组件规范优化</a>
     <a href="#section24"><i class="icon-bullet-point iconfont"></i>5.4 色彩系统优化</a>
   </div>
-
-  
-
-  
-  
-
   <section class="section">
     <div class="container">
       <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row" style="line-height: 32px;">
@@ -355,19 +292,14 @@
             data-srcset="img/project_redcity/Redcity-banner.svg 1x" alt="This is ifa-banner." />
         </div>
       </div>
-
     </div>
   </section>
-
-
   <div class="imgstyle2 row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row" style="margin-top: 32px;">
     <img src="img/project_redcity/小红书 All-in-one 企业套件.svg">
   </div>
-
   <div class="embed-center" >
     <iframe loading="lazy" style="border: 1px solid rgba(0, 0, 0, 0.1);border-radius: 32px;pointer-events: none;" width="1280" height="354" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fp8No3KmkWF2WSsVTE0uw2K%2FPortfolio-for-Redcity%3Fpage-id%3D2385%253A97009%26node-id%3D5074-112718%26viewport%3D1838%252C5142%252C0.56%26t%3DZAF50w68yqvg8JO9-1%26scaling%3Dmin-zoom%26content-scaling%3Dfixed%26starting-point-node-id%3D5069%253A110899?embed_host=share&hide-ui=1" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
   </div>
-
   <section id="section1" class="section" style="margin-top: 0px;">
     <div class="container">
       <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
@@ -380,27 +312,9 @@
           </div>
         </div>
   </section>
-
-  
-
-
-  <!-- <div class="imgstyle2 row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row ">
-    <img src="img/project_redcity/关于Redcity与顶层设计 About Redcity.svg">
-  </div> -->
-
-
   <div class="embed-center" >
     <iframe loading="lazy" style="border: 1px solid rgba(0, 0, 0, 0.1);border-radius: 32px;pointer-events: none;" width="1280" height="706" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fp8No3KmkWF2WSsVTE0uw2K%2FPortfolio-V2%3Fpage-id%3D2385%253A97009%26node-id%3D6546-151484%26viewport%3D1886%252C5065%252C0.46%26t%3DlgWN5h8VD2U2m19a-1%26scaling%3Dmin-zoom%26content-scaling%3Dfixed%26starting-point-node-id%3D6546%253A151347%26show-proto-sidebar%3D1?embed_host=share&hide-ui=1" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
   </div>
-
-  
-
-  <!-- <div class="imgstyle2 row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row ">
-    <img src="img/project_redcity/Profile Avatar Profile Avatar.svg">
-  </div> -->
-
-  
-
   <section id="section2" class="section" style="margin-top: 0px;">
     <div class="container">
       <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
@@ -412,22 +326,9 @@
           </p>
         </div>
   </section>
-
-  
- 
-
   <div class="embed-center" >
     <iframe loading="lazy" style="border: 1px solid rgba(0, 0, 0, 0.1);border-radius: 32px;pointer-events: none;" width="1280" height="640" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fp8No3KmkWF2WSsVTE0uw2K%2FPortfolio-for-Redcity%3Fpage-id%3D2385%253A97009%26node-id%3D2385-97077%26viewport%3D1063%252C1419%252C0.26%26t%3DN8WFFchJAmPnRmgo-1%26scaling%3Dmin-zoom%26content-scaling%3Dfixed%26starting-point-node-id%3D2385%253A97054%26show-proto-sidebar%3D1?embed_host=share&hide-ui=1" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
   </div>
-
-  
-
-  <!-- youtube示例 -->
-  <!-- <div class="imgstyle2 row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row" >
-    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);border-radius: 32px;" width="1280" height="706" src="https://www.youtube.com/embed/KbiUfrcOcdk?si=tJxscr1n4m_bYCmR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-  </div> -->
-
-
   <section id="section3" class="section" style="margin-top: 0px;">
     <div class="container">
       <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
@@ -439,11 +340,9 @@
           </p>
         </div>
   </section>
-
   <div class="imgstyle2 row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
     <img src="img/project_redcity/项目思路 Structure.svg">
   </div>
-
   <section id="section4" class="section" style="margin-top: 0px;">
     <div class="container">
       <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
@@ -455,11 +354,9 @@
           </p>
         </div>
   </section>
-
   <div class="imgstyle2 row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
     <img src="img/project_redcity/用户摸底调研与用户故事 User Research Design Opportunity.svg">
   </div>
-
   <section id="section5" class="section" style="margin-top: 0px;">
     <div class="container">
       <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
@@ -472,11 +369,9 @@
           <div class="title5">1.4.1 机会点1: 让REDers自主工作,提升FocusTime至2小时/人</div>
         </div>
   </section>
-
   <div  class="imgstyle2 row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
     <img src="img/project_redcity/IM消费及AI赋能产品架构 · 设计机会点总结 Design Opportunity_1.svg">
   </div>
-
   <section class="section" style="margin-top: 0px;">
     <div class="container">
       <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
@@ -486,11 +381,9 @@
           <div class="title5">1.4.3 机会点3: Context not Control: 最全上下文，智能Agent赋能REDers智慧工作</div>
         </div>
   </section>
-
   <div id="section1" class="imgstyle2 row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
     <img src="img/project_redcity/IM消费及AI赋能产品架构 · 设计机会点总结 Design Opportunity_2.svg">
   </div>
-
   <section id="section6" class="section" style="margin-top: 0px;">
     <div class="container">
       <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
@@ -503,7 +396,6 @@
           </div>
         </div>
   </section>
-
   <section id="section7" class="section" style="margin-top: 0px;">
     <div class="container">
       <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
@@ -518,12 +410,9 @@
           </p>
         </div>
   </section>
-
   <div class="imgstyle2 row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
     <img src="img/project_redcity/设计机会点1_ 消息优先级 - 竞品分析 Competitive Analysis.svg">
   </div>
-  
-
   <section id="section8" class="section" style="margin-top: 0px;">
     <div class="container">
       <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
@@ -535,11 +424,9 @@
           </p>
         </div>
   </section>
-
   <div class="imgstyle2 row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
     <img src="img/project_redcity/设计机会点1_ IM消息消费使用习惯调研 · 设计解法 Researh and Design Proposal.svg">
   </div>
-
   <section id="section9" class="section" style="margin-top: 0px;">
     <div class="container">
       <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
@@ -551,13 +438,9 @@
           </p>
         </div>
   </section>
-
   <div class="imgstyle2 row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
     <img src="img/project_redcity/设计机会点1_ Happy Path 低保真方案原型 Design Prototype.svg">
   </div>
-
-  
-
   <section id="section10" class="section" style="margin-top: 0px;">
     <div class="container">
       <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
@@ -569,13 +452,9 @@
           </p>
         </div>
   </section>
-
-  
-
   <div class="imgstyle2 row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
     <img src="img/project_redcity/设计机会点1：UAT测试 User Acceptance Test.svg">
   </div>
-
   <section id="section25" class="section" style="margin-top: 0px;">
     <div class="container">
       <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
@@ -587,11 +466,9 @@
           </p>
         </div>
   </section>
-
   <div  class="imgstyle2 row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
     <img src="img/project_redcity/核心架构页面心智动线规划 Core Architecture Page Mental Flow Planning.svg">
   </div>
-
   <section id="section11" class="section" style="margin-top: 0px;">
     <div class="container">
       <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
@@ -603,17 +480,12 @@
           </p>
         </div>
   </section>
-
-
   <div  class="imgstyle2 row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
     <img src="img/project_redcity/关键核心页面 Key Page.svg">
   </div>
-
   <div  class="imgstyle2 row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
     <img src="img/project_redcity/AI 赋能 AI Empowerment.svg">
   </div>
-  
-
   <section id="section12" class="section" style="margin-top: 0px;">
     <div class="container">
       <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
@@ -623,16 +495,11 @@
           <p class="lead">
             基于用户反馈，调整了设计方案，最后完成最优IM消费路径。达成了以下的方案设计MVP IM产品方案设计。
           </p>
-
         </div>
   </section>
-
   <div class="embed-center" >
     <iframe loading="lazy" style="border: 1px solid rgba(0, 0, 0, 0.1);border-radius: 32px;pointer-events: none;" width="1280" height="576" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fp8No3KmkWF2WSsVTE0uw2K%2FPortfolio-for-Redcity%3Fpage-id%3D2385%253A97009%26node-id%3D2385-97439%26viewport%3D2699%252C4566%252C0.77%26t%3DaiNmUIhuc4fdzWzq-1%26scaling%3Dmin-zoom%26content-scaling%3Dfixed%26starting-point-node-id%3D2385%253A97268%26show-proto-sidebar%3D1?embed_host=share&hide-ui=1" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
   </div>
-
-
-
   <section id="section13" class="section" style="margin-top: 0px;">
     <div class="container">
       <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
@@ -645,7 +512,6 @@
           </div>
         </div>
   </section>
-
   <section id="section14" class="section" style="margin-top: 0px;">
     <div class="container">
       <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
@@ -657,11 +523,9 @@
           </p>
         </div>
   </section>
-
   <div class="imgstyle2 row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
     <img src="img/project_redcity/设计机会点 2_ 多线程任务方案调研与探索 Multithreading tasks.svg">
   </div>
-
   <section id="section15" class="section" style="margin-top: 0px;">
     <div class="container">
       <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
@@ -674,8 +538,6 @@
           </div>
         </div>
   </section>
-
-
   <section id="section17" class="section" style="margin-top: 0px;">
     <div class="container">
       <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
@@ -687,59 +549,30 @@
           </p>
         </div>
   </section>
-
   <div class="imgstyle2 row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
     <img src="img/project_redcity/设计机会点 3_ AI 横向薯名与知识库AI Background.svg">
   </div>
-
   <div class="imgstyle2 row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
     <img src="img/project_redcity/设计机会点 3_ AI 薯名体验亮点 Background.svg">
   </div>
-
   <div class="imgstyle2 row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
     <img src="img/project_redcity/设计机会点 3_ AI 薯名体验亮点 Background 4.svg">
   </div>
-
   <div class="imgstyle2 row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
     <img src="img/project_redcity/设计机会点 3_ AI 薯名体验亮点 Background 1.svg">
   </div>
-  
   <div class="imgstyle2 row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
     <img src="img/project_redcity/设计机会点 3_ AI 薯名体验亮点 Background 2.svg">
   </div>
-
   <div class="imgstyle2 row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
     <img src="img/project_redcity/设计机会点 3_ AI 体验优化 Experience Optimization 1.svg">
   </div>
-
   <div class="imgstyle2 row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
     <img src="img/project_redcity/设计机会点 3_ AI 体验优化 Experience Optimization 2.svg">
   </div>
-
-  <!-- <div class="imgstyle2 row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
-    <img src="img/project_redcity/设计机会点 3_ Chat UI 组件 Chat UI组件.svg">
-  </div> -->
-
   <div class="imgstyle2 row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
     <img src="img/project_redcity/设计机会点 3_ 框架层级 - AI大搜体验对齐 AI Experience Consistency.svg ">
   </div>
-
-  <!-- <section id="section16" class="section" style="margin-top: 0px;">
-    <div class="container">
-      <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
-        style="margin-top: 0px;">
-        <div class="col-12 mt-4 mt-md-0 my-md-auto">
-          <div class="title4">4.2 Demo: IM/AI双端框架交互方案演示</div>
-          <p class="lead">
-            以下是MVP完整方案
-          </p>
-        </div>
-  </section>
-
-  <div style="display:flex;justify-content:center;" >
-    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);border-radius: 32px;pointer-events: none;" width="1280" height="690" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fp8No3KmkWF2WSsVTE0uw2K%2FPortfolio-for-Redcity%3Fpage-id%3D2385%253A97009%26node-id%3D2452-126023%26viewport%3D1063%252C1419%252C0.26%26t%3DeO0LiJbdDQhFD15l-1%26scaling%3Dmin-zoom%26content-scaling%3Dfixed%26starting-point-node-id%3D2452%253A124750%26show-proto-sidebar%3D1?embed_host=share&hide-ui=1" allowfullscreen></iframe>
-  </div> -->
-  
   <section id="section18" class="section" style="margin-top: 0px;">
     <div class="container">
       <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
@@ -751,11 +584,9 @@
           </p>
         </div>
   </section>
-
   <div class="imgstyle2 row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
     <img src="img/project_redcity/设计机会点 3_ LUI 框架层级 - 初版IMAI组件抽象 Components.svg">
   </div>
-
   <section id="section19" class="section" style="margin-top: 0px;">
     <div class="container">
       <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
@@ -767,11 +598,9 @@
           </p>
         </div>
   </section>
-
   <div class="embed-center" >
     <iframe loading="lazy" style="border: 1px solid rgba(0, 0, 0, 0.1);border-radius: 32px;pointer-events: none;" width="1280" height="600" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fp8No3KmkWF2WSsVTE0uw2K%2FPortfolio-for-Redcity%3Fpage-id%3D2385%253A97009%26node-id%3D2547-102604%26viewport%3D2018%252C1178%252C0.52%26t%3DPniZ6XIF1PfKGi56-1%26scaling%3Dmin-zoom%26content-scaling%3Dfixed%26starting-point-node-id%3D2547%253A102604%26show-proto-sidebar%3D1?embed_host=share&hide-ui=1" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
   </div>
-
   <section id="section20" class="section" style="margin-top: 0px;">
     <div class="container">
       <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
@@ -784,7 +613,6 @@
           </div>
         </div>
   </section>
-
   <section id="section21" class="section" style="margin-top: 0px;">
     <div class="container">
       <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
@@ -796,11 +624,9 @@
           </p>
         </div>
   </section>
-
   <div class="imgstyle2 row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
     <img src="img/project_redcity/PC框架 PC Framework.svg">
   </div>
-
   <section id="section22" class="section" style="margin-top: 0px;">
     <div class="container">
       <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
@@ -812,11 +638,9 @@
           </p>
         </div>
   </section>
-
   <div  class="imgstyle2 row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
     <img src="img/project_redcity/双端框架断点规范及说明 Framework Guidelines.svg">
   </div>
-
   <section id="section23" class="section" style="margin-top: 0px;">
     <div class="container">
       <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
@@ -831,7 +655,6 @@
           </p>
         </div>
   </section>
-
   <div class="article" data-category="best_practice">
     <div class="container">
       <div
@@ -857,7 +680,6 @@
       </div>
     </div>
   </div>
-
   <section id="section24" class="section" style="margin-top: 0px;">
     <div class="container">
       <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
@@ -872,7 +694,6 @@
           </p>
         </div>
   </section>
-
   <div class="article" data-category="best_practice">
     <div class="container">
       <div
@@ -898,8 +719,6 @@
       </div>
     </div>
   </div>
-
-
   <section class="section" style="margin-top: 80px; margin-bottom: 100px;">
     <div class="container">
       <a type="button" class="btn btn-primary btn-lg buttom-link" style="float: left;width: 340px;height: 80px;"
@@ -908,13 +727,6 @@
         href="project_Construct.html">Next:<br>Construct Product Design<br/> 0 to 1 Case Retro Sharing</a>
     </div>
   </section>
-
-
-
-
-
-
-
   <site-footer></site-footer>
   <script src='js/rad-animations.js'></script>
   <script src='js/library/lozad.min.js'></script>
@@ -934,7 +746,6 @@
   <script src='js/library/fontfaceobserver.js'></script>
   <script>
     (function (w) {
-
       if (w.document.documentElement.className.indexOf("fonts-loaded") > -1) {
         return;
       }
@@ -970,7 +781,5 @@
       }
     })
   </script>
-
 </body>
-
 </html>

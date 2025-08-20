@@ -1,30 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
-
-<!-- <SCRIPT language=JavaScript>
-  function password() {
-    var testV = 1;
-    var pass1 = prompt('Hi there! Welcome to my site and portfolio! Due to the use of portfolio is for my job hunting, I have to set a password requirement for access. If you need to visit, please contact me on WeChat at 131 6243 5185. Kindly fill in the password:','');
-    while (testV < 3) {
-      if (!pass1)
-        history.go(-1);
-      if (pass1 == "qyw") {
-        alert('Welcome to my site!');
-        break;
-      }
-      testV += -1;
-      var pass1 = prompt('Error, pls fill in again:');
-    }
-    if (pass1 != "password" & testV == 3)
-      history.go(-1);
-    return " ";
-  }
-
-  document.write(password());
-
-</SCRIPT> -->
-
 <head>
   <meta name="author" content="yuwen">
   <meta charset="UTF-8" />
@@ -35,12 +10,8 @@
   <meta property="og:image" content="img/meta/web Logo.png" />
   <link rel="icon" type="image/x-icon" href="favicon.ico" />
   <link rel="stylesheet" href="css/main.css" />
-  <!-- <link rel="stylesheet" href="css/rad-icons.css" />   -->
   <link rel="stylesheet" href="css/custom.css" />
-  <!-- 我自己的iconfont -->
   <link rel="stylesheet" href="https://at.alicdn.com/t/c/font_4545731_cvnf4bw0cg.css" />
-
-
   <script>
     (function (w, d, s, l, i) {
       w[l] = w[l] || [];
@@ -57,13 +28,11 @@
       f.parentNode.insertBefore(j, f);
     })(window, document, 'script', 'dataLayer', 'GTM-000000');
   </script>
-
   <script src="js/components/header.js"></script>
   <script src="js/components/footer.js"></script>
   <script src="js/components/badge-tag.js"></script>
   <script src="js/components/footer.js"></script>
   <script src="js/components/badge-tag.js"></script>
-  
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       const toggleButton = document.getElementById('toggleButton');
@@ -71,19 +40,15 @@
       const gradientOverlay = document.getElementById('gradientOverlay');
       const COLLAPSED_HEIGHT = 218;
       let isAnimating = false;
-
       function collapse() {
         if (isAnimating) return;
         isAnimating = true;
         toggleButton.disabled = true;
-
         const currentHeight = expandableDiv.getBoundingClientRect().height;
         expandableDiv.style.height = currentHeight + 'px';
-
         requestAnimationFrame(() => {
           expandableDiv.style.height = COLLAPSED_HEIGHT + 'px';
         });
-
         const onTransitionEnd = (event) => {
           if (event.propertyName !== 'height') return;
           expandableDiv.removeEventListener('transitionend', onTransitionEnd);
@@ -97,23 +62,18 @@
           isAnimating = false;
           toggleButton.disabled = false;
         };
-
         expandableDiv.addEventListener('transitionend', onTransitionEnd);
       }
-
       function expand() {
         if (isAnimating) return;
         isAnimating = true;
         toggleButton.disabled = true;
-
         const startHeight = expandableDiv.getBoundingClientRect().height;
         expandableDiv.style.height = startHeight + 'px';
         const targetHeight = expandableDiv.scrollHeight;
-
         requestAnimationFrame(() => {
           expandableDiv.style.height = targetHeight + 'px';
         });
-
         const onTransitionEnd = (event) => {
           if (event.propertyName !== 'height') return;
           expandableDiv.removeEventListener('transitionend', onTransitionEnd);
@@ -127,10 +87,8 @@
           isAnimating = false;
           toggleButton.disabled = false;
         };
-
         expandableDiv.addEventListener('transitionend', onTransitionEnd);
       }
-
       toggleButton.addEventListener('click', function () {
         if (expandableDiv.classList.contains('expanded')) {
           collapse();
@@ -140,11 +98,7 @@
       });
     });
   </script>
-
-  
-
   <title>Yuwen‘s Portfolio</title>
-
   <style>
     .rad-fade-in {
       will-change: opacity, transform;
@@ -152,90 +106,71 @@
       animation-duration: 5s;
       animation-fill-mode: both;
     }
-
     @keyframes rad-fade-in-fallback {
       0% {
         opacity: 0;
       }
-
       75% {
         opacity: 0;
       }
-
       100% {
         opacity: 1;
       }
     }
-
     .fonts-loaded .rad-fade-in.rad-waiting {
       animation-name: none;
       opacity: 0;
     }
-
     .fonts-loaded .rad-fade-in.rad-animate {
       animation-name: rad-fade-in;
       animation-duration: 1.1s;
       animation-fill-mode: both;
     }
-
     @keyframes rad-fade-in {
       0% {
         opacity: 0;
       }
-
       100% {
         opacity: 1;
       }
     }
-
-
     .rad-fade-in-long {
       will-change: opacity, transform;
       animation-name: rad-fade-in-long-fallback;
       animation-duration: 8s;
       animation-fill-mode: both;
     }
-
     @keyframes rad-fade-in-long-fallback {
       0% {
         opacity: 0;
       }
-
       75% {
         opacity: 0;
       }
-
       100% {
         opacity: 1;
       }
     }
-
     .fonts-loaded .rad-fade-in-long.rad-waiting {
       animation-name: none;
       opacity: 0;
     }
-
     .fonts-loaded .rad-fade-in-long.rad-animate {
       animation-name: rad-fade-in-long;
       animation-duration: 2s;
       animation-fill-mode: both;
     }
-
     @keyframes rad-fade-in-long {
       0% {
         opacity: 0;
       }
-
       20% {
         opacity: 0;
       }
-
       100% {
         opacity: 1;
       }
     }
-
-
     .rad-fade-down {
       will-change: opacity, transform;
       animation-name: rad-fade-down-fallback;
@@ -243,48 +178,39 @@
       animation-fill-mode: both;
       transform: translateY(-30px);
     }
-
     @keyframes rad-fade-down-fallback {
       0% {
         opacity: 0;
         transform: translateY(-30px);
       }
-
       75% {
         opacity: 0;
         transform: translateY(-30px);
       }
-
       100% {
         opacity: 1;
         transform: translateY(0);
       }
     }
-
     .fonts-loaded .rad-fade-down.rad-waiting {
       animation-name: none;
       opacity: 0;
       transform: translateY(-30px);
     }
-
     .fonts-loaded .rad-fade-down.rad-animate {
       animation-name: rad-fade-down;
       animation-duration: 1.1s;
     }
-
     @keyframes rad-fade-down {
       0% {
         opacity: 0;
         transform: translateY(-30px);
       }
-
       100% {
         opacity: 1;
         transform: translateY(0);
       }
     }
-
-
     .rad-scale-down {
       will-change: opacity, transform;
       animation-name: rad-scale-down-fallback;
@@ -292,70 +218,57 @@
       animation-fill-mode: both;
       transform-origin: 50% 0;
     }
-
     @keyframes rad-scale-down-fallback {
       0% {
         opacity: 0;
         transform: scaleY(0.95);
       }
-
       75% {
         opacity: 0;
         transform: scaleY(0.95);
       }
-
       100% {
         opacity: 1;
         transform: scaleY(1);
       }
     }
-
     .fonts-loaded .rad-scale-down.rad-waiting {
       animation-name: none;
       opacity: 0;
       transform: scaleY(0.95);
     }
-
     .fonts-loaded .rad-scale-down.rad-animate {
       animation-name: rad-scale-down;
       animation-duration: 1.1s;
       animation-fill-mode: both;
     }
-
     @keyframes rad-scale-down {
       0% {
         opacity: 0;
         transform: scaleY(0.95);
       }
-
       100% {
         opacity: 1;
         transform: scaleY(1);
       }
-
     }
-
     @keyframes move_left {
       from {
         left: -430px;
       }
-
       to {
         left: -380px;
       }
     }
-
     @keyframes move_right {
       from {
         left: 930px;
       }
-
       to {
         left: 980px;
       }
     }
   </style>
-
   <style>
     #expandableDiv {
       width: 100%;
@@ -365,25 +278,21 @@
       position: relative;
       padding-bottom: 64px;
     }
-  
     #expandableDiv.expanded {
       height: auto;
     }
-  
     #toggleButton {
       position: absolute;
       left: 50%;
       transform: translateX(-50%); 
       cursor: pointer;
     }
-
     .buttonPosition {
       height: 36px; 
       border-radius: 50rem;
       color: var(--mode-light-text-85-primary);
       background-color: white;
     }
-
     #gradientOverlay {
       position: absolute;
       bottom: 0;
@@ -395,29 +304,19 @@
       justify-content: center;
       align-items: center;
         }
-
     @media (prefers-reduced-motion: reduce) {
       #expandableDiv {
         transition: none !important;
       }
     }
-
   </style>
-
-
 </head>
-
 <body>
-
   <script src="js/components/header.js"></script>
   <script src="js/components/footer.js"></script>
   <script src="js/components/badge-tag.js"></script>
   <script src="js/components/badge-tag.js"></script>
   <site-header></site-header>
-
-
-
-
   <section class="rad-showcase rad-showcase--index rad-animation-group rad-fade-down">
     <div class="rad-showcase__bg">
       <img class="lozad img-responsive"
@@ -434,15 +333,12 @@
             An <div style="color: var(--mode-dark-primary-brand-default);display: contents;">Experience Imagineer</div>,
             <br />
             an Individual <div style="color: var(--mode-dark-primary-brand-default);display: contents;">Developer</div>.
-            <!-- <br />
-            and an Spontaneous <a href="my_insight.html" target="_blank" style="color: var(--mode-dark-primary-brand-default);">Writer</a>. -->
           </h1>
           <ul class="lead" style="padding-top: 0px;margin-bottom: 20px;">
             <li>Tel: &#43;86 131 6243 5185</li>
             <li>Mail: tatamato811@gmail.com</li>
             <li>Location: Shanghai</li>
           </ul>
-          
           <div class="row platform-links">
             <div class="col-12">
               <a href="https://www.linkedin.com/in/yuwen-qin-275864114/" target="_blank">
@@ -457,26 +353,11 @@
               <a href="https://www.figma.com/community/file/1372032938337980594/community-test" target="_blank">
                 <i class="icon-a-Yvesicon iconfont"></i>
               </a>
-              
-              <!-- <a href="https://twitter.com/Qinyuwen" target="_blank">
-              <i class="icon-twitter-line"></i>
-            </a>
-            <a href="https://www.instagram.com/qin_yvonne/" target="_blank"
-              ><i class="icon-instagram-line"></i
-            ></a>
-            <a href="https://www.facebook.com/tata.qin.9/" target="_blank"
-              ><i class="icon-facebook-line"></i
-            ></a> -->
           </div>
         </div>
       </div>
-
     </div>
   </section>
-
-  
-
-  
   <section class="section rad-animation-group pb-0" style="margin-top: -60px;">
     <div class="container rad-fade-down">
       <div class="row d-flex flex-column-reverse flex-md-row justify-content-center">
@@ -487,25 +368,9 @@
       </div>
     </div>
   </section>
-
-  
-  
-
-  
-
-
   <section id="about" class="section rad-animation-group pb-0">
     <div class="container rad-fade-down">
       <div class="row d-flex flex-column-reverse flex-md-row">
-        <!-- <div class="about__profile-picture col-12 col-md-6">
-        <img
-          class="lozad img-responsive image-left-overflow"
-          src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
-          data-src="img/who-am-i/user-picture.png"
-          data-srcset="img/who-am-i/user-picture.png 1x, img/who-am-i/user-picture@2x.png 2x"
-          alt="Profile Picture"
-        />
-      </div> -->
         <div class="col-12 collapsed" id="expandableDiv">
           <h2>Skills & Certifications</h2>
           <p style="font-size: 14px;font-weight: 500;margin: var(--s_8) 0">Coding & AI</p>
@@ -560,10 +425,6 @@
       </div>
     </div>
   </section>
-
-
-
-
   <section class="section section--border-bottom rad-animation-group">
     <div class="container">
       <div class="row rad-fade-down">
@@ -601,63 +462,39 @@
                 </div>
               </div>
             </div>
-            
           </div>
         </div>
       </div>
     </div>
   </section>
-
-
-
-
   <section id="experience" class="section section--border-bottom rad-animation-group">
     <div class="container">
       <div class="row flex-column-reverse flex-md-row rad-fade-down" style="margin-bottom: 48px;">
         <div class="col-12 mt-5 mt-sm-0" style="-webkit-box-flex:0;flex:0 0 50%;max-width:50% ">
-          
           <div class="experience" >
             <img src="img/frontpage/Xiaohongshu.svg" style="width: 70px; float: left;margin-right: 24px;">
             <div class="experience__date">2024.01 - 2024.05</div>
             <div class="experience__title">Experience Design Expert</div>
             <div class="experience__company">Rednote @ Productivity Dept</div>
           </div>
-          
           <div class="experience" >
             <img src="img/frontpage/Yaocheng.svg" style="width: 70px; float: left;margin-right: 24px;">
             <div class="experience__date">2021.04 - 2023.11</div>
             <div class="experience__title">CX Designer</div>
             <div class="experience__company">AlphaLife Science @ Product Dept</div>
           </div>
-
           <div class="experience">
             <img src="img/frontpage/Pingan technology.svg" style="width: 70px; float: left;margin-right: 24px;">
             <div class="experience__date">2017.04 - 2021.04</div>
             <div class="experience__title">Product Designer</div>
             <div class="experience__company">Pingan Tech @ Strategy Dept</div>
           </div>
-
           <div class="experience">
             <img src="img/frontpage/Microsoft.svg" style="width: 70px; float: left;margin-right: 24px;">
             <div class="experience__date">2016.04 – 2017.03</div>
             <div class="experience__title">Interaction Design Intern</div>
             <div class="experience__company">Microsoft @ CSS OS & USTC</div>
           </div>
-
-          <!-- <div class="experience">
-            <img src="img/frontpage/Schneider.svg" style="width: 70px; float: left;margin-right: 24px;">
-            <div class="experience__date">2015.10 – 2016.04</div>
-            <div class="experience__title">Marketing Intern</div>
-            <div class="experience__company">Schneider @ IOC LoB</div>
-          </div>
-
-          <div class="experience">
-            <img src="img/frontpage/Honeywell.svg" style="width: 70px; float: left;margin-right: 24px;">
-            <div class="experience__date">2015.01 – 2016.01</div>
-            <div class="experience__title">Product Manager Intern</div>
-            <div class="experience__company">Honeywell @ HSP</div>
-          </div> -->
-
         </div>
         <div class="col-6">
           <h2>Work Experience</h2>
@@ -670,25 +507,11 @@
             quality and experience, contributing to business success. Meanwhile, I enjoy documenting my design experiences in <a target='_blank'
             href='my_insight.html'>My Insight</a>.
           </p>
-          <!-- <ul style="padding-left: 10px; padding-bottom: 10px;list-style:square!important;">
-            <li style="font-size: 14px;color: #555555;">Experience designing across multiple platforms including
-              Android, multiple form factors, phones, and tablets.</li>
-            <li style="font-size: 14px;color: #555555;">Experience collaborating with multidisciplinary teams of
-              Designers, Researchers, Engineers, Content Strategists, and Product Managers throughout the design
-              process.</li>
-            <li style="font-size: 14px;color: #555555;">Understanding of technical requirements and limitations</li>
-            <li style="font-size: 14px;color: #555555;">Ability to have a strategic and critical thinking mindset.</li>
-            <li style="font-size: 14px;color: #555555;">Strong hybrid design skills including: interaction, visual,
-              prototyping.</li>
-            <li style="font-size: 14px;color: #555555;">Excellent verbal and written communication, presentation, and
-              problem-solving skills with attention to detail.</li>
-          </ul> -->
           <a href="https://www.linkedin.com/in/yuwen-qin-275864114/" class="btn btn-primary"target="_blank">
             <i class="icon-linkedin-fill iconfont"></i>
             Linkedin
             </a>
           <a href="file/yuwenqin 13162435185 - Designer.pdf" class="btn btn-frameless" style="height: 36px;" target="_blank">
-            
             <i class="icon-profile-fill iconfont"></i>
             My Resume
           </a>
@@ -696,24 +519,9 @@
       </div>
     </div>
   </section>
-
-
   <section id="portfolio" class="section section--border-bottom">
     <div class="container" style="margin-bottom: 80px;">
       <h2>Projects</h2>
-      <!-- <div class="row row--padded rad-animation-group rad-fade-down">
-        <div class="col-12">
-          <div class="clients">
-            <div class="clients__item">Clinical Trial</div>
-            <div class="clients__item">Knowledge Graph</div>
-            <div class="clients__item">CRM</div>
-            <div class="clients__item">OA</div>
-            <div class="clients__item">AI Legal</div>
-            <div class="clients__item">Banking</div>
-          </div>
-        </div>
-      </div> -->
-
       <div class="row row--padded rad-animation-group rad-fade-down " style="margin-top: 32px;">
         <div class="col-12 col-md-7 pl-md-0 text-right">
           <img class='lozad img-responsive img-clip-right-backward' data-src="img/works/Redcity-banner.gif"
@@ -732,14 +540,10 @@
               class="icon-arrow-right-sm iconfont"></i></a>
         </div>
       </div>
-
-
       <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
-      
         <div class="hero_footer-svg_right">
           <img src="img/figure-svg.svg" alt="">
         </div>
-      
         <div class="col-12 col-md-5 mt-4 mt-md-0 my-md-auto" style="line-height: 32px;">
           <badge-tag>0 to 1</badge-tag>
           <badge-tag>Product Design & Strategy</badge-tag>
@@ -750,15 +554,12 @@
           </p>
           <a href="project_Construct.html" class="btn btn-primary">Check it out<i class="icon-arrow-right-sm iconfont"></i></a>
         </div>
-      
         <div class="col-12 col-md-7 pl-md-0 text-right">
           <img class='lozad img-responsive img-clip-left-backward'
             src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
             data-src="img/works/construct-banner.svg" />
         </div>
-      
       </div>
-      
       <div class="row row--padded rad-animation-group rad-fade-down ">
         <div class="col-12 col-md-7 pl-md-0 text-right">
           <img class='lozad img-responsive img-clip-right-backward' data-src="img/works/Best Practice For CX Management On DCT.svg"
@@ -776,12 +577,10 @@
               class="icon-arrow-right-sm iconfont"></i></a>
         </div>
       </div>
-      
       <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row customhover\\">
         <div class="hero_footer-svg">
           <img src="img/figure-svg.svg" alt="">
         </div>
-      
         <div class="col-12 col-md-5 mt-4 mt-md-0 my-md-auto" style="line-height: 32px;">
           <badge-tag>Product Design & Strategy</badge-tag>
           <h3>LLM-Based Experience Design</h3>
@@ -796,11 +595,8 @@
             src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
             data-src="img/works/AI - Powered Experience Design.svg" />
         </div>
-      
       </div>
-      
       <div class="row row--padded rad-animation-group rad-fade-down ">
-      
         <div class="col-12 col-md-7 pl-md-0 text-right">
           <img class='lozad img-responsive img-clip-right-backward' data-src="img/works/compute-banner.svg"
             data-srcset="img/works/compute-banner.svg" />
@@ -816,13 +612,10 @@
           <a href="project_MM.html" class="btn btn-primary">Check it out<i class="icon-arrow-right-sm iconfont"></i></a>
         </div>
       </div>
-      
       <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
-      
         <div class="hero_footer-svg_right">
           <img src="img/figure-svg.svg" alt="">
         </div>
-      
         <div class="col-12 col-md-5 mt-4 mt-md-0 my-md-auto" style="line-height: 32px;">
           <badge-tag>Product Design</badge-tag>
           <badge-tag>Rapid Prototype</badge-tag>
@@ -839,36 +632,8 @@
             src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
             data-src="img/works/Group 1.svg" />
         </div>
-      
       </div>
-
-      <!-- <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row customhover\\">
-        <div class="hero_footer-svg">
-          <img src="img/figure-svg.svg" alt="">
-        </div>
-
-          <div class="col-12 col-md-5 mt-4 mt-md-0 my-md-auto" style="line-height: 32px;">
-                      <badge-tag background-color="#F4EDEE">产品</badge-tag>
-          <badge-tag background-color="#D5EDFF">交互</badge-tag>
-          <badge-tag background-color="#D5FFE9">项目管理</badge-tag>
-            <h3>智慧党建平台前后台系统搭建与设计</h3>
-            <p class="lead" style="padding-top: 0px;margin-bottom: 8px;">
-              2020年6月 - 2021年3月<br />
-              项目负责人<br />
-               15 min</p>
-            <a href="project1.html" class="btn btn-primary">Check it out<i class="icon-arrow-right-sm iconfont"></i></a>
-          </div>
-          <div class="col-12 col-md-7 pl-md-0 text-right">
-            <img class='lozad img-responsive img-clip-left-backward'
-              src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
-              data-src="img/works/Smart Party Management Platform Construction Copy.svg"/>
-
-        </div>
-
-      </div> -->
-
       <div class="row row--padded rad-animation-group rad-fade-down ">
-
         <div class="col-12 col-md-7 pl-md-0 text-right">
           <img class='lozad img-responsive img-clip-right-backward' data-src="img/works/ifa-banner.png"
             data-srcset="img/works/ifa-banner.png 1x, img/works/ifa-banner@2x.png 2x" />
@@ -884,14 +649,11 @@
           </p>
           <a href="project_Law.html" class="btn btn-primary">Check it out<i class="icon-arrow-right-sm iconfont"></i></a>
         </div>
-
       </div>
-
       <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row customhover\\">
         <div class="hero_footer-svg">
           <img src="img/figure-svg.svg" alt="">
         </div>
-
         <div class="col-12 col-md-5 mt-4 mt-md-0 my-md-auto" style="line-height: 32px;">
           <badge-tag>交互</badge-tag>
           <badge-tag>用户研究</badge-tag>
@@ -907,55 +669,8 @@
             src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
             data-src="img/works/Group 6@2x.png" />
         </div>
-
       </div>
-
-      <!-- <div class="row row--padded rad-animation-group rad-fade-down ">
-
-        <div class="col-12 col-md-7 pl-md-0 text-right">
-          <img class='lozad img-responsive img-clip-right-forward'
-            src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
-            data-src="img/works/Background Copy.svg" />
-        </div>
-        <div class="col-12 col-md-5 mt-4 mt-md-0 my-md-auto" style="line-height: 32px;">
-          <badge-tag background-color="#F4EDEE">交互</badge-tag>
-          <badge-tag background-color="#FFE8D5">用户研究</badge-tag>
-          <h3>PC语音输入方案可用性测试及设计提升</h3>
-          <p class="lead" style="padding-top: 0px;margin-bottom: 8px;">
-            2019年10月 - 2020年1月<br />
-            Product Designer<br />
-             8 min</p>
-          <a href="project4.html" class="btn btn-primary">Check it out<i class="icon-arrow-right-sm iconfont"></i></a>
-        </div>
-
-      </div> -->
-
-      <!-- <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
-
-        <div class="hero_footer-svg">
-          <img src="img/figure-svg.svg" alt="">
-        </div>
-
-        <div class="col-12 col-md-5 mt-4 mt-md-0 my-md-auto" style="line-height: 32px;">
-          <badge-tag background-color="#FFD5D5">编程</badge-tag>
-          <badge-tag background-color="#FFE8D5">用户研究</badge-tag>
-          <h3>Python批量处理生命力评估模型</h3>
-          <p class="lead" style="padding-top: 0px;margin-bottom: 8px;">
-            2019年10月 - 2020年1月<br />
-            码农<br />
-             8 min</p>
-          <a href="project5.html" class="btn btn-primary">Check it out<i class="icon-arrow-right-sm iconfont"></i></a>
-        </div>
-        <div class="col-12 col-md-7 pl-md-0 text-right">
-          <img class='lozad img-responsive img-clip-left-backward'
-            src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
-            data-src="img/works/Background Copy2.svg" />
-        </div>
-
-      </div> -->
-
       <div class="row row--padded rad-animation-group rad-fade-down ">
-
         <div class="col-12 col-md-7 pl-md-0 text-right">
           <img class='lozad img-responsive img-clip-right-forward'
             src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
@@ -971,15 +686,11 @@
           <a href="project_Gradute.html" class="btn btn-primary">Check it out ( Video included )
             <i class="icon-arrow-right-sm iconfont"></i></a>
         </div>
-
       </div>
-
       <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
-
         <div class="hero_footer-svg_right">
           <img src="img/figure-svg.svg" alt="">
         </div>
-
         <div class="col-12 col-md-5 mt-4 mt-md-0 my-md-auto" style="line-height: 32px;">
           <badge-tag>视觉</badge-tag>
           <h3>CoE Workshop专家讲座系列宣传物料视觉设计</h3>
@@ -994,81 +705,9 @@
             src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
             data-src="img/works/Background Copy 4.svg" />
         </div>
-
       </div>
-
     </div>
   </section>
-
-
-
-
-  <!-- <section  id="mytestimony" class="section rad-animation-group section--border-bottom">
-    <div class="container" style="margin-bottom: 80px;">
-        <h2 class="rad-fade-down">行业口碑</h2>
-        <div class="row row--padded mb-0 rad-fade-down">
-            
-            <div class="col-12 col-md-4 mb-5 mb-md-0 testimonial">
-                <i class="icon-quote"></i>
-                <p>
-                    Cold calling can be a great way to generate quality leads. You get to speak to the gatekeepers and stakeholders, and you get a great insight into their requirements and influences. But cold calling is an art-form. It can be daunting, it’s always a lot of work, and you always need to make a good impression.
-                </p>
-                <div class="testimonial__author">
-                    <img class="lozad testimonial__author-image"
-                         src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
-                         data-src="img/testimonials/daniel-jordan.jpg"
-                         data-srcset="img/testimonials/daniel-jordan.jpg 1x, https://raditian-hugo.radity.com/img/testimonials/daniel-jordan@2x.jpg 2x"
-                         alt="Daniel Jordan"/>
-                    <div class="testimonial__author-info">
-                        <h4>Daniel Jordan</h4>
-                        <span>Phonet, CEO</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-12 col-md-4 mb-5 mb-md-0 testimonial">
-                <i class="icon-quote"></i>
-                <p>
-                    Whether you or your loved one is encountering the natural decrease in mobility that occurs with the passing of time, or deals with an illness-related lack of physical agility, a stair lift can be the ideal way to put you in charge of your home again. Regardless of the shape or make of your living accommodation.
-                </p>
-                <div class="testimonial__author">
-                    <img class="lozad testimonial__author-image"
-                         src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
-                         data-src="https://raditian-hugo.radity.com/img/testimonials/jonathan-peters.jpg"
-                         data-srcset="https://raditian-hugo.radity.com/img/testimonials/jonathan-peters.jpg 1x, https://raditian-hugo.radity.com/img/testimonials/jonathan-peters@2x.jpg 2x"
-                         alt="Jonathan Peters"/>
-                    <div class="testimonial__author-info">
-                        <h4>Jonathan Peters</h4>
-                        <span>Textic, CEO</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-12 col-md-4 mb-5 mb-md-0 testimonial">
-                <i class="icon-quote"></i>
-                <p>
-                    In this digital generation where information can be easily obtained within seconds, business cards still have retained their importance in the achievement of increased business exposure and business sales. If your business already has a bunch of printed cards distributed to a number of potential customers and yet.
-                </p>
-                <div class="testimonial__author">
-                    <img class="lozad testimonial__author-image"
-                         src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
-                         data-src="https://raditian-hugo.radity.com/img/testimonials/antonio-willis.jpg"
-                         data-srcset="https://raditian-hugo.radity.com/img/testimonials/antonio-willis.jpg 1x, https://raditian-hugo.radity.com/img/testimonials/antonio-willis@2x.jpg 2x"
-                         alt="Antonio Willis"/>
-                    <div class="testimonial__author-info">
-                        <h4>Antonio Willis</h4>
-                        <span>Cyberse, CEO</span>
-                    </div>
-                </div>
-            </div>
-            
-        </div>
-    </div>
-</section> -->
-
-
-
-
   <section id="contact" class="section section--contact pt-0">
     <div class="container">
       <div class="contact">
@@ -1077,32 +716,6 @@
           <div class="col-12 col-lg-6">
             <img src="img/WechatIMG1314.jpeg"
               style="border-radius: 10px;box-shadow: 0 42px 34px -16px rgb(0 0 0 / 30%);">
-            <!-- <form action="#" method="">
-                        <div class="row">
-                            <div class="col-12 col-sm-6">
-                                <input type="text" name="" id="full_name"
-                                       placeholder="Full Name"/>
-                            </div>
-                            <div class="col-12 col-sm-6">
-                                <input type="text" name="" id="email"
-                                       placeholder="Email Address"/>
-                            </div>
-                        </div>
-                        <div class="row pt-4">
-                            <div class="col-12">
-                                <textarea name="" id="message"
-                                          cols="30" rows="3" placeholder="Type Your Message Here"></textarea>
-                            </div>
-                        </div>
-                        <div class="row pt-4">
-                            <div class="col-12">
-                                <button type="submit" class="btn btn-primary">
-                                    <i class="icon-mail-fill"></i>
-                                    Send Message
-                                </button>
-                            </div>
-                        </div>
-                    </form> -->
           </div>
           <div class="col-12 col-lg-6 contact__info">
             <h4>Tel</h4>
@@ -1116,48 +729,6 @@
       </div>
     </div>
   </section>
-
-
-
-
-  <!-- <section class="section section--cta">
-<div class="container">
-  <div class="row">
-    <div class="col-12 text-center">
-      <h2>Newsletter subscription</h2>
-      <div class="rad-subscription-group">
-        <form id="rad-subscription" action="">
-          <input
-            id="rad-subscription-email"
-            type="email"
-            class="form-control"
-            aria-describedby="emailHelp"
-            placeholder="Email Address..."
-            aria-label="Email Address"
-          />
-          <button type="submit" id="rad-subscription-submit" class="btn btn-light btn-rounded">
-            Sign Up
-          </button>
-        </form>
-        <div id="rad-subscription-success" class="d-none">
-          <p class="lead">Successfully subscribed</p>
-        </div>
-        <div id="rad-subscription-fail" class="d-none">
-          <p>Error while subscribing.</p>
-        </div>
-        <script src="/js/subscription.js"></script>
-      </div>
-      <small id="emailHelp" class="form-text text-muted"
-        >We&#39;ll never share your email with anyone else.</small
-      >
-    </div>
-  </div>
-</div>
-</section> -->
-
-
-
-
   <site-footer></site-footer>
   <script src='js/rad-animations.js'></script>
   <script src='js/library/lozad.min.js'></script>
@@ -1177,7 +748,6 @@
   <script src='js/library/fontfaceobserver.js'></script>
   <script>
     (function (w) {
-
       if (w.document.documentElement.className.indexOf("fonts-loaded") > -1) {
         return;
       }
@@ -1213,7 +783,5 @@
       }
     })
   </script>
-
 </body>
-
 </html>
