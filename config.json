@@ -1,5 +1,5 @@
 {
-  "source": ["yves tokens.json"],
+  "source": ["yves-tokens.json"],
   "platforms": {
     "css": {
       "transformGroup": "css",
