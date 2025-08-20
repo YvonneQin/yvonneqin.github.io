@@ -83,6 +83,7 @@
           expandableDiv.removeEventListener('transitionend', onTransitionEnd);
           expandableDiv.classList.remove('expanded');
           toggleButton.innerHTML = 'Expand All<i class="icon-arrow-down-F iconfont"></i>';
+          toggleButton.setAttribute('aria-expanded', 'false');
           // Keep overlay visible as before
           // gradientOverlay.style.display = 'flex';
           // Clear inline height to rely on CSS collapsed height
@@ -112,6 +113,7 @@
           expandableDiv.removeEventListener('transitionend', onTransitionEnd);
           expandableDiv.classList.add('expanded');
           toggleButton.innerHTML = 'Collapse All <i class="icon-arrow-up-F iconfont"></i>';
+          toggleButton.setAttribute('aria-expanded', 'true');
           // Keep overlay visible as before
           // gradientOverlay.style.display = 'flex';
           // Allow content to grow naturally when expanded
@@ -388,6 +390,12 @@
       align-items: center;
         }
 
+    @media (prefers-reduced-motion: reduce) {
+      #expandableDiv {
+        transition: none !important;
+      }
+    }
+
   </style>
 
 
@@ -573,7 +581,7 @@
           <span class="badge rounded-pill bg-primary">Panel study</span>
           <span class="badge rounded-pill bg-primary">Retrospective study</span>
           <div id="gradientOverlay">
-            <button id="toggleButton" class="btn btn-sm buttonPosition">Expand All<i class="icon-arrow-down-F iconfont"></i></button>
+            <button id="toggleButton" class="btn btn-sm buttonPosition" type="button" aria-expanded="false" aria-controls="expandableDiv">Expand All<i class="icon-arrow-down-F iconfont"></i></button>
           </div>
           <div class="hero_footer-svg">
             <img src="img/figure-svg.svg" alt="">
