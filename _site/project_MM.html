@@ -1,0 +1,1144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<SCRIPT language=JavaScript>
+  function password() {
+    var testV = 1;
+    var pass1 = prompt('Pls fill in password:', '');
+    while (testV < 3) {
+      if (!pass1)
+        history.go(-1);
+      if (pass1 == "qyw") {
+        alert('Go!');
+        break;
+      }
+
+      testV += -1;
+      var pass1 = prompt('Error, pls fill in again:');
+    }
+    if (pass1 != "password" & testV == 3)
+      history.go(-1);
+    return " ";
+  }
+
+  document.write(password());
+
+</SCRIPT>
+
+
+<head>
+  <meta name="author" content="yuwen">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/rad-icons.css" />
+  <link rel="stylesheet" href="css/custom.css" />
+
+  <script>
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src =
+        'https://www.googletagmanager.com/gtm.js?id=GTM-000000' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-000000');
+  </script>
+
+  <title>Medical Monitoring Config Benchmarking Analysis</title>
+  <style>
+    .rad-fade-in {
+      will-change: opacity, transform;
+      animation-name: rad-fade-in-fallback;
+      animation-duration: 5s;
+      animation-fill-mode: both;
+    }
+
+    @keyframes rad-fade-in-fallback {
+      0% {
+        opacity: 0;
+      }
+
+      75% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+
+    .fonts-loaded .rad-fade-in.rad-waiting {
+      animation-name: none;
+      opacity: 0;
+    }
+
+    .fonts-loaded .rad-fade-in.rad-animate {
+      animation-name: rad-fade-in;
+      animation-duration: 1.1s;
+      animation-fill-mode: both;
+    }
+
+    @keyframes rad-fade-in {
+      0% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+
+
+    .rad-fade-in-long {
+      will-change: opacity, transform;
+      animation-name: rad-fade-in-long-fallback;
+      animation-duration: 8s;
+      animation-fill-mode: both;
+    }
+
+    @keyframes rad-fade-in-long-fallback {
+      0% {
+        opacity: 0;
+      }
+
+      75% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+
+    .fonts-loaded .rad-fade-in-long.rad-waiting {
+      animation-name: none;
+      opacity: 0;
+    }
+
+    .fonts-loaded .rad-fade-in-long.rad-animate {
+      animation-name: rad-fade-in-long;
+      animation-duration: 2s;
+      animation-fill-mode: both;
+    }
+
+    @keyframes rad-fade-in-long {
+      0% {
+        opacity: 0;
+      }
+
+      20% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+
+
+    .rad-fade-down {
+      will-change: opacity, transform;
+      animation-name: rad-fade-down-fallback;
+      animation-duration: 5s;
+      animation-fill-mode: both;
+      transform: translateY(-30px);
+    }
+
+    @keyframes rad-fade-down-fallback {
+      0% {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+
+      75% {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .fonts-loaded .rad-fade-down.rad-waiting {
+      animation-name: none;
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+
+    .fonts-loaded .rad-fade-down.rad-animate {
+      animation-name: rad-fade-down;
+      animation-duration: 1.1s;
+    }
+
+    @keyframes rad-fade-down {
+      0% {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+
+    .rad-scale-down {
+      will-change: opacity, transform;
+      animation-name: rad-scale-down-fallback;
+      animation-duration: 5s;
+      animation-fill-mode: both;
+      transform-origin: 50% 0;
+    }
+
+    @keyframes rad-scale-down-fallback {
+      0% {
+        opacity: 0;
+        transform: scaleY(0.95);
+      }
+
+      75% {
+        opacity: 0;
+        transform: scaleY(0.95);
+      }
+
+      100% {
+        opacity: 1;
+        transform: scaleY(1);
+      }
+    }
+
+    .fonts-loaded .rad-scale-down.rad-waiting {
+      animation-name: none;
+      opacity: 0;
+      transform: scaleY(0.95);
+    }
+
+    .fonts-loaded .rad-scale-down.rad-animate {
+      animation-name: rad-scale-down;
+      animation-duration: 1.1s;
+      animation-fill-mode: both;
+    }
+
+    @keyframes rad-scale-down {
+      0% {
+        opacity: 0;
+        transform: scaleY(0.95);
+      }
+
+      100% {
+        opacity: 1;
+        transform: scaleY(1);
+      }
+
+    }
+  </style>
+
+
+
+
+
+</head>
+
+<body class="body">
+
+  <header class="header fixed-top rad-animation-group" id="header">
+    <div class="container rad-fade-in">
+      <nav class="navbar navbar-expand-lg navbar-light p-0">
+        <a class="navbar-brand" href="index.html">
+          <span style="font-size: 24px;">Yuwen</span>
+          <span style="font-size: 24px;">Qin</span>
+
+
+
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+          data-target="#navbarSupportedContent, #header" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-lg-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Homepage</a>
+            </li>
+
+            <li class="nav-item">
+              <a data-scroll class="nav-link" href="index.html#about">Skills</a>
+            </li>
+
+            <li class="nav-item">
+              <a data-scroll class="nav-link" href="index.html#portfolio">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a data-scroll class="nav-link" href="my_insight.html">Insights</a>
+            </li>
+            <li class="nav-item">
+              <a data-scroll class="nav-link" href="index.html#contact">Contact</a>
+            </li>
+            <!-- 
+            <li class="nav-item">
+              <a data-scroll class="nav-link" href="more me.html">More Me</a>
+            </li> -->
+
+            <!-- <li class="nav-item">
+              <a data-scroll class="nav-link" href="#mytestimony">行业口碑</a>
+            </li> -->
+
+
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+
+
+
+
+
+
+  <section class="section">
+    <div class="container">
+
+      <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row" style="line-height: 32px;">
+        <div class="col-12 col-md-5 mt-4 mt-md-0 my-md-auto">
+          <span class="badge-2 rounded-pill">0 to 1</span>
+          <span class="badge-2 rounded-pill">Product Design</span>
+          <br />
+          <span class="badge-2 rounded-pill">Product Strategy</span>
+          <h3 style="margin-top: 16px;">Medical Monitoring Config Benchmarking Analysis</h3>
+          <p class="lead">
+            2022.12 - Now<br />
+            Researcher & Designer<br />
+            20 mins
+          </p>
+        </div>
+        <div class="col-12 col-md-7 pl-md-0 text-right">
+          <img class='lozad img-responsive img-clip-left-backward'
+            src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
+            data-src="img/project_MM/compute-banner.svg" data-srcset="img/project_MM/compute-banner.svg 1x"
+            alt="This is ifa-banner." />
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <section class="section" style="margin-top: 0px;">
+    <div class="container">
+
+      <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
+        style="margin-top: 0px;">
+        <div class="col-12 mt-4 mt-md-0 my-md-auto">
+          <div>
+            <div class="titlenumber">01</div>
+            <div class="sectiontitle">Compute Intro</div>
+            <div class="sectiontitle-eng">Compute Intro</div>
+          </div>
+          <p class="lead">
+            As more and more companies and organizations in phanmaceutical industry are adopting R to their statistical
+            programming process, it is possible that more and more clinical studies and programmers will be utilizing R
+            Studio Project.
+          </p>
+          <div>
+            <img class="imgstyle" src="img/project_MM/AuroraPrime Platform Overview.png">
+            <div class="imgsubtitle">AuroraPrime Platform Overview</div>
+          </div>
+          <!-- <p class="lead">
+            Prime Compute is an application-oriented statistical analysis tool on the AuroraPrime clinical research
+            platform. Designed for various roles in clinical trials, such as data management (DM), operations, med-
+            ical, and statistical personnel, Compute offers a wide range of statistical analysis tools tailored to their
+            specific work needs. These tools include Key Risk Indicator (KRI) definition and calculations for
+            operations, Patient Profile for medical purposes, Data Listing for DM, and Tables, Figures, and Listings
+            (TFLs) for statistical analysis. By providing these tools, Compute significantly enhances the efficiency of
+            obtaining data results for each role.
+          </p>
+          <p class="lead">
+            At its core, Compute leverages standard statistical analysis packages written in Java, R, and SAS to ensure
+            that the computed results comply with industry standards. Additionally, the system incor- porates built-in
+            processes for data normalization, cleaning, and SDTM transformation, enabling stan- dardized definition of
+            business scenarios and higher reusability across trials. For data integration, the system supports the
+            standard Webhook protocol, allowing integration with any system that has open interfaces. Furthermore, it
+            offers adaptable data integration models, enabling seamless data import without requiring modifications to
+            third-party systems. Multiple data integration methods, including interface-based and variable data
+            model-based import, are provided to ensure seamless integration with various systems, such as third-party
+            EDC systems.
+          </p> -->
+  </section>
+
+  <section class="section" style="margin-top: 0px;">
+    <div class="container">
+      <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
+        style="margin-top: 0px;">
+        <div class="col-12 mt-4 mt-md-0 my-md-auto">
+          <div>
+            <div class="titlenumber">02</div>
+            <div class="sectiontitle">Entry points and prerequisites.</div>
+            <div class="sectiontitle-eng">The selection of entry points and prerequisites.</div>
+          </div>
+          <blockquote class="blockquote text-center">
+            <p class="mb-0">Why would one choose Medical Monitoring and opt for a configurable experience?</p>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="imgstyle2 row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
+    <img src="img/project_MM/Statistics Process.svg">
+  </div>
+
+
+  <section class="section" style="margin-top: 0px;">
+    <div class="container">
+      <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
+        style="margin-top: 0px;">
+        <div class="col-12 mt-4 mt-md-0 my-md-auto">
+          <!-- <div>
+            <img class="imgstyle" src="img/project_MM/Statistics Process.png">
+            <div class="imgsubtitle">Statistics Process</div>
+          </div> -->
+          <p class="lead">
+            In clinical trial research, the verification content of medical monitoring involves a significant focus on
+            insights from safety data. It is the aspect that requires the most close attention during the trial
+            operation. The most characteristic events to be closely monitored are Adverse Events (AE events).
+          </p>
+          <p class="lead">
+            Adverse Events (AE events) are often monitored and presented based on Preferred Terms (PT) and System Organ
+            Classes (SOC), utilizing various dimensions for categorization. This includes segmentation by site, CTCAE
+            (Common Terminology Criteria for Adverse Events) grade, whether it is an AESER (Adverse Event of Special
+            Interest), whether it is a TEAE (Treatment-Emergent Adverse Event, occurring during treatment), and its
+            association with the investigational drug, among other dimensions. In addition to conventional clinical data
+            visualization plots such as bar, scattered, line, boxplot, and butterfly plot, more advanced data models
+            have emerged to gain insights into the correlations between AEs. For example:
+          </p>
+          <p class="lead">
+            After integrating the R tidyverse, ggplotly, and Plotly into the platform, a solid foundation for
+            presentation in medical monitoring scenarios has been established. The computational capabilities showcased
+            here have initiated exploration and development in the realm of configurability.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="imgstyle2 row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
+    <img src="img/project_MM/Typical MM Plot Example.svg">
+  </div>
+
+  <section class="section" style="margin-top: 0px;">
+    <div class="container">
+
+      <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
+        style="margin-top: 0px;">
+        <div class="col-12 mt-4 mt-md-0 my-md-auto">
+          <div class="title4">Rapid Prototyping Through R Studio</div>
+          <div>
+            <img class="imgstyle" src="img/project_MM/Based on the Plotly R package.png">
+            <div class="imgsubtitle">Based on the Plotly R package, a demo is presented for drawing error bars using
+              data from the 'Gender' variable in the Demographic.</div>
+          </div>
+          <p class="lead">
+            The Vital Sign Error Bar Plot fills missing values using the mean, displays visits in a fixed order, and excludes
+            specific visits, such as unplanned visits.
+          </p>
+          <div>
+            <img class="imgstyle" src="img/project_MM/Rapid prototype with R script.png">
+            <div class="imgsubtitle">Rapid prototype with R script</div>
+          </div>
+
+  </section>
+
+  <section class="section" style="margin-top: 0px;">
+    <div class="container">
+
+      <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
+        style="margin-top: 0px;">
+        <div class="col-12 mt-4 mt-md-0 my-md-auto">
+          <div>
+            <div class="titlenumber">03</div>
+            <div class="sectiontitle">Typical User</div>
+            <div class="sectiontitle-eng">Typical User</div>
+          </div>
+          <div>
+            <img class="imgstyle" src="img/project_MM/User.png">
+            <div class="imgsubtitle">Typical User</div>
+          </div>
+
+  </section>
+
+  <section class="section" style="margin-top: 0px;">
+    <div class="container">
+
+      <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
+        style="margin-top: 0px;">
+        <div class="col-12 mt-4 mt-md-0 my-md-auto">
+          <div>
+            <div class="titlenumber">04</div>
+            <div class="sectiontitle">Analysis Goal & Scope</div>
+            <div class="sectiontitle-eng">Analysis Goal & Scope</div>
+          </div>
+          <p class="lead">
+            1. Research and analyze the commonly used functionalities of medical monitoring tools, understand the
+            current and future business needs, and explore possible mechanisms to address the questions that may
+            arise.DetectoR
+          </p>
+          <p class="lead">
+            2. Qualitative research and quantitative analysis.
+          </p>
+          <div>
+            <img class="imgstyle" src="img/project_MM/Research Methodology.png">
+            <div class="imgsubtitle">Research Methodology</div>
+            <img class="imgstyle" src="img/project_MM/Qualitative Analysis R package.png">
+            <div class="imgsubtitle">Qualitative Analysis: Explore MM Scenario and Trends</div>
+            <img class="imgstyle" src="img/project_MM/benchmarking Products.png">
+            <div class="imgsubtitle">Quantitative Analysis: Benchmarking Products</div>
+          </div>
+          <p class="lead">
+            3. Propose the optimal user journey and user flow for configuring the source of Medical Monitoring and
+            explore possible solutions.
+          </p>
+  </section>
+
+  <section class="section" style="margin-top: 0px;">
+    <div class="container">
+
+      <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
+        style="margin-top: 0px;">
+        <div class="col-12 mt-4 mt-md-0 my-md-auto">
+          <div>
+            <div class="titlenumber">05</div>
+            <div class="sectiontitle">Qualitative Analysis</div>
+            <div class="sectiontitle-eng">Qualitative Analysis:</div>
+          </div>
+          <p class="lead">
+            The open-source R package can address the core concerns of DIA in medical scenarios, providing assistance in
+            the design of product functionalities.
+          </p>
+          <div>
+            <img class="imgstyle" src="img/project_MM/Qualitative Analysis R package.png">
+            <div class="imgsubtitle">Qualitative Analysis: Explore MM Scenario and Trends</div>
+          </div>
+          <div class="title5">1. SubgroupExplorer/Subscreen</div>
+          <p class="lead">
+            https://cran.r-project.org/web/packages/subscreen/index.html<br />
+            Simplify sub-group analysis associated with relevant results.
+          </p>
+          <div>
+            <img class="imgstyle"
+              src="img/project_MM/A novel concept of screening for subgrouping factors for the association between socioeconomic status and respiratory allergies.png">
+            <div class="imgsubtitle">A novel concept of screening for subgrouping factors for the association between
+              socioeconomic status and respiratory allergies</div>
+          </div>
+          <div class="title5"> 2. AdePro</div>
+          <p class="lead">
+            https://cran.r-project.org/web/packages/subscreen/index.html<br />
+            https://rdrr.io/cran/adepro/#vignettes<br />
+            Animation and visualization of Adverse Event (AE) profiles
+          </p>
+          <!-- <div>
+            <img class="imgstyle" src="img/project_MM/Visualization of Adverse Event Profiles.png">
+            <img class="imgstyle" src="img/project_MM/Animation of Adverse Event Profiles2.png">
+            <div class="imgsubtitle">Visualization of Adverse Event Profiles</div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="imgstyle2 row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
+    <img src="img/project_MM/Visualization of Adverse Event Profiles.svg">
+  </div>
+
+  <section class="section" style="margin-top: 0px;">
+    <div class="container">
+      <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
+        style="margin-top: 0px;">
+        <div class="col-12 mt-4 mt-md-0 my-md-auto">
+          <div class="title5">3. eLabrator</div>
+          <p class="lead">
+            Insights into laboratory data with evolution over time<br />
+            https://github.com/openpharma/elaborator<br />
+            https://link.springer.com/article/10.1007/s43441-021-00318-4<br />
+            https://rdrr.io/cran/elaborator/<br />
+            https://pubmed.ncbi.nlm.nih.gov/34196957/<br />
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="imgstyle2 row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
+    <img src="img/project_MM/eLabrator.svg">
+  </div>
+
+
+  <section class="section" style="margin-top: 0px;">
+    <div class="container">
+      <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
+        style="margin-top: 0px;">
+        <div class="col-12 mt-4 mt-md-0 my-md-auto">
+          <!-- <div>
+            <img class="imgstyle"
+              src="img/project_MM/Screenshot of the quantitative trend analysis and all categories 1234 and 5 within its submenu.png">
+            <div class="imgsubtitle">Screenshot of the quantitative trend analysis and all categories 1234 and 5 within
+              its submenu</div>
+            <img class="imgstyle"
+              src="img/project_MM/Screenshot of the qualitative trend analysis showing the results for four laboratory parameters in the 2  mg vilaprisan group of Asteroid 1.png">
+            <div class="imgsubtitle">Screenshot of the qualitative trend analysis showing the results for four
+              laboratory parameters in the 2 mg vilaprisan group of Asteroid 1</div>
+          </div> -->
+          <div class="title5">4. DetectoR</div>
+          <p class="lead">
+            https://github.com/Bayer-Group/BIC-DetectoR<br />
+            The DetectoR R Shiny app provides a handy platform allowing for early identification of signals and an
+            ongoing monitoring of safety along the medical product development phase and lifecycle.
+          </p>
+          <div class="title5">5. BReasy</div>
+          <p class="lead">
+            https://github.com/Bayer-Group/BIC-BReasy#breasy-<br />
+            The BReasy R Shiny app provides a handy platform for structured benefit-risk assessment using clinical study
+            or pooled data. With the provided forest plot estimates for all relevant efficacy and safety outcomes can be
+            shown in one graph. In the graphical display the presented outcomes can be separated into efficacy and
+            safety. To enable a structured and transparent approach to assessing the benefit-risk profile, the outcomes
+            shown in the forest plot are based on the same analysis sets and data scopes. Furthermore, a presentation by
+            study (in case of pooled data), stratum and subgroups is possible to assess the benefit-risk profile in
+            subpopulations of interest.
+          </p>
+          <div>
+            <img class="imgstyle" src="img/project_MM/Forrest Plot.png">
+            <div class="imgsubtitle">Forest Plot</div>
+          </div>
+  </section>
+
+  <section class="section" style="margin-top: 0px;">
+    <div class="container">
+
+      <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
+        style="margin-top: 0px;">
+        <div class="col-12 mt-4 mt-md-0 my-md-auto">
+          <div>
+            <div class="titlenumber">06</div>
+            <div class="sectiontitle">Quantative Analysis：Benchmarking analysis</div>
+            <div class="sectiontitle-eng">Quantative Analysis：Benchmarking analysis</div>
+          </div>
+          <blockquote class="blockquote text-center">
+            <p class="mb-0">Why I Use Benchmarking Analysis? <br />
+              Benchmarking can provide an efficient and effective means for a firm to take the best ideas from other
+              firms, integrate them into their own, and take actions that may provide it with a strong advantage over
+              their competitors.</p>
+          </blockquote>
+          <div class="title4">1. Products need to Be Benchmarked</div>
+          <p class="lead">
+            In this quantitative research, I selected five representative products in the field of medical statistics,
+            namely SAS Viya, Plotly Dash, SPSSPRO, JMP Clinical, and Tableau. I chose them individually because they
+            have significant influence in the life science professionals' domain and are recognized by global
+            associations such as DIA and software user groups in life science like PharmaSUG. The factors contributing
+            to their influence include efficiency and speed, collaboration capabilities, scalability, advanced
+            analytics, model deployment, integration with other tools, and user-friendly interfaces.
+          </p>
+          <div>
+            <img class="imgstyle" src="img/project_MM/benchmarking Products.png">
+            <div class="imgsubtitle">benchmarking Products</div>
+          </div>
+          <div class="title4">2. Statistics processes </div>
+          <p class="lead">
+            Dimension that need to be benchmarked, and its explanation:
+          </p>
+          <p class="lead">a. Data Management: Utilize common methods such as merging,
+            concatenating, or joining datasets based on shared variables. Choose the appropriate join type (e.g.,
+            inner join, outer join, left join, right join) depending on the analysis nature and data relationships.</p>
+          <p class="lead">b. Data Transformation: Convert data into a suitable format and
+            normalize or standardize it if necessary.</p>
+          <p class="lead">c. Exploratory Data Analysis (EDA): Proficiency in exploratory
+            analysis is crucial for data scientists. They employ EDA to analyze datasets, summarize key
+            characteristics, and utilize data visualization methods. EDA helps in determining the best approach to
+            manipulate the data source for desired insights, facilitating the identification of patterns, anomalies,
+            hypothesis testing, and assumption examination.</p>
+          <p class="lead">d. Interactive Graphs & Data Visualization: Data visualization
+            is pivotal for simplifying complex datasets and effectively communicating insights. It enables users to
+            identify patterns, trends, and anomalies, fostering a deeper understanding of the data. Ultimately, it
+            plays a crucial role in facilitating informed decision-making by transforming data into visual
+            representations.</p>
+          <p class="lead">e. Medical Modeling Development: Statistical models like
+            Kaplan-Meier Survival Curve, Ridit Analysis, and Chi-Square Test are commonly used in clinical research.</p>
+          <p class="lead">f. Decision Building with AI, ML, Modeling: Clinical
+            statisticians can leverage these tools to gain deeper insights from clinical data, identify patterns, and
+            enhance predictive modeling in areas such as patient outcomes and treatment efficacy.</p>
+          <div class="title5">1. Tableau</div>
+          <p class="lead">
+            <b>Product concept: </b><br/>
+            A powerful data visualization tool that enables users to create interactive and shareable
+            dashboards, allowing for intuitive exploration and understanding of complex datasets.<br />
+            <b>Pros:</b><br />
+            1. Has basic dataset processing capabilities and strong capabilities in visualizing data.<br />
+            <b>Cons:</b><br />
+            1. However, it performs weakly in medical scenarios and lacks accumulated experience in medical
+            modeling.<br />
+          </p>
+          <div>
+            <img class="imgstyle" src="img/project_MM/Join Dataset.png">
+            <div class="imgsubtitle">Join Dataset</div>
+            <img class="imgstyle" src="img/project_MM/Visualization1.gif">
+            <img class="imgstyle" src="img/project_MM/Visualization2.gif">
+            <div class="imgsubtitle">Data visualization</div>
+          </div>
+          <div class="title5">2. SAS Viya</div>
+          <p class="lead">
+            https://azureuse011456.my-trials.sas.com/SASDataExplorer/<br />
+            <b>Product Concept: </b><br/>
+            SAS Viya is a robust analytics platform designed to empower organizations with efficient,
+            collaborative, and scalable data analysis, machine learning deployment, and advanced analytics
+            capabilities.<br />
+            <b>Pros:</b><br />
+            It offers advanced analytics, scalability, and efficient collaboration for diverse life science
+            professionals.
+            customization of figures.<br />
+            <b>Cons:</b><br />
+            Its extensive functionalities may require a steeper learning curve for some users.<br />
+          </p>
+          <!-- <div>
+            <img class="imgstyle" src="img/project_MM/sasviya.png">
+            <div class="imgsubtitle">SAS Viya</div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="imgstyle2 row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
+    <img src="img/project_MM/SAS Viya.svg">
+  </div>
+
+
+
+  <section class="section" style="margin-top: 0px;">
+    <div class="container">
+
+      <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
+        style="margin-top: 0px;">
+        <div class="col-12 mt-4 mt-md-0 my-md-auto">
+          <div class="title5">3. Plotly Dash</div>
+          <p class="lead">
+            https://chart-studio.plotly.com/create/?fid=plotly2_demo:417#/<br />
+            <b>Product Concept:</b><br/>
+             Low/No Code mode. The interface configuration capability based on Plotly is essentially
+            equivalent to the coding ability in Plotly.<br />
+            <b>Pros:</b><br />
+            1. The model structure is fixed and clear, making it highly replicable.<br />
+            2. High and relatively comprehensive customization of visualization, supporting strong customer
+            customization of figures.<br />
+            <b>Cons:</b><br />
+            1. Supports straightforward data processing workflows, allowing for direct analysis based on tables. <br />
+            2. However, lacks the accumulation of medical industry models and insights, as well as in-depth analyses
+            such as curve fitting, and model prediction analysis.<br />
+          </p>
+          <!-- <div>
+            <img class="imgstyle" src="img/project_MM/1All visualizations use this configuration framework.png">
+            <div class="imgsubtitle">All visualizations use this configuration framework</div>
+            <img class="imgstyle" src="img/project_MM/2Select analysis chart template.png">
+            <div class="imgsubtitle">Select analysis chart template</div>
+            <img class="imgstyle" src="img/project_MM/3per trace type per config.png">
+            <div class="imgsubtitle">Per trace type per config</div>
+            <img class="imgstyle" src="img/project_MM/4Simple data processing.png">
+            <div class="imgsubtitle">Simple data processing</div>
+            <img class="imgstyle" src="img/project_MM/5Simple analysis- Linear regression.png">
+            <div class="imgsubtitle">Simple analysis- Linear regression</div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="imgstyle2 row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
+    <img src="img/project_MM/Plotly Dash.svg">
+  </div>
+
+  <section class="section" style="margin-top: 0px;">
+    <div class="container">
+      <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
+        style="margin-top: 0px;">
+        <div class="col-12 mt-4 mt-md-0 my-md-auto">
+          <div class="title5">4. SPSSPRO</div>
+          <p class="lead">
+            https://www.spsspro.com/prodraw/operation/4632787?name=AdverseR.csv<br />
+            <b>Product Concept: </b><br/>
+            There is a complete data processing workflow. The configuration process is user-friendly,
+            and one can learn a lot about data flows from the platform. The approach to plotting is similar to
+            Tableau.<br />
+            <b>Pros:</b><br />
+            1. The data flow processing is relatively comprehensive, providing essential data analysis workflows.<br />
+            <b>Cons:</b><br />
+            1. Visual interactivity is not very strong.<br />
+          </p>
+          <!-- <div>
+            <img class="imgstyle" src="img/project_MM/Rich data processing workflow1.png">
+            <img class="imgstyle" src="img/project_MM/Rich data processing workflow2.png">
+            <div class="imgsubtitle">Rich data processing workflow</div>
+            <img class="imgstyle" src="img/project_MM/Dataset processing and analysis1.png">
+            <img class="imgstyle" src="img/project_MM/Dataset processing and analysis2.png">
+            <div class="imgsubtitle">Dataset processing and analysis</div>
+            <img class="imgstyle" src="img/project_MM/Accumulation of medical models.png">
+            <div class="imgsubtitle">Accumulation of medical models</div>
+            <img class="imgstyle"
+              src="img/project_MM/User-friendly configuration process, recommending limited chart types based on data types and quantities.png">
+            <div class="imgsubtitle">User-friendly configuration process, recommending limited chart types based on data
+              types and
+              quantities</div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="imgstyle2 row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
+    <img src="img/project_MM/SPSSPRO.svg">
+  </div>
+
+
+  <section class="section" style="margin-top: 0px;">
+    <div class="container">
+      <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
+        style="margin-top: 0px;">
+        <div class="col-12 mt-4 mt-md-0 my-md-auto">
+          <div class="title5">5. JMP clinical</div>
+          <p class="lead">
+            <b>Product Concept: </b><br/>
+            Offering advanced statistical analysis and visualization tools to streamline and enhance
+            the analysis of clinical trial data, facilitating data-driven decision-making in the pharmaceutical and
+            healthcare sectors.<br />
+            <b>Pros:</b><br />
+            1. Emphasizing annotated visualization generation and exploratory analysis<br />
+            <b>Cons:</b><br />
+            1. Do not emphasize data processing and manipulation.<br />
+          </p>
+          <!-- <div>
+            <img class="imgstyle" src="img/project_MM/jmpclinical.png">
+            <div class="imgsubtitle">JMP Clinical</div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="imgstyle2 row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
+    <img src="img/project_MM/JMP Clinical.svg">
+  </div>
+
+
+  <section class="section" style="margin-top: 0px;">
+    <div class="container">
+      <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
+        style="margin-top: 0px;">
+        <div class="col-12 mt-4 mt-md-0 my-md-auto">
+          <div class="title4">Conclusion</div>
+          <p class="lead">
+            1. The current research has not assessed the effectiveness of data results, only evaluating the product
+            layout from a functional and process perspective. Further in-depth research is needed to reveal the
+            professionalism presented by each product in the dimension of data analysis effectiveness.<br />
+            2. Through research, an understanding of the complete life cycle process of data has been gained, and the
+            business flows generated based on this data cycle are widely recognized in the industry.<br />
+          </p>
+          <div>
+            <img class="imgstyle" src="img/project_MM/Measurement Matrix.png">
+            <div class="imgsubtitle">Measurement Matrix</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="imgstyle2 row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
+    <img src="img/project_MM/Statistics Process.svg">
+  </div>
+
+  <section class="section" style="margin-top: 0px;">
+    <div class="container">
+      <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
+        style="margin-top: 0px;">
+        <div class="col-12 mt-4 mt-md-0 my-md-auto">
+          <p class="lead">
+            3. Mainstream, well-developed, and widely applicable data insights are based on the lifecycle of data.
+            Different
+            product lines may have slight variations in their emphasis on features.<br />
+          </p>
+          <ul class="lead" style="padding-left: 0px;padding-top: 0px;margin-bottom: 20px;">
+            <li style="font-size: 14px;color: #000000;">a. SAS Viya stands as a versatile solution in the data product
+              industry,
+              providing
+              an
+              end-to-end solution for comprehensive data insight scenarios.</li>
+            <li style="font-size: 14px;color: #000000;">b. SPSS PRO in fundamental analytical capabilities,
+              demonstrating
+              outstanding
+              performance in exploring data distribution and generating descriptive statistics with a focus on data
+              validity.</li>
+            <li style="font-size: 14px;color: #000000;">c. Plotly, JMP_Clinical, and Tableau exhibit strong
+              visualization
+              capabilities,
+              prioritizing
+              data interpretation and expression, though they show relatively weaker data processing capabilities.</li>
+            <li style="font-size: 14px;color: #000000;">d. Among the mentioned mainstream products, SAS Viya stands out
+              in Modeling
+              and
+              Decision,
+              while the others exhibit less comprehensive performance. This suggests one of the potential areas for
+              future
+              improvement, which has not been thoroughly explored in this preliminary survey.</li>
+            <ul class="lead" style="padding-left: 18px;padding-top: 0px;margin-bottom: 20px;">
+              <li style="font-size: 14px;color: #000000;">i.In the research of other products, certain products may
+                have strengths in
+                specific medical modeling scenarios, but they lack a good user experience and functional applications.
+                Therefore,
+                these aspects do not contribute to the core competitiveness of the products.</li>
+            </ul>
+            <li style="font-size: 14px;color: #000000;">e. Within the statistical ecosystem, open-source R packages
+              provide
+              visualization
+              solutions for
+              specific key medical scenarios. It may be worthwhile to explore and follow up on these R packages in the
+              future. This
+              consideration assumes that the technology stack is determined to be based entirely on the R ecosystem.
+            </li>
+            <ul class="lead" style="padding-left: 18px;padding-top: 0px;margin-bottom: 20px;">
+              <li style="font-size: 14px;color: #000000;">i. Focus on subgroup analysis.</li>
+              <li style="font-size: 14px;color: #000000;">ii. Pay attention to Adverse Event dynamics.</li>
+              <li style="font-size: 14px;color: #000000;">iii.Pay attention to laboratory insights, and so
+                on.</li>
+            </ul>
+            </li>
+          </ul>
+          <p class="lead">
+            4. The mainstream visualization configuration methods generally fall into two categories:
+          </p>
+          <ul class="lead" style="padding-left: 0px;padding-top: 0px;margin-bottom: 20px;">
+            <li style="font-size: 14px;color: #000000;">a. Filling data through an object-oriented approach, using a
+              Bottom-Up method. The
+              advantage lies in rapid generation, but the current technology stack is not easily adaptable to this
+              model.
+              Derivatively, filling data is tailored to specific scenarios, enabling faster generation of plots.</li>
+            <li style="font-size: 14px;color: #000000;">b. Based on data, recommending objects in a Top-Down approach.
+              The advantage lies in
+              a well-initiated development with a favorable technology stack and good support for users sensitive to
+              data.
+              However, the interaction may be extensive, which is not conducive to the rapid generation of plots using
+              Plotly.</li>
+          </ul>
+
+
+  </section>
+
+  <section class="section" style="margin-top: 0px;">
+    <div class="container">
+
+      <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
+        style="margin-top: 0px;">
+        <div class="col-12 mt-4 mt-md-0 my-md-auto">
+          <div>
+            <div class="titlenumber">07</div>
+            <div class="sectiontitle">Potential Product Positioning Strategy</div>
+            <div class="sectiontitle-eng">Potential Product Positioning Strategy</div>
+          </div>
+          <blockquote class="blockquote text-center">
+            <p class="mb-0">No Firm Does Everything the Best</p>
+          </blockquote>
+          <p class="lead">
+            1. Based on scenario templates for rapid generation, not open for user configuration, only for
+            initialization. At a coarse granularity, to discover significant security data issues.
+          </p>
+          <ul class="lead" style="padding-left: 0px;padding-top: 0px;margin-bottom: 20px;">
+            <li style="font-size: 14px;color: #000000;">a. During the customer pitch process, we learned that medical
+              monitoring always accompanies the progress of clinical trials. However, there is no need to submit code,
+              and there is not a strong dependency on data validity checks.</li>
+            <li style="font-size: 14px;color: #000000;">b. Opportunity points and breakthrough points: Improve insight
+              speed. Help enhance business volume for increased user engagement and revenue growth.</li>
+            <li style="font-size: 14px;color: #000000;">c. Low Barriers to Entry: As is well known, configuring
+              functionality can be a very lengthy process, involving numerous details. Therefore, providing a
+              coarse-grained template encapsulation solution is currently the best choice. It can avoid the detailed
+              design and development of the configuration process and bypass the validation of data effectiveness.</li>
+            <li style="font-size: 14px;color: #000000;">d. Not reinventing the wheel, leaving time and opportunities to
+              discover better industry best practices.</li>
+          </ul>
+          <p class="lead">
+            2. Leveraging the interface-equivalent coding capability based on the R ecosystem, providing users with a
+            basic plot configuration end is the optimal solution while offering the capability for configuration.
+          </p>
+
+  </section>
+
+
+  <section class="section" style="margin-top: 0px;">
+    <div class="container">
+
+      <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
+        style="margin-top: 0px;">
+        <div class="col-12 mt-4 mt-md-0 my-md-auto">
+          <div>
+            <div class="titlenumber">08</div>
+            <div class="sectiontitle">Journey Maps and User Flow Proposal</div>
+            <div class="sectiontitle-eng">TJourney Maps and User Flow Proposal</div>
+          </div>
+          <p class="lead">
+            1. Positioning Strategy 1: Quick launch and setup of MM plots are based on the encapsulation of business
+            scenarios,
+            reducing data exploration and increasing verification efficiency.
+          </p>
+          <p class="lead">
+            2. Positioning Strategy 2: MM Config
+          </p>
+          <p class="lead">
+            Proposal 1: Drag a Gallery chart here to use it as your starting point.
+          </p>
+          <!-- <div>
+            <img class="imgstyle" src="img/project_MM/Proposal 1 E2E.png">
+            <div class="imgsubtitle">Proposal 1 E2E</div>
+            <img class="imgstyle" src="img/project_MM/Proposal 1 Config concept draft.png">
+            <div class="imgsubtitle">Proposal 1 Config concept draft</div>
+          </div> -->
+          <div class="title4"></div>
+          <p class="lead">
+            Proposal 2: Click on the Basic Elements tab to build a chart element by element.
+          </p>
+          <!-- <div>
+            <img class="imgstyle" src="img/project_MM/Proposal 2 E2E.png">
+            <div class="imgsubtitle">Proposal 2 E2E</div>
+          </div> -->
+        </div>
+
+  </section>
+
+
+
+
+  <section class="section" style="margin-top: 80px; margin-bottom: 100px;">
+    <div class="container">
+      <a type="button" class="btn btn-primary btn-lg buttom-link" style="float: left;width: 340px;height: 80px;"
+        href="project_AI.html">Previous:<br>LLM-Based Experience Design</a>
+      <a type="button" class="btn btn-primary btn-lg buttom-link" style="float: right;width: 340px;height: 80px;"
+        href="project_POC.html">Next:<br>Spinning The Wheel Of Product Growth By Design & Insigh<br> - Sneak Peak To Narratives POC Demo</a>
+    </div>
+  </section>
+
+
+
+
+
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__left">
+        <div class="footer__copy">
+          Designed and coded by Yuwen. All rights reserved.
+        </div>
+      </div>
+      <div class="footer__links">
+        <ul class="navbar-nav ">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Homepage</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#about">Skills</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#portfolio">Projects</a>
+          </li>
+          
+          <li class="nav-item">
+            <a data-scroll class="nav-link" href="my_insight.html">Insights</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#contact">Contact</a>
+          </li>
+
+          <!-- <li class="nav-item">
+          <a class="nav-link" href="#myfriend">行业口碑</a>
+        </li> -->
+
+        </ul>
+      </div>
+      <!-- <div class="footer__right">
+      <img
+          src="img/general/design-and-code-radity.svg"
+          srcset="https://raditian-hugo.radity.com/img/general/design-and-code-radity.png 1x, https://raditian-hugo.radity.com/img/general/design-and-code-radity@2x.png 2x"
+          alt="Design &amp; Code - yuwen"
+      />
+    </div> -->
+    </div>
+  </footer>
+
+  <script src='js/rad-animations.js'></script>
+  <script src='js/library/lozad.min.js'></script>
+  <script>
+    window.addEventListener("load", function () {
+      var observer = window.lozad(".lozad", {
+        rootMargin: window.innerHeight / 2 + "px 0px",
+        threshold: 0.01
+      });
+      observer.observe();
+    });
+  </script>
+  <script src='js/library/jquery-3.3.1.slim.min.js'></script>
+  <script src='js/library/bootstrap.min.js'></script>
+  <script src='js/sticky-header.js'></script>
+  <script src='js/library/smooth-scroll.polyfills.min.js'></script>
+  <script src='js/library/fontfaceobserver.js'></script>
+  <script>
+    (function (w) {
+
+      if (w.document.documentElement.className.indexOf("fonts-loaded") > -1) {
+        return;
+      }
+      var fontA = new w.FontFaceObserver("Inter", {
+        weight: 300
+      });
+      var fontB = new w.FontFaceObserver("Inter", {
+        weight: 400
+      });
+      var fontC = new w.FontFaceObserver("Inter", {
+        weight: 500
+      });
+      var fontD = new w.FontFaceObserver("Inter", {
+        weight: 600
+      });
+      var fontE = new w.FontFaceObserver("Inter", {
+        weight: 700
+      });
+      var fontF = new w.FontFaceObserver("Inter", {
+        weight: 900
+      });
+      w.Promise.all([fontA.load(), fontC.load(), fontF.load()]).then(function () {
+        w.document.documentElement.className += " fonts-loaded";
+      });
+    })(this);
+  </script>
+  <script>
+    const scroll = new SmoothScroll('a[href*="#"]');
+    $('a.nav-link').on('click', () => {
+      const navbar = $('.navbar-collapse');
+      if (navbar && navbar.hasClass('show')) {
+        $('.navbar-toggler').click();
+      }
+    })
+  </script>
+
+</body>
+
+</html>

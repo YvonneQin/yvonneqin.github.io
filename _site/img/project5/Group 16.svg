@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1152px" height="516px" viewBox="0 0 1152 516" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 16</title>
+    <g id="我的网页" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="project-5" transform="translate(-414.000000, -6323.000000)">
+            <g id="Group-16" transform="translate(414.000000, 6323.000000)">
+                <rect id="Rectangle-Copy-27" fill="#F6F7F7" x="0" y="0" width="1152" height="516"></rect>
+                <rect id="Rectangle" fill="#FFFFFF" x="98" y="57" width="955" height="108"></rect>
+                <rect id="Rectangle-Copy-5" fill="#FFFFFF" x="98" y="195" width="955" height="108"></rect>
+                <g id="Group-10" transform="translate(98.000000, 333.000000)">
+                    <rect id="Rectangle-Copy-7" fill="#FFFFFF" x="0" y="0" width="955" height="108"></rect>
+                    <text id="Excel数据分析的可视化呈现方式有限。" font-family="PingFangSC-Regular, PingFang SC" font-size="20" font-weight="normal" fill="#555555">
+                        <tspan x="207" y="61">Excel数据分析的可视化呈现方式有限。</tspan>
+                    </text>
+                    <text id="不利可视化" font-family="PingFangSC-Semibold, PingFang SC" font-size="20" font-weight="500" fill="#E93E34">
+                        <tspan x="68" y="61">不利可视化</tspan>
+                    </text>
+                    <text id="⊗-copy-2" font-family="SFCompactDisplay-Black, SF Compact Display" font-size="20" font-weight="700" fill="#E93E34">
+                        <tspan x="30" y="61">⊗</tspan>
+                    </text>
+                </g>
+                <text id="测试样本增加，受测产品及竞品规模扩大，加" font-family="PingFangSC-Regular, PingFang SC" font-size="20" font-weight="normal" fill="#555555">
+                    <tspan x="305" y="118">测试样本增加，受测产品及竞品规模扩大，加大了数据分析难度，降低测评准确性</tspan>
+                </text>
+                <text id="数据无法结构化存储，仅存于本地，限制了数" font-family="PingFangSC-Regular, PingFang SC" font-size="20" font-weight="normal" fill="#555555">
+                    <tspan x="305" y="256">数据无法结构化存储，仅存于本地，限制了数据同步、交接与共享。</tspan>
+                </text>
+                <text id="过程冗长" font-family="PingFangSC-Semibold, PingFang SC" font-size="20" font-weight="500" fill="#E93E34">
+                    <tspan x="166" y="118">过程冗长</tspan>
+                </text>
+                <text id="不利数据存储" font-family="PingFangSC-Semibold, PingFang SC" font-size="20" font-weight="500" fill="#E93E34">
+                    <tspan x="166" y="256">不利数据存储</tspan>
+                </text>
+                <text id="⊗" font-family="SFCompactDisplay-Black, SF Compact Display" font-size="20" font-weight="700" fill="#E93E34">
+                    <tspan x="128" y="118">⊗</tspan>
+                </text>
+                <text id="⊗-copy" font-family="SFCompactDisplay-Black, SF Compact Display" font-size="20" font-weight="700" fill="#E93E34">
+                    <tspan x="128" y="256">⊗</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>
