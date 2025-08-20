@@ -1,28 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<SCRIPT language=JavaScript>
-  function password() {
-    var testV = 1;
-    var pass1 = prompt('Hi there! Welcome to my site and portfolio! Due to the use of portfolio is for my job hunting, I have to set a password requirement for access. If you need to visit, please contact me on WeChat at 131 6243 5185. Kindly fill in the password:','');
-    while (testV < 3) {
-      if (!pass1)
-        history.go(-1);
-      if (pass1 == "qyw") {
-        alert('Welcome to my site!');
+<script>
+  (function () {
+    var MAX_TRY = 3;
+    var tries = 0;
+    while (tries < MAX_TRY) {
+      var input = window.prompt('Hi there! Welcome to my site and portfolio! Due to the use of portfolio is for my job hunting, I have to set a password requirement for access. If you need to visit, please contact me on WeChat at 131 6243 5185. Kindly fill in the password:', '');
+      if (input === null) {
+        window.location.replace('index.html');
         break;
       }
-      testV += -1;
-      var pass1 = prompt('Error, pls fill in again:');
+      if (input === 'qyw') {
+        window.alert('Welcome to my site!');
+        break;
+      }
+      tries++;
+      if (tries >= MAX_TRY) {
+        window.location.replace('index.html');
+        break;
+      }
+      window.alert('Error, please fill in again.');
     }
-    if (pass1 != "password" & testV == 3)
-      history.go(-1);
-    return " ";
-  }
-
-  document.write(password());
-
-</SCRIPT>
+  })();
+</script>
 
 
 <head>
@@ -55,20 +56,32 @@
   </script>
 
 <script>
-  document.addEventListener("scroll", function() {
-      var sections = document.querySelectorAll(".section");
-      var sidebarLinks = document.querySelectorAll(".fixed-anchor a");
-
-      sections.forEach(function(section, index) {
+  (function () {
+    var sections = document.querySelectorAll('.section');
+    var sidebarLinks = document.querySelectorAll('.fixed-anchor a');
+    if (!('IntersectionObserver' in window)) {
+      document.addEventListener('scroll', function () {
+        sections.forEach(function (section, index) {
           var rect = section.getBoundingClientRect();
           if (rect.top >= 0 && rect.top <= window.innerHeight / 2) {
-              sidebarLinks.forEach(function(link) {
-                  link.classList.remove("active");
-              });
-              sidebarLinks[index].classList.add("active");
+            sidebarLinks.forEach(function (link) { link.classList.remove('active'); });
+            if (sidebarLinks[index]) sidebarLinks[index].classList.add('active');
           }
+        });
       });
-  });
+      return;
+    }
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          var index = Array.prototype.indexOf.call(sections, entry.target);
+          sidebarLinks.forEach(function (link) { link.classList.remove('active'); });
+          if (sidebarLinks[index]) sidebarLinks[index].classList.add('active');
+        }
+      });
+    }, { root: null, rootMargin: '0px', threshold: 0.5 });
+    sections.forEach(function (section) { observer.observe(section); });
+  })();
 </script>
 
 
@@ -77,6 +90,11 @@
 
 
   <style>
+    .embed-center {
+      display: flex;
+      justify-content: center;
+      margin-top: 32px;
+    }
     .rad-fade-in {
       will-change: opacity, transform;
       animation-name: rad-fade-in-fallback;
@@ -390,8 +408,8 @@
     <img src="img/project_redcity/小红书 All-in-one 企业套件.svg">
   </div>
 
-  <div style="display:flex;justify-content:center;margin-top: 32px;" >
-    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);border-radius: 32px;pointer-events: none;" width="1280" height="354" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fp8No3KmkWF2WSsVTE0uw2K%2FPortfolio-for-Redcity%3Fpage-id%3D2385%253A97009%26node-id%3D5074-112718%26viewport%3D1838%252C5142%252C0.56%26t%3DZAF50w68yqvg8JO9-1%26scaling%3Dmin-zoom%26content-scaling%3Dfixed%26starting-point-node-id%3D5069%253A110899?embed_host=share&hide-ui=1" allowfullscreen></iframe>
+  <div class="embed-center" >
+    <iframe loading="lazy" style="border: 1px solid rgba(0, 0, 0, 0.1);border-radius: 32px;pointer-events: none;" width="1280" height="354" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fp8No3KmkWF2WSsVTE0uw2K%2FPortfolio-for-Redcity%3Fpage-id%3D2385%253A97009%26node-id%3D5074-112718%26viewport%3D1838%252C5142%252C0.56%26t%3DZAF50w68yqvg8JO9-1%26scaling%3Dmin-zoom%26content-scaling%3Dfixed%26starting-point-node-id%3D5069%253A110899?embed_host=share&hide-ui=1" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
   </div>
 
   <section id="section1" class="section" style="margin-top: 0px;">
@@ -415,8 +433,8 @@
   </div> -->
 
 
-  <div style="display:flex;justify-content:center;margin-top: 32px;" >
-    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);border-radius: 32px;pointer-events: none;" width="1280" height="706" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fp8No3KmkWF2WSsVTE0uw2K%2FPortfolio-V2%3Fpage-id%3D2385%253A97009%26node-id%3D6546-151484%26viewport%3D1886%252C5065%252C0.46%26t%3DlgWN5h8VD2U2m19a-1%26scaling%3Dmin-zoom%26content-scaling%3Dfixed%26starting-point-node-id%3D6546%253A151347%26show-proto-sidebar%3D1?embed_host=share&hide-ui=1" allowfullscreen></iframe>
+  <div class="embed-center" >
+    <iframe loading="lazy" style="border: 1px solid rgba(0, 0, 0, 0.1);border-radius: 32px;pointer-events: none;" width="1280" height="706" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fp8No3KmkWF2WSsVTE0uw2K%2FPortfolio-V2%3Fpage-id%3D2385%253A97009%26node-id%3D6546-151484%26viewport%3D1886%252C5065%252C0.46%26t%3DlgWN5h8VD2U2m19a-1%26scaling%3Dmin-zoom%26content-scaling%3Dfixed%26starting-point-node-id%3D6546%253A151347%26show-proto-sidebar%3D1?embed_host=share&hide-ui=1" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
   </div>
 
   
@@ -442,8 +460,8 @@
   
  
 
-  <div style="display:flex;justify-content:center;margin-top: 32px;" >
-    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);border-radius: 32px;pointer-events: none;" width="1280" height="640" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fp8No3KmkWF2WSsVTE0uw2K%2FPortfolio-for-Redcity%3Fpage-id%3D2385%253A97009%26node-id%3D2385-97077%26viewport%3D1063%252C1419%252C0.26%26t%3DN8WFFchJAmPnRmgo-1%26scaling%3Dmin-zoom%26content-scaling%3Dfixed%26starting-point-node-id%3D2385%253A97054%26show-proto-sidebar%3D1?embed_host=share&hide-ui=1" allowfullscreen></iframe>
+  <div class="embed-center" >
+    <iframe loading="lazy" style="border: 1px solid rgba(0, 0, 0, 0.1);border-radius: 32px;pointer-events: none;" width="1280" height="640" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fp8No3KmkWF2WSsVTE0uw2K%2FPortfolio-for-Redcity%3Fpage-id%3D2385%253A97009%26node-id%3D2385-97077%26viewport%3D1063%252C1419%252C0.26%26t%3DN8WFFchJAmPnRmgo-1%26scaling%3Dmin-zoom%26content-scaling%3Dfixed%26starting-point-node-id%3D2385%253A97054%26show-proto-sidebar%3D1?embed_host=share&hide-ui=1" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
   </div>
 
   
@@ -653,8 +671,8 @@
         </div>
   </section>
 
-  <div style="display:flex;justify-content:center;" >
-    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);border-radius: 32px;pointer-events: none;" width="1280" height="576" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fp8No3KmkWF2WSsVTE0uw2K%2FPortfolio-for-Redcity%3Fpage-id%3D2385%253A97009%26node-id%3D2385-97439%26viewport%3D2699%252C4566%252C0.77%26t%3DaiNmUIhuc4fdzWzq-1%26scaling%3Dmin-zoom%26content-scaling%3Dfixed%26starting-point-node-id%3D2385%253A97268%26show-proto-sidebar%3D1?embed_host=share&hide-ui=1" allowfullscreen></iframe>
+  <div class="embed-center" >
+    <iframe loading="lazy" style="border: 1px solid rgba(0, 0, 0, 0.1);border-radius: 32px;pointer-events: none;" width="1280" height="576" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fp8No3KmkWF2WSsVTE0uw2K%2FPortfolio-for-Redcity%3Fpage-id%3D2385%253A97009%26node-id%3D2385-97439%26viewport%3D2699%252C4566%252C0.77%26t%3DaiNmUIhuc4fdzWzq-1%26scaling%3Dmin-zoom%26content-scaling%3Dfixed%26starting-point-node-id%3D2385%253A97268%26show-proto-sidebar%3D1?embed_host=share&hide-ui=1" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
   </div>
 
 
@@ -794,8 +812,8 @@
         </div>
   </section>
 
-  <div style="display:flex;justify-content:center;" >
-    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);border-radius: 32px;pointer-events: none;" width="1280" height="600" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fp8No3KmkWF2WSsVTE0uw2K%2FPortfolio-for-Redcity%3Fpage-id%3D2385%253A97009%26node-id%3D2547-102604%26viewport%3D2018%252C1178%252C0.52%26t%3DPniZ6XIF1PfKGi56-1%26scaling%3Dmin-zoom%26content-scaling%3Dfixed%26starting-point-node-id%3D2547%253A102604%26show-proto-sidebar%3D1?embed_host=share&hide-ui=1" allowfullscreen></iframe>
+  <div class="embed-center" >
+    <iframe loading="lazy" style="border: 1px solid rgba(0, 0, 0, 0.1);border-radius: 32px;pointer-events: none;" width="1280" height="600" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fp8No3KmkWF2WSsVTE0uw2K%2FPortfolio-for-Redcity%3Fpage-id%3D2385%253A97009%26node-id%3D2547-102604%26viewport%3D2018%252C1178%252C0.52%26t%3DPniZ6XIF1PfKGi56-1%26scaling%3Dmin-zoom%26content-scaling%3Dfixed%26starting-point-node-id%3D2547%253A102604%26show-proto-sidebar%3D1?embed_host=share&hide-ui=1" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
   </div>
 
   <section id="section20" class="section" style="margin-top: 0px;">
@@ -867,7 +885,7 @@
           <a
             href="https://mp.weixin.qq.com/s?__biz=MzIyNzQ4NDc4NA==&mid=2247483850&idx=1&sn=c1bcd27961e50ca4986b83b81d27f5d6&chksm=e86134d5df16bdc31c801402e0e7a5c6afd49104af755ad0cec84e1573b4cc522401d63c7fd4#rd"
             class="insight btn btn-frameless"
-            target="_blank"
+            target="_blank" rel="noopener noreferrer"
           >
             <div>
               <p class="lead2">Updated Date: 2024-05-22</p>
@@ -908,7 +926,7 @@
           <a
             href="https://mp.weixin.qq.com/s?__biz=MzIyNzQ4NDc4NA%3D%3D&mid=2247483998&idx=1&sn=521507d8078eb8a8eb36a5400b1c2ab9&chksm=e8613741df16be57f61c8293af8ba9de4b88c40648460d4a60582b34dba5fb7f68b0196bba56&token=1474122979&lang=zh_CN#rd"
             class="insight btn btn-frameless"
-            target="_blank"
+            target="_blank" rel="noopener noreferrer"
           >
             <div>
               <p class="lead2">Updated Date: 2024-05-31</p>
