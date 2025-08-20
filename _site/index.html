@@ -63,16 +63,67 @@
       const toggleButton = document.getElementById('toggleButton');
       const expandableDiv = document.getElementById('expandableDiv');
       const gradientOverlay = document.getElementById('gradientOverlay');
+      const COLLAPSED_HEIGHT = 218;
+      let isAnimating = false;
+
+      function collapse() {
+        if (isAnimating) return;
+        isAnimating = true;
+        toggleButton.disabled = true;
+
+        const currentHeight = expandableDiv.getBoundingClientRect().height;
+        expandableDiv.style.height = currentHeight + 'px';
+
+        requestAnimationFrame(() => {
+          expandableDiv.style.height = COLLAPSED_HEIGHT + 'px';
+        });
+
+        const onTransitionEnd = (event) => {
+          if (event.propertyName !== 'height') return;
+          expandableDiv.removeEventListener('transitionend', onTransitionEnd);
+          expandableDiv.classList.remove('expanded');
+          toggleButton.innerHTML = 'Expand All<i class="icon-arrow-down-F iconfont"></i>';
+          // gradientOverlay.style.display = 'flex';
+          expandableDiv.style.height = '';
+          isAnimating = false;
+          toggleButton.disabled = false;
+        };
+
+        expandableDiv.addEventListener('transitionend', onTransitionEnd);
+      }
+
+      function expand() {
+        if (isAnimating) return;
+        isAnimating = true;
+        toggleButton.disabled = true;
+
+        const startHeight = expandableDiv.getBoundingClientRect().height;
+        expandableDiv.style.height = startHeight + 'px';
+        const targetHeight = expandableDiv.scrollHeight;
+
+        requestAnimationFrame(() => {
+          expandableDiv.style.height = targetHeight + 'px';
+        });
+
+        const onTransitionEnd = (event) => {
+          if (event.propertyName !== 'height') return;
+          expandableDiv.removeEventListener('transitionend', onTransitionEnd);
+          expandableDiv.classList.add('expanded');
+          toggleButton.innerHTML = 'Collapse All <i class="icon-arrow-up-F iconfont"></i>';
+          // gradientOverlay.style.display = 'flex';
+          expandableDiv.style.height = 'auto';
+          isAnimating = false;
+          toggleButton.disabled = false;
+        };
+
+        expandableDiv.addEventListener('transitionend', onTransitionEnd);
+      }
 
       toggleButton.addEventListener('click', function () {
         if (expandableDiv.classList.contains('expanded')) {
-          expandableDiv.classList.remove('expanded');
-          toggleButton.innerHTML = 'Expand All<i class="icon-arrow-down-F iconfont"></i>';
-          gradientOverlay.style.display = 'flex';
+          collapse();
         } else {
-          expandableDiv.classList.add('expanded');
-          toggleButton.innerHTML = 'Collapsed <i class="icon-arrow-up-F iconfont"></i>';
-          gradientOverlay.style.display = 'flex';
+          expand();
         }
       });
     });
