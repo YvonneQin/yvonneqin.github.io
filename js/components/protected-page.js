@@ -21,7 +21,7 @@ class ProtectedPage extends HTMLElement {
 
     let attempts = 0;
     while (attempts < tries) {
-      const input = window.prompt('Hi there! Welcome to my site and portfolio! Due to the use of portfolio is for my job hunting, I have to set a password requirement for access. If you need to visit, please contact me on WeChat at 131 6243 5185. Kindly fill in the password:', '');
+      const input = window.prompt('Welcome to my secret portfolio vault 🚪🔑', '');
       if (input === null) {
         window.location.replace(redirect);
         return;
