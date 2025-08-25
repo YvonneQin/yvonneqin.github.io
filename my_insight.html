@@ -43,24 +43,7 @@
         });
       }
     </script>
-    <script>
-      function openProtectedLink() {
-        var testV = 1;
-        var pass1 = prompt('Hi there! Welcome to my site and portfolio! Due to the use of portfolio is for my job hunting, I have to set a password requirement for access. If you need to visit, please contact me on WeChat at 131 6243 5185. Kindly fill in the password:', '');
-        while (testV < 3) {
-          if (!pass1)
-            history.go(-1);
-          if (pass1 == "qyw") {
-            break;
-          }
-          testV += -1;
-          var pass1 = prompt('Error, pls fill in again:');
-        }
-        if (pass1 != "password" & testV == 3)
-          history.go(-1);
-        return " ";
-      }
-    </script>
+
     <title>my_insight</title>
     <style>
       .rad-fade-in {
@@ -224,6 +207,8 @@
   <script src="js/components/quote-block.js"></script>
   <script src="js/components/figma-embed.js"></script>
   <script src="js/components/subtitle.js"></script>
+  <script src="js/components/protected-link.js"></script>
+  <script src="js/components/filter-toolbar.js"></script>
 <body class="body">
     <site-header></site-header>
             </ul>
@@ -235,7 +220,6 @@
       class="imgstyle2 row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
       style="padding-top: 60px; padding-bottom: 16px"
     >
-      <img src="img/my_insight/mywechat.svg" />
     </div>
     <section class="section" style="padding-top: 0px; margin-top: 0px; padding-bottom: 32px;">
       <div class="container">
@@ -244,29 +228,7 @@
           style="margin-top: 0px"
         >
           <div class="col-12 mt-4 mt-md-0 my-md-auto">
-            <div>
-              <button class="btn btn-sm" onclick="filterArticles('all')">
-                All Catagory</i>
-              </button>
-              <button
-                class="btn btn-frameless btn-sm" style="background-color: var(--grey-text-05-pressing-border);"
-                onclick="filterArticles('best_practice')"
-              >
-                Best Practices
-              </button>
-              <button
-                class="btn btn-frameless btn-sm" style="background-color: var(--grey-text-05-pressing-border);"
-                onclick="filterArticles('learning_notes')"
-              >
-                Learning Notes
-              </button>
-              <button
-                class="btn btn-frameless btn-sm" style="background-color: var(--grey-text-05-pressing-border);"
-                onclick="filterArticles('insight')"
-              >
-                Others
-              </button>
-            </div>
+            <filter-toolbar></filter-toolbar>
           </div>
         </div>
       </div>
@@ -655,6 +617,19 @@
           }
         );
       })(this);
+    </script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const toolbar = document.querySelector('filter-toolbar');
+        if (toolbar) {
+          toolbar.addEventListener('filter-change', function (e) {
+            const cat = e.detail && e.detail.category ? e.detail.category : 'all';
+            if (typeof filterArticles === 'function') {
+              filterArticles(cat);
+            }
+          });
+        }
+      });
     </script>
     <script>
       const scroll = new SmoothScroll('a[href*="#"]');
