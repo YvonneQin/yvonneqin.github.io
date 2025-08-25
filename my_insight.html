@@ -224,6 +224,8 @@
   <script src="js/components/quote-block.js"></script>
   <script src="js/components/figma-embed.js"></script>
   <script src="js/components/subtitle.js"></script>
+  <script src="js/components/protected-link.js"></script>
+  <script src="js/components/filter-toolbar.js"></script>
 <body class="body">
     <site-header></site-header>
             </ul>
@@ -243,29 +245,7 @@
           style="margin-top: 0px"
         >
           <div class="col-12 mt-4 mt-md-0 my-md-auto">
-            <div>
-              <button class="btn btn-sm" onclick="filterArticles('all')">
-                All Catagory</i>
-              </button>
-              <button
-                class="btn btn-frameless btn-sm" style="background-color: var(--grey-text-05-pressing-border);"
-                onclick="filterArticles('best_practice')"
-              >
-                Best Practices
-              </button>
-              <button
-                class="btn btn-frameless btn-sm" style="background-color: var(--grey-text-05-pressing-border);"
-                onclick="filterArticles('learning_notes')"
-              >
-                Learning Notes
-              </button>
-              <button
-                class="btn btn-frameless btn-sm" style="background-color: var(--grey-text-05-pressing-border);"
-                onclick="filterArticles('insight')"
-              >
-                Others
-              </button>
-            </div>
+            <filter-toolbar></filter-toolbar>
           </div>
         </div>
       </div>
@@ -654,6 +634,19 @@
           }
         );
       })(this);
+    </script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const toolbar = document.querySelector('filter-toolbar');
+        if (toolbar) {
+          toolbar.addEventListener('filter-change', function (e) {
+            const cat = e.detail && e.detail.category ? e.detail.category : 'all';
+            if (typeof filterArticles === 'function') {
+              filterArticles(cat);
+            }
+          });
+        }
+      });
     </script>
     <script>
       const scroll = new SmoothScroll('a[href*="#"]');

@@ -25,6 +25,47 @@ class SiteHeader extends HTMLElement {
     </nav>
   </div>
 </header>`;
+
+    // Initialize global external link protection once per page
+    if (!window.__protectLinksInitialized) {
+      window.__protectLinksInitialized = true;
+      const PASSWORD = 'qyw';
+      const PROMPT_MSG = 'Hi there! Access to external links requires a password. Please contact me on WeChat at 131 6243 5185 to get it. Kindly fill in the password:';
+
+      function isExternalUrl(href) {
+        try {
+          const u = new URL(href, window.location.href);
+          return u.origin !== window.location.origin;
+        } catch (e) {
+          return false;
+        }
+      }
+
+      document.addEventListener('click', function (e) {
+        const anchor = e.target && (e.target.closest ? e.target.closest('a[href]') : null);
+        if (!anchor) return;
+
+        // Allow opting out
+        if (anchor.hasAttribute('data-unprotected')) return;
+
+        const href = anchor.getAttribute('href') || '';
+        if (!href) return;
+
+        // Only protect external http(s) links
+        if (!/^https?:/i.test(href) && !isExternalUrl(href)) return;
+
+        // If already wrapped by <protected-link>, skip
+        if (anchor.closest('protected-link')) return;
+
+        e.preventDefault();
+        const input = window.prompt(PROMPT_MSG, '');
+        if (input === PASSWORD) {
+          const target = anchor.getAttribute('target') || '_blank';
+          const rel = anchor.getAttribute('rel') || 'noopener noreferrer';
+          window.open(anchor.href, target, 'noopener,noreferrer');
+        }
+      }, true);
+    }
   }
 }
 
