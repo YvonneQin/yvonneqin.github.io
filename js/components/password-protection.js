@@ -3,7 +3,7 @@ class PasswordProtection extends HTMLElement {
     super();
     this.maxAttempts = 3;
     this.password = 'qyw';
-    this.welcomeMessage = 'Welcome to my site!';
+    this.welcomeMessage = 'Hey there, glad you dropped by!';
     this.redirectUrl = 'index.html';
   }
 
