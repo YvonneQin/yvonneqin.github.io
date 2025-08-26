@@ -44,21 +44,30 @@
       }
     </script>
     <script>
-      function openProtectedLink() {
+      function openProtectedLink(event, url) {
+        event.preventDefault(); // 阻止默认链接行为
+        
         var testV = 1;
-        var pass1 = prompt('Hi there! Welcome to my site and portfolio! Due to the use of portfolio is for my job hunting, I have to set a password requirement for access. If you need to visit, please contact me on WeChat at 131 6243 5185. Kindly fill in the password:', '');
+        var pass1 = prompt('Welcome to my secret portfolio vault 🚪🔑', '');
+        
         while (testV < 3) {
-          if (!pass1)
+          if (!pass1) {
             history.go(-1);
-          if (pass1 == "qyw") {
-            break;
+            return false;
           }
-          testV += -1;
+          if (pass1 == "qyw") {
+            // 密码正确，打开链接
+            window.open(url, '_blank');
+            return true;
+          }
+          testV += 1;
           var pass1 = prompt('Error, pls fill in again:');
         }
-        if (pass1 != "password" & testV == 3)
+        
+        if (pass1 != "qyw" && testV >= 3) {
           history.go(-1);
-        return " ";
+        }
+        return false;
       }
     </script>
     <title>my_insight</title>
@@ -224,6 +233,8 @@
   <script src="js/components/quote-block.js"></script>
   <script src="js/components/figma-embed.js"></script>
   <script src="js/components/subtitle.js"></script>
+  <script src="js/components/article-card.js"></script>
+</head>
 <body class="body">
     <site-header></site-header>
             </ul>
@@ -235,7 +246,6 @@
       class="imgstyle2 row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
       style="padding-top: 60px; padding-bottom: 16px"
     >
-      <img src="img/my_insight/mywechat.svg" />
     </div>
     <section class="section" style="padding-top: 0px; margin-top: 0px; padding-bottom: 32px;">
       <div class="container">
@@ -271,344 +281,94 @@
         </div>
       </div>
     </section>
-    <div class="article" data-category="insight">
-      <div class="container">
-        <div
-          class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
-        >
-          <div class="col-12 mt-4 mt-md-0 my-md-auto">
-            <a onclick="openProtectedLink()"  
-              href="https://yuwen.notion.site/Daily-Workflow-of-UX-Design-34e22c0cf75243138adc2ff0b403308f?pvs=4"
-              class="insight btn btn-frameless"
-              target="_blank"
-            >
-              <div style="padding-top: 14px;">
-                <img
-                  class="imgstyle"
-                  style="margin-top: 0px"
-                  src="img/my_insight/Daily Workflow of UX Design.svg"
-                />
-                <p class="insightlead">Daily Workflow of UX Design</p>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="article" data-category="best_practice">
-      <div class="container">
-        <div
-          class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
-        >
-          <div class="col-12 mt-4 mt-md-0 my-md-auto">
-            <a onclick="openProtectedLink()"  
-              href="https://yuwen.notion.site/B-52308b64614746c4b1426ddf5383ce19?pvs=4"
-              class="insight btn btn-frameless"
-              target="_blank"
-            >
-              <div style="padding-top: 14px;">
-                <img
-                  class="imgstyle"
-                  style="margin-top: 0px"
-                  src="img/my_insight/B端框架最佳实践(以B端商家系统为例).svg"
-                />
-                <p class="insightlead">for B-end Product Design Framework</p>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div  class="article" data-category="best_practice">
-      <div class="container">
-        <div
-          class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
-        >
-          <div class="col-12 mt-4 mt-md-0 my-md-auto">
-            <a onclick="openProtectedLink()"
-              href="https://yuwen.notion.site/for-E-commerce-Product-Line-0e91a66633a94248bc0ea63507d17a6a?pvs=4"
-              class="insight btn btn-frameless"
-              target="_blank"
-            >
-               <div style="padding-top: 14px;">
-                <img
-                  class="imgstyle"
-                  style="margin-top: 0px"
-                  src="img/my_insight/for E-commerce Product Line.svg"
-                />
-                <p class="insightlead">for E-commerce Product Line</p>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div  class="article" data-category="best_practice">
-      <div class="container">
-        <div
-          class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
-        >
-          <div class="col-12 mt-4 mt-md-0 my-md-auto">
-            <a
-              href="https://yuwen.notion.site/AIGC-afc6655a222848118115791df536223f?pvs=4"
-              class="insight btn btn-frameless"
-              target="_blank"
-            >
-               <div style="padding-top: 14px;">
-                <img
-                  class="imgstyle"
-                  style="margin-top: 0px"
-                  src="img/my_insight/for AIGC.svg"
-                />
-                <p class="insightlead">for design AIGC</p>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="article" data-category="best_practice">
-      <div class="container">
-        <div
-          class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
-        >
-          <div class="col-12 mt-4 mt-md-0 my-md-auto">
-            <a onclick="openProtectedLink()" 
-              href="https://yuwen.notion.site/for-Human-Resources-Product-Line-a6c389ba541c42c9aa0834d5abf8239a?pvs=4"
-              class="insight btn btn-frameless"
-              target="_blank"
-            >
-               <div style="padding-top: 14px;">
-                <img
-                  class="imgstyle"
-                  style="margin-top: 0px"
-                  src="img/my_insight/for Human Resources Product Line.svg"
-                />
-                <p class="insightlead">for Human Resources Product Line</p>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="article" data-category="best_practice">
-      <div class="container">
-        <div
-          class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
-        >
-          <div class="col-12 mt-4 mt-md-0 my-md-auto">
-            <a
-              href="https://mp.weixin.qq.com/s?__biz=MzIyNzQ4NDc4NA%3D%3D&mid=2247483998&idx=1&sn=521507d8078eb8a8eb36a5400b1c2ab9&chksm=e8613741df16be57f61c8293af8ba9de4b88c40648460d4a60582b34dba5fb7f68b0196bba56&token=1474122979&lang=zh_CN#rd"
-              class="insight btn btn-frameless"
-              target="_blank"
-            >
-            <div style="padding-top: 14px;">
-                <img
-                  class="imgstyle"
-                  style="margin-top: 0px"
-                  src="img/my_insight/Design Token 最佳实践沉淀.svg"
-                />
-                <p class="insightlead">Design Token 最佳实践沉淀</p>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="article" data-category="learning_notes">
-      <div class="container">
-        <div
-          class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
-        >
-          <div class="col-12 mt-4 mt-md-0 my-md-auto">
-            <a
-              href="https://mp.weixin.qq.com/s?__biz=MzIyNzQ4NDc4NA%3D%3D&mid=2247483937&idx=1&sn=97c90c578919491db3de3c825c6e1c20&chksm=e861373edf16be280ede4bdde2ad19d1eefac1d2e5695851739ab31d5587a7787a01d7532049&token=982504421&lang=zh_CN#rd"
-              class="insight btn btn-frameless"
-              target="_blank"
-            >
-            <div style="padding-top: 14px;">
-                <img
-                  class="imgstyle"
-                  style="margin-top: 0px"
-                  src="img/my_insight/Supervised Machine Learning_ Regression and Classification - Week 3 Learning Notes.svg"
-                />
-                <p class="insightlead">《Supervised Machine Learning》 - Week 3 学习笔记</p>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="article" data-category="learning_notes">
-      <div class="container">
-        <div
-          class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
-        >
-          <div class="col-12 mt-4 mt-md-0 my-md-auto">
-            <a
-              href="https://mp.weixin.qq.com/s?__biz=MzIyNzQ4NDc4NA%3D%3D&mid=2247483902&idx=1&sn=45d3dae8d63322cee7ef505fd7efbaaa&chksm=e86134e1df16bdf7a811322c4f85ba6204a348b9cd45e4656c986adcf902eb6d77155a16bdf1&token=982504421&lang=zh_CN#rd"
-              class="insight btn btn-frameless"
-              target="_blank"
-            >
-            <div style="padding-top: 14px;">
-                <img
-                  class="imgstyle"
-                  style="margin-top: 0px"
-                  src="img/my_insight/Supervised Machine Learning_ Regression and Classification - Week 2 Learning Notes.svg"
-                />
-                <p class="insightlead">《Supervised Machine Learning》 - Week 2 学习笔记</p>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="article" data-category="learning_notes">
-      <div class="container">
-        <div
-          class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
-        >
-          <div class="col-12 mt-4 mt-md-0 my-md-auto">
-            <a
-              href="https://mp.weixin.qq.com/s?__biz=MzIyNzQ4NDc4NA%3D%3D&mid=2247483877&idx=1&sn=8a24a0063e5b33c569593b904045b4bf&chksm=e86134fadf16bdec285cd918b1e6482a32ae9b0e916a348f71976d78a90613d1fa34dd72663c&token=982504421&lang=zh_CN#rd"
-              class="insight btn btn-frameless"
-              target="_blank"
-            >
-            <div style="padding-top: 14px;">
-                <img
-                  class="imgstyle"
-                  style="margin-top: 0px"
-                  src="img/my_insight/Supervised Machine Learning_ Regression and Classification - Week 1 Learning Notes.svg"
-                />
-                <p class="insightlead">《Supervised Machine Learning》 - Week 1 学习笔记</p>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="article" data-category="best_practice">
-      <div class="container">
-        <div
-          class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
-        >
-          <div class="col-12 mt-4 mt-md-0 my-md-auto">
-            <a
-              href="https://mp.weixin.qq.com/s?__biz=MzIyNzQ4NDc4NA==&mid=2247483850&idx=1&sn=c1bcd27961e50ca4986b83b81d27f5d6&chksm=e86134d5df16bdc31c801402e0e7a5c6afd49104af755ad0cec84e1573b4cc522401d63c7fd4#rd"
-              class="insight btn btn-frameless"
-              target="_blank"
-            >
-            <div style="padding-top: 14px;">
-                <img
-                  class="imgstyle"
-                  style="margin-top: 0px"
-                  src="img/my_insight/Icon绘制规范最佳实践.svg"
-                />
-                <p class="insightlead">B端 Icon 规范最佳实践沉淀</p>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="article" data-category="learning_notes">
-      <div class="container">
-        <div
-          class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
-        >
-          <div class="col-12 mt-4 mt-md-0 my-md-auto">
-            <a
-              href="https://mp.weixin.qq.com/s?__biz=MzIyNzQ4NDc4NA==&mid=2247483720&idx=1&sn=dd904f9b810feec4d2689b749f7b578e&chksm=e8613457df16bd417c84479195649ad4111ba46916d10bdc65f51ed55ed8eeebcf31bfd8467e#rd"
-              class="insight btn btn-frameless"
-              target="_blank"
-            >
-            <div style="padding-top: 14px;">
-                <img
-                  class="imgstyle"
-                  style="margin-top: 0px"
-                  src="img/my_insight/Social psychology 进阶延后的第二周 Notes 分享.svg"
-                />
-                <p class="insightlead">Social psychology进阶延后的第二周 Notes分享</p>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="article" data-category="learning_notes">
-      <div class="container">
-        <div
-            class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
-          >
-            <div class="col-12 mt-4 mt-md-0 my-md-auto">
-              <a
-                href="https://mp.weixin.qq.com/s?__biz=MzIyNzQ4NDc4NA==&mid=2247483711&idx=1&sn=2c778a1bc59aa1af3fd6710881b56dc1&chksm=e8613420df16bd36dbcdcca793dea31de7418ae9b0f238f44626178bfaaa07f080bc25d38fc4#rd"
-                class="insight btn btn-frameless"
-                target="_blank"
-              >
-              <div style="padding-top: 14px;">
-                  <img
-                    class="imgstyle"
-                    style="margin-top: 0px"
-                    src="img/my_insight/Social psychology 进阶第一周 Notes 分享.svg"
-                  />
-                  <p class="insightlead">Social psychology 进阶第一周 Notes 分享</p>
-                </div>
-              </a>
-            </div>
-          </div>
-      </div>
-    </div>
-    <div class="article" data-category="insight">
-      <div class="container">
-        <div
-            class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
-            style="margin-top: 0px"
-          >
-            <div class="col-12 mt-4 mt-md-0 my-md-auto">
-              <a
-                href="https://mp.weixin.qq.com/s?__biz=MzIyNzQ4NDc4NA==&mid=2247483696&idx=1&sn=0f9c65e79872976cf79edf18b4faef14&chksm=e861342fdf16bd39e5d214b757f41ff544622da994959c334002f3a410f3641f9d54af957955#rd"
-                class="insight btn btn-frameless"
-                target="_blank"
-              >
-              <div style="padding-top: 14px;">
-                  <img
-                    class="imgstyle"
-                    style="margin-top: 0px"
-                    src="img/my_insight/所见即是所需——Julie Zhuo.svg"
-                  />
-                  <p class="insightlead">所见即是所需——Julie Zhuo</p>
-                </div>
-              </a>
-            </div>
-          </div>
-      </div>
-    </div>
-    <div class="article" data-category="insight">
-      <div class="container">
-        <div
-            class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
-            style="margin-top: 0px"
-          >
-            <div class="col-12 mt-4 mt-md-0 my-md-auto">
-              <a
-                href="https://mp.weixin.qq.com/s?__biz=MzIyNzQ4NDc4NA==&mid=2247483689&idx=1&sn=f43accfa97fd50d9e02cd98ae9486537&chksm=e8613436df16bd20f091dda034fa19267f03094751ec4847afcbb9136747caee4a4142dd00ea#rd"
-                class="insight btn btn-frameless"
-                target="_blank"
-              >
-              <div style="padding-top: 14px;">
-                  <img
-                    class="imgstyle"
-                    style="margin-top: 0px"
-                    src="img/my_insight/微软Windows三十年间的巨大变化.svg"
-                  />
-                  <p class="insightlead">微软Windows三十年间的巨大变化</p>
-                </div>
-              </a>
-            </div>
-          </div>
-      </div>
-    </div>
+    <article-card 
+      category="insight"
+      title="Daily Workflow of UX Design"
+      image-src="img/my_insight/Daily Workflow of UX Design.svg"
+      href="https://yuwen.notion.site/Daily-Workflow-of-UX-Design-34e22c0cf75243138adc2ff0b403308f?pvs=4"
+      protected
+    ></article-card>
+    <article-card 
+      category="best_practice"
+      title="for B-end Product Design Framework"
+      image-src="img/my_insight/B端框架最佳实践(以B端商家系统为例).svg"
+      href="https://yuwen.notion.site/B-52308b64614746c4b1426ddf5383ce19?pvs=4"
+      protected
+    ></article-card>
+    <article-card 
+      category="best_practice"
+      title="for E-commerce Product Line"
+      image-src="img/my_insight/for E-commerce Product Line.svg"
+      href="https://yuwen.notion.site/for-E-commerce-Product-Line-0e91a66633a94248bc0ea63507d17a6a?pvs=4"
+      protected
+    ></article-card>
+    <article-card 
+      category="best_practice"
+      title="for design AIGC"
+      image-src="img/my_insight/for AIGC.svg"
+      href="https://yuwen.notion.site/AIGC-afc6655a222848118115791df536223f?pvs=4"
+    ></article-card>
+    <article-card 
+      category="best_practice"
+      title="for Human Resources Product Line"
+      image-src="img/my_insight/for Human Resources Product Line.svg"
+      href="https://yuwen.notion.site/for-Human-Resources-Product-Line-a6c389ba541c42c9aa0834d5abf8239a?pvs=4"
+      protected
+    ></article-card>
+    <article-card 
+      category="best_practice"
+      title="Design Token 最佳实践沉淀"
+      image-src="img/my_insight/Design Token 最佳实践沉淀.svg"
+      href="https://mp.weixin.qq.com/s?__biz=MzIyNzQ4NDc4NA%3D%3D&mid=2247483998&idx=1&sn=521507d8078eb8a8eb36a5400b1c2ab9&chksm=e8613741df16be57f61c8293af8ba9de4b88c40648460d4a60582b34dba5fb7f68b0196bba56&token=1474122979&lang=zh_CN#rd"
+    ></article-card>
+    <article-card 
+      category="learning_notes"
+      title="《Supervised Machine Learning》 - Week 3 学习笔记"
+      image-src="img/my_insight/Supervised Machine Learning_ Regression and Classification - Week 3 Learning Notes.svg"
+      href="https://mp.weixin.qq.com/s?__biz=MzIyNzQ4NDc4NA%3D%3D&mid=2247483937&idx=1&sn=97c90c578919491db3de3c825c6e1c20&chksm=e861373edf16be280ede4bdde2ad19d1eefac1d2e5695851739ab31d5587a7787a01d7532049&token=982504421&lang=zh_CN#rd"
+    ></article-card>
+    <article-card 
+      category="learning_notes"
+      title="《Supervised Machine Learning》 - Week 2 学习笔记"
+      image-src="img/my_insight/Supervised Machine Learning_ Regression and Classification - Week 2 Learning Notes.svg"
+      href="https://mp.weixin.qq.com/s?__biz=MzIyNzQ4NDc4NA%3D%3D&mid=2247483902&idx=1&sn=45d3dae8d63322cee7ef505fd7efbaaa&chksm=e86134e1df16bdf7a811322c4f85ba6204a348b9cd45e4656c986adcf902eb6d77155a16bdf1&token=982504421&lang=zh_CN#rd"
+    ></article-card>
+    <article-card 
+      category="learning_notes"
+      title="《Supervised Machine Learning》 - Week 1 学习笔记"
+      image-src="img/my_insight/Supervised Machine Learning_ Regression and Classification - Week 1 Learning Notes.svg"
+      href="https://mp.weixin.qq.com/s?__biz=MzIyNzQ4NDc4NA%3D%3D&mid=2247483877&idx=1&sn=8a24a0063e5b33c569593b904045b4bf&chksm=e86134fadf16bdec285cd918b1e6482a32ae9b0e916a348f71976d78a90613d1fa34dd72663c&token=982504421&lang=zh_CN#rd"
+    ></article-card>
+    <article-card 
+      category="best_practice"
+      title="B端 Icon 规范最佳实践沉淀"
+      image-src="img/my_insight/Icon绘制规范最佳实践.svg"
+      href="https://mp.weixin.qq.com/s?__biz=MzIyNzQ4NDc4NA==&mid=2247483850&idx=1&sn=c1bcd27961e50ca4986b83b81d27f5d6&chksm=e86134d5df16bdc31c801402e0e7a5c6afd49104af755ad0cec84e1573b4cc522401d63c7fd4#rd"
+    ></article-card>
+    <article-card 
+      category="learning_notes"
+      title="Social psychology进阶延后的第二周 Notes分享"
+      image-src="img/my_insight/Social psychology 进阶延后的第二周 Notes 分享.svg"
+      href="https://mp.weixin.qq.com/s?__biz=MzIyNzQ4NDc4NA==&mid=2247483720&idx=1&sn=dd904f9b810feec4d2689b749f7b578e&chksm=e8613457df16bd417c84479195649ad4111ba46916d10bdc65f51ed55ed8eeebcf31bfd8467e#rd"
+    ></article-card>
+    <article-card 
+      category="learning_notes"
+      title="Social psychology 进阶第一周 Notes 分享"
+      image-src="img/my_insight/Social psychology 进阶第一周 Notes 分享.svg"
+      href="https://mp.weixin.qq.com/s?__biz=MzIyNzQ4NDc4NA==&mid=2247483711&idx=1&sn=2c778a1bc59aa1af3fd6710881b56dc1&chksm=e8613420df16bd36dbcdcca793dea31de7418ae9b0f238f44626178bfaaa07f080bc25d38fc4#rd"
+    ></article-card>
+    <article-card 
+      category="insight"
+      title="所见即是所需——Julie Zhuo"
+      image-src="img/my_insight/所见即是所需——Julie Zhuo.svg"
+      href="https://mp.weixin.qq.com/s?__biz=MzIyNzQ4NDc4NA==&mid=2247483696&idx=1&sn=0f9c65e79872976cf79edf18b4faef14&chksm=e861342fdf16bd39e5d214b757f41ff544622da994959c334002f3a410f3641f9d54af957955#rd"
+    ></article-card>
+    <article-card 
+      category="insight"
+      title="微软Windows三十年间的巨大变化"
+      image-src="img/my_insight/微软Windows三十年间的巨大变化.svg"
+      href="https://mp.weixin.qq.com/s?__biz=MzIyNzQ4NDc4NA==&mid=2247483689&idx=1&sn=f43accfa97fd50d9e02cd98ae9486537&chksm=e8613436df16bd20f091dda034fa19267f03094751ec4847afcbb9136747caee4a4142dd00ea#rd"
+    ></article-card>
   <site-footer></site-footer>
     <script src="js/rad-animations.js"></script>
     <script src="js/library/lozad.min.js"></script>
