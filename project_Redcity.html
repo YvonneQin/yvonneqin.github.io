@@ -1,28 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<script>
-  (function () {
-    var MAX_TRY = 3;
-    var tries = 0;
-    while (tries < MAX_TRY) {
-      var input = window.prompt('Hi there! Welcome to my site and portfolio! Due to the use of portfolio is for my job hunting, I have to set a password requirement for access. If you need to visit, please contact me on WeChat at 131 6243 5185. Kindly fill in the password:', '');
-      if (input === null) {
-        window.location.replace('index.html');
-        break;
-      }
-      if (input === 'qyw') {
-        window.alert('Welcome to my site!');
-        break;
-      }
-      tries++;
-      if (tries >= MAX_TRY) {
-        window.location.replace('index.html');
-        break;
-      }
-      window.alert('Error, please fill in again.');
-    }
-  })();
-</script>
+
 <head>
   <meta name="author" content="yuwen">
   <meta charset="UTF-8" />
@@ -244,7 +222,10 @@
   <script src="js/components/quote-block.js"></script>
   <script src="js/components/figma-embed.js"></script>
   <script src="js/components/subtitle.js"></script>
+  <script src="js/components/password-protection.js"></script>
+</head>
 <body class="body">
+  <password-protection></password-protection>
   <site-header></site-header>
   <div class="fixed-anchor row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
     <a style="font-weight: 600;font-size: 16px; color: var(--mode-light-text-85-primary);">大纲</a>
