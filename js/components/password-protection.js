@@ -30,6 +30,13 @@ class PasswordProtection extends HTMLElement {
       if (input === this.password) {
         // Correct password
         window.alert(this.welcomeMessage);
+        
+        // 密码验证成功后，加载页面组件
+        if (window.ComponentManager) {
+          console.log('🔓 密码验证成功，开始加载页面组件...');
+          window.ComponentManager.loadByPageType();
+        }
+        
         return;
       }
 

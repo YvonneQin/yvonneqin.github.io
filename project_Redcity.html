@@ -214,7 +214,7 @@
       }
     }
   </style>
-<script src="js/components/header.js"></script>
+  <script src="js/components/header.js"></script>
   <script src="js/components/footer.js"></script>
   <script src="js/components/badge-tag.js"></script>
   <script src="js/components/section-header.js"></script>
@@ -223,38 +223,41 @@
   <script src="js/components/figma-embed.js"></script>
   <script src="js/components/subtitle.js"></script>
   <script src="js/components/password-protection.js"></script>
+  <script src="js/components/anchor-navigation.js"></script>
   <script src="js/project-data.js"></script>
 </head>
 <body class="body">
   <password-protection></password-protection>
   <site-header></site-header>
-  <div class="fixed-anchor row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
-    <a style="font-weight: 600;font-size: 16px; color: var(--mode-light-text-85-primary);">大纲</a>
-    <a href="#section1">1. REDcity是什么？</a>
-    <a href="#section2"><i class="icon-bullet-point iconfont"></i>1.1 Demo: 方案概览</a>
-    <a href="#section3"><i class="icon-bullet-point iconfont"></i>1.2 项目思路</a>
-    <a href="#section4"><i class="icon-bullet-point iconfont"></i>1.3 用户摸底调研与用户故事</a>
-    <a href="#section5"><i class="icon-bullet-point iconfont"></i>1.4 IM消费及AI赋能产品架构 · 设计机会点总结</a>
-    <a href="#section6">2. 解构机会点1: IM降噪</a>
-    <a href="#section7"><i class="icon-bullet-point iconfont"></i>2.1 竞品分析</a>
-    <a href="#section8"><i class="icon-bullet-point iconfont"></i>2.2 设计解法</a>
-    <a href="#section9"><i class="icon-bullet-point iconfont"></i>2.3 低保真原型</a>
-    <a href="#section10"><i class="icon-bullet-point iconfont"></i>2.4 UAT测试</a>
-    <a href="#section25"><i class="icon-bullet-point iconfont"></i>2.4 动线规划</a>
-    <a href="#section11"><i class="icon-bullet-point iconfont"></i>2.5 方案确认及关键页面</a>
-    <a href="#section12"><i class="icon-bullet-point iconfont"></i>2.6 Demo: 完整方案Demo</a>
-    <a href="#section13">3. 解构机会点2: 多线程任务方案</a>
-    <a href="#section14"><i class="icon-bullet-point iconfont"></i>3.1 调研与探索</a>
-    <a href="#section15">4. 解构机会点3: AI体验</a>
-    <a href="#section17"><i class="icon-bullet-point iconfont"></i>4.1 AI体验打造</a>
-    <a href="#section18"><i class="icon-bullet-point iconfont"></i>4.3 IM/AI组件规范抽象</a>
-    <a href="#section19"><i class="icon-bullet-point iconfont"></i>4.4 情感化设计</a>
-    <a href="#section20">5. 落地PC框架架构</a>
-    <a href="#section21"><i class="icon-bullet-point iconfont"></i>5.1 PC框架</a>
-    <a href="#section22"><i class="icon-bullet-point iconfont"></i>5.2 双端框架断点规范及说明</a>
-    <a href="#section23"><i class="icon-bullet-point iconfont"></i>5.3 Icon组件规范优化</a>
-    <a href="#section24"><i class="icon-bullet-point iconfont"></i>5.4 色彩系统优化</a>
-  </div>
+  <anchor-navigation 
+    title="大纲"
+    items='[
+      {"href": "#section1", "text": "1. REDcity是什么？", "level": 0},
+      {"href": "#section2", "text": "1.1 Demo: 方案概览", "level": 1},
+      {"href": "#section3", "text": "1.2 项目思路", "level": 1},
+      {"href": "#section4", "text": "1.3 用户摸底调研与用户故事", "level": 1},
+      {"href": "#section5", "text": "1.4 IM消费及AI赋能产品架构 · 设计机会点总结", "level": 1},
+      {"href": "#section6", "text": "2. 解构机会点1: IM降噪", "level": 0},
+      {"href": "#section7", "text": "2.1 竞品分析", "level": 1},
+      {"href": "#section8", "text": "2.2 设计解法", "level": 1},
+      {"href": "#section9", "text": "2.3 低保真原型", "level": 1},
+      {"href": "#section10", "text": "2.4 UAT测试", "level": 1},
+      {"href": "#section25", "text": "2.4 动线规划", "level": 1},
+      {"href": "#section11", "text": "2.5 方案确认及关键页面", "level": 1},
+      {"href": "#section12", "text": "2.6 Demo: 完整方案Demo", "level": 1},
+      {"href": "#section13", "text": "3. 解构机会点2: 多线程任务方案", "level": 0},
+      {"href": "#section14", "text": "3.1 调研与探索", "level": 1},
+      {"href": "#section15", "text": "4. 解构机会点3: AI体验", "level": 0},
+      {"href": "#section17", "text": "4.1 AI体验打造", "level": 1},
+      {"href": "#section18", "text": "4.3 IM/AI组件规范抽象", "level": 1},
+      {"href": "#section19", "text": "4.4 情感化设计", "level": 1},
+      {"href": "#section20", "text": "5. 落地PC框架架构", "level": 0},
+      {"href": "#section21", "text": "5.1 PC框架", "level": 1},
+      {"href": "#section22", "text": "5.2 双端框架断点规范及说明", "level": 1},
+      {"href": "#section23", "text": "5.3 Icon组件规范优化", "level": 1},
+      {"href": "#section24", "text": "5.4 色彩系统优化", "level": 1}
+    ]'
+  ></anchor-navigation>
   <section class="section">
     <div class="container">
       <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row" style="line-height: 32px;">
