@@ -50,12 +50,28 @@ class SiteHeader extends HTMLElement {
     navLinks.forEach(link => {
       link.addEventListener('click', (e) => {
         const href = link.getAttribute('href');
-        if (href && href.includes('#')) {
-          e.preventDefault();
-          const targetId = href.split('#')[1];
-          const targetElement = document.getElementById(targetId);
-          if (targetElement) {
-            targetElement.scrollIntoView({ behavior: 'smooth' });
+        if (!href) return;
+
+        // 仅当目标在当前页面时，才拦截并平滑滚动；
+        // 若指向其他页面（例如 index.html#... 且当前不在首页），则允许默认跳转
+        if (href.includes('#')) {
+          const [targetPageRaw, targetHash] = href.split('#');
+          const targetPage = (targetPageRaw || '').trim();
+          const currentPage = (location.pathname.split('/').pop() || 'index.html').trim();
+
+          const isSamePageLink =
+            targetPage === '' ||
+            targetPage === '#' ||
+            targetPage === currentPage ||
+            // 当当前页面是首页时，视指向 index.html 为同页
+            (currentPage === 'index.html' && targetPage === 'index.html');
+
+          if (isSamePageLink) {
+            e.preventDefault();
+            const targetElement = document.getElementById(targetHash);
+            if (targetElement) {
+              targetElement.scrollIntoView({ behavior: 'smooth' });
+            }
           }
         }
       });
