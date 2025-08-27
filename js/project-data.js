@@ -2,7 +2,7 @@
 const ProjectData = {
   // REDcity 项目
   redcity: {
-    title: 'REDcity v1.0 IM/AI/Framework Design for Enterprise Productivity Suite',
+    title: 'REDcity v1.0 IM/AI Framework Design for Enterprise Productivity Suite',
     badges: ['0 to 1', 'Framework', 'Guidelines'],
     period: '2024.01 - 2024.05',
     role: 'Researcher & Designer',
