@@ -1,12 +1,42 @@
 
-/* Filter buttons: default and hover states */
+/* Filter buttons: match My Resume button style */
 .btn.btn-frameless.is-filter {
-  background-color: var(--grey-text-05-pressing-border);
+  background-color: transparent !important;
+  color: var(--mode-light-text-85-primary) !important;
+  border: 1px solid var(--palette-light-neutral-neutral-1) !important;
+  transition: all 0.3s ease !important;
 }
 .btn.btn-frameless.is-filter:hover {
-  background-color: #fff;
-  border-color: #000;
-  color: #000;
+  background-color: rgba(0, 0, 0, 0.06) !important;
+  border-color: var(--mode-light-text-45-secondary) !important;
+  color: var(--mode-light-text-85-primary) !important;
+}
+
+/* All Category button: use darkest design tokens in light mode */
+.btn:not(.btn-frameless) {
+  background-color: var(--palette-light-neutral-neutral-9) !important;
+  color: #ffffff !important;
+  border: 1px solid var(--palette-light-neutral-neutral-9) !important;
+  transition: all 0.3s ease !important;
+}
+
+.btn:not(.btn-frameless):hover {
+  background-color: #000000 !important;
+  border-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+/* Dark mode: regular button styling */
+html.dark .btn:not(.btn-frameless) {
+  background-color: #ffffff14 !important;
+  color: #ffffffd9 !important;
+  border: 1px solid #ffffff33 !important;
+}
+
+html.dark .btn:not(.btn-frameless):hover {
+  background-color: #ffffff33 !important;
+  border-color: #ffffff66 !important;
+  color: #ffffff !important;
 }
 
 /* Filter buttons container */
@@ -444,8 +474,16 @@ html.dark .btn { color: #ffffffd9; border-color: #ffffffeb; }
 html.dark .btn-primary { background-color: #ffffff14; color: #ffffffd9; border-color: #ffffffeb; }
 html.dark .btn-primary:hover { background-color: #ffffff33; color: #ffffff; border-color: #ffffff; }
 html.dark .btn-frameless { color: #ffffffd9; border-color: #ffffffeb; }
-html.dark .btn.btn-frameless.is-filter { background-color: #f7f7f7; color: #000; }
-html.dark .btn.btn-frameless.is-filter:hover { background-color: #fff; border-color: #fff; color: #000; }
+html.dark .btn.btn-frameless.is-filter { 
+  background-color: transparent !important; 
+  color: #ffffffd9 !important; 
+  border-color: #ffffff33 !important; 
+}
+html.dark .btn.btn-frameless.is-filter:hover { 
+  background-color: rgba(255, 255, 255, 0.08) !important; 
+  border-color: #ffffff66 !important; 
+  color: #ffffff !important; 
+}
 html.dark .section, .card, .modal-content, .dropdown-menu, .navbar, .footer, .jumbotron { background-color: transparent; color: inherit; border-color: #ffffffeb; }
 html.dark input, html.dark select, html.dark textarea { background-color: #111; color: #ffffffd9; border-color: #ffffff47; }
 html.dark input::placeholder, html.dark textarea::placeholder { color: #ffffff73; }
@@ -588,6 +626,33 @@ html.dark .badge-2.rounded-pill {
 html.dark .insight {
   background-color: #ffffff14 !important;
   border-color: #ffffff47 !important;
+}
+
+/* Insight button: match filter button style but keep size */
+.insight.btn-frameless {
+  background-color: transparent !important;
+  color: var(--mode-light-text-85-primary) !important;
+  border: 1px solid var(--palette-light-neutral-neutral-1) !important;
+  transition: all 0.3s ease !important;
+}
+
+.insight.btn-frameless:hover {
+  background-color: rgba(0, 0, 0, 0.06) !important;
+  border-color: var(--mode-light-text-45-secondary) !important;
+  color: var(--mode-light-text-85-primary) !important;
+}
+
+/* Dark mode: insight button styling */
+html.dark .insight.btn-frameless {
+  background-color: transparent !important;
+  color: #ffffffd9 !important;
+  border: 1px solid #ffffff33 !important;
+}
+
+html.dark .insight.btn-frameless:hover {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  border-color: #ffffff66 !important;
+  color: #ffffff !important;
 }
 
 /* Fix sticky header background in dark mode */
