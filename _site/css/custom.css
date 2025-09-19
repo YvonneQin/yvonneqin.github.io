@@ -1,4 +1,14 @@
 
+/* Filter buttons: default and hover states */
+.btn.btn-frameless.is-filter {
+  background-color: var(--grey-text-05-pressing-border);
+}
+.btn.btn-frameless.is-filter:hover {
+  background-color: #fff;
+  border-color: #000;
+  color: #000;
+}
+
 .header .navbar .nav-item .nav-link {
   font-weight: 600;
   padding: 0px var(--l_16);
