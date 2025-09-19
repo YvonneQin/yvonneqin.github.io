@@ -15,7 +15,7 @@ class SiteHeader extends HTMLElement {
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-lg-auto">
-          <li class="nav-item"><a class="nav-link" href="index.html">Homepage</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
           <li class="nav-item"><a data-scroll class="nav-link" href="index.html#skills">Skills</a></li>
           <li class="nav-item"><a data-scroll class="nav-link" href="index.html#portfolio">🧩 Tinkering Zones</a></li>
           <li class="nav-item"><a data-scroll class="nav-link" href="my_insight.html">Insights</a></li>

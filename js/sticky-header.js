@@ -100,6 +100,37 @@ document.addEventListener('DOMContentLoaded', () => {
   if (header) {
     new StickyHeader(header);
   }
+
+  // Dark mode toggle with persistence
+  const htmlEl = document.documentElement;
+  const storedTheme = localStorage.getItem('theme');
+  const isInitiallyDark = storedTheme ? (storedTheme === 'dark') : true; // default to dark
+  if (isInitiallyDark) {
+    htmlEl.classList.add('dark');
+    if (!storedTheme) localStorage.setItem('theme', 'dark');
+  } else {
+    htmlEl.classList.remove('dark');
+  }
+
+  // Create or find a toggle button with data-theme-toggle
+  let themeToggle = document.querySelector('[data-theme-toggle]');
+  if (!themeToggle) {
+    themeToggle = document.createElement('button');
+    themeToggle.type = 'button';
+    themeToggle.setAttribute('data-theme-toggle', 'true');
+    themeToggle.className = 'btn btn-frameless btn-sm';
+    themeToggle.style.marginLeft = '8px';
+    themeToggle.textContent = htmlEl.classList.contains('dark') ? 'Light' : 'Dark';
+    // Try to inject into header right area
+    const host = document.querySelector('.header .navbar') || header || document.body;
+    host.appendChild(themeToggle);
+  }
+
+  themeToggle.addEventListener('click', () => {
+    const isDark = htmlEl.classList.toggle('dark');
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    themeToggle.textContent = isDark ? 'Light' : 'Dark';
+  });
 });
 
 // 导出类供其他模块使用

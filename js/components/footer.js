@@ -11,7 +11,7 @@ class SiteFooter extends HTMLElement {
     <div class="footer__links">
       <ul class="navbar-nav ">
         <li class="nav-item">
-          <a class="nav-link" href="index.html">Homepage</a>
+          <a class="nav-link" href="index.html">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="index.html#about">Skills</a>

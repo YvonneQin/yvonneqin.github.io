@@ -45,6 +45,38 @@
   margin-top: 20px;
 }
 
+/* Dark mode: platform social icons two-tone */
+html.dark .platform-links a i,
+html.dark .platform-links a .iconfont {
+  color: #ffffff73 !important;
+  transition: color .2s ease;
+}
+html.dark .platform-links a:hover i,
+html.dark .platform-links a:hover .iconfont {
+  color: #ffffff !important;
+}
+
+/* Dark mode: gradient overlay toggle button two-tone */
+html.dark #gradientOverlay #toggleButton,
+html.dark #gradientOverlay .buttonPosition {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  color: #ffffffd9 !important;
+  border: 1px solid #ffffff33 !important;
+}
+html.dark #gradientOverlay #toggleButton:hover,
+html.dark #gradientOverlay .buttonPosition:hover {
+  background-color: rgba(255, 255, 255, 0.16) !important;
+  color: #ffffff !important;
+  border-color: #ffffff66 !important;
+}
+html.dark #gradientOverlay #toggleButton i,
+html.dark #gradientOverlay .buttonPosition i { color: inherit !important; }
+
+/* Dark mode: section border line matches header's subtle line */
+html.dark .section--border-bottom::after {
+  background-color: #ffffff47 !important;
+}
+
 .badge-2.rounded-pill {
   font-size: 12px;
   font-weight: 500;
@@ -380,4 +412,192 @@ h3 {
   border-radius: 1.75rem;
   background-color: var(--mode-light-text-02-disabled-opacity);
   border-color:var(--palette-light-neutral-neutral-1);
+}
+
+/* === Global Dark Mode Overrides (scoped by html.dark) === */
+html.dark body { background-color: #1a1a1a; color: #ffffffd9; }
+html.dark a { color: #6c78f3; }
+html.dark a:hover { color: #9ea0f6; }
+html.dark hr, html.dark .divider, html.dark .border, html.dark [class*="border"] { border-color: #ffffffeb !important; }
+html.dark .btn { color: #ffffffd9; border-color: #ffffffeb; }
+html.dark .btn-primary { background-color: #ffffff14; color: #ffffffd9; border-color: #ffffffeb; }
+html.dark .btn-primary:hover { background-color: #ffffff33; color: #ffffff; border-color: #ffffff; }
+html.dark .btn-frameless { color: #ffffffd9; border-color: #ffffffeb; }
+html.dark .btn.btn-frameless.is-filter { background-color: #f7f7f7; color: #000; }
+html.dark .btn.btn-frameless.is-filter:hover { background-color: #fff; border-color: #fff; color: #000; }
+html.dark .section, .card, .modal-content, .dropdown-menu, .navbar, .footer, .jumbotron { background-color: transparent; color: inherit; border-color: #ffffffeb; }
+html.dark input, html.dark select, html.dark textarea { background-color: #111; color: #ffffffd9; border-color: #ffffff47; }
+html.dark input::placeholder, html.dark textarea::placeholder { color: #ffffff73; }
+html.dark .body { background-color: #1a1a1a !important; }
+
+/* Override all text colors with higher specificity */
+html.dark .sectiontitle,
+html.dark .title4,
+html.dark .title5,
+html.dark .lead,
+html.dark .insightlead,
+html.dark .lead2,
+html.dark h1,
+html.dark h2,
+html.dark h3,
+html.dark h4,
+html.dark h5,
+html.dark h6,
+html.dark p,
+html.dark .mb-0,
+html.dark .fixed-anchor a,
+html.dark .fixed-anchor a:hover,
+html.dark .fixed-anchor a.active,
+html.dark .clients__item,
+html.dark .subtitle,
+html.dark .imgsubtitle,
+html.dark .titlenumber,
+html.dark .sectiontitle-eng,
+html.dark .badge,
+html.dark .badge-2,
+html.dark .navbar .nav-link,
+html.dark .header .navbar .nav-item .nav-link {
+  color: #ffffffd9 !important;
+}
+
+html.dark .navbar-brand span:last-child {
+  color: #ffffff73 !important; /* Qin - secondary text */
+}
+
+/* Dark mode: frameless buttons should appear colorless (except .is-filter) */
+html.dark .btn-frameless:not(.is-filter) {
+  background-color: transparent !important;
+  border-color: transparent !important;
+  color: #ffffffd9 !important;
+  box-shadow: none !important;
+}
+html.dark .btn-frameless:not(.is-filter):hover,
+html.dark .btn-frameless:not(.is-filter):focus {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  border-color: transparent !important;
+  color: #ffffff !important;
+}
+
+/* Theme toggle button: always show border in both modes */
+[data-theme-toggle].btn-frameless {
+  border: 1px solid var(--palette-light-neutral-neutral-1) !important;
+  background-color: transparent !important;
+}
+[data-theme-toggle].btn-frameless:hover,
+[data-theme-toggle].btn-frameless:focus {
+  border-color: var(--mode-light-text-45-secondary) !important;
+  background-color: rgba(0, 0, 0, 0.06) !important;
+}
+html.dark [data-theme-toggle].btn-frameless {
+  border: 1px solid #ffffff33 !important;
+  background-color: rgba(255, 255, 255, 0.08) !important;
+}
+html.dark [data-theme-toggle].btn-frameless:hover,
+html.dark [data-theme-toggle].btn-frameless:focus {
+  border-color: #ffffff66 !important;
+  background-color: rgba(255, 255, 255, 0.16) !important;
+}
+
+/* Align primary button borders in light mode (no size change) */
+.btn-primary {
+  border-color: var(--palette-light-neutral-neutral-1) !important;
+}
+.btn-primary:hover,
+.btn-primary:focus {
+  border-color: var(--mode-light-text-45-secondary) !important;
+}
+
+/* Align primary button borders in dark mode (consistent with toggle) */
+html.dark .btn-primary {
+  border-color: #ffffff33 !important;
+}
+html.dark .btn-primary:hover,
+html.dark .btn-primary:focus {
+  border-color: #ffffff66 !important;
+}
+
+html.dark .titlenumber {
+  color: #ffffff47 !important;
+  opacity: 0.1;
+}
+
+html.dark .subtitle {
+  color: #ffffff73 !important;
+  background-color: #ffffff14 !important;
+}
+
+html.dark .imgsubtitle {
+  color: #ffffff73 !important;
+}
+
+html.dark .clients__item {
+  background-color: #ffffff14 !important;
+  color: #ffffffab !important;
+}
+
+html.dark .badge-2.rounded-pill {
+  color: #ffffffab !important;
+  background-color: #ffffff14 !important;
+}
+
+html.dark .insight {
+  background-color: #ffffff14 !important;
+  border-color: #ffffff47 !important;
+}
+
+/* Fix sticky header background in dark mode */
+html.dark .header--sticky-triggered {
+  background-color: #1a1a1a !important;
+  border-bottom: 1px solid #ffffff47 !important;
+}
+
+/* Education block - dark two-tone */
+html.dark .education::before {
+  background-color: #ffffff14 !important;
+}
+html.dark .education__title {
+  color: #ffffffd9 !important;
+}
+html.dark .education__date,
+html.dark .education__degree,
+html.dark .experience__date {
+  color: #ffffff73 !important;
+}
+
+/* Experience block - dark colors */
+html.dark .experience__title { color: #ffffffd9 !important; }
+html.dark .experience__company { color: #e62122 !important; }
+
+/* Dark mode: links in lead paragraph - light color, underline, bold */
+html.dark .lead a {
+  color: #ffffffd9 !important;
+  text-decoration: underline !important;
+  font-weight: 700 !important;
+}
+html.dark .lead a:hover { color: #ffffff !important; }
+
+/* Contact section two-tone in dark */
+html.dark .section--contact h2 { color: #ffffffd9 !important; }
+html.dark .section--contact h4 { color: #ffffffd9 !important; }
+html.dark .section--contact span { color: #ffffff73 !important; }
+html.dark .section--contact a { color: #ffffffd9 !important; text-decoration: underline !important; font-weight: 700 !important; }
+html.dark .section--contact a:hover { color: #ffffff !important; }
+
+/* Contact section background fix in dark: avoid light background */
+html.dark .section--contact { background-color: #1a1a1a !important; }
+html.dark .section--contact .contact { background-color: transparent !important; border: 1px solid #ffffff14 !important; border-radius: 10px; }
+html.dark .section--contact .contact__info { background-color: transparent !important; }
+
+/* Override container light background inside contact section */
+html.dark .section--contact .container {
+  background-color: #1a1a1a !important;
+  border: 1px solid #ffffff14 !important;
+}
+
+/* Badges two-tone in dark */
+html.dark .badge.rounded-pill,
+html.dark .badge.rounded-pill.bg-primary {
+  background-color: #ffffff14 !important;
+  color: #ffffffd9 !important;
+  border-color: #ffffff33 !important;
 }
