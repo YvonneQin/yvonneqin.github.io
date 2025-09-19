@@ -336,6 +336,15 @@ h3 {
   background-image: linear-gradient(to right, rgba(255, 255, 255, 0.8) 0%,  rgba(255, 255, 255, 0.2) 100%);
 }
 
+/* Dark mode: anchor background gradient mapped to dark palette */
+html.dark .fixed-anchor {
+  background-image: linear-gradient(
+    to right,
+    rgba(26, 26, 26, 0.85) 0%,
+    rgba(26, 26, 26, 0.35) 100%
+  ) !important;
+}
+
 .fixed-anchor:hover {
   width: 200px; /* 悬浮时的宽度 */
   padding-left: 8px;
@@ -367,6 +376,18 @@ h3 {
   color:var(--palette-light-key-colors-primary);
   font-weight: 700;
   background-color: var(--palette-light-red-red-1);
+}
+
+/* Light mode: anchor navigation two-tone for sub-levels */
+.fixed-anchor a.indent-1,
+.fixed-anchor a.indent-2,
+.fixed-anchor a.indent-3 {
+  color: var(--mode-light-text-45-secondary);
+}
+.fixed-anchor a.indent-1:hover,
+.fixed-anchor a.indent-2:hover,
+.fixed-anchor a.indent-3:hover {
+  color: var(--mode-light-text-85-primary);
 }
 
 .body {
@@ -445,9 +466,6 @@ html.dark h5,
 html.dark h6,
 html.dark p,
 html.dark .mb-0,
-html.dark .fixed-anchor a,
-html.dark .fixed-anchor a:hover,
-html.dark .fixed-anchor a.active,
 html.dark .clients__item,
 html.dark .subtitle,
 html.dark .imgsubtitle,
@@ -514,6 +532,33 @@ html.dark .btn-primary {
 html.dark .btn-primary:hover,
 html.dark .btn-primary:focus {
   border-color: #ffffff66 !important;
+}
+
+/* Dark mode: anchor navigation two-tone */
+html.dark .fixed-anchor a {
+  color: #ffffffd9 !important; /* title & top-level */
+}
+html.dark .fixed-anchor a.indent-1,
+html.dark .fixed-anchor a.indent-2,
+html.dark .fixed-anchor a.indent-3 {
+  color: #ffffff73 !important; /* sub-levels */
+}
+html.dark .fixed-anchor a:hover {
+  color: #ffffff !important;
+}
+html.dark .fixed-anchor a.active {
+  color: #e62122 !important; /* active highlight matches brand red */
+}
+
+/* Dark mode: anchor item hover styles */
+html.dark .fixed-anchor a:hover {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  color: #ffffff !important;
+}
+
+/* Dark mode: force title (first link) to primary color, override inline color */
+html.dark .fixed-anchor > a:first-child {
+  color: #ffffffd9 !important;
 }
 
 html.dark .titlenumber {
