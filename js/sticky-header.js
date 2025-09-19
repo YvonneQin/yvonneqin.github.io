@@ -1,6 +1,6 @@
 /**
- * Sticky Header 功能
- * 支持动态创建的header组件
+ * Sticky Header Functionality
+ * Supports dynamically created header components
  */
 class StickyHeader {
   constructor(headerElement) {
@@ -12,11 +12,11 @@ class StickyHeader {
     this.ticking = false;
     this.bodyPosition = 0;
     
-    // 如果header已经存在，直接初始化
+    // If header already exists, initialize directly
     if (this.header) {
       this.initSticky();
     } else {
-      // 如果header还不存在，等待它创建完成
+      // If header doesn't exist yet, wait for it to be created
       this.waitForHeader();
     }
   }
