@@ -9,6 +9,13 @@
   color: #000;
 }
 
+/* Filter buttons container */
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
 .header .navbar .nav-item .nav-link {
   font-weight: 600;
   padding: 0px var(--l_16);
