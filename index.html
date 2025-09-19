@@ -1,17 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="author" content="yuwen">
+  <meta name="author" content="Yuwen Qin">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <meta property="og:title" content="yuwen-site" />
-  <meta property="og:description" content="This is yuwen's site, whatever you wonder is here." />
+  <meta name="description" content="Yuwen Qin - Experience Imagineer & Individual Developer. UX/UI Designer with expertise in product design, frontend development, and AI/ML. Based in Shanghai." />
+  <meta name="keywords" content="Yuwen Qin, UX Designer, UI Designer, Product Designer, Frontend Developer, Portfolio, Shanghai, Experience Design" />
+  <meta property="og:title" content="Yuwen Qin - Experience Imagineer & Developer" />
+  <meta property="og:description" content="UX/UI Designer and Developer creating meaningful digital experiences. Specialized in product design, frontend development, and AI/ML integration." />
   <meta property="og:image" content="img/meta/web Logo.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://yvonneqin.github.io" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Yuwen Qin - Experience Imagineer & Developer" />
+  <meta name="twitter:description" content="UX/UI Designer and Developer creating meaningful digital experiences." />
+  <meta name="twitter:image" content="img/meta/web Logo.png" />
   <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="canonical" href="https://yvonneqin.github.io" />
+  <link rel="preconnect" href="https://at.alicdn.com" crossorigin />
+  <link rel="preload" href="css/main.css" as="style" />
+  <link rel="preload" href="css/custom.css" as="style" />
   <link rel="stylesheet" href="css/main.css" />
   <link rel="stylesheet" href="css/custom.css" />
   <link rel="stylesheet" href="https://at.alicdn.com/t/c/font_4545731_cvnf4bw0cg.css" />
+  
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Yuwen Qin",
+    "jobTitle": "Experience Imagineer & Individual Developer",
+    "description": "UX/UI Designer and Developer creating meaningful digital experiences",
+    "url": "https://yvonneqin.github.io",
+    "sameAs": [
+      "https://www.linkedin.com/in/yuwen-qin-275864114/",
+      "https://github.com/YvonneQin"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Shanghai",
+      "addressCountry": "CN"
+    },
+    "email": "tatamato811@gmail.com",
+    "telephone": "+86 131 6243 5185"
+  }
+  </script>
+  
   <script>
     (function (w, d, s, l, i) {
       w[l] = w[l] || [];
@@ -30,11 +66,18 @@
   </script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
-      const toggleButton = document.getElementById('toggleButton');
-      const expandableDiv = document.getElementById('expandableDiv');
-      const gradientOverlay = document.getElementById('gradientOverlay');
-      const COLLAPSED_HEIGHT = 218;
-      let isAnimating = false;
+      try {
+        const toggleButton = document.getElementById('toggleButton');
+        const expandableDiv = document.getElementById('expandableDiv');
+        const gradientOverlay = document.getElementById('gradientOverlay');
+        const COLLAPSED_HEIGHT = 218;
+        let isAnimating = false;
+        
+        // Check if required elements exist
+        if (!toggleButton || !expandableDiv) {
+          console.warn('Required elements for expandable section not found');
+          return;
+        }
       function collapse() {
         if (isAnimating) return;
         isAnimating = true;
@@ -91,6 +134,9 @@
           expand();
         }
       });
+      } catch (error) {
+        console.error('Error initializing expandable section:', error);
+      }
     });
   </script>
   <title>Yuwen‘s Portfolio</title>
@@ -325,13 +371,18 @@
   <script src="js/components/subtitle.js"></script>
   <script src="js/project-data.js"></script>
 <body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
   <site-header></site-header>
-  <section class="rad-showcase rad-showcase--index rad-animation-group rad-fade-down">
+  
+  <main id="main-content">
+    <section class="rad-showcase rad-showcase--index rad-animation-group rad-fade-down" role="banner">
     <div class="rad-showcase__bg">
       <img class="lozad img-responsive"
         src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
         data-src="img/showcase/showcase2.png"
-        data-srcset="img/showcase/showcase2.png 1x, img/showcase/showcase2@2x.png 2x" alt="Header background image of Yuwen's portfolio" />
+        data-srcset="img/showcase/showcase2.png 1x, img/showcase/showcase2@2x.png 2x" 
+        alt="Portrait of Yuwen Qin, UX/UI Designer and Developer" 
+        loading="eager" />
     </div>
     <div class="container">
       <div class="row">

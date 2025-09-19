@@ -1,17 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta name="author" content="yuwen" />
+    <meta name="author" content="Yuwen Qin" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta property="og:title" content="yuwen-insight" />
-    <meta property="og:description" content="This is yuwen's sharing" />
+    <meta name="description" content="Yuwen Qin's Design Insights & Best Practices. Explore UX/UI design frameworks, learning notes, and professional insights from an Experience Designer." />
+    <meta name="keywords" content="Yuwen Qin, UX Design, UI Design, Design Insights, Best Practices, Learning Notes, Design Framework, UX Research" />
+    <meta property="og:title" content="Design Insights & Best Practices - Yuwen Qin" />
+    <meta property="og:description" content="Explore professional UX/UI design insights, best practices, and learning notes from an experienced designer." />
     <meta property="og:image" content="img/meta/wechaticon.JPG" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://yvonneqin.github.io/my_insight.html" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Design Insights & Best Practices - Yuwen Qin" />
+    <meta name="twitter:description" content="Explore professional UX/UI design insights, best practices, and learning notes." />
+    <meta name="twitter:image" content="img/meta/wechaticon.JPG" />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="canonical" href="https://yvonneqin.github.io/my_insight.html" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="preload" href="css/main.css" as="style" />
+    <link rel="preload" href="css/custom.css" as="style" />
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/rad-icons.css" />
     <link rel="stylesheet" href="css/custom.css" />
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Design Insights & Best Practices",
+      "description": "Yuwen Qin's professional UX/UI design insights, best practices, and learning notes",
+      "url": "https://yvonneqin.github.io/my_insight.html",
+      "author": {
+        "@type": "Person",
+        "name": "Yuwen Qin",
+        "jobTitle": "Experience Imagineer & Individual Developer"
+      },
+      "publisher": {
+        "@type": "Person",
+        "name": "Yuwen Qin"
+      },
+      "dateModified": "2024-01-01",
+      "inLanguage": "en"
+    }
+    </script>
+    
     <script>
       (function (w, d, s, l, i) {
         w[l] = w[l] || [];
@@ -30,44 +65,144 @@
     </script>
     <script>
       function filterArticles(category) {
-        var articles = document.querySelectorAll(".article");
-        articles.forEach(function (article) {
-          if (
-            category === "all" ||
-            article.getAttribute("data-category") === category
-          ) {
-            article.style.display = "block";
-          } else {
-            article.style.display = "none";
+        try {
+          var articles = document.querySelectorAll("article-card");
+          var buttons = document.querySelectorAll('[role="tab"]');
+          var container = document.getElementById('article-container');
+          
+          if (!articles.length || !buttons.length || !container) {
+            console.warn('Required elements for filtering not found');
+            return;
           }
-        });
+          
+          // Update button states
+          buttons.forEach(function(button) {
+            var isActive = button.getAttribute('aria-label').toLowerCase().includes(category) || 
+                          (category === 'all' && button.textContent.trim() === 'All Category');
+            button.setAttribute('aria-selected', isActive);
+            button.setAttribute('tabindex', isActive ? '0' : '-1');
+            
+            if (isActive) {
+              button.classList.add('active');
+            } else {
+              button.classList.remove('active');
+            }
+          });
+          
+          // Filter articles with smooth transition
+          articles.forEach(function (article) {
+            var articleCategory = article.getAttribute("category");
+            var shouldShow = category === "all" || articleCategory === category;
+            
+            if (shouldShow) {
+              article.style.display = "block";
+              article.style.opacity = "0";
+              article.style.transform = "translateY(10px)";
+              
+              // Smooth fade-in animation
+              requestAnimationFrame(function() {
+                article.style.transition = "opacity 0.3s ease, transform 0.3s ease";
+                article.style.opacity = "1";
+                article.style.transform = "translateY(0)";
+              });
+            } else {
+              article.style.transition = "opacity 0.3s ease, transform 0.3s ease";
+              article.style.opacity = "0";
+              article.style.transform = "translateY(-10px)";
+              
+              setTimeout(function() {
+                article.style.display = "none";
+              }, 300);
+            }
+          });
+          
+          // Announce filter change to screen readers
+          var announcement = category === 'all' ? 'Showing all articles' : 'Showing ' + category + ' articles';
+          container.setAttribute('aria-label', announcement);
+          
+        } catch (error) {
+          console.error('Error filtering articles:', error);
+        }
       }
+      
+      // Add keyboard navigation support
+      document.addEventListener('DOMContentLoaded', function() {
+        var filterButtons = document.querySelectorAll('[role="tab"]');
+        
+        filterButtons.forEach(function(button, index) {
+          button.addEventListener('keydown', function(e) {
+            var currentIndex = Array.from(filterButtons).indexOf(button);
+            var nextIndex, targetButton;
+            
+            switch(e.key) {
+              case 'ArrowRight':
+              case 'ArrowDown':
+                e.preventDefault();
+                nextIndex = (currentIndex + 1) % filterButtons.length;
+                targetButton = filterButtons[nextIndex];
+                break;
+              case 'ArrowLeft':
+              case 'ArrowUp':
+                e.preventDefault();
+                nextIndex = currentIndex === 0 ? filterButtons.length - 1 : currentIndex - 1;
+                targetButton = filterButtons[nextIndex];
+                break;
+              case 'Home':
+                e.preventDefault();
+                targetButton = filterButtons[0];
+                break;
+              case 'End':
+                e.preventDefault();
+                targetButton = filterButtons[filterButtons.length - 1];
+                break;
+              case 'Enter':
+              case ' ':
+                e.preventDefault();
+                var category = this.getAttribute('aria-label').toLowerCase().includes('all') ? 'all' :
+                              this.getAttribute('aria-label').toLowerCase().includes('best practice') ? 'best_practice' :
+                              this.getAttribute('aria-label').toLowerCase().includes('learning notes') ? 'learning_notes' : 'insight';
+                filterArticles(category);
+                break;
+            }
+            
+            if (targetButton) {
+              targetButton.focus();
+            }
+          });
+        });
+      });
     </script>
     <script>
       function openProtectedLink(event, url) {
-        event.preventDefault(); // 阻止默认链接行为
-        
-        var testV = 1;
-        var pass1 = prompt('Welcome to my secret portfolio vault 🚪🔑', '');
-        
-        while (testV < 3) {
-          if (!pass1) {
-            history.go(-1);
-            return false;
+        try {
+          event.preventDefault(); // 阻止默认链接行为
+          
+          var testV = 1;
+          var maxAttempts = 3;
+          var pass1 = prompt('Welcome to my secret portfolio vault 🚪🔑', '');
+          
+          while (testV < maxAttempts) {
+            if (!pass1) {
+              // User cancelled
+              return false;
+            }
+            if (pass1 === "qyw") {
+              // 密码正确，打开链接
+              window.open(url, '_blank', 'noopener,noreferrer');
+              return true;
+            }
+            testV += 1;
+            pass1 = prompt('Error, please try again (attempt ' + testV + '/' + maxAttempts + '):');
           }
-          if (pass1 == "qyw") {
-            // 密码正确，打开链接
-            window.open(url, '_blank');
-            return true;
-          }
-          testV += 1;
-          var pass1 = prompt('Error, pls fill in again:');
+          
+          // Max attempts reached
+          alert('Maximum attempts reached. Access denied.');
+          return false;
+          
+        } catch (error) {
+          console.error('Error in openProtectedLink:', error);
+          return false;
         }
-        
-        if (pass1 != "qyw" && testV >= 3) {
-          history.go(-1);
-        }
-        return false;
       }
     </script>
     <title>my_insight</title>
@@ -234,8 +369,9 @@
   <script src="js/components/figma-embed.js"></script>
   <script src="js/components/subtitle.js"></script>
   <script src="js/components/article-card.js"></script>
-</head>
+  </head>
 <body class="body">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <site-header></site-header>
             </ul>
           </div>
@@ -247,32 +383,61 @@
       style="padding-top: 60px; padding-bottom: 16px"
     >
     </div>
-    <section class="section" style="padding-top: 0px; margin-top: 0px; padding-bottom: 32px;">
+    
+    <main id="main-content">
+      <section class="section" style="padding-top: 0px; margin-top: 0px; padding-bottom: 32px;" role="main">
       <div class="container">
         <div
           class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
           style="margin-top: 0px"
         >
           <div class="col-12 mt-4 mt-md-0 my-md-auto">
-            <div class="filter-buttons">
-              <button class="btn btn-sm" style="height: 36px" onclick="filterArticles('all')">
-                All Catagory</i>
+            <div class="filter-buttons" role="tablist" aria-label="Filter articles by category">
+              <button 
+                class="btn btn-sm" 
+                style="height: 36px" 
+                onclick="filterArticles('all')"
+                role="tab"
+                aria-selected="true"
+                aria-controls="article-container"
+                tabindex="0"
+                aria-label="Show all articles"
+              >
+                All Category
               </button>
               <button
-                class="btn btn-frameless btn-sm is-filter" style="height: 36px"
+                class="btn btn-frameless btn-sm is-filter" 
+                style="height: 36px"
                 onclick="filterArticles('best_practice')"
+                role="tab"
+                aria-selected="false"
+                aria-controls="article-container"
+                tabindex="-1"
+                aria-label="Show best practice articles"
               >
                 Best Practices
               </button>
               <button
-                class="btn btn-frameless btn-sm is-filter" style="height: 36px"
+                class="btn btn-frameless btn-sm is-filter" 
+                style="height: 36px"
                 onclick="filterArticles('learning_notes')"
+                role="tab"
+                aria-selected="false"
+                aria-controls="article-container"
+                tabindex="-1"
+                aria-label="Show learning notes articles"
               >
                 Learning Notes
               </button>
               <button
-                class="btn btn-frameless btn-sm is-filter" style="height: 36px"
+                class="btn btn-frameless btn-sm is-filter" 
+                style="height: 36px"
                 onclick="filterArticles('insight')"
+                role="tab"
+                aria-selected="false"
+                aria-controls="article-container"
+                tabindex="-1"
+                aria-label="Show other insight articles"
               >
                 Others
               </button>
@@ -281,7 +446,9 @@
         </div>
       </div>
     </section>
-    <article-card 
+    
+    <div id="article-container" role="tabpanel" aria-live="polite" aria-label="Filtered articles">
+      <article-card 
       category="insight"
       title="Daily Workflow of UX Design"
       image-src="img/my_insight/Daily Workflow of UX Design.svg"
@@ -369,6 +536,10 @@
       image-src="img/my_insight/微软Windows三十年间的巨大变化.svg"
       href="https://mp.weixin.qq.com/s?__biz=MzIyNzQ4NDc4NA==&mid=2247483689&idx=1&sn=f43accfa97fd50d9e02cd98ae9486537&chksm=e8613436df16bd20f091dda034fa19267f03094751ec4847afcbb9136747caee4a4142dd00ea#rd"
     ></article-card>
+    </div>
+    
+    </main>
+    
   <site-footer></site-footer>
     <script src="js/rad-animations.js"></script>
     <script src="js/library/lozad.min.js"></script>

@@ -712,13 +712,13 @@ html.dark .section--contact a:hover { color: #ffffff !important; }
 
 /* Contact section background fix in dark: avoid light background */
 html.dark .section--contact { background-color: #1a1a1a !important; }
-html.dark .section--contact .contact { background-color: transparent !important; border: 1px solid #ffffff14 !important; border-radius: 10px; }
+html.dark .section--contact .contact { background-color: transparent !important; border: none !important; }
 html.dark .section--contact .contact__info { background-color: transparent !important; }
 
 /* Override container light background inside contact section */
 html.dark .section--contact .container {
   background-color: #1a1a1a !important;
-  border: 1px solid #ffffff14 !important;
+  border: none !important;
 }
 
 /* Badges two-tone in dark */
@@ -728,4 +728,43 @@ html.dark .badge.rounded-pill.bg-primary {
   color: #ffffffd9 !important;
   border-color: #ffffff33 !important;
 }
+
+/* Skip link for accessibility */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: var(--palette-light-key-colors-primary);
+  color: white;
+  padding: 8px;
+  text-decoration: none;
+  border-radius: 4px;
+  z-index: 1000;
+  font-weight: 600;
+}
+
+.skip-link:focus {
+  top: 6px;
+}
+
+html.dark .skip-link {
+  background: #ffffff;
+  color: #000000;
+}
+
+/* Fix margin-bottom for experience section row */
+.section .row[style*="margin-bottom: 48px"] {
+  margin-bottom: 48px !important;
+}
+
+/* Work experience section: ensure 56px distance from buttons to border line */
+#experience.section--border-bottom {
+  padding-bottom: 16px !important;
+}
+
+/* Portfolio section: ensure proper distance from last button to border line */
+#portfolio.section--border-bottom {
+  padding-bottom: 16px !important;
+}
+
 
