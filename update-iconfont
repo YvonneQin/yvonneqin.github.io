@@ -1,0 +1,33 @@
+#!/bin/bash
+
+# 简单的iconfont更新命令
+# 使用方法: ./update-iconfont [新链接]
+
+if [ $# -eq 0 ]; then
+    echo "使用方法: ./update-iconfont [新链接]"
+    echo "示例: ./update-iconfont https://at.alicdn.com/t/c/font_4545731_new.css"
+    exit 1
+fi
+
+NEW_URL="$1"
+echo "🔄 正在更新iconfont链接到: $NEW_URL"
+
+# 更新所有HTML文件
+find . -name "*.html" -type f -exec sed -i '' "s|https://at\.alicdn\.com/t/c/font_[^.]*\.css|$NEW_URL|g" {} \;
+
+# 更新配置文件
+if [ -f "iconfont-config.json" ]; then
+    sed -i '' "s|\"url\": \"[^\"]*\"|\"url\": \"$NEW_URL\"|g" iconfont-config.json
+    echo "✅ 已更新 iconfont-config.json"
+fi
+
+if [ -f "js/config.js" ]; then
+    sed -i '' "s|primary: '[^']*'|primary: '$NEW_URL'|g" js/config.js
+    echo "✅ 已更新 js/config.js"
+fi
+
+# 统计更新的文件
+UPDATED_COUNT=$(find . -name "*.html" -type f -exec grep -l "at\.alicdn\.com" {} \; | wc -l)
+
+echo "✅ 更新完成！共更新了 $UPDATED_COUNT 个文件"
+echo "🔗 新链接: $NEW_URL"

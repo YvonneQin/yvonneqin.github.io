@@ -1,0 +1,123 @@
+#!/bin/bash
+
+# iconfont 管理器
+# 使用方法: ./iconfont-manager [命令] [参数]
+
+show_help() {
+    echo "🎨 iconfont 管理器"
+    echo ""
+    echo "使用方法:"
+    echo "  ./iconfont-manager update [新链接]     - 更新所有iconfont链接"
+    echo "  ./iconfont-manager status              - 查看当前状态"
+    echo "  ./iconfont-manager backup              - 创建备份"
+    echo "  ./iconfont-manager restore             - 恢复备份"
+    echo "  ./iconfont-manager help                - 显示帮助"
+    echo ""
+    echo "示例:"
+    echo "  ./iconfont-manager update https://at.alicdn.com/t/c/font_4545731_new.css"
+    echo "  ./iconfont-manager status"
+}
+
+update_iconfont() {
+    local new_url="$1"
+    
+    if [ -z "$new_url" ]; then
+        echo "❌ 请提供新的iconfont链接"
+        echo "使用方法: ./iconfont-manager update [新链接]"
+        exit 1
+    fi
+    
+    echo "🔄 正在更新iconfont链接到: $new_url"
+    
+    # 创建备份
+    echo "💾 创建备份..."
+    find . -name "*.html" -type f -exec cp {} {}.backup \;
+    
+    # 更新所有HTML文件
+    echo "📝 更新HTML文件..."
+    find . -name "*.html" -type f -exec sed -i '' "s|https://at\.alicdn\.com/t/c/font_[^.]*\.css|$new_url|g" {} \;
+    
+    # 更新配置文件
+    if [ -f "iconfont-config.json" ]; then
+        sed -i '' "s|\"url\": \"[^\"]*\"|\"url\": \"$new_url\"|g" iconfont-config.json
+        echo "✅ 已更新 iconfont-config.json"
+    fi
+    
+    if [ -f "js/config.js" ]; then
+        sed -i '' "s|primary: '[^']*'|primary: '$new_url'|g" js/config.js
+        echo "✅ 已更新 js/config.js"
+    fi
+    
+    # 统计更新的文件
+    local updated_count=$(find . -name "*.html" -type f -exec grep -l "at\.alicdn\.com" {} \; | wc -l)
+    
+    echo "✅ 更新完成！"
+    echo "📊 共更新了 $updated_count 个文件"
+    echo "🔗 新链接: $new_url"
+    echo "💾 备份文件已保存为 .backup 扩展名"
+}
+
+show_status() {
+    echo "📊 iconfont 状态报告"
+    echo ""
+    
+    # 检查配置文件
+    if [ -f "iconfont-config.json" ]; then
+        local config_url=$(grep -o '"url": "[^"]*"' iconfont-config.json | cut -d'"' -f4)
+        echo "📄 iconfont-config.json: $config_url"
+    fi
+    
+    if [ -f "js/config.js" ]; then
+        local js_url=$(grep -o "primary: '[^']*'" js/config.js | cut -d"'" -f2)
+        echo "📄 js/config.js: $js_url"
+    fi
+    
+    # 统计HTML文件中的链接
+    echo ""
+    echo "📁 HTML文件中的iconfont链接:"
+    find . -name "*.html" -type f -exec grep -l "at\.alicdn\.com" {} \; | while read file; do
+        local url=$(grep -o "https://at\.alicdn\.com/t/c/font_[^.]*\.css" "$file" | head -1)
+        echo "  $file: $url"
+    done
+    
+    # 统计备份文件
+    local backup_count=$(find . -name "*.html.backup" -type f | wc -l)
+    echo ""
+    echo "💾 备份文件数量: $backup_count"
+}
+
+create_backup() {
+    echo "💾 创建备份..."
+    find . -name "*.html" -type f -exec cp {} {}.backup \;
+    echo "✅ 备份完成！"
+}
+
+restore_backup() {
+    echo "🔄 恢复备份..."
+    find . -name "*.html.backup" -type f -exec sh -c 'mv "$1" "${1%.backup}"' _ {} \;
+    echo "✅ 恢复完成！"
+}
+
+# 主程序
+case "$1" in
+    "update")
+        update_iconfont "$2"
+        ;;
+    "status")
+        show_status
+        ;;
+    "backup")
+        create_backup
+        ;;
+    "restore")
+        restore_backup
+        ;;
+    "help"|"--help"|"-h"|"")
+        show_help
+        ;;
+    *)
+        echo "❌ 未知命令: $1"
+        show_help
+        exit 1
+        ;;
+esac

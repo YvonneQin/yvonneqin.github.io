@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iconfont Test</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="https://at.alicdn.com/t/c/font_4545731_1iwxww92za1.css" />
+    <link rel="stylesheet" href="css/rad-icons.css" />
+    <link rel="stylesheet" href="css/custom.css" />
+    <style>
+        body { padding: 20px; font-family: Arial, sans-serif; }
+        .test-section { margin: 20px 0; padding: 20px; border: 1px solid #ccc; }
+        .icon-test { font-size: 24px; margin: 10px; }
+    </style>
+</head>
+<body>
+    <h1>iconfont 测试页面</h1>
+    
+    <div class="test-section">
+        <h2>1. 直接测试 iconfont 类</h2>
+        <p>icon-a-directto-s: <i class="icon-a-directto-s iconfont"></i></p>
+        <p>icon-linkedin-line: <i class="icon-linkedin-line iconfont"></i></p>
+        <p>icon-github-line: <i class="icon-github-line iconfont"></i></p>
+    </div>
+    
+    <div class="test-section">
+        <h2>2. 在导航链接中测试</h2>
+        <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Insights<i class="icon-a-directto-s iconfont"></i></a></li>
+        </ul>
+    </div>
+    
+    <div class="test-section">
+        <h2>3. 检查字体加载</h2>
+        <p>检查浏览器开发者工具中的 Network 标签，确认 iconfont CSS 文件已加载</p>
+        <p>检查 Elements 标签，确认 .iconfont:before 的 font-family 是 "iconfont"</p>
+    </div>
+    
+    <div class="test-section">
+        <h2>4. 字体信息</h2>
+        <p id="font-info">正在检查字体...</p>
+    </div>
+    
+    <script>
+        // 检查字体是否加载成功
+        document.addEventListener('DOMContentLoaded', function() {
+            const testElement = document.querySelector('.icon-a-directto-s');
+            if (testElement) {
+                const computedStyle = window.getComputedStyle(testElement, '::before');
+                const fontFamily = computedStyle.getPropertyValue('font-family');
+                document.getElementById('font-info').innerHTML = 
+                    `字体族: ${fontFamily}<br>内容: ${computedStyle.getPropertyValue('content')}`;
+            }
+        });
+    </script>
+</body>
+</html>

@@ -762,6 +762,30 @@ html.dark .skip-link {
   margin-bottom: 48px !important;
 }
 
+/* Fix iconfont conflict with rad-icons */
+/* 确保所有iconfont图标使用正确的字体 */
+.iconfont:before {
+  font-family: "iconfont" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  speak: none !important;
+  display: inline-block !important;
+  text-decoration: inherit !important;
+  width: 1em !important;
+  margin-right: .2em !important;
+  text-align: center !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  line-height: 1em !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+}
+
+/* 特别针对导航中的iconfont图标 */
+.nav-link .iconfont:before {
+  font-family: "iconfont" !important;
+}
+
 /* Work experience section: ensure 56px distance from buttons to border line */
 #experience.section--border-bottom {
   padding-bottom: 16px !important;

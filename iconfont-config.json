@@ -1,0 +1,9 @@
+{
+  "iconfont": {
+    "url": "https://at.alicdn.com/t/c/font_4545731_1iwxww92za1.css",
+    "preconnect": "https://at.alicdn.com",
+    "fallback": "https://at.alicdn.com/t/c/font_4545731_3pnlmzv33e7.css"
+  },
+  "lastUpdated": "2024-01-01T00:00:00.000Z",
+  "description": "统一管理iconfont链接的配置文件"
+}

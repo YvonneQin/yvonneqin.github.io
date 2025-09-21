@@ -1,0 +1,16 @@
+/* iconfont 统一配置文件 */
+/* 在这里修改iconfont链接，所有HTML文件都会自动使用 */
+
+:root {
+  /* 主要iconfont链接 */
+  --iconfont-url: 'https://at.alicdn.com/t/c/font_4545731_cvnf4bw0cg.css';
+  
+  /* 备用iconfont链接（如果需要） */
+  --iconfont-fallback: 'https://at.alicdn.com/t/c/font_4545731_3pnlmzv33e7.css';
+  
+  /* 预连接域名 */
+  --iconfont-preconnect: 'https://at.alicdn.com';
+}
+
+/* 自动加载iconfont的CSS（通过@import） */
+@import url('https://at.alicdn.com/t/c/font_4545731_cvnf4bw0cg.css');
