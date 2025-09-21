@@ -66,6 +66,45 @@
       })(window, document, "script", "dataLayer", "GTM-000000");
     </script>
     <script>
+      // 统计文章数量并更新按钮显示
+      function updateArticleCounts() {
+        try {
+          var articles = document.querySelectorAll("article-card");
+          var counts = {
+            'all': articles.length,
+            'best_practice': 0,
+            'learning_notes': 0,
+            'insight': 0
+          };
+          
+          // 统计各分类文章数量
+          articles.forEach(function(article) {
+            var category = article.getAttribute("category");
+            if (category && counts.hasOwnProperty(category)) {
+              counts[category]++;
+            }
+          });
+          
+          // 更新按钮显示
+          Object.keys(counts).forEach(function(category) {
+            var countElement = document.getElementById('count-' + category);
+            if (countElement) {
+              countElement.textContent = counts[category];
+            }
+          });
+          
+          console.log('Article counts updated:', counts);
+        } catch (error) {
+          console.error('Error updating article counts:', error);
+        }
+      }
+      
+      // 页面加载完成后初始化计数
+      document.addEventListener('DOMContentLoaded', function() {
+        // 等待article-card组件加载完成
+        setTimeout(updateArticleCounts, 500);
+      });
+      
       function filterArticles(category) {
         try {
           var articles = document.querySelectorAll("article-card");
@@ -121,6 +160,9 @@
           // Announce filter change to screen readers
           var announcement = category === 'all' ? 'Showing all articles' : 'Showing ' + category + ' articles';
           container.setAttribute('aria-label', announcement);
+          
+          // 重新更新计数显示
+          updateArticleCounts();
           
         } catch (error) {
           console.error('Error filtering articles:', error);
@@ -404,8 +446,9 @@
                 aria-controls="article-container"
                 tabindex="0"
                 aria-label="Show all articles"
+                data-category="all"
               >
-                All Category
+                All Category <span class="article-count" id="count-all">0</span>
               </button>
               <button
                 class="btn btn-frameless btn-sm is-filter" 
@@ -416,8 +459,9 @@
                 aria-controls="article-container"
                 tabindex="-1"
                 aria-label="Show best practice articles"
+                data-category="best_practice"
               >
-                Best Practices
+                Best Practices <span class="article-count" id="count-best_practice">0</span>
               </button>
               <button
                 class="btn btn-frameless btn-sm is-filter" 
@@ -428,8 +472,9 @@
                 aria-controls="article-container"
                 tabindex="-1"
                 aria-label="Show learning notes articles"
+                data-category="learning_notes"
               >
-                Learning Notes
+                Learning Notes <span class="article-count" id="count-learning_notes">0</span>
               </button>
               <button
                 class="btn btn-frameless btn-sm is-filter" 
@@ -440,8 +485,9 @@
                 aria-controls="article-container"
                 tabindex="-1"
                 aria-label="Show other insight articles"
+                data-category="insight"
               >
-                Others
+                Others <span class="article-count" id="count-insight">0</span>
               </button>
             </div>
           </div>
