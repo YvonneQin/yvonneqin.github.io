@@ -533,6 +533,11 @@ html.dark .header .navbar .nav-item .nav-link {
   color: #ffffffd9 !important;
 }
 
+/* Dark mode: navigation underline two-tone gradient */
+html.dark .header .navbar .nav-item .nav-link::after {
+  background: linear-gradient(to right, --palette-light-fill-red 0%, #6c78f3 100%) !important;
+}
+
 html.dark .navbar-brand span:last-child {
   color: #ffffff73 !important; /* Qin - secondary text */
 }
