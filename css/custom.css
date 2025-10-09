@@ -208,6 +208,11 @@ h3 {
   margin-top: 60px;
 }
 
+/* Force specific project margin-top to 48px */
+#project-container .row.row--padded:first-child {
+  margin-top: 48px !important;
+}
+
 .titlenumber {
   font-size: 136px;
   font-weight: 600;
@@ -716,8 +721,10 @@ html.dark .experience__company { color: var(--palette-dark-key-colors-primary) !
 /* Links in lead paragraph - primary color */
 .lead a {
   color: var(--palette-light-key-colors-primary) !important;
-  text-decoration: underline !important;
+  text-decoration: none !important;
+  border-bottom: 1px solid var(--palette-light-key-colors-primary) !important;
   font-weight: 700 !important;
+  display: inline !important;
 }
 .lead a:hover { 
   color: var(--palette-light-key-colors-primary) !important; 
@@ -808,8 +815,10 @@ div[data-category] {
 /* Dark mode: links in lead paragraph - primary color */
 html.dark .lead a {
   color: var(--palette-dark-key-colors-primary) !important;
-  text-decoration: underline !important;
+  text-decoration: none !important;
+  border-bottom: 1px solid var(--palette-dark-key-colors-primary) !important;
   font-weight: 700 !important;
+  display: inline !important;
 }
 html.dark .lead a:hover { 
   color: var(--palette-dark-key-colors-primary) !important; 
