@@ -636,7 +636,7 @@
               Previously at <a target='_blank' href='https://www.linkedin.com/company/xiaohongshu/'>Xiaohongshu</a> & <a target='_blank' href='https://www.linkedin.com/company/%E4%B8%8A%E6%B5%B7%E8%80%80%E4%B9%98%E5%81%A5%E5%BA%B7%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8/'>AlphaLife Science</a>: built intelligent product ecosystems end-to-end, leveraging ML-driven UX and behavioral analytics for exponential growth.
             </p>
             
-            <p class="lead" style="text-align: left; margin-bottom: 0;">
+            <p class="lead" style="text-align: left; padding-bottom: 0px;">
               Publishing AI/ML insights in <a target='_blank' href='my_insight.html'>My Insight</a>.
             </p>
             <a href="https://www.linkedin.com/in/yuwen-qin-275864114/" class="btn btn-primary" target="_blank">
@@ -655,137 +655,194 @@
     <section id="portfolio" class="section section--border-bottom">
       <div class="container" style="margin-bottom: 80px;">
         <h2>🧩 Tinkering Zone</h2>
-        <div class="row row--padded rad-animation-group rad-fade-down " style="margin-top: 32px;">
-          <div class="col-12 col-md-7 pl-md-0 text-right">
+        <section class="section" style="padding-top: 0px; margin-top: 0px; " role="main">
+          <div class="container">
+            <div
+              class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
+              style="margin-top: 0px"
+            >
+              <div class="col-12 mt-4 mt-md-0 my-md-auto" style="padding-top: 16px;padding-left: 0px;">
+                <div class="filter-buttons" role="tablist" aria-label="Filter articles by category">
+                   <button 
+                     class="btn btn-sm filter-active" 
+                     style="height: 36px" 
+                     onclick="filterProjects('all')"
+                     role="tab"
+                     aria-selected="true"
+                     aria-controls="project-container"
+                     tabindex="0"
+                     aria-label="Show all projects"
+                     data-category="all"
+                   >
+                     All<span class="article-count" id="count-all">0</span>
+                   </button>
+                   <button
+                     class="btn btn-sm btn-frameless is-filter" 
+                     style="height: 36px"
+                     onclick="filterProjects('product_initiative')"
+                     role="tab"
+                     aria-selected="false"
+                     aria-controls="project-container"
+                     tabindex="-1"
+                     aria-label="Show product initiative articles"
+                     data-category="product_initiative"
+                   >
+                   Product Initiative
+                   <span class="article-count" id="count-product_initiative">0</span>
+                   </button>
+                   <button
+                     class="btn btn-sm btn-frameless is-filter" 
+                     style="height: 36px"
+                     onclick="filterProjects('side_project')"
+                     role="tab"
+                     aria-selected="false"
+                     aria-controls="project-container"
+                     tabindex="-1"
+                     aria-label="Show side project articles"
+                     data-category="side_project"
+                   >
+                   Side Project
+                   <span class="article-count" id="count-side_project">0</span>
+                   </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div id="project-container">
+
+        <div class="row row--padded rad-animation-group rad-fade-down " style="margin-top: 32px;" data-category="product_initiative">
+          <div class="col-md-7 pl-md-0 text-right">
             <img class='lozad img-responsive img-clip-right-backward' data-src="img/works/Redcity-banner.gif"
               data-srcset="img/works/Redcity-banner.gif" />
           </div>
-          <div class="col-12 col-md-5 mt-4 mt-md-0 my-md-auto" style="line-height: 32px;">
+          <div class="col-md-5 mt-4 mt-md-0 my-md-auto" style="line-height: 32px;">
             <div data-project="redcity" data-type="compact"></div>
             <a href="project_Redcity.html" class="btn btn-primary">Check it out<i
                 class="icon-arrow-right-sm iconfont"></i></a>
           </div>
         </div>
-        <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
-          <div class="hero_footer-svg_right">
-            <img src="img/figure-svg.svg" alt="">
-          </div>
-          <div class="col-12 col-md-5 mt-4 mt-md-0 my-md-auto" style="line-height: 32px;">
+        <div class="row row--padded rad-animation-group rad-fade-down" data-category="product_initiative">
+          <div class="col-md-5 mt-4 mt-md-0 my-md-auto" style="line-height: 32px;">
             <div data-project="construct" data-type="compact"></div>
             <a href="project_Construct.html" class="btn btn-primary">Check it out<i
                 class="icon-arrow-right-sm iconfont"></i></a>
           </div>
-          <div class="col-12 col-md-7 pl-md-0 text-right">
+          <div class="col-md-7 pl-md-0 text-right">
             <img class='lozad img-responsive img-clip-left-backward'
               src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
               data-src="img/works/construct-banner.svg" />
           </div>
+          <div class="hero_footer-svg_right">
+            <img src="img/figure-svg.svg" alt="">
+          </div>
         </div>
-        <div class="row row--padded rad-animation-group rad-fade-down ">
-          <div class="col-12 col-md-7 pl-md-0 text-right">
+        <div class="row row--padded rad-animation-group rad-fade-down " data-category="product_initiative">
+          <div class="col-md-7 pl-md-0 text-right">
             <img class='lozad img-responsive img-clip-right-backward'
               data-src="img/works/Best Practice For CX Management On DCT.svg"
               data-srcset="img/works/Best Practice For CX Management On DCT.svg" />
           </div>
-          <div class="col-12 col-md-5 mt-4 mt-md-0 my-md-auto" style="line-height: 32px;">
+          <div class="col-md-5 mt-4 mt-md-0 my-md-auto" style="line-height: 32px;">
             <div data-project="dct" data-type="compact"></div>
             <a href="project_DCT.html" class="btn btn-primary">Check it out<i
                 class="icon-arrow-right-sm iconfont"></i></a>
           </div>
         </div>
-        <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row customhover\\">
-          <div class="hero_footer-svg">
-            <img src="img/figure-svg.svg" alt="">
-          </div>
-          <div class="col-12 col-md-5 mt-4 mt-md-0 my-md-auto" style="line-height: 32px;">
+        <div class="row row--padded rad-animation-group rad-fade-down customhover\\" data-category="product_initiative">
+          <div class="col-md-5 mt-4 mt-md-0 my-md-auto" style="line-height: 32px;">
             <div data-project="ai" data-type="compact"></div>
             <a href="project_AI.html" class="btn btn-primary">Check it out<i
                 class="icon-arrow-right-sm iconfont"></i></a>
           </div>
-          <div class="col-12 col-md-7 pl-md-0 text-right">
+          <div class="col-md-7 pl-md-0 text-right">
             <img class='lozad img-responsive img-clip-left-backward'
               src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
               data-src="img/works/AI - Powered Experience Design.svg" />
           </div>
+          <div class="hero_footer-svg">
+            <img src="img/figure-svg.svg" alt="">
+          </div>
         </div>
-        <div class="row row--padded rad-animation-group rad-fade-down ">
-          <div class="col-12 col-md-7 pl-md-0 text-right">
+        <div class="row row--padded rad-animation-group rad-fade-down " data-category="product_initiative">
+          <div class="col-md-7 pl-md-0 text-right">
             <img class='lozad img-responsive img-clip-right-backward' data-src="img/works/compute-banner.svg"
               data-srcset="img/works/compute-banner.svg" />
           </div>
-          <div class="col-12 col-md-5 mt-4 mt-md-0 my-md-auto" style="line-height: 32px;">
+          <div class="col-md-5 mt-4 mt-md-0 my-md-auto" style="line-height: 32px;">
             <div data-project="mm" data-type="compact"></div>
             <a href="project_MM.html" class="btn btn-primary">Check it out<i
                 class="icon-arrow-right-sm iconfont"></i></a>
           </div>
         </div>
-        <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
-          <div class="hero_footer-svg_right">
-            <img src="img/figure-svg.svg" alt="">
-          </div>
-          <div class="col-12 col-md-5 mt-4 mt-md-0 my-md-auto" style="line-height: 32px;">
+        <div class="row row--padded rad-animation-group rad-fade-down" data-category="product_initiative">
+          <div class="col-md-5 mt-4 mt-md-0 my-md-auto" style="line-height: 32px;">
             <div data-project="poc" data-type="compact"></div>
             <a href="project_POC.html" class="btn btn-primary">Check it out<i
                 class="icon-arrow-right-sm iconfont"></i></a>
           </div>
-          <div class="col-12 col-md-7 pl-md-0 text-right">
+          <div class="col-md-7 pl-md-0 text-right">
             <img class='lozad img-responsive img-clip-left-backward'
               src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
               data-src="img/works/Group 1.svg" />
           </div>
+          <div class="hero_footer-svg_right">
+            <img src="img/figure-svg.svg" alt="">
+          </div>
         </div>
-        <div class="row row--padded rad-animation-group rad-fade-down ">
-          <div class="col-12 col-md-7 pl-md-0 text-right">
+        <div class="row row--padded rad-animation-group rad-fade-down " data-category="product_initiative">
+          <div class="col-md-7 pl-md-0 text-right">
             <img class='lozad img-responsive img-clip-right-backward' data-src="img/works/ifa-banner.png"
               data-srcset="img/works/ifa-banner.png 1x, img/works/ifa-banner@2x.png 2x" />
           </div>
-          <div class="col-12 col-md-5 mt-4 mt-md-0 my-md-auto" style="line-height: 32px;">
+          <div class="col-md-5 mt-4 mt-md-0 my-md-auto" style="line-height: 32px;">
             <div data-project="law" data-type="compact"></div>
             <a href="project_Law.html" class="btn btn-primary">Check it out<i
                 class="icon-arrow-right-sm iconfont"></i></a>
           </div>
         </div>
-        <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row customhover\\">
-          <div class="hero_footer-svg">
-            <img src="img/figure-svg.svg" alt="">
-          </div>
-          <div class="col-12 col-md-5 mt-4 mt-md-0 my-md-auto" style="line-height: 32px;">
+        <div class="row row--padded rad-animation-group rad-fade-down customhover\\" data-category="product_initiative">
+          <div class="col-md-5 mt-4 mt-md-0 my-md-auto" style="line-height: 32px;">
             <div data-project="askbob" data-type="compact"></div>
             <a href="project_Askbob.html" class="btn btn-primary">Check it out<i
                 class="icon-arrow-right-sm iconfont"></i></a>
           </div>
-          <div class="col-12 col-md-7 pl-md-0 text-right">
+          <div class="col-md-7 pl-md-0 text-right">
             <img class='lozad img-responsive img-clip-left-backward'
               src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
               data-src="img/works/Group 6@2x.png" />
           </div>
+          <div class="hero_footer-svg">
+            <img src="img/figure-svg.svg" alt="">
+          </div>
         </div>
-        <div class="row row--padded rad-animation-group rad-fade-down ">
-          <div class="col-12 col-md-7 pl-md-0 text-right">
+        <div class="row row--padded rad-animation-group rad-fade-down " data-category="product_initiative">
+          <div class="col-md-7 pl-md-0 text-right">
             <img class='lozad img-responsive img-clip-right-forward'
               src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
               data-src="img/works/Background Copy 3.svg" />
           </div>
-          <div class="col-12 col-md-5 mt-4 mt-md-0 my-md-auto" style="line-height: 32px;">
+          <div class="col-md-5 mt-4 mt-md-0 my-md-auto" style="line-height: 32px;">
             <div data-project="graduate" data-type="compact"></div>
             <a href="project_Gradute.html" class="btn btn-primary">Check it out ( Video included )
               <i class="icon-arrow-right-sm iconfont"></i></a>
           </div>
         </div>
-        <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row">
-          <div class="hero_footer-svg_right">
-            <img src="img/figure-svg.svg" alt="">
-          </div>
-          <div class="col-12 col-md-5 mt-4 mt-md-0 my-md-auto" style="line-height: 32px;">
+        <div class="row row--padded rad-animation-group rad-fade-down" data-category="product_initiative">
+          <div class="col-md-5 mt-4 mt-md-0 my-md-auto" style="line-height: 32px;">
             <div data-project="coe" data-type="compact"></div>
             <a href="project_COE.html" class="btn btn-primary">Check it out<i
                 class="icon-arrow-right-sm iconfont"></i></a>
           </div>
-          <div class="col-12 col-md-7 pl-md-0 text-right">
+          <div class="col-md-7 pl-md-0 text-right">
             <img class='lozad img-responsive img-clip-left-backward'
               src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
               data-src="img/works/Background Copy 4.svg" />
           </div>
+          <div class="hero_footer-svg_right">
+            <img src="img/figure-svg.svg" alt="">
+          </div>
+        </div>
         </div>
       </div>
     </section>
@@ -854,6 +911,203 @@
           w.document.documentElement.className += " fonts-loaded";
         });
       })(this);
+    </script>
+    <script>
+      // Project Filter System
+      function updateProjectCounts() {
+        try {
+          var projects = document.querySelectorAll('div[data-category]');
+          var counts = {
+            'all': projects.length,
+            'product_initiative': 0,
+            'side_project': 0
+          };
+          
+          // Count projects by category
+          projects.forEach(function(project) {
+            var category = project.getAttribute("data-category");
+            if (category && counts.hasOwnProperty(category)) {
+              counts[category]++;
+            }
+          });
+          
+          // Update button displays
+          Object.keys(counts).forEach(function(category) {
+            var countElement = document.getElementById('count-' + category);
+            if (countElement) {
+              countElement.textContent = counts[category];
+            }
+          });
+          
+          console.log('Project counts updated:', counts);
+          console.log('Total project divs found:', projects.length);
+        } catch (error) {
+          console.error('Error updating project counts:', error);
+        }
+      }
+
+      function filterProjects(category) {
+        try {
+          var projects = document.querySelectorAll('div[data-category]');
+          var buttons = document.querySelectorAll('[role="tab"]');
+          var container = document.getElementById('project-container');
+          
+          if (!projects.length || !buttons.length || !container) {
+            console.warn('Required elements for filtering not found');
+            return;
+          }
+          
+          // Update button states
+          buttons.forEach(function(button) {
+            var buttonCategory = button.getAttribute('data-category');
+            var isActive = buttonCategory === category;
+            button.setAttribute('aria-selected', isActive);
+            button.setAttribute('tabindex', isActive ? '0' : '-1');
+            
+            if (isActive) {
+              // Active state: add filter-active class, remove inactive classes
+              button.classList.remove('btn-frameless', 'is-filter');
+              button.classList.add('filter-active');
+              // Remove any inline styles that might override
+              button.style.backgroundColor = '';
+              button.style.color = '';
+              button.style.borderColor = '';
+              button.style.border = '';
+            } else {
+              // Inactive state: remove filter-active, add inactive classes
+              button.classList.remove('filter-active');
+              button.classList.add('btn-frameless', 'is-filter');
+            }
+          });
+          
+          // Filter projects with smooth transition
+          projects.forEach(function (project) {
+            var projectCategory = project.getAttribute("data-category");
+            var shouldShow = category === "all" || projectCategory === category;
+            
+              if (shouldShow) {
+                project.style.display = "block";
+                project.style.opacity = "0";
+                project.style.transform = "translateY(10px)";
+                project.style.pointerEvents = "auto";
+                project.style.maxHeight = "none";
+                project.style.overflow = "visible";
+                project.style.margin = "";
+                project.style.padding = "";
+                
+                // Smooth fade-in animation
+                requestAnimationFrame(function() {
+                  project.style.transition = "opacity 0.3s ease, transform 0.3s ease";
+                  project.style.opacity = "1";
+                  project.style.transform = "translateY(0)";
+                });
+            } else {
+              project.style.transition = "opacity 0.3s ease, transform 0.3s ease, max-height 0.3s ease, margin 0.3s ease, padding 0.3s ease";
+              project.style.opacity = "0";
+              project.style.transform = "translateY(-10px)";
+              project.style.pointerEvents = "none";
+              project.style.maxHeight = "0";
+              project.style.overflow = "hidden";
+              project.style.margin = "0";
+              project.style.padding = "0";
+              
+              setTimeout(function() {
+                project.style.display = "none";
+              }, 300);
+            }
+          });
+          
+          console.log(`Filtered projects by category: ${category}`);
+          console.log('Button states updated for category:', category);
+          
+          // Debug: Log button states
+          buttons.forEach(function(button) {
+            var buttonCategory = button.getAttribute('data-category');
+            var isActive = buttonCategory === category;
+            console.log(`Button ${buttonCategory}: active=${isActive}, classes=${button.className}`);
+          });
+        } catch (error) {
+          console.error('Error filtering projects:', error);
+        }
+      }
+
+      // Initialize on page load
+      document.addEventListener('DOMContentLoaded', function() {
+        // Set initial styles for all projects
+        var projects = document.querySelectorAll('div[data-category]');
+        projects.forEach(function(project) {
+          project.style.display = "block";
+          project.style.opacity = "1";
+          project.style.transform = "translateY(0)";
+          project.style.pointerEvents = "auto";
+          project.style.maxHeight = "none";
+          project.style.overflow = "visible";
+          project.style.margin = "";
+          project.style.padding = "";
+        });
+        
+        updateProjectCounts();
+        
+        // Ensure All button has correct initial state
+        var allButton = document.querySelector('[data-category="all"]');
+        if (allButton) {
+          // Ensure All button has active state
+          allButton.classList.remove('btn-frameless', 'is-filter');
+          allButton.classList.add('filter-active');
+          allButton.setAttribute('aria-selected', 'true');
+          allButton.setAttribute('tabindex', '0');
+        }
+        
+        // Ensure Product Initiative button has correct initial state
+        var productButton = document.querySelector('[data-category="product_initiative"]');
+        if (productButton) {
+          // Ensure Product Initiative button has inactive state
+          productButton.classList.remove('filter-active');
+          productButton.classList.add('btn-frameless', 'is-filter');
+          productButton.setAttribute('aria-selected', 'false');
+          productButton.setAttribute('tabindex', '-1');
+        }
+        
+        // Ensure Side Project button has correct initial state
+        var sideProjectButton = document.querySelector('[data-category="side_project"]');
+        if (sideProjectButton) {
+          // Ensure Side Project button has inactive state
+          sideProjectButton.classList.remove('filter-active');
+          sideProjectButton.classList.add('btn-frameless', 'is-filter');
+          sideProjectButton.setAttribute('aria-selected', 'false');
+          sideProjectButton.setAttribute('tabindex', '-1');
+        }
+        
+        // Add keyboard navigation support
+        document.querySelectorAll('[role="tab"]').forEach(function(button) {
+          button.addEventListener('keydown', function(e) {
+            var buttons = Array.from(document.querySelectorAll('[role="tab"]'));
+            var currentIndex = buttons.indexOf(this);
+            var targetButton = null;
+            
+            switch(e.key) {
+              case 'ArrowLeft':
+                e.preventDefault();
+                targetButton = buttons[currentIndex - 1] || buttons[buttons.length - 1];
+                break;
+              case 'ArrowRight':
+                e.preventDefault();
+                targetButton = buttons[currentIndex + 1] || buttons[0];
+                break;
+              case 'Enter':
+              case ' ':
+                e.preventDefault();
+                var category = this.getAttribute('data-category');
+                filterProjects(category);
+                break;
+            }
+            
+            if (targetButton) {
+              targetButton.focus();
+            }
+          });
+        });
+      });
     </script>
     <script>
       const scroll = new SmoothScroll('a[href*="#"]');

@@ -1,39 +1,49 @@
 
-/* Filter buttons: match My Resume button style */
-.btn.btn-frameless.is-filter {
+/* Filter buttons: inactive state */
+.btn-frameless.is-filter {
   background-color: transparent !important;
   color: var(--mode-light-text-85-primary) !important;
   border: 1px solid var(--palette-light-neutral-neutral-1) !important;
   transition: all 0.3s ease !important;
 }
-.btn.btn-frameless.is-filter:hover {
+.btn-frameless.is-filter:hover {
   background-color: rgba(0, 0, 0, 0.06) !important;
   border-color: var(--mode-light-text-45-secondary) !important;
   color: var(--mode-light-text-85-primary) !important;
 }
 
-/* All Category button: use darkest design tokens in light mode */
-.btn:not(.btn-frameless) {
+/* Filter buttons: active state */
+.filter-active {
   background-color: var(--palette-light-neutral-neutral-9) !important;
   color: #ffffff !important;
   border: 1px solid var(--palette-light-neutral-neutral-9) !important;
   transition: all 0.3s ease !important;
 }
 
-.btn:not(.btn-frameless):hover {
+.filter-active:hover {
   background-color: #000000 !important;
   border-color: #000000 !important;
   color: #ffffff !important;
 }
 
-/* Dark mode: regular button styling */
-html.dark .btn:not(.btn-frameless) {
+/* Dark mode: filter buttons */
+html.dark .btn-frameless.is-filter {
+  background-color: transparent !important;
+  color: #ffffffd9 !important;
+  border: 1px solid #ffffff33 !important;
+}
+html.dark .btn-frameless.is-filter:hover {
+  background-color: #ffffff14 !important;
+  border-color: #ffffff66 !important;
+  color: #ffffff !important;
+}
+
+html.dark .filter-active {
   background-color: #ffffff14 !important;
   color: #ffffffd9 !important;
   border: 1px solid #ffffff33 !important;
 }
-
-html.dark .btn:not(.btn-frameless):hover {
+html.dark .filter-active:hover {
   background-color: #ffffff33 !important;
   border-color: #ffffff66 !important;
   color: #ffffff !important;
@@ -712,6 +722,87 @@ html.dark .experience__company { color: var(--palette-dark-key-colors-primary) !
 .lead a:hover { 
   color: var(--palette-light-key-colors-primary) !important; 
   opacity: 0.8;
+}
+
+/* Project filter animation styles */
+div[data-category] {
+  transition: opacity 0.3s ease, transform 0.3s ease, max-height 0.3s ease !important;
+}
+
+#project-container {
+  /* Container for project filtering - keep original vertical layout */
+}
+
+/* Ensure hidden projects take no space for compact layout */
+#project-container .row[style*="display: none"] {
+  display: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  height: 0 !important;
+  max-height: 0 !important;
+  overflow: hidden !important;
+}
+
+#project-container .row[style*="max-height: 0"] {
+  margin: 0 !important;
+  padding: 0 !important;
+  height: 0 !important;
+  max-height: 0 !important;
+  overflow: hidden !important;
+}
+
+/* Force project content to stay in one row - override Bootstrap */
+#project-container .row {
+  display: flex !important;
+  align-items: center !important;
+  flex-wrap: nowrap !important;
+}
+
+#project-container .row .col-md-7,
+#project-container .row .col-md-5 {
+  display: inline-block !important;
+  float: none !important;
+  width: 60% !important;
+  max-width: 60% !important;
+  flex: 0 0 60% !important;
+}
+
+#project-container .row .col-md-5 {
+  width: 40% !important;
+  max-width: 40% !important;
+  flex: 0 0 40% !important;
+}
+
+/* Mobile - force 50/50 split */
+@media (max-width: 767px) {
+  #project-container .row {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+  }
+  
+  #project-container .row .col-md-7 {
+    width: 50% !important;
+    max-width: 50% !important;
+    flex: 0 0 50% !important;
+  }
+  
+  #project-container .row .col-md-5 {
+    width: 50% !important;
+    max-width: 50% !important;
+    flex: 0 0 50% !important;
+  }
+}
+
+/* Handle flex-column-reverse projects */
+#project-container .row.flex-column-reverse {
+  flex-direction: row-reverse !important;
+}
+
+@media (max-width: 767px) {
+  #project-container .row.flex-column-reverse {
+    flex-direction: row-reverse !important;
+  }
 }
 
 /* Dark mode: links in lead paragraph - primary color */

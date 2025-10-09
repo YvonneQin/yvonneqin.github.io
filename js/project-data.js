@@ -6,7 +6,8 @@ const ProjectData = {
     badges: ['0 to 1', 'Framework', 'Guidelines'],
     period: '2024.01 - 2024.05',
     role: 'Researcher & Designer',
-    duration: '20 mins'
+    duration: '20 mins',
+    category: 'product_initiative'
   },
   
   // Construct Project
@@ -15,7 +16,8 @@ const ProjectData = {
     badges: ['0 to 1', 'Product Design', 'Product Strategy'],
     period: '2021.04 - 2023.11',
     role: 'Researcher & Designer',
-    duration: '20 mins'
+    duration: '20 mins',
+    category: 'product_initiative'
   },
   
   // DCT Project
@@ -24,7 +26,8 @@ const ProjectData = {
     badges: ['Service Design', 'Hardware Design'],
     period: '2022.12 - 2023.11',
     role: 'Researcher & Designer',
-    duration: '20 mins'
+    duration: '20 mins',
+    category: 'product_initiative'
   },
   
   // AI Project
@@ -33,7 +36,8 @@ const ProjectData = {
     badges: ['Product Design & Strategy'],
     period: '2022.12 - 2023.11',
     role: 'Designer & Researcher',
-    duration: '20 mins'
+    duration: '20 mins',
+    category: 'product_initiative'
   },
   
   // MM Project
@@ -42,7 +46,8 @@ const ProjectData = {
     badges: ['Benchmarking Analysis', 'Product Design'],
     period: '2022.12 - 2023.11',
     role: 'Researcher & Designer',
-    duration: '20 mins'
+    duration: '20 mins',
+    category: 'product_initiative'
   },
   
   // POC Project
@@ -51,7 +56,8 @@ const ProjectData = {
     badges: ['Product Design', 'Rapid Prototype'],
     period: '2022.12 - 2023.11',
     role: 'Researcher & Designer',
-    duration: '20 mins'
+    duration: '20 mins',
+    category: 'side_project'
   },
   
   // Law Project
@@ -60,7 +66,8 @@ const ProjectData = {
     badges: ['Product', 'Interaction', 'User Research'],
     period: 'Mar 2020 - Jul 2020',
     role: 'Product Designer',
-    duration: '20 mins'
+    duration: '20 mins',
+    category: 'product_initiative'
   },
   
   // Askbob Project
@@ -69,7 +76,8 @@ const ProjectData = {
     badges: ['Interaction', 'User Research'],
     period: 'Jan 2019 - Mar 2020',
     role: 'Product Designer',
-    duration: '20 mins'
+    duration: '20 mins',
+    category: 'product_initiative'
   },
   
   // Graduate Project
@@ -78,7 +86,8 @@ const ProjectData = {
     badges: ['Smart Hardware', 'Interaction'],
     period: 'Jan 2016',
     role: 'Student',
-    duration: '20 mins'
+    duration: '20 mins',
+    category: 'side_project'
   },
   
   // COE Project
@@ -87,7 +96,8 @@ const ProjectData = {
     badges: ['Visual'],
     period: 'Oct 2019 - Jan 2020',
     role: 'Product Designer',
-    duration: '20 mins'
+    duration: '20 mins',
+    category: 'side_project'
   }
 };
 
