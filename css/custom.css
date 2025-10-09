@@ -696,17 +696,34 @@ html.dark .experience__date {
   color: #ffffff73 !important;
 }
 
+/* Experience block colors */
+.experience__company { color: var(--palette-light-key-colors-primary) !important; }
+
 /* Experience block - dark colors */
 html.dark .experience__title { color: #ffffffd9 !important; }
-html.dark .experience__company { color: #e62122 !important; }
+html.dark .experience__company { color: var(--palette-dark-key-colors-primary) !important; }
 
-/* Dark mode: links in lead paragraph - light color, underline, bold */
-html.dark .lead a {
-  color: #ffffffd9 !important;
+/* Links in lead paragraph - primary color */
+.lead a {
+  color: var(--palette-light-key-colors-primary) !important;
   text-decoration: underline !important;
   font-weight: 700 !important;
 }
-html.dark .lead a:hover { color: #ffffff !important; }
+.lead a:hover { 
+  color: var(--palette-light-key-colors-primary) !important; 
+  opacity: 0.8;
+}
+
+/* Dark mode: links in lead paragraph - primary color */
+html.dark .lead a {
+  color: var(--palette-dark-key-colors-primary) !important;
+  text-decoration: underline !important;
+  font-weight: 700 !important;
+}
+html.dark .lead a:hover { 
+  color: var(--palette-dark-key-colors-primary) !important; 
+  opacity: 0.8;
+}
 
 /* Contact section two-tone in dark */
 html.dark .section--contact h2 { color: #ffffffd9 !important; }
