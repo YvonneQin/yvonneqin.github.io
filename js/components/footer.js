@@ -17,13 +17,13 @@ class SiteFooter extends HTMLElement {
           <a class="nav-link" href="index.html#about">Skills</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="index.html#portfolio">Projects</a>
+          <a class="nav-link" href="index.html#portfolio">🧩 Tinkering Zones</a>
         </li>
         <li class="nav-item">
-          <a data-scroll class="nav-link" href="my_insight.html">Insights</a>
+          <a data-scroll class="nav-link" href="my_insight.html">Insights<i class="icon-a-directto-s iconfont"></i></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="index.html#contact">Contact</a>
+          <a class="nav-link" href="index.html#contact">Contact me</a>
         </li>
       </ul>
     </div>

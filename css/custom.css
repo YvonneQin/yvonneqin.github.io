@@ -820,6 +820,11 @@ html.dark .lead a {
   font-weight: 700 !important;
   display: inline !important;
 }
+
+/* Footer navigation padding adjustment */
+.footer .navbar-nav .nav-item .nav-link {
+  padding: 8px !important;
+}
 html.dark .lead a:hover { 
   color: var(--palette-dark-key-colors-primary) !important; 
   opacity: 0.8;

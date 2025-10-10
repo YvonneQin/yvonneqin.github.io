@@ -18,8 +18,8 @@ class SiteHeader extends HTMLElement {
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
           <li class="nav-item"><a data-scroll class="nav-link" href="index.html#skills">Skills</a></li>
           <li class="nav-item"><a data-scroll class="nav-link" href="index.html#portfolio">🧩 Tinkering Zones</a></li>
-          <li class="nav-item"><a data-scroll class="nav-link" href="index.html#contact">Contact</a></li>
-                    <li class="nav-item"><a data-scroll class="nav-link" href="my_insight.html">Insights<i class="icon-a-directto-s iconfont"></i></a></li>
+          <!-- <li class="nav-item"><a data-scroll class="nav-link" href="index.html#contact">Contact me</a></li> -->
+          <li class="nav-item"><a data-scroll class="nav-link" href="my_insight.html">Insights<i class="icon-a-directto-s iconfont"></i></a></li>
         </ul>
       </div>
     </nav>
