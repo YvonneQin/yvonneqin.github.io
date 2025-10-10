@@ -2,30 +2,40 @@
 <html lang="en">
 
 <head>
+  <!-- Meta Tags -->
   <meta name="author" content="Yuwen Qin">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <meta name="description"
-    content="Yuwen Qin - Experience Imagineer & Individual Developer. UX/UI Designer with expertise in product design, frontend development, and AI/ML. Based in Shanghai." />
-  <meta name="keywords"
-    content="Yuwen Qin, UX Designer, UI Designer, Product Designer, Frontend Developer, Portfolio, Shanghai, Experience Design" />
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Yuwen Qin - Experience Imagineer & Individual Developer. UX/UI Designer with expertise in product design, frontend development, and AI/ML. Based in Shanghai." />
+  <meta name="keywords" content="Yuwen Qin, UX Designer, UI Designer, Product Designer, Frontend Developer, Portfolio, Shanghai, Experience Design" />
+  
+  <!-- Open Graph Meta Tags -->
   <meta property="og:title" content="Yuwen Qin - Experience Imagineer & Developer" />
-  <meta property="og:description"
-    content="UX/UI Designer and Developer creating meaningful digital experiences. Specialized in product design, frontend development, and AI/ML integration." />
+  <meta property="og:description" content="UX/UI Designer and Developer creating meaningful digital experiences. Specialized in product design, frontend development, and AI/ML integration." />
   <meta property="og:image" content="img/meta/web Logo.png" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://yvonneqin.github.io" />
+  
+  <!-- Twitter Card Meta Tags -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Yuwen Qin - Experience Imagineer & Developer" />
   <meta name="twitter:description" content="UX/UI Designer and Developer creating meaningful digital experiences." />
   <meta name="twitter:image" content="img/meta/web Logo.png" />
+  
+  <!-- Links -->
   <link rel="icon" type="image/x-icon" href="favicon.ico" />
   <link rel="canonical" href="https://yvonneqin.github.io" />
+  
+  <!-- Stylesheets -->
   <link rel="preload" href="css/main.css" as="style" />
   <link rel="preload" href="css/custom.css" as="style" />
   <link rel="stylesheet" href="css/main.css" />
   <link rel="stylesheet" href="css/custom.css" />
+  
+  <!-- Scripts -->
   <script src="js/config.js"></script>
 
   <!-- Structured Data -->
@@ -51,6 +61,7 @@
   }
   </script>
 
+  <!-- Google Tag Manager -->
   <script>
     (function (w, d, s, l, i) {
       w[l] = w[l] || [];
@@ -59,77 +70,98 @@
         event: 'gtm.js'
       });
       var f = d.getElementsByTagName(s)[0],
-        j = d.createElement(s),
-        dl = l != 'dataLayer' ? '&l=' + l : '';
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
       j.async = true;
-      j.src =
-        'https://www.googletagmanager.com/gtm.js?id=GTM-000000' + i + dl;
+      j.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-000000' + i + dl;
       f.parentNode.insertBefore(j, f);
     })(window, document, 'script', 'dataLayer', 'GTM-000000');
   </script>
+  <!-- Expandable Section Script -->
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       try {
+        // Get DOM elements
         const toggleButton = document.getElementById('toggleButton');
         const expandableDiv = document.getElementById('expandableDiv');
         const gradientOverlay = document.getElementById('gradientOverlay');
         const COLLAPSED_HEIGHT = 218;
         let isAnimating = false;
 
-        // Check if required elements exist
+        // Validate required elements
         if (!toggleButton || !expandableDiv) {
           console.warn('Required elements for expandable section not found');
           return;
         }
+
+        /**
+         * Collapse the expandable section
+         */
         function collapse() {
           if (isAnimating) return;
+          
           isAnimating = true;
           toggleButton.disabled = true;
+          
           const currentHeight = expandableDiv.getBoundingClientRect().height;
           expandableDiv.style.height = currentHeight + 'px';
+          
           requestAnimationFrame(() => {
             expandableDiv.style.height = COLLAPSED_HEIGHT + 'px';
           });
+          
           const onTransitionEnd = (event) => {
             if (event.propertyName !== 'height') return;
+            
             expandableDiv.removeEventListener('transitionend', onTransitionEnd);
             expandableDiv.classList.remove('expanded');
             toggleButton.innerHTML = 'Expand All<i class="icon-arrow-down-F iconfont"></i>';
             toggleButton.setAttribute('aria-expanded', 'false');
-            // Keep overlay visible as before
-            // gradientOverlay.style.display = 'flex';
+            
             // Clear inline height to rely on CSS collapsed height
             expandableDiv.style.height = '';
             isAnimating = false;
             toggleButton.disabled = false;
           };
+          
           expandableDiv.addEventListener('transitionend', onTransitionEnd);
         }
+
+        /**
+         * Expand the expandable section
+         */
         function expand() {
           if (isAnimating) return;
+          
           isAnimating = true;
           toggleButton.disabled = true;
+          
           const startHeight = expandableDiv.getBoundingClientRect().height;
           expandableDiv.style.height = startHeight + 'px';
           const targetHeight = expandableDiv.scrollHeight;
+          
           requestAnimationFrame(() => {
             expandableDiv.style.height = targetHeight + 'px';
           });
+          
           const onTransitionEnd = (event) => {
             if (event.propertyName !== 'height') return;
+            
             expandableDiv.removeEventListener('transitionend', onTransitionEnd);
             expandableDiv.classList.add('expanded');
             toggleButton.innerHTML = 'Collapse All <i class="icon-arrow-up-F iconfont"></i>';
             toggleButton.setAttribute('aria-expanded', 'true');
-            // Keep overlay visible as before
-            // gradientOverlay.style.display = 'flex';
+            
             // Allow content to grow naturally when expanded
             expandableDiv.style.height = 'auto';
             isAnimating = false;
             toggleButton.disabled = false;
           };
+          
           expandableDiv.addEventListener('transitionend', onTransitionEnd);
         }
+
+        // Add click event listener
         toggleButton.addEventListener('click', function () {
           if (expandableDiv.classList.contains('expanded')) {
             collapse();
@@ -137,13 +169,19 @@
             expand();
           }
         });
+        
       } catch (error) {
         console.error('Error initializing expandable section:', error);
       }
     });
   </script>
-  <title>Yuwen‘s Portfolio</title>
+  <title>Yuwen's Portfolio</title>
+  
+  <!-- Animation Styles -->
   <style>
+    /* ============================================
+       Fade In Animation
+       ============================================ */
     .rad-fade-in {
       will-change: opacity, transform;
       animation-name: rad-fade-in-fallback;
@@ -152,17 +190,9 @@
     }
 
     @keyframes rad-fade-in-fallback {
-      0% {
-        opacity: 0;
-      }
-
-      75% {
-        opacity: 0;
-      }
-
-      100% {
-        opacity: 1;
-      }
+      0% { opacity: 0; }
+      75% { opacity: 0; }
+      100% { opacity: 1; }
     }
 
     .fonts-loaded .rad-fade-in.rad-waiting {
@@ -177,15 +207,13 @@
     }
 
     @keyframes rad-fade-in {
-      0% {
-        opacity: 0;
-      }
-
-      100% {
-        opacity: 1;
-      }
+      0% { opacity: 0; }
+      100% { opacity: 1; }
     }
 
+    /* ============================================
+       Fade In Long Animation
+       ============================================ */
     .rad-fade-in-long {
       will-change: opacity, transform;
       animation-name: rad-fade-in-long-fallback;
@@ -194,17 +222,9 @@
     }
 
     @keyframes rad-fade-in-long-fallback {
-      0% {
-        opacity: 0;
-      }
-
-      75% {
-        opacity: 0;
-      }
-
-      100% {
-        opacity: 1;
-      }
+      0% { opacity: 0; }
+      75% { opacity: 0; }
+      100% { opacity: 1; }
     }
 
     .fonts-loaded .rad-fade-in-long.rad-waiting {
@@ -219,19 +239,14 @@
     }
 
     @keyframes rad-fade-in-long {
-      0% {
-        opacity: 0;
-      }
-
-      20% {
-        opacity: 0;
-      }
-
-      100% {
-        opacity: 1;
-      }
+      0% { opacity: 0; }
+      20% { opacity: 0; }
+      100% { opacity: 1; }
     }
 
+    /* ============================================
+       Fade Down Animation
+       ============================================ */
     .rad-fade-down {
       will-change: opacity, transform;
       animation-name: rad-fade-down-fallback;
@@ -245,12 +260,10 @@
         opacity: 0;
         transform: translateY(-30px);
       }
-
       75% {
         opacity: 0;
         transform: translateY(-30px);
       }
-
       100% {
         opacity: 1;
         transform: translateY(0);
@@ -273,13 +286,15 @@
         opacity: 0;
         transform: translateY(-30px);
       }
-
       100% {
         opacity: 1;
         transform: translateY(0);
       }
     }
 
+    /* ============================================
+       Scale Down Animation
+       ============================================ */
     .rad-scale-down {
       will-change: opacity, transform;
       animation-name: rad-scale-down-fallback;
@@ -293,12 +308,10 @@
         opacity: 0;
         transform: scaleY(0.95);
       }
-
       75% {
         opacity: 0;
         transform: scaleY(0.95);
       }
-
       100% {
         opacity: 1;
         transform: scaleY(1);
@@ -322,34 +335,30 @@
         opacity: 0;
         transform: scaleY(0.95);
       }
-
       100% {
         opacity: 1;
         transform: scaleY(1);
       }
     }
 
+    /* ============================================
+       Movement Animations
+       ============================================ */
     @keyframes move_left {
-      from {
-        left: -430px;
-      }
-
-      to {
-        left: -380px;
-      }
+      from { left: -430px; }
+      to { left: -380px; }
     }
 
     @keyframes move_right {
-      from {
-        left: 930px;
-      }
-
-      to {
-        left: 980px;
-      }
+      from { left: 930px; }
+      to { left: 980px; }
     }
   </style>
+  <!-- Expandable Section Styles -->
   <style>
+    /* ============================================
+       Expandable Section Styles
+       ============================================ */
     #expandableDiv {
       width: 100%;
       height: 218px;
@@ -377,32 +386,46 @@
       background-color: white;
     }
 
+    /* ============================================
+       Gradient Overlay Styles
+       ============================================ */
     #gradientOverlay {
       position: absolute;
       bottom: 0;
       left: 0;
       width: 100%;
       height: 64px;
-      background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 1) 100%);
+      background: linear-gradient(
+        to bottom, 
+        rgba(255, 255, 255, 0) 0%, 
+        rgba(255, 255, 255, 1) 50%, 
+        rgba(255, 255, 255, 1) 100%
+      );
       display: flex;
       justify-content: center;
       align-items: center;
     }
 
-    /* Dark mode gradient overlay - soften */
+    /* Dark mode gradient overlay */
     html.dark #gradientOverlay {
-      background: linear-gradient(to bottom,
-          rgba(26, 26, 26, 0) 0%,
-          rgba(26, 26, 26, 0.85) 55%,
-          rgba(26, 26, 26, 1) 100%);
+      background: linear-gradient(
+        to bottom,
+        rgba(26, 26, 26, 0) 0%,
+        rgba(26, 26, 26, 0.85) 55%,
+        rgba(26, 26, 26, 1) 100%
+      );
     }
 
+    /* ============================================
+       Accessibility & Performance
+       ============================================ */
     @media (prefers-reduced-motion: reduce) {
       #expandableDiv {
         transition: none !important;
       }
     }
   </style>
+  <!-- Component Scripts -->
   <script src="js/components/header.js"></script>
   <script src="js/components/footer.js"></script>
   <script src="js/components/badge-tag.js"></script>
@@ -414,9 +437,13 @@
   <script src="js/project-data.js"></script>
 
 <body>
+  <!-- Skip to main content link for accessibility -->
   <a href="#main-content" class="skip-link">Skip to main content</a>
+  
+  <!-- Site Header -->
   <site-header></site-header>
 
+  <!-- Main Content -->
   <main id="main-content">
     <section class="rad-showcase rad-showcase--index rad-animation-group rad-fade-down" role="banner">
       <div class="rad-showcase__bg">
@@ -662,26 +689,26 @@
               <div class="col-12 mt-4 mt-md-0 my-md-auto" style="padding-top: 16px;padding-left: 0px;">
                 <div class="filter-buttons" role="tablist" aria-label="Filter articles by category">
                    <button 
-                     class="btn btn-sm filter-active" 
+                     class="btn btn-sm btn-frameless is-filter" 
                      style="height: 36px" 
                      onclick="filterProjects('all')"
                      role="tab"
-                     aria-selected="true"
+                     aria-selected="false"
                      aria-controls="project-container"
-                     tabindex="0"
+                     tabindex="-1"
                      aria-label="Show all projects"
                      data-category="all"
                    >
                      All<span class="article-count" id="count-all">0</span>
                    </button>
                    <button
-                     class="btn btn-sm btn-frameless is-filter" 
+                     class="btn btn-sm filter-active" 
                      style="height: 36px"
                      onclick="filterProjects('product_initiative')"
                      role="tab"
-                     aria-selected="false"
+                     aria-selected="true"
                      aria-controls="project-container"
-                     tabindex="-1"
+                     tabindex="0"
                      aria-label="Show product initiative articles"
                      data-category="product_initiative"
                    >
@@ -909,12 +936,22 @@
         });
       })(this);
     </script>
+    <!-- Project Filter System -->
     <script>
-      // Project Filter System
+      /**
+       * ============================================
+       * Project Filter System
+       * ============================================
+       */
+      
+      /**
+       * Update project counts for each category
+       * @function updateProjectCounts
+       */
       function updateProjectCounts() {
         try {
-          var projects = document.querySelectorAll('div[data-category]');
-          var counts = {
+          const projects = document.querySelectorAll('div[data-category]');
+          const counts = {
             'all': projects.length,
             'product_initiative': 0,
             'side_project': 0
@@ -922,7 +959,7 @@
           
           // Count projects by category
           projects.forEach(function(project) {
-            var category = project.getAttribute("data-category");
+            const category = project.getAttribute("data-category");
             if (category && counts.hasOwnProperty(category)) {
               counts[category]++;
             }
@@ -930,7 +967,7 @@
           
           // Update button displays
           Object.keys(counts).forEach(function(category) {
-            var countElement = document.getElementById('count-' + category);
+            const countElement = document.getElementById('count-' + category);
             if (countElement) {
               countElement.textContent = counts[category];
             }
@@ -943,95 +980,167 @@
         }
       }
 
+      /**
+       * Filter projects by category with smooth animations
+       * @function filterProjects
+       * @param {string} category - The category to filter by
+       */
       function filterProjects(category) {
         try {
-          var projects = document.querySelectorAll('div[data-category]');
-          var buttons = document.querySelectorAll('[role="tab"]');
-          var container = document.getElementById('project-container');
+          const projects = document.querySelectorAll('div[data-category]');
+          const buttons = document.querySelectorAll('[role="tab"]');
+          const container = document.getElementById('project-container');
           
+          // Validate required elements
           if (!projects.length || !buttons.length || !container) {
             console.warn('Required elements for filtering not found');
             return;
           }
           
           // Update button states
-          buttons.forEach(function(button) {
-            var buttonCategory = button.getAttribute('data-category');
-            var isActive = buttonCategory === category;
-            button.setAttribute('aria-selected', isActive);
-            button.setAttribute('tabindex', isActive ? '0' : '-1');
-            
-            if (isActive) {
-              // Active state: add filter-active class, remove inactive classes
-              button.classList.remove('btn-frameless', 'is-filter');
-              button.classList.add('filter-active');
-              // Remove any inline styles that might override
-              button.style.backgroundColor = '';
-              button.style.color = '';
-              button.style.borderColor = '';
-              button.style.border = '';
-            } else {
-              // Inactive state: remove filter-active, add inactive classes
-              button.classList.remove('filter-active');
-              button.classList.add('btn-frameless', 'is-filter');
-            }
-          });
+          updateButtonStates(buttons, category);
           
           // Filter projects with smooth transition
-          projects.forEach(function (project) {
-            var projectCategory = project.getAttribute("data-category");
-            var shouldShow = category === "all" || projectCategory === category;
-            
-              if (shouldShow) {
-                project.style.display = "block";
-                project.style.opacity = "0";
-                project.style.transform = "translateY(10px)";
-                project.style.pointerEvents = "auto";
-                project.style.maxHeight = "none";
-                project.style.overflow = "visible";
-                project.style.margin = "";
-                project.style.padding = "";
-                
-                // Smooth fade-in animation
-                requestAnimationFrame(function() {
-                  project.style.transition = "opacity 0.3s ease, transform 0.3s ease";
-                  project.style.opacity = "1";
-                  project.style.transform = "translateY(0)";
-                });
-            } else {
-              project.style.transition = "opacity 0.3s ease, transform 0.3s ease, max-height 0.3s ease, margin 0.3s ease, padding 0.3s ease";
-              project.style.opacity = "0";
-              project.style.transform = "translateY(-10px)";
-              project.style.pointerEvents = "none";
-              project.style.maxHeight = "0";
-              project.style.overflow = "hidden";
-              project.style.margin = "0";
-              project.style.padding = "0";
-              
-              setTimeout(function() {
-                project.style.display = "none";
-              }, 300);
-            }
-          });
+          filterProjectElements(projects, category);
           
           console.log(`Filtered projects by category: ${category}`);
           console.log('Button states updated for category:', category);
           
-          // Debug: Log button states
-          buttons.forEach(function(button) {
-            var buttonCategory = button.getAttribute('data-category');
-            var isActive = buttonCategory === category;
-            console.log(`Button ${buttonCategory}: active=${isActive}, classes=${button.className}`);
-          });
         } catch (error) {
           console.error('Error filtering projects:', error);
         }
       }
 
+      /**
+       * Update button states based on active category
+       * @function updateButtonStates
+       * @param {NodeList} buttons - The filter buttons
+       * @param {string} activeCategory - The currently active category
+       */
+      function updateButtonStates(buttons, activeCategory) {
+        buttons.forEach(function(button) {
+          const buttonCategory = button.getAttribute('data-category');
+          const isActive = buttonCategory === activeCategory;
+          
+          // Update ARIA attributes
+          button.setAttribute('aria-selected', isActive);
+          button.setAttribute('tabindex', isActive ? '0' : '-1');
+          
+          if (isActive) {
+            // Active state: add filter-active class, remove inactive classes
+            button.classList.remove('btn-frameless', 'is-filter');
+            button.classList.add('filter-active');
+            
+            // Clear any inline styles that might override
+            button.style.backgroundColor = '';
+            button.style.color = '';
+            button.style.borderColor = '';
+            button.style.border = '';
+          } else {
+            // Inactive state: remove filter-active, add inactive classes
+            button.classList.remove('filter-active');
+            button.classList.add('btn-frameless', 'is-filter');
+          }
+        });
+      }
+
+      /**
+       * Filter project elements with smooth animations
+       * @function filterProjectElements
+       * @param {NodeList} projects - The project elements
+       * @param {string} category - The category to filter by
+       */
+      function filterProjectElements(projects, category) {
+        projects.forEach(function (project) {
+          const projectCategory = project.getAttribute("data-category");
+          const shouldShow = category === "all" || projectCategory === category;
+          
+          if (shouldShow) {
+            showProject(project);
+          } else {
+            hideProject(project);
+          }
+        });
+      }
+
+      /**
+       * Show project with fade-in animation
+       * @function showProject
+       * @param {HTMLElement} project - The project element to show
+       */
+      function showProject(project) {
+        project.style.display = "block";
+        project.style.opacity = "0";
+        project.style.transform = "translateY(10px)";
+        project.style.pointerEvents = "auto";
+        project.style.maxHeight = "none";
+        project.style.overflow = "visible";
+        project.style.margin = "";
+        project.style.padding = "";
+        
+        // Smooth fade-in animation
+        requestAnimationFrame(function() {
+          project.style.transition = "opacity 0.3s ease, transform 0.3s ease";
+          project.style.opacity = "1";
+          project.style.transform = "translateY(0)";
+        });
+      }
+
+      /**
+       * Hide project with fade-out animation
+       * @function hideProject
+       * @param {HTMLElement} project - The project element to hide
+       */
+      function hideProject(project) {
+        project.style.transition = "opacity 0.3s ease, transform 0.3s ease, max-height 0.3s ease, margin 0.3s ease, padding 0.3s ease";
+        project.style.opacity = "0";
+        project.style.transform = "translateY(-10px)";
+        project.style.pointerEvents = "none";
+        project.style.maxHeight = "0";
+        project.style.overflow = "hidden";
+        project.style.margin = "0";
+        project.style.padding = "0";
+        
+        setTimeout(function() {
+          project.style.display = "none";
+        }, 300);
+      }
+
+      /**
+       * ============================================
+       * Page Initialization
+       * ============================================
+       */
+      
       // Initialize on page load
       document.addEventListener('DOMContentLoaded', function() {
-        // Set initial styles for all projects
-        var projects = document.querySelectorAll('div[data-category]');
+        try {
+          // Initialize project styles
+          initializeProjectStyles();
+          
+          // Update project counts
+          updateProjectCounts();
+          
+          // Initialize button states
+          initializeButtonStates();
+          
+          // Add keyboard navigation support
+          initializeKeyboardNavigation();
+          
+          // Set default filter to Product Initiative
+          filterProjects('product_initiative');
+          
+        } catch (error) {
+          console.error('Error during page initialization:', error);
+        }
+      });
+
+      /**
+       * Initialize project styles
+       * @function initializeProjectStyles
+       */
+      function initializeProjectStyles() {
+        const projects = document.querySelectorAll('div[data-category]');
         projects.forEach(function(project) {
           project.style.display = "block";
           project.style.opacity = "1";
@@ -1042,45 +1151,47 @@
           project.style.margin = "";
           project.style.padding = "";
         });
-        
-        updateProjectCounts();
-        
-        // Ensure All button has correct initial state
-        var allButton = document.querySelector('[data-category="all"]');
-        if (allButton) {
-          // Ensure All button has active state
-          allButton.classList.remove('btn-frameless', 'is-filter');
-          allButton.classList.add('filter-active');
-          allButton.setAttribute('aria-selected', 'true');
-          allButton.setAttribute('tabindex', '0');
-        }
-        
-        // Ensure Product Initiative button has correct initial state
-        var productButton = document.querySelector('[data-category="product_initiative"]');
-        if (productButton) {
-          // Ensure Product Initiative button has inactive state
-          productButton.classList.remove('filter-active');
-          productButton.classList.add('btn-frameless', 'is-filter');
-          productButton.setAttribute('aria-selected', 'false');
-          productButton.setAttribute('tabindex', '-1');
-        }
-        
-        // Ensure Side Project button has correct initial state
-        var sideProjectButton = document.querySelector('[data-category="side_project"]');
-        if (sideProjectButton) {
-          // Ensure Side Project button has inactive state
-          sideProjectButton.classList.remove('filter-active');
-          sideProjectButton.classList.add('btn-frameless', 'is-filter');
-          sideProjectButton.setAttribute('aria-selected', 'false');
-          sideProjectButton.setAttribute('tabindex', '-1');
-        }
-        
-        // Add keyboard navigation support
+      }
+
+      /**
+       * Initialize button states
+       * @function initializeButtonStates
+       */
+      function initializeButtonStates() {
+        const buttonStates = [
+          { selector: '[data-category="all"]', active: false },
+          { selector: '[data-category="product_initiative"]', active: true },
+          { selector: '[data-category="side_project"]', active: false }
+        ];
+
+        buttonStates.forEach(function(config) {
+          const button = document.querySelector(config.selector);
+          if (button) {
+            if (config.active) {
+              button.classList.remove('btn-frameless', 'is-filter');
+              button.classList.add('filter-active');
+              button.setAttribute('aria-selected', 'true');
+              button.setAttribute('tabindex', '0');
+            } else {
+              button.classList.remove('filter-active');
+              button.classList.add('btn-frameless', 'is-filter');
+              button.setAttribute('aria-selected', 'false');
+              button.setAttribute('tabindex', '-1');
+            }
+          }
+        });
+      }
+
+      /**
+       * Initialize keyboard navigation for filter buttons
+       * @function initializeKeyboardNavigation
+       */
+      function initializeKeyboardNavigation() {
         document.querySelectorAll('[role="tab"]').forEach(function(button) {
           button.addEventListener('keydown', function(e) {
-            var buttons = Array.from(document.querySelectorAll('[role="tab"]'));
-            var currentIndex = buttons.indexOf(this);
-            var targetButton = null;
+            const buttons = Array.from(document.querySelectorAll('[role="tab"]'));
+            const currentIndex = buttons.indexOf(this);
+            let targetButton = null;
             
             switch(e.key) {
               case 'ArrowLeft':
@@ -1094,7 +1205,7 @@
               case 'Enter':
               case ' ':
                 e.preventDefault();
-                var category = this.getAttribute('data-category');
+                const category = this.getAttribute('data-category');
                 filterProjects(category);
                 break;
             }
@@ -1104,16 +1215,21 @@
             }
           });
         });
-      });
+      }
     </script>
+    
+    <!-- Smooth Scroll and Navigation Scripts -->
     <script>
+      // Initialize smooth scrolling
       const scroll = new SmoothScroll('a[href*="#"]');
+      
+      // Handle mobile navigation toggle
       $('a.nav-link').on('click', () => {
         const navbar = $('.navbar-collapse');
         if (navbar && navbar.hasClass('show')) {
           $('.navbar-toggler').click();
         }
-      })
+      });
     </script>
 </body>
 
