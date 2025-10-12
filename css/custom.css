@@ -514,9 +514,48 @@ html.dark .section,
 .navbar,
 .jumbotron { background-color: transparent; color: inherit; border-color: #ffffffeb; }
 
-/* Footer should maintain its dark background */
-.footer { background-color: #000 !important; }
-html.dark .footer { background-color: #000 !important; }
+/* AI Chat Button with header-style gradient normal state */
+.ai-chat-button {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  background: linear-gradient(to right, #e62122 0%, #6c78f3 100%) !important;
+  border: none !important;
+  color: white !important;
+}
+
+.ai-chat-button:hover {
+  background: linear-gradient(to right, #d11a1b 0%, #5a6ae8 100%) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.ai-chat-button::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.1) 100%);
+  will-change: transform;
+  transform-origin: 0 50%;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.ai-chat-button:hover::after {
+  transform: scaleX(1);
+}
+
+/* Dark mode: AI Chat Button gradient */
+html.dark .ai-chat-button {
+  background: linear-gradient(to right, #e62122 0%, #6c78f3 100%) !important;
+}
+
+html.dark .ai-chat-button:hover {
+  background: linear-gradient(to right, #d11a1b 0%, #5a6ae8 100%) !important;
+}
 
 html.dark input, html.dark select, html.dark textarea { background-color: #111; color: #ffffffd9; border-color: #ffffff47; }
 html.dark input::placeholder, html.dark textarea::placeholder { color: #ffffff73; }
