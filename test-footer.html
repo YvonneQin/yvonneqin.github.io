@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footer Test</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <script src="js/components/footer.js"></script>
+</head>
+<body>
+    <div style="min-height: 100vh; padding: 20px;">
+        <h1>Footer Test Page</h1>
+        <p>This page tests if the footer component is working correctly.</p>
+        <p>You should see a dark footer at the bottom with navigation links.</p>
+    </div>
+    
+    <site-footer></site-footer>
+    
+    <script>
+        // Test if footer component is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            const footer = document.querySelector('site-footer');
+            if (footer) {
+                console.log('Footer component found:', footer);
+                console.log('Footer innerHTML:', footer.innerHTML);
+            } else {
+                console.error('Footer component not found');
+            }
+        });
+    </script>
+</body>
+</html>

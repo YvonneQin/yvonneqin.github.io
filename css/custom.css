@@ -512,8 +512,11 @@ html.dark .section,
 .modal-content,
 .dropdown-menu,
 .navbar,
-.footer,
 .jumbotron { background-color: transparent; color: inherit; border-color: #ffffffeb; }
+
+/* Footer should maintain its dark background */
+.footer { background-color: #000 !important; }
+html.dark .footer { background-color: #000 !important; }
 
 html.dark input, html.dark select, html.dark textarea { background-color: #111; color: #ffffffd9; border-color: #ffffff47; }
 html.dark input::placeholder, html.dark textarea::placeholder { color: #ffffff73; }

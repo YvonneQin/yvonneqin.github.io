@@ -1,6 +1,8 @@
 class SiteFooter extends HTMLElement {
   connectedCallback() {
-    this.innerHTML = `
+    // Ensure the component renders even if called multiple times
+    if (this.innerHTML.trim() === '') {
+      this.innerHTML = `
 <footer class="footer">
   <div class="container">
     <div class="footer__left">
@@ -29,6 +31,7 @@ class SiteFooter extends HTMLElement {
     </div>
   </div>
 </footer>`;
+    }
   }
 }
 
