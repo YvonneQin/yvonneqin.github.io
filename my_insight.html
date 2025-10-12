@@ -102,7 +102,11 @@
       // 页面加载完成后初始化计数
       document.addEventListener('DOMContentLoaded', function() {
         // 等待article-card组件加载完成
-        setTimeout(updateArticleCounts, 500);
+        setTimeout(function() {
+          updateArticleCounts();
+          // 默认显示所有文章，激活All按钮
+          filterArticles('all');
+        }, 500);
       });
       
       function filterArticles(category) {
@@ -118,15 +122,20 @@
           
           // Update button states
           buttons.forEach(function(button) {
-            var isActive = button.getAttribute('aria-label').toLowerCase().includes(category) || 
-                          (category === 'all' && button.textContent.trim() === 'All Category');
+            var buttonCategory = button.getAttribute('data-category');
+            var isActive = buttonCategory === category;
+            
             button.setAttribute('aria-selected', isActive);
             button.setAttribute('tabindex', isActive ? '0' : '-1');
             
             if (isActive) {
-              button.classList.add('active');
+              // Active state: add filter-active class, remove inactive classes
+              button.classList.remove('btn-frameless', 'is-filter');
+              button.classList.add('filter-active');
             } else {
-              button.classList.remove('active');
+              // Inactive state: remove filter-active, add inactive classes
+              button.classList.remove('filter-active');
+              button.classList.add('btn-frameless', 'is-filter');
             }
           });
           
@@ -438,7 +447,7 @@
           <div class="col-12 mt-4 mt-md-0 my-md-auto">
             <div class="filter-buttons" role="tablist" aria-label="Filter articles by category">
               <button 
-                class="btn btn-sm" 
+                class="btn btn-sm filter-active" 
                 style="height: 36px" 
                 onclick="filterArticles('all')"
                 role="tab"
