@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ubuntu Web Desktop</title>
+<!-- External Assets (Fonts & Icons only) -->
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&family=Ubuntu+Mono&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+    /* --- CSS VARIABLES & RESET --- */
+    :root {
+        --ub-orange: #E95420;
+        --ub-aubergine: #2C001E;
+        --ub-warm-grey: #AEA79F;
+        --ub-cool-grey: #333333;
+        --ub-icloud: #F7F7F7;
+        --win-bg: #fafafaf0;
+        --win-header: #e4e4e4;
+        --glass-bg: rgba(20, 20, 20, 0.6);
+        --glass-border: rgba(255, 255, 255, 0.1);
+        --shadow-md: 0 10px 30px rgba(0,0,0,0.3), 0 0 0 1px rgba(0,0,0,0.1);
+        --radius-md: 12px;
+        --radius-lg: 18px;
+        --font-main: 'Ubuntu', sans-serif;
+        --font-mono: 'Ubuntu Mono', monospace;
+    }
+
+    * { box-sizing: border-box; user-select: none; }
+    body, html {
+        margin: 0; padding: 0; width: 100vw; height: 100vh; overflow: hidden;
+        font-family: var(--font-main); background: #000; color: #fff;
+    }
+
+    /* --- BOOT SEQUENCE & LOGIN --- */
+    #boot-screen, #login-screen {
+        position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+        z-index: 9999; display: flex; flex-direction: column;
+        justify-content: center; align-items: center;
+        transition: opacity 1s ease;
+    }
+    #boot-screen { background: #000; font-family: var(--font-mono); color: #ccc; align-items: flex-start; padding: 40px; }
+    .bios-text { margin: 2px 0; }
+    .ubuntu-spinner {
+        border: 4px solid rgba(255,255,255,0.1); border-left-color: var(--ub-orange);
+        border-radius: 50%; width: 50px; height: 50px; animation: spin 1s linear infinite;
+        position: absolute; top: 50%; left: 50%; margin-top: -25px; margin-left: -25px; display: none;
+    }
+    #login-screen {
+        background: linear-gradient(rgba(44, 0, 30, 0.8), rgba(44, 0, 30, 0.9)), url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop') no-repeat center center/cover;
+        backdrop-filter: blur(10px); display: none; opacity: 0;
+    }
+    .login-box { text-align: center; background: rgba(0,0,0,0.4); padding: 40px; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); }
+    .user-avatar { width: 100px; height: 100px; border-radius: 50%; background: #fff url('https://api.dicebear.com/7.x/avataaars/svg?seed=Felix') center/cover; margin: 0 auto 20px; border: 3px solid rgba(255,255,255,0.2); }
+    .login-input-group { display: flex; margin-top: 20px; justify-content: center;}
+    #password-input { background: rgba(30,30,30,0.8); border: 1px solid #555; color: #fff; padding: 8px 12px; border-radius: 4px 0 0 4px; outline: none; font-family: var(--font-main); }
+    #login-btn { background: var(--ub-orange); border: none; color: #fff; padding: 8px 15px; border-radius: 0 4px 4px 0; cursor: pointer; transition: 0.2s; }
+    #login-btn:hover { filter: brightness(1.1); }
+
+    /* --- DESKTOP ENVIRONMENT --- */
+    #desktop {
+        width: 100%; height: 100%; display: none; opacity: 0; transition: opacity 1s;
+        background: url('https://images.unsplash.com/photo-1506703719100-a0f3a48c0f86?q=80&w=2070&auto=format&fit=crop') no-repeat center center / cover;
+        overflow: hidden; position: relative;
+    }
+
+    /* Top Bar */
+    #top-bar {
+        height: 30px; background: #1d1d1d; display: flex; justify-content: space-between;
+        align-items: center; padding: 0 15px; font-size: 14px; font-weight: 500;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.5); position: relative; z-index: 2000;
+    }
+    .bar-section { display: flex; align-items: center; gap: 15px; height: 100%; }
+    #activities-btn { padding: 0 10px; height: 100%; display: flex; align-items: center; cursor: pointer; }
+    #activities-btn:hover, .tray-icon:hover { background: rgba(255,255,255,0.1); }
+    #clock { font-weight: bold; position: absolute; left: 50%; transform: translateX(-50%); cursor: default;}
+    .tray-icon { padding: 0 8px; height: 100%; display: flex; align-items: center; cursor: pointer; gap: 8px;}
+
+    /* Dock */
+    #dock-container {
+        position: absolute; left: 10px; top: 50%; transform: translateY(-50%);
+        height: auto; z-index: 1000;
+    }
+    #dock {
+        background: rgba(35, 35, 35, 0.85); backdrop-filter: blur(15px);
+        border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius-lg);
+        padding: 10px 6px; display: flex; flex-direction: column; gap: 12px;
+        box-shadow: var(--shadow-md);
+    }
+    .dock-item {
+        width: 48px; height: 48px; position: relative; cursor: pointer;
+        transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+        display: flex; justify-content: center; align-items: center; font-size: 24px;
+        background: rgba(255,255,255,0.05); border-radius: 10px; color: #eee;
+    }
+    .dock-item:hover { transform: scale(1.15); background: rgba(255,255,255,0.15); }
+    .dock-item.active::before {
+        content: ''; position: absolute; left: -4px; top: 50%; transform: translateY(-50%);
+        width: 4px; height: 4px; background: var(--ub-orange); border-radius: 50%; box-shadow: 0 0 5px var(--ub-orange);
+    }
+    /* App Icon Specific Colors */
+    .icon-term { color: #333; background: linear-gradient(135deg, #e0e0e0, #bababa); }
+    .icon-edit { color: #2980b9; background: linear-gradient(135deg, #fff, #ecf0f1); }
+    .icon-browser { color: #e67e22; background: linear-gradient(135deg, #fff, #f39c1222); }
+    .icon-calc { color: #27ae60; background: linear-gradient(135deg, #333, #111); }
+    .icon-settings { color: #7f8c8d; background: linear-gradient(135deg, #ddd, #bbb); }
+
+    /* Tooltips */
+    .dock-item::after {
+        content: attr(data-title); position: absolute; left: 60px; top: 50%;
+        transform: translateY(-50%) scale(0.8); background: #333; padding: 4px 10px;
+        border-radius: 6px; font-size: 12px; opacity: 0; pointer-events: none; transition: 0.2s;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.3); border: 1px solid #444;
+    }
+    .dock-item:hover::after { opacity: 1; transform: translateY(-50%) scale(1); left: 65px; }
+
+    /* --- WINDOW MANAGER --- */
+    .window {
+        position: absolute; background: var(--win-bg); border-radius: var(--radius-md);
+        box-shadow: var(--shadow-md); display: flex; flex-direction: column;
+        overflow: hidden; min-width: 300px; min-height: 200px; color: #333;
+        resize: both; /* Native CSS resize */
+        animation: winOpen 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+        border: 1px solid rgba(0,0,0,0.1);
+    }
+    .window.focused { box-shadow: 0 15px 40px rgba(0,0,0,0.4), 0 0 0 1px rgba(0,0,0,0.15); }
+    .window.minimized {
+        opacity: 0; transform: scale(0.8) translateY(200px); pointer-events: none; transition: 0.3s;
+    }
+
+    .win-header {
+        height: 38px; background: linear-gradient(to bottom, #e8e8e8, #dcdcdc);
+        border-bottom: 1px solid #ccc; display: flex; justify-content: space-between;
+        align-items: center; padding: 0 10px; cursor: grab; user-select: none;
+    }
+    .win-header:active { cursor: grabbing; }
+    .win-title { font-weight: 700; font-size: 14px; color: #444; flex-grow: 1; text-align: center;}
+    .win-controls { display: flex; gap: 8px; }
+    .win-btn {
+        width: 18px; height: 18px; border-radius: 50%; border: 1px solid rgba(0,0,0,0.1);
+        display: flex; justify-content: center; align-items: center; font-size: 10px; color: transparent; transition: 0.1s;
+    }
+    .win-header:hover .win-btn { color: rgba(0,0,0,0.5); }
+    .close-btn { background: #ff5f56; } .close-btn:hover{filter:brightness(0.9);}
+    .min-btn { background: #ffbd2e; } .min-btn:hover{filter:brightness(0.9);}
+    .max-btn { background: #27c93f; } .max-btn:hover{filter:brightness(0.9);}
+
+    .win-content { flex: 1; overflow: auto; position: relative; background: #fff;}
+
+    /* --- APPLICATIONS --- */
+
+    /* Terminal */
+    .term-app { background: #300a24e6; color: #fff; font-family: var(--font-mono); padding: 10px; height: 100%; overflow-y: auto; font-size: 15px; user-select: text; }
+    .term-line { display: flex; flex-wrap: wrap; margin-bottom: 2px; }
+    .prompt { color: #87d441; font-weight: bold; margin-right: 8px; }
+    .path { color: #3465a4; font-weight: bold; }
+    .term-input { background: transparent; border: none; color: #fff; font-family: var(--font-mono); font-size: 15px; flex: 1; outline: none; min-width: 50px;}
+    .matrix-mode { color: #0f0; text-shadow: 0 0 5px #0f0; font-family: 'Courier New', monospace; font-weight: bold;}
+
+    /* Text Editor */
+    .editor-app { display: flex; flex-direction: column; height: 100%; }
+    .editor-toolbar { background: #f0f0f0; padding: 5px; border-bottom: 1px solid #ddd; display: flex; gap: 5px;}
+    .editor-btn { padding: 4px 10px; background: #fff; border: 1px solid #ccc; border-radius: 4px; cursor: pointer; font-size: 12px;}
+    .editor-btn:hover { background: #eee; }
+    #gedit-textarea { flex: 1; border: none; padding: 15px; font-family: var(--font-mono); font-size: 14px; outline: none; resize: none; background: #fff; color: #333; user-select: text;}
+
+    /* Browser */
+    .browser-app { display: flex; flex-direction: column; height: 100%; }
+    .browser-bar { background: #f1f3f4; padding: 8px; display: flex; gap: 8px; align-items: center; border-bottom: 1px solid #ddd; }
+    .nav-btn { color: #5f6368; padding: 4px; cursor: pointer; border-radius: 50%;}
+    .nav-btn:hover { background: rgba(0,0,0,0.1); }
+    #browser-url { flex: 1; padding: 6px 15px; border-radius: 20px; border: none; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.1); outline: none; font-size: 13px; color: #333; user-select: text;}
+    #browser-frame { flex: 1; border: none; background: #fff; }
+
+    /* Calculator */
+    .calc-app { height: 100%; display: grid; grid-template-rows: 1fr 4fr; background: #333; }
+    #calc-display { background: #222; color: #fff; font-size: 32px; text-align: right; padding: 20px; font-family: var(--font-main); overflow: hidden; display: flex; align-items: flex-end; justify-content: flex-end; word-break: break-all;}
+    .calc-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: #444; }
+    .calc-btn { background: #555; border: none; color: #fff; font-size: 18px; cursor: pointer; transition: 0.1s; }
+    .calc-btn:hover { background: #666; }
+    .calc-btn:active { background: #777; }
+    .calc-op { background: var(--ub-orange); }
+    .calc-op:hover { filter: brightness(1.1); }
+    .calc-eq { grid-column: span 2; background: var(--ub-orange); }
+
+    /* Settings */
+    .settings-app { padding: 20px; background: #f5f5f5; height: 100%; overflow-y: auto; }
+    .settings-section { background: #fff; border-radius: 8px; padding: 15px; margin-bottom: 15px; border: 1px solid #ddd; }
+    .settings-title { font-weight: bold; margin-bottom: 10px; border-bottom: 1px solid #eee; padding-bottom: 5px;}
+    .wall-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)); gap: 10px; }
+    .wall-thumb { height: 60px; border-radius: 6px; cursor: pointer; border: 2px solid transparent; background-size: cover; background-position: center;}
+    .wall-thumb:hover, .wall-thumb.active { border-color: var(--ub-orange); }
+
+    /* Context Menu */
+    #context-menu {
+        position: absolute; background: rgba(40,40,40,0.95); backdrop-filter: blur(10px);
+        border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 5px 0;
+        width: 200px; display: none; z-index: 9999; box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    }
+    .ctx-item { padding: 8px 15px; cursor: pointer; font-size: 14px; display: flex; align-items: center; gap: 10px;}
+    .ctx-item:hover { background: var(--ub-orange); }
+    .ctx-hr { height: 1px; background: rgba(255,255,255,0.1); margin: 4px 0; }
+
+    /* Notifications */
+    #notify-area { position: absolute; top: 40px; right: 10px; width: 300px; z-index: 3000; display: flex; flex-direction: column; gap: 10px; pointer-events: none;}
+    .toast {
+        background: rgba(30,30,30,0.9); backdrop-filter: blur(10px); color: #fff; padding: 15px;
+        border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1);
+        transform: translateX(120%); transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        display: flex; align-items: flex-start; gap: 10px; pointer-events: auto;
+    }
+    .toast.show { transform: translateX(0); }
+    .toast i { color: var(--ub-orange); font-size: 20px; margin-top: 2px;}
+
+    /* System Tray Menu */
+    #sys-menu {
+        position: absolute; top: 35px; right: 10px; width: 280px; background: rgba(30,30,30,0.95);
+        backdrop-filter: blur(15px); border-radius: 12px; border: 1px solid rgba(255,255,255,0.1);
+        padding: 15px; display: none; z-index: 2001; box-shadow: var(--shadow-md);
+    }
+    .sys-slider-row { display: flex; align-items: center; gap: 10px; margin-bottom: 15px; }
+    input[type=range] { flex: 1; accent-color: var(--ub-orange); cursor: pointer;}
+    .sys-toggles { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .sys-toggle { background: rgba(255,255,255,0.1); border-radius: 20px; padding: 10px; text-align: center; cursor: pointer; transition: 0.2s;}
+    .sys-toggle:hover { background: rgba(255,255,255,0.2); }
+    .sys-toggle.active { background: var(--ub-orange); color: #fff; }
+
+    /* Animations */
+    @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+    @keyframes winOpen { from { opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: scale(1); } }
+    @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+
+</style>
+</head>
+<body>
+
+    <!-- --- BOOT & LOGIN --- -->
+    <div id="boot-screen">
+        <div id="bios-log"></div>
+        <div class="ubuntu-spinner" id="plymouth"></div>
+        <div style="position:absolute; bottom: 30px; text-align: center; width: 100%; font-family: var(--font-main); font-weight: bold; font-size: 24px; display:none;" id="ubuntu-logo"><i class="fab fa-ubuntu" style="color: var(--ub-orange);"></i> ubuntu</div>
+    </div>
+
+    <div id="login-screen">
+        <div class="login-box">
+            <div class="user-avatar"></div>
+            <h2 style="margin:0;">Guest User</h2>
+            <div class="login-input-group">
+                <input type="password" id="password-input" placeholder="Password (just press enter)">
+                <button id="login-btn"><i class="fas fa-arrow-right"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- --- DESKTOP --- -->
+    <div id="desktop">
+        <!-- Top Bar -->
+        <div id="top-bar">
+            <div class="bar-section">
+                <div id="activities-btn">Activities</div>
+            </div>
+            <div id="clock">Oct 25 12:00 PM</div>
+            <div class="bar-section">
+                <div class="tray-icon" id="sys-tray-trigger">
+                    <i class="fas fa-wifi"></i>
+                    <i class="fas fa-volume-up"></i>
+                    <i class="fas fa-battery-three-quarters"></i>
+                    <i class="fas fa-caret-down" style="font-size: 10px;"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- System Menu Dropdown -->
+        <div id="sys-menu">
+            <div class="sys-slider-row"><i class="fas fa-volume-up"></i><input type="range"></div>
+            <div class="sys-slider-row"><i class="fas fa-sun"></i><input type="range"></div>
+            <div class="sys-hr" style="height:1px; background:rgba(255,255,255,0.1); margin: 10px 0;"></div>
+            <div class="sys-toggles">
+                <div class="sys-toggle active"><i class="fas fa-wifi"></i><br><small>Wi-Fi</small></div>
+                <div class="sys-toggle"><i class="fab fa-bluetooth-b"></i><br><small>Bluetooth</small></div>
+                <div class="sys-toggle"><i class="fas fa-plane"></i><br><small>Airplane</small></div>
+                <div class="sys-toggle" onclick="location.reload()"><i class="fas fa-power-off"></i><br><small>Power Off</small></div>
+            </div>
+        </div>
+
+        <!-- Dock -->
+        <div id="dock-container">
+            <div id="dock">
+                <div class="dock-item icon-term rounded" data-app="terminal" data-title="Terminal"><i class="fas fa-terminal"></i></div>
+                <div class="dock-item icon-edit rounded" data-app="editor" data-title="Text Editor"><i class="fas fa-edit"></i></div>
+                <div class="dock-item icon-browser rounded" data-app="browser" data-title="Web Browser"><i class="fab fa-firefox-browser"></i></div>
+                <div class="dock-item icon-calc rounded" data-app="calculator" data-title="Calculator"><i class="fas fa-calculator"></i></div>
+                <div style="flex-grow: 1;"></div> <!-- Spacer -->
+                <div class="dock-item icon-settings rounded" data-app="settings" data-title="Settings"><i class="fas fa-cog"></i></div>
+                <div class="dock-item rounded" style="background: rgba(255,255,255,0.1);" data-title="Trash"><i class="fas fa-trash-alt"></i></div>
+            </div>
+        </div>
+
+        <!-- Window Container (Apps connect here) -->
+        <div id="window-area"></div>
+
+        <!-- Notifications -->
+        <div id="notify-area"></div>
+
+        <!-- Context Menu -->
+        <div id="context-menu">
+            <div class="ctx-item" onclick="wm.openApp('terminal')"><i class="fas fa-terminal"></i> Open Terminal</div>
+            <div class="ctx-hr"></div>
+            <div class="ctx-item" onclick="wm.openApp('settings')"><i class="fas fa-image"></i> Change Background</div>
+            <div class="ctx-item"><i class="fas fa-cog"></i> Display Settings</div>
+        </div>
+    </div>
+
+<!-- --- TEMPLATES FOR APPS --- -->
+<template id="tpl-terminal">
+    <div class="term-app" onclick="this.querySelector('.term-input').focus()">
+        <div class="term-output">
+            <div>Welcome to Ubuntu 24.04 LTS (GNU/Linux 6.5.0-generic x86_64)</div>
+            <br>
+            <div> * Documentation:  https://help.ubuntu.com</div>
+            <div> * Management:     https://landscape.canonical.com</div>
+            <div> * Support:        https://ubuntu.com/advantage</div>
+            <br>
+            <div style="color: #888;">Type 'help' for a list of commands. Try 'matrix' for fun.</div>
+            <br>
+        </div>
+        <div class="term-line active-line">
+            <span class="prompt">guest@webos:</span><span class="path">~</span><span style="margin-right:5px;">$</span>
+            <input type="text" class="term-input" spellcheck="false" autocomplete="off">
+        </div>
+    </div>
+</template>
+
+<template id="tpl-editor">
+    <div class="editor-app">
+        <div class="editor-toolbar">
+            <button class="editor-btn" id="gedit-save"><i class="fas fa-save"></i> Save</button>
+            <button class="editor-btn"><i class="fas fa-folder-open"></i> Open</button>
+            <div style="flex-grow:1; text-align:center; line-height: 24px; font-size:12px; color:#666;" id="gedit-filename">Untitled Document</div>
+        </div>
+        <textarea id="gedit-textarea" placeholder="Start typing..."></textarea>
+    </div>
+</template>
+
+<template id="tpl-browser">
+    <div class="browser-app">
+        <div class="browser-bar">
+            <i class="fas fa-arrow-left nav-btn" id="bx-back"></i>
+            <i class="fas fa-arrow-right nav-btn" id="bx-fwd"></i>
+            <i class="fas fa-redo-alt nav-btn" id="bx-reload"></i>
+            <input type="text" id="browser-url" value="https://www.wikipedia.org/">
+        </div>
+        <iframe id="browser-frame" src="https://www.wikipedia.org/" sandbox="allow-scripts allow-same-origin allow-forms"></iframe>
+    </div>
+</template>
+
+<template id="tpl-calculator">
+    <div class="calc-app">
+        <div id="calc-display">0</div>
+        <div class="calc-grid">
+            <button class="calc-btn" onclick="calc.clear()">C</button>
+            <button class="calc-btn" onclick="calc.append('(')">(</button>
+            <button class="calc-btn" onclick="calc.append(')')">)</button>
+            <button class="calc-btn calc-op" onclick="calc.append('/')">÷</button>
+            <button class="calc-btn" onclick="calc.append('7')">7</button>
+            <button class="calc-btn" onclick="calc.append('8')">8</button>
+            <button class="calc-btn" onclick="calc.append('9')">9</button>
+            <button class="calc-btn calc-op" onclick="calc.append('*')">×</button>
+            <button class="calc-btn" onclick="calc.append('4')">4</button>
+            <button class="calc-btn" onclick="calc.append('5')">5</button>
+            <button class="calc-btn" onclick="calc.append('6')">6</button>
+            <button class="calc-btn calc-op" onclick="calc.append('-')">-</button>
+            <button class="calc-btn" onclick="calc.append('1')">1</button>
+            <button class="calc-btn" onclick="calc.append('2')">2</button>
+            <button class="calc-btn" onclick="calc.append('3')">3</button>
+            <button class="calc-btn calc-op" onclick="calc.append('+')">+</button>
+            <button class="calc-btn" onclick="calc.append('0')">0</button>
+            <button class="calc-btn" onclick="calc.append('.')">.</button>
+            <button class="calc-btn calc-eq" onclick="calc.solve()">=</button>
+        </div>
+    </div>
+</template>
+
+<template id="tpl-settings">
+    <div class="settings-app">
+        <div class="settings-section">
+            <div class="settings-title">Background</div>
+            <div class="wall-grid" id="bg-picker">
+                <!-- Wallpapers injected via JS -->
+            </div>
+        </div>
+        <div class="settings-section">
+            <div class="settings-title">About</div>
+            <div style="display:flex; gap:15px; align-items:center;">
+                <i class="fab fa-ubuntu" style="font-size: 40px; color: var(--ub-orange);"></i>
+                <div>
+                    <strong>Ubuntu Web OS 24.04</strong><br>
+                    <small style="color:#666;">A single-file HTML5 simulation.</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script>
+    /* --- SYSTEM CORE --- */
+    const $ = (sel) => document.querySelector(sel);
+    const $$ = (sel) => document.querySelectorAll(sel);
+
+    // Boot Sequence
+    const bootLines = [
+        "SeaBIOS (version 1.13.0-1ubuntu1.1)",
+        "Machine UUID 890345-890345-890435",
+        "Initializing RAM...",
+        "RAM OK. 16384MB detected.",
+        "Booting from Hard Disk...",
+        "Loading initramfs...",
+        "OK"
+    ];
+
+    async function runBoot() {
+        const log = $('#bios-log');
+        for(let line of bootLines) {
+            log.innerHTML += `<div class="bios-text">${line}</div>`;
+            await new Promise(r => setTimeout(r, Math.random() * 300 + 50));
+        }
+        await new Promise(r => setTimeout(r, 500));
+        log.innerHTML = '';
+        $('#plymouth').style.display = 'block';
+        $('#ubuntu-logo').style.display = 'block';
+        
+        await new Promise(r => setTimeout(r, 3000)); // Simulate OS load
+        
+        $('#boot-screen').style.opacity = 0;
+        setTimeout(() => {
+            $('#boot-screen').style.display = 'none';
+            $('#login-screen').style.display = 'flex';
+            setTimeout(() => $('#login-screen').style.opacity = 1, 50);
+            $('#password-input').focus();
+        }, 1000);
+    }
+
+    // Login
+    function doLogin() {
+        $('#login-screen').style.opacity = 0;
+        setTimeout(() => {
+            $('#login-screen').style.display = 'none';
+            $('#desktop').style.display = 'block';
+            setTimeout(() => $('#desktop').style.opacity = 1, 50);
+            sys.notify('Welcome', 'Logged in as Guest User', 'fas fa-user');
+            startClock();
+        }, 1000);
+    }
+
+    $('#login-btn').addEventListener('click', doLogin);
+    $('#password-input').addEventListener('keypress', (e) => { if(e.key === 'Enter') doLogin(); });
+
+    window.onload = runBoot;
+
+    /* --- WINDOW MANAGER --- */
+    class WindowManager {
+        constructor() {
+            this.windows = [];
+            this.zIndex = 100;
+            this.setupDesktopEvents();
+        }
+
+        openApp(appId) {
+            const appConfig = this.getAppConfig(appId);
+            if (!appConfig) return;
+
+            // Mark dock item active
+            $(`.dock-item[data-app="${appId}"]`)?.classList.add('active');
+
+            const id = 'win-' + Date.now();
+            const winEl = document.createElement('div');
+            winEl.className = 'window';
+            winEl.id = id;
+            winEl.style.width = appConfig.width + 'px';
+            winEl.style.height = appConfig.height + 'px';
+            // Center initial position randomly
+            winEl.style.left = (window.innerWidth/2 - appConfig.width/2) + (Math.random()*40-20) + 'px';
+            winEl.style.top = (window.innerHeight/2 - appConfig.height/2) + (Math.random()*40-20) + 'px';
+            winEl.style.zIndex = ++this.zIndex;
+
+            winEl.innerHTML = `
+                <div class="win-header">
+                    <div class="win-controls">
+                        <div class="win-btn close-btn"><i class="fas fa-times"></i></div>
+                        <div class="win-btn min-btn"><i class="fas fa-minus"></i></div>
+                        <div class="win-btn max-btn"><i class="fas fa-expand-alt"></i></div>
+                    </div>
+                    <div class="win-title">${appConfig.title}</div>
+                    <div style="width: 50px;"></div> <!-- balance -->
+                </div>
+                <div class="win-content"></div>
+            `;
+
+            // Load content from template
+            const tpl = $(`#tpl-${appId}`);
+            if (tpl) {
+                winEl.querySelector('.win-content').appendChild(tpl.content.cloneNode(true));
+            }
+
+            $('#window-area').appendChild(winEl);
+            this.windows.push({ id, appId, el: winEl });
+            this.focus(id);
+            this.setupWindowEvents(winEl, id, appId);
+
+            // Initialize app specific logic
+            if(appId === 'terminal') new Terminal(winEl);
+            if(appId === 'editor') new TextEditor(winEl);
+            if(appId === 'browser') new Browser(winEl);
+            if(appId === 'settings') new Settings(winEl);
+        }
+
+        getAppConfig(appId) {
+            const configs = {
+                'terminal': { title: 'Terminal', width: 600, height: 400 },
+                'editor': { title: 'Text Editor', width: 700, height: 500 },
+                'browser': { title: 'Mozilla Firefox', width: 900, height: 600 },
+                'calculator': { title: 'Calculator', width: 320, height: 450 },
+                'settings': { title: 'Settings', width: 800, height: 500 }
+            };
+            return configs[appId];
+        }
+
+        setupWindowEvents(winEl, id, appId) {
+            const header = winEl.querySelector('.win-header');
+            const closeBtn = winEl.querySelector('.close-btn');
+            const minBtn = winEl.querySelector('.min-btn');
+            const maxBtn = winEl.querySelector('.max-btn');
+
+            winEl.addEventListener('mousedown', () => this.focus(id));
+
+            // Dragging
+            let isDragging = false;
+            let offset = { x: 0, y: 0 };
+
+            header.addEventListener('mousedown', (e) => {
+                if(e.target.closest('.win-btn')) return; // Don't drag if clicking buttons
+                isDragging = true;
+                offset.x = e.clientX - winEl.offsetLeft;
+                offset.y = e.clientY - winEl.offsetTop;
+                this.focus(id);
+            });
+
+            document.addEventListener('mousemove', (e) => {
+                if (!isDragging) return;
+                e.preventDefault();
+                // Simple bounds check (top bar and dock area)
+                let newY = e.clientY - offset.y;
+                let newX = e.clientX - offset.x;
+                if(newY < 30) newY = 30; // Below top bar
+                winEl.style.top = newY + 'px';
+                winEl.style.left = newX + 'px';
+            });
+
+            document.addEventListener('mouseup', () => { isDragging = false; });
+
+            // Controls
+            closeBtn.addEventListener('click', () => this.close(id, appId));
+            minBtn.addEventListener('click', () => {
+                winEl.classList.add('minimized');
+                this.checkDockStatus(appId);
+            });
+            maxBtn.addEventListener('click', () => {
+                if(winEl.style.width === '100%') {
+                    // Restore
+                    winEl.style.width = winEl.dataset.ow;
+                    winEl.style.height = winEl.dataset.oh;
+                    winEl.style.top = winEl.dataset.ot;
+                    winEl.style.left = winEl.dataset.ol;
+                } else {
+                    // Maximize
+                    winEl.dataset.ow = winEl.style.width;
+                    winEl.dataset.oh = winEl.style.height;
+                    winEl.dataset.ot = winEl.style.top;
+                    winEl.dataset.ol = winEl.style.left;
+                    winEl.style.width = '100%';
+                    winEl.style.height = 'calc(100% - 30px)';
+                    winEl.style.top = '30px';
+                    winEl.style.left = '0';
+                }
+            });
+        }
+
+        focus(id) {
+            $$('.window').forEach(w => w.classList.remove('focused'));
+            const win = this.windows.find(w => w.id === id);
+            if (win) {
+                win.el.style.zIndex = ++this.zIndex;
+                win.el.classList.remove('minimized');
+                win.el.classList.add('focused');
+                // Update Top Bar title (Activity)
+                $('#activities-btn').innerText = win.el.querySelector('.win-title').innerText;
+            } else {
+                $('#activities-btn').innerText = 'Activities';
+            }
+        }
+
+        close(id, appId) {
+            const win = this.windows.find(w => w.id === id);
+            if (win) {
+                win.el.style.opacity = 0;
+                win.el.style.transform = "scale(0.9)";
+                setTimeout(() => {
+                    win.el.remove();
+                    this.windows = this.windows.filter(w => w.id !== id);
+                    this.checkDockStatus(appId);
+                }, 200);
+            }
+        }
+
+        checkDockStatus(appId) {
+            // If no windows of this app type are open/visible, remove active dot
+            const openApps = this.windows.filter(w => w.appId === appId && !w.el.classList.contains('minimized'));
+            if(openApps.length === 0) {
+                 // Check if any are just minimized
+                 const anyApps = this.windows.filter(w => w.appId === appId);
+                 if(anyApps.length === 0) {
+                     $(`.dock-item[data-app="${appId}"]`)?.classList.remove('active');
+                 }
+            }
+        }
+        
+        setupDesktopEvents() {
+            // Dock Clicks
+            $$('.dock-item[data-app]').forEach(item => {
+                item.addEventListener('click', () => {
+                    const appId = item.dataset.app;
+                    // Check if minimized window exists
+                    const minimized = this.windows.find(w => w.appId === appId && w.el.classList.contains('minimized'));
+                    if(minimized) {
+                        this.focus(minimized.id);
+                    } else {
+                        this.openApp(appId);
+                    }
+                });
+            });
+
+            // Context Menu
+            $('#desktop').addEventListener('contextmenu', (e) => {
+                if(e.target.closest('.window') || e.target.closest('#dock') || e.target.closest('#top-bar')) return;
+                e.preventDefault();
+                const menu = $('#context-menu');
+                menu.style.display = 'block';
+                menu.style.left = e.clientX + 'px';
+                menu.style.top = e.clientY + 'px';
+            });
+
+            document.addEventListener('click', () => $('#context-menu').style.display = 'none');
+            
+            // Sys Tray
+            $('#sys-tray-trigger').addEventListener('click', (e) => {
+                e.stopPropagation();
+                const menu = $('#sys-menu');
+                menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+            });
+            document.addEventListener('click', (e) => {
+                if(!e.target.closest('#sys-menu') && !e.target.closest('#sys-tray-trigger')) {
+                    $('#sys-menu').style.display = 'none';
+                }
+            });
+        }
+    }
+
+    const wm = new WindowManager();
+
+    /* --- APPS LOGIC --- */
+
+    // Virtual File System for Terminal
+    const vfs = {
+        '~': {
+            type: 'dir',
+            children: {
+                'Documents': { type: 'dir', children: { 'notes.txt': { type: 'file', content: 'Meeting at 5pm.' } } },
+                'Downloads': { type: 'dir', children: {} },
+                'hello.sh': { type: 'file', content: 'echo "Hello World!"' },
+                'secret.txt': { type: 'file', content: 'The password is 1234' }
+            }
+        }
+    };
+
+    class Terminal {
+        constructor(winEl) {
+            this.el = winEl.querySelector('.term-app');
+            this.output = this.el.querySelector('.term-output');
+            this.currentPath = ['~'];
+            this.history = [];
+            this.histIdx = -1;
+            this.matrixInterval = null;
+            this.setupInput();
+        }
+
+        print(text, className='') {
+            const div = document.createElement('div');
+            div.className = className;
+            div.textContent = text;
+            this.output.appendChild(div);
+            this.el.scrollTop = this.el.scrollHeight;
+        }
+
+        setupInput() {
+            const input = this.el.querySelector('.term-input');
+            
+            this.el.addEventListener('click', () => {
+               if(!this.matrixInterval) input.focus();
+            });
+
+            input.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter') {
+                    const cmd = input.value;
+                    this.print(`guest@webos:${this.currentPath.join('/')}$ ${cmd}`);
+                    if(cmd.trim()) {
+                        this.history.push(cmd);
+                        this.histIdx = this.history.length;
+                        this.exec(cmd.trim());
+                    }
+                    input.value = '';
+                    // Update path display
+                    this.el.querySelector('.path').innerText = this.currentPath.join('/');
+                } else if (e.key === 'ArrowUp') {
+                    e.preventDefault();
+                    if(this.histIdx > 0) input.value = this.history[--this.histIdx];
+                } else if (e.key === 'ArrowDown') {
+                    e.preventDefault();
+                    if(this.histIdx < this.history.length - 1) input.value = this.history[++this.histIdx];
+                    else { this.histIdx = this.history.length; input.value = ''; }
+                }
+            });
+        }
+
+        getDir(pathArr) {
+            let curr = vfs;
+            for(let p of pathArr) {
+                if(curr[p] && curr[p].type === 'dir') curr = curr[p].children;
+                else return null;
+            }
+            return curr;
+        }
+
+        exec(cmdStr) {
+            const args = cmdStr.split(' ');
+            const cmd = args[0];
+            const currDir = this.getDir(this.currentPath);
+
+            switch(cmd) {
+                case 'help':
+                    this.print("Available commands: help, clear, ls, cd, cat, echo, whoami, date, matrix");
+                    break;
+                case 'clear':
+                    this.output.innerHTML = '';
+                    break;
+                case 'ls':
+                    if(!currDir) { this.print('Error reading directory'); return; }
+                    const items = Object.keys(currDir).map(k => {
+                        return currDir[k].type === 'dir' ? `<span style="color:#3465a4">${k}/</span>` : k;
+                    });
+                    this.output.innerHTML += `<div style="display:flex; gap:10px; flex-wrap:wrap;">${items.join(' ')}</div>`;
+                    break;
+                case 'cd':
+                    if(!args[1] || args[1] === '~') { this.currentPath = ['~']; }
+                    else if (args[1] === '..') { if(this.currentPath.length > 1) this.currentPath.pop(); }
+                    else if (currDir[args[1]] && currDir[args[1]].type === 'dir') { this.currentPath.push(args[1]); }
+                    else { this.print(`cd: ${args[1]}: No such directory`); }
+                    break;
+                case 'cat':
+                    if(!args[1]) { this.print("Usage: cat <filename>"); return; }
+                    if(currDir[args[1]] && currDir[args[1]].type === 'file') { this.print(currDir[args[1]].content); }
+                    else { this.print(`cat: ${args[1]}: No such file`); }
+                    break;
+                case 'echo':
+                    this.print(args.slice(1).join(' ').replace(/"/g, ''));
+                    break;
+                case 'whoami': this.print('guest'); break;
+                case 'date': this.print(new Date().toString()); break;
+                case 'sudo': this.print('guest is not in the sudoers file. This incident will be reported.'); break;
+                case 'matrix': this.startMatrix(); break;
+                default: this.print(`${cmd}: command not found`);
+            }
+            this.el.scrollTop = this.el.scrollHeight;
+        }
+        
+        startMatrix() {
+            this.output.innerHTML = '';
+            this.el.querySelector('.term-line').style.display = 'none';
+            const canvas = document.createElement('canvas');
+            canvas.style.position = 'absolute'; canvas.style.top='0';canvas.style.left='0';
+            canvas.width = this.el.clientWidth; canvas.height = this.el.clientHeight;
+            this.el.appendChild(canvas);
+            const ctx = canvas.getContext('2d');
+            
+            const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%^&*';
+            const fontSize = 14;
+            const columns = canvas.width/fontSize;
+            const drops = Array(Math.floor(columns)).fill(1);
+            
+            const draw = () => {
+                ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+                ctx.fillStyle = '#0F0';
+                ctx.font = fontSize + 'px monospace';
+                for(let i = 0; i < drops.length; i++) {
+                    const text = chars[Math.floor(Math.random()*chars.length)];
+                    ctx.fillText(text, i*fontSize, drops[i]*fontSize);
+                    if(drops[i]*fontSize > canvas.height && Math.random() > 0.975) drops[i] = 0;
+                    drops[i]++;
+                }
+            };
+            
+            this.matrixInterval = setInterval(draw, 33);
+            
+            const stopMatrix = () => {
+                clearInterval(this.matrixInterval);
+                this.matrixInterval = null;
+                canvas.remove();
+                this.output.innerHTML = '';
+                this.el.querySelector('.term-line').style.display = 'flex';
+                this.el.querySelector('.term-input').focus();
+                this.el.removeEventListener('click', stopMatrix);
+                this.el.removeEventListener('keydown', stopMatrix);
+            };
+            
+            setTimeout(() => {
+                 this.el.addEventListener('click', stopMatrix);
+                 this.el.addEventListener('keydown', stopMatrix);
+                 sys.notify('Terminal', 'Press any key or click to stop Matrix mode.', 'fas fa-terminal');
+            }, 500);
+        }
+    }
+
+    class TextEditor {
+        constructor(winEl) {
+            this.el = winEl;
+            this.textarea = this.el.querySelector('#gedit-textarea');
+            this.saveBtn = this.el.querySelector('#gedit-save');
+            
+            // Load from local storage
+            const saved = localStorage.getItem('webos-gedit-doc');
+            if(saved) this.textarea.value = saved;
+
+            this.saveBtn.addEventListener('click', () => {
+                localStorage.setItem('webos-gedit-doc', this.textarea.value);
+                sys.notify('Text Editor', 'Document saved successfully.', 'fas fa-save');
+            });
+        }
+    }
+
+    class Browser {
+        constructor(winEl) {
+            this.iframe = winEl.querySelector('iframe');
+            this.urlInput = winEl.querySelector('#browser-url');
+            
+            winEl.querySelector('#browser-url').addEventListener('keypress', (e) => {
+                if(e.key === 'Enter') this.navigate();
+            });
+            winEl.querySelector('#bx-reload').addEventListener('click', () => this.navigate());
+            // Back/Fwd are tricky with cross-origin iframes, simulate for now
+            winEl.querySelector('#bx-back').addEventListener('click', () => sys.notify('Browser', 'History API restricted in sandbox', 'fas fa-exclamation-triangle'));
+        }
+        navigate() {
+            let url = this.urlInput.value;
+            if(!url.startsWith('http')) url = 'https://' + url;
+            // Many sites block iframes via X-Frame-Options. Wikipedia usually allows it.
+            this.iframe.src = url;
+            this.urlInput.value = url;
+        }
+    }
+
+    const calc = {
+        displayVal: '0',
+        evalString: '',
+        newNumber: true,
+        updateDisplay: function() { $('#calc-display').innerText = this.displayVal; },
+        append: function(char) {
+            if('0123456789.'.includes(char)) {
+                if(this.newNumber) { this.displayVal = char; this.newNumber = false; }
+                else { this.displayVal += char; }
+                this.evalString += char;
+            } else {
+                // Operator
+                this.newNumber = true;
+                this.evalString += char;
+            }
+            this.updateDisplay();
+        },
+        clear: function() {
+            this.displayVal = '0'; this.evalString = ''; this.newNumber = true;
+            this.updateDisplay();
+        },
+        solve: function() {
+            try {
+                // Basic sanitization before eval
+                const safeEval = this.evalString.replace(/[^0-9+\-*/().]/g, '');
+                const result = eval(safeEval);
+                this.displayVal = result.toString();
+                this.evalString = result.toString();
+                this.newNumber = true;
+            } catch(e) {
+                this.displayVal = 'Error';
+                this.evalString = '';
+            }
+            this.updateDisplay();
+        }
+    };
+
+    class Settings {
+        constructor(winEl) {
+            const wallpapers = [
+                'https://images.unsplash.com/photo-1506703719100-a0f3a48c0f86?q=80&w=2070', // Default
+                'https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?q=80&w=2070', // Nature
+                'https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=2020', // Tech
+                'https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=2070', // Mountains
+                'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2064'  // Abstract
+            ];
+            
+            const grid = winEl.querySelector('#bg-picker');
+            wallpapers.forEach(url => {
+                const thumb = document.createElement('div');
+                thumb.className = 'wall-thumb';
+                thumb.style.backgroundImage = `url('${url}&auto=format&fit=crop&w=200')`;
+                thumb.addEventListener('click', () => {
+                    $('#desktop').style.backgroundImage = `url('${url}&auto=format&fit=crop')`;
+                    winEl.querySelectorAll('.wall-thumb').forEach(t => t.classList.remove('active'));
+                    thumb.classList.add('active');
+                });
+                grid.appendChild(thumb);
+            });
+        }
+    }
+
+    /* --- UTILITIES --- */
+    function startClock() {
+        const update = () => {
+            const now = new Date();
+            const options = { month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit', hour12: true };
+            $('#clock').innerText = now.toLocaleDateString('en-US', options).replace(',', '');
+        };
+        update();
+        setInterval(update, 1000); // Every minute
+    }
+
+    const sys = {
+        notify: (title, message, iconClass='fas fa-info-circle') => {
+            const toast = document.createElement('div');
+            toast.className = 'toast';
+            toast.innerHTML = `<i class="${iconClass}"></i><div><strong>${title}</strong><br><small>${message}</small></div>`;
+            $('#notify-area').appendChild(toast);
+            // Trigger reflow for animation
+            toast.offsetHeight;
+            toast.classList.add('show');
+            setTimeout(() => {
+                toast.classList.remove('show');
+                setTimeout(() => toast.remove(), 300);
+            }, 4000);
+        }
+    };
+
+</script>
+</body>
+</html>
