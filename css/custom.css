@@ -526,8 +526,13 @@ html.dark .section,
 
 .ai-chat-button:hover {
   background: linear-gradient(to right, #d11a1b 0%, #5a6ae8 100%) !important;
-  transform: translateY(-2px);
+  transform: none;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Home page: enable slight lift on hover */
+.page-home .ai-chat-button:hover {
+  transform: translateY(-2px);
 }
 
 .ai-chat-button::after {
@@ -617,6 +622,14 @@ html.dark .btn-frameless:not(.is-filter):focus {
 [data-theme-toggle].btn-frameless {
   border: 1px solid var(--palette-light-neutral-neutral-1) !important;
   background-color: transparent !important;
+}
+
+/* Minimal hover lift utility (no visual changes except slight translate) */
+.hover-lift {
+  transition: transform 0.2s ease;
+}
+.page-home .hover-lift:hover {
+  transform: translateY(-2px);
 }
 [data-theme-toggle].btn-frameless:hover,
 [data-theme-toggle].btn-frameless:focus {
