@@ -1,45 +1,60 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chatbot</title>
-<script src="js/components/header.js"></script>
-  <script src="js/components/footer.js"></script>
-  <script src="js/components/badge-tag.js"></script>
-  <script src="js/components/section-header.js"></script>
-  <script src="js/components/image-display.js"></script>
-  <script src="js/components/quote-block.js"></script>
-  <script src="js/components/figma-embed.js"></script>
-  <script src="js/components/subtitle.js"></script>
-<body>
-    <h1>Chat with AI</h1>
-    <div id="chat-container">
-        <input type="text" id="user-input" placeholder="Type your message...">
-        <button onclick="sendMessage()">Send</button>
-        <div id="chat-log"></div>
-    </div>
-    <script>
-        async function sendMessage() {
-            const userInput = document.getElementById("user-input").value;
-            document.getElementById("user-input").value = "";
-            const chatLog = document.getElementById("chat-log");
-            chatLog.innerHTML += `<p><strong>You:</strong> ${userInput}</p>`;
-            const response = await fetch("https://api.openai.com/v1/engines/davinci-codex/completions", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                    "Authorization": `Bearer YOUR_OPENAI_API_KEY`
-                },
-                body: JSON.stringify({
-                    prompt: userInput,
-                    max_tokens: 50
-                })
-            });
-            const data = await response.json();
-            const botReply = data.choices[0].text;
-            chatLog.innerHTML += `<p><strong>Bot:</strong> ${botReply}</p>`;
-        }
-    </script>
-</body>
-</html>
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+<div id="map" style="height: 1600px;"></div>
+
+<!-- 先加载 Leaflet，本体 -->
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<!-- 再加载 leaflet-curve 插件（依赖 Leaflet） -->
+<script src="https://unpkg.com/leaflet-curve"></script>
+<script src="https://unpkg.com/leaflet.geodesic"></script>
+<script src="https://unpkg.com/leaflet-ant-path/dist/leaflet-ant-path.min.js"></script>
+
+<script>
+// 1) 初始化地图（底图可以换自家/商用合规的瓦片源）
+const map = L.map('map').setView([35.6812, 139.7671], 4); // 东京附近
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  maxZoom: 19,
+  attribution: '© OpenStreetMap contributors'
+}).addTo(map);
+
+// 2) 两个位置（东京 & 香港示例）
+const tokyo = [35.6812, 139.7671];   // [lat, lng]
+const hongkong = [22.3193, 114.1694]; // [lat, lng]
+
+// 3) 你的带宽数据（Mbps）——来自你的后端
+const bandwidthMbps = 850;
+
+// 简单映射函数：带宽 -> 线宽（可调）
+function widthFromMbps(mbps) {
+  const base = 3, max = 12;
+  return Math.min(max, base + Math.log2(Math.max(1, mbps / 50)));
+}
+
+// 4) 画“曲线”（leaflet-curve 的坐标同样是 [lat, lng]）
+const curve = L.curve(
+  [
+    'M', tokyo,       // MoveTo 起点
+    'Q', [35, 125],   // Quadratic Bézier 控制点（注意顺序是 [lat, lng]）
+    hongkong          // 终点
+  ],
+  {
+    color: bandwidthMbps > 1000 ? '#d73027'
+         : bandwidthMbps > 300  ? '#fc8d59'
+         : '#91bfdb',
+    weight: widthFromMbps(bandwidthMbps),
+    opacity: 0.9
+  }
+).addTo(map);
+
+// 5) 提示信息（绑定到曲线本身）
+curve.bindTooltip(`Tokyo ⇄ Hong Kong<br/>带宽：${bandwidthMbps} Mbps`, { sticky: true });
+
+// 6) 两端标记
+L.polyline.antPath([tokyo, hongkong], {
+  color: '#fc8d59',
+  weight: widthFromMbps(bandwidthMbps),
+  pulseColor: '#ffffff',
+  delay: 400,
+  dashArray: [10, 20],
+  opacity: 0.8
+}).addTo(map);
+</script>
