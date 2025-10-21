@@ -709,6 +709,20 @@
                      All<span class="article-count" id="count-all">0</span>
                    </button>
                    <button
+                     class="btn btn-sm btn-frameless is-filter" 
+                     style="height: 36px"
+                     onclick="filterProjects('side_project')"
+                     role="tab"
+                     aria-selected="false"
+                     aria-controls="project-container"
+                     tabindex="-1"
+                     aria-label="Show side project articles"
+                     data-category="side_project"
+                   >
+                   🧩 Tinkering Projects
+                   <span class="article-count" id="count-side_project">0</span>
+                   </button>
+                   <button
                      class="btn btn-sm filter-active" 
                      style="height: 36px"
                      onclick="filterProjects('product_initiative')"
@@ -722,20 +736,7 @@
                    Product Initiative
                    <span class="article-count" id="count-product_initiative">0</span>
                    </button>
-                   <button
-                     class="btn btn-sm btn-frameless is-filter" 
-                     style="height: 36px"
-                     onclick="filterProjects('side_project')"
-                     role="tab"
-                     aria-selected="false"
-                     aria-controls="project-container"
-                     tabindex="-1"
-                     aria-label="Show side project articles"
-                     data-category="side_project"
-                   >
-                   Side Project
-                   <span class="article-count" id="count-side_project">0</span>
-                   </button>
+                   
                 </div>
               </div>
             </div>
