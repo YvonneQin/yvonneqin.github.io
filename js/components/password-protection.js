@@ -152,7 +152,7 @@ class PasswordProtection extends HTMLElement {
         Scan the QR code below with your wallet app to complete payment.
       </div>
       <img src="${this.paymentImagePath}" alt="USDT Payment QR Code" 
-           style="max-width: 200px; border: 1px solid ${isDarkMode ? '#ffffff33' : '#dee2e6'}; border-radius: 6px; margin: 16px 0;">
+           style="max-width: 320px; border: 1px solid ${isDarkMode ? '#ffffff33' : '#dee2e6'}; border-radius: 6px; margin: 16px 0;">
       <div style="color: ${isDarkMode ? '#ffffff73' : '#6c757d'}; font-size: 14px; margin-bottom: 20px;">
         After completing the payment, click "I've Paid" below.
       </div>
