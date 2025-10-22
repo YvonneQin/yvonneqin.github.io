@@ -178,11 +178,15 @@ class PasswordProtection extends HTMLElement {
     cancelBtn.textContent = 'Cancel';
     cancelBtn.addEventListener('click', (e) => {
       e.preventDefault();
-      // 取消时直接关闭弹窗，不访问目标页面
-      document.body.removeChild(overlay);
-      themeObserver.disconnect();
-      // 可以选择跳转到首页或其他安全页面
+      // 先跳转，再清理弹窗，避免露出目标页面
       window.location.href = 'index.html';
+      // 延迟清理，确保跳转已经开始
+      setTimeout(() => {
+        if (document.body.contains(overlay)) {
+          document.body.removeChild(overlay);
+        }
+        themeObserver.disconnect();
+      }, 100);
     });
 
     const confirmBtn = document.createElement('a');
@@ -208,10 +212,15 @@ class PasswordProtection extends HTMLElement {
     // 点击遮罩层关闭
     overlay.addEventListener('click', (e) => {
       if (e.target === overlay) {
-        document.body.removeChild(overlay);
-        themeObserver.disconnect(); // 清理监听器
-        // 点击遮罩层也跳转到首页，不访问目标页面
+        // 先跳转，再清理弹窗，避免露出目标页面
         window.location.href = 'index.html';
+        // 延迟清理，确保跳转已经开始
+        setTimeout(() => {
+          if (document.body.contains(overlay)) {
+            document.body.removeChild(overlay);
+          }
+          themeObserver.disconnect();
+        }, 100);
       }
     });
 
@@ -237,11 +246,16 @@ class PasswordProtection extends HTMLElement {
     // ESC键关闭
     const handleKeydown = (e) => {
       if (e.key === 'Escape') {
-        document.body.removeChild(overlay);
-        document.removeEventListener('keydown', handleKeydown);
-        themeObserver.disconnect(); // 清理监听器
-        // ESC键也跳转到首页，不访问目标页面
+        // 先跳转，再清理弹窗，避免露出目标页面
         window.location.href = 'index.html';
+        // 延迟清理，确保跳转已经开始
+        setTimeout(() => {
+          if (document.body.contains(overlay)) {
+            document.body.removeChild(overlay);
+          }
+          document.removeEventListener('keydown', handleKeydown);
+          themeObserver.disconnect();
+        }, 100);
       }
     };
     document.addEventListener('keydown', handleKeydown);
