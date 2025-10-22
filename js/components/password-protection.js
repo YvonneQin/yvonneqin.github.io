@@ -54,8 +54,8 @@ class PasswordProtection extends HTMLElement {
       );
 
       if (input === null) {
-        // User cancelled, go back
-        history.go(-1);
+        // User cancelled, redirect to home page
+        window.location.href = 'index.html';
         return;
       }
 
@@ -69,9 +69,9 @@ class PasswordProtection extends HTMLElement {
       // Wrong password
       attempts++;
       if (attempts >= maxAttempts) {
-        // Max attempts reached, go back
+        // Max attempts reached, redirect to home page
         window.alert('❌ Maximum attempts reached. Access denied.');
-        history.go(-1);
+        window.location.href = 'index.html';
         return;
       }
 
@@ -89,12 +89,11 @@ class PasswordProtection extends HTMLElement {
   }
 
   showPaymentQR() {
-    // 检测深色主题 - 多种检测方式
-    const isDarkMode = document.documentElement.classList.contains('dark') || 
-                      document.body.classList.contains('dark') ||
-                      (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    // 检测深色主题 - 直接检查html元素的dark类
+    const isDarkMode = document.documentElement.classList.contains('dark');
     
     console.log('🌓 Dark mode detected:', isDarkMode);
+    console.log('🔍 HTML classes:', document.documentElement.className);
     
     // 创建系统样式的支付弹窗
     const overlay = document.createElement('div');
@@ -104,7 +103,7 @@ class PasswordProtection extends HTMLElement {
       left: 0;
       width: 100%;
       height: 100%;
-      background: ${isDarkMode ? 'rgba(0, 0, 0, 0.8)' : 'rgba(0, 0, 0, 0.3)'};
+      background: ${isDarkMode ? '#000000' : '#ffffff'};
       display: flex;
       justify-content: center;
       align-items: center;
@@ -179,8 +178,11 @@ class PasswordProtection extends HTMLElement {
     cancelBtn.textContent = 'Cancel';
     cancelBtn.addEventListener('click', (e) => {
       e.preventDefault();
+      // 取消时直接关闭弹窗，不访问目标页面
       document.body.removeChild(overlay);
-      history.go(-1);
+      themeObserver.disconnect();
+      // 可以选择跳转到首页或其他安全页面
+      window.location.href = 'index.html';
     });
 
     const confirmBtn = document.createElement('a');
@@ -207,16 +209,39 @@ class PasswordProtection extends HTMLElement {
     overlay.addEventListener('click', (e) => {
       if (e.target === overlay) {
         document.body.removeChild(overlay);
-        history.go(-1);
+        themeObserver.disconnect(); // 清理监听器
+        // 点击遮罩层也跳转到首页，不访问目标页面
+        window.location.href = 'index.html';
       }
     });
+
+    // 主题变化监听器
+    const themeObserver = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+          const newIsDarkMode = document.documentElement.classList.contains('dark');
+          
+          if (newIsDarkMode !== isDarkMode) {
+            console.log('🔄 Theme changed, updating modal...');
+            // 重新创建弹窗以应用新主题
+            document.body.removeChild(overlay);
+            this.showPaymentQR();
+          }
+        }
+      });
+    });
+    
+    // 只监听html元素的class变化
+    themeObserver.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
 
     // ESC键关闭
     const handleKeydown = (e) => {
       if (e.key === 'Escape') {
         document.body.removeChild(overlay);
         document.removeEventListener('keydown', handleKeydown);
-        history.go(-1);
+        themeObserver.disconnect(); // 清理监听器
+        // ESC键也跳转到首页，不访问目标页面
+        window.location.href = 'index.html';
       }
     };
     document.addEventListener('keydown', handleKeydown);
@@ -224,7 +249,6 @@ class PasswordProtection extends HTMLElement {
 
   createSiteButton(text, type, onClick) {
     const isDarkMode = document.documentElement.classList.contains('dark');
-    console.log(`🔘 Creating ${type} button: ${text}, Dark mode: ${isDarkMode}`);
     const button = document.createElement('button');
     
     // 添加站点按钮类名
