@@ -1,5 +1,15 @@
 // Project Data Management Module
 const ProjectData = {
+
+  // Tinkering Project
+  quant: {
+    title: 'Tinkering Project',
+    badges: ['Tinkering', 'Product Design', 'Product Strategy'],
+    period: '2022.12 - 2023.11',
+    role: 'Researcher & Designer',
+    duration: '20 mins',
+    category: 'tinkering_project'
+  },
   // REDcity Project
   redcity: {
     title: 'REDcity v1.0 IM/AI Framework Design for Enterprise Productivity Suite',
