@@ -12,7 +12,7 @@ const ProjectData = {
   },
   // Tinkering Project
   quant: {
-    title: 'Tinkering Project',
+    title: 'Quant Knowledge Visualization',
     badges: ['Tinkering', 'Product Design', 'Product Strategy','Pages'],
     period: 'Fresh Start',
     role: 'PM & Deveplorer',
