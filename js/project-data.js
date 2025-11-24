@@ -2,11 +2,20 @@
 const ProjectData = {
 
   // Tinkering Project
+  gesture: {
+    title: 'Gesture based Web Scroller',
+    badges: ['Tinkering', 'Product Design', 'Product Strategy','Worker'],
+    period: 'Fresh Start',
+    role: 'PM & Deveplorer',
+    duration: '20 mins',
+    category: 'tinkering_project'
+  },
+  // Tinkering Project
   quant: {
     title: 'Tinkering Project',
-    badges: ['Tinkering', 'Product Design', 'Product Strategy'],
-    period: '2022.12 - 2023.11',
-    role: 'Researcher & Designer',
+    badges: ['Tinkering', 'Product Design', 'Product Strategy','Pages'],
+    period: 'Fresh Start',
+    role: 'PM & Deveplorer',
     duration: '20 mins',
     category: 'tinkering_project'
   },
