@@ -3,20 +3,20 @@ const ProjectData = {
 
   // Tinkering Project
   gesture: {
-    title: 'Gesture based Web Scroller',
-    badges: ['Tinkering', 'Product Design', 'Product Strategy','Worker'],
+    title: 'Gesture-Based Web Scroller',
+    badges: ['Tinkering', 'Product Design', 'Worker'],
     period: 'Fresh Start',
     role: 'PM & Deveplorer',
-    duration: '20 mins',
+    duration: '--',
     category: 'tinkering_project'
   },
   // Tinkering Project
   quant: {
     title: 'Quant Knowledge Visualization',
-    badges: ['Tinkering', 'Product Design', 'Product Strategy','Pages'],
+    badges: ['Tinkering', 'Product Design', 'Pages'],
     period: 'Fresh Start',
     role: 'PM & Deveplorer',
-    duration: '20 mins',
+    duration: '--',
     category: 'tinkering_project'
   },
   // REDcity Project
