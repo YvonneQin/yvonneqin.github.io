@@ -1,0 +1,8 @@
+_site
+.DS_Store
+.jekyll-cache
+.sass-cache
+node_modules
+venv
+__pycache__
+.env
