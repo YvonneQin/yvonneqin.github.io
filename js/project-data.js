@@ -2,6 +2,14 @@
 const ProjectData = {
 
   // Tinkering Project
+  TLDW: {
+    title: 'TLDW',
+    badges: ['Tinkering', 'Product Design', 'Worker'],
+    period: 'Fresh Start',
+    role: 'PM & Deveplorer',
+    duration: '--',
+    category: 'tinkering_project'
+  },
   gesture: {
     title: 'Gesture-Based Web Scroller',
     badges: ['Tinkering', 'Product Design', 'Worker'],
