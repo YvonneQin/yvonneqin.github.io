@@ -7,34 +7,37 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  
+
   <!-- SEO Meta Tags -->
-  <meta name="description" content="Yuwen Qin - Experience Imagineer & Individual Developer. UX/UI Designer with expertise in product design, frontend development, and AI/ML. Based in Shanghai." />
-  <meta name="keywords" content="Yuwen Qin, UX Designer, UI Designer, Product Designer, Frontend Developer, Portfolio, Shanghai, Experience Design" />
-  
+  <meta name="description"
+    content="Yuwen Qin - Experience Imagineer & Individual Developer. UX/UI Designer with expertise in product design, frontend development, and AI/ML. Based in Shanghai." />
+  <meta name="keywords"
+    content="Yuwen Qin, UX Designer, UI Designer, Product Designer, Frontend Developer, Portfolio, Shanghai, Experience Design" />
+
   <!-- Open Graph Meta Tags -->
   <meta property="og:title" content="Yuwen Qin - Experience Imagineer & Developer" />
-  <meta property="og:description" content="UX/UI Designer and Developer creating meaningful digital experiences. Specialized in product design, frontend development, and AI/ML integration." />
+  <meta property="og:description"
+    content="UX/UI Designer and Developer creating meaningful digital experiences. Specialized in product design, frontend development, and AI/ML integration." />
   <meta property="og:image" content="img/meta/web Logo.png" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://yvonneqin.github.io" />
-  
+
   <!-- Twitter Card Meta Tags -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Yuwen Qin - Experience Imagineer & Developer" />
   <meta name="twitter:description" content="UX/UI Designer and Developer creating meaningful digital experiences." />
   <meta name="twitter:image" content="img/meta/web Logo.png" />
-  
+
   <!-- Links -->
   <!-- <link rel="icon" type="image/x-icon" href="favicon.ico" />
   <link rel="canonical" href="https://yvonneqin.github.io" /> -->
-  
+
   <!-- Stylesheets -->
   <link rel="preload" href="css/main.css" as="style" />
   <link rel="preload" href="css/custom.css" as="style" />
   <link rel="stylesheet" href="css/main.css" />
   <link rel="stylesheet" href="css/custom.css" />
-  
+
   <!-- Scripts -->
   <script src="js/config.js"></script>
 
@@ -70,8 +73,8 @@
         event: 'gtm.js'
       });
       var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
       j.async = true;
       j.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-000000' + i + dl;
       f.parentNode.insertBefore(j, f);
@@ -99,31 +102,31 @@
          */
         function collapse() {
           if (isAnimating) return;
-          
+
           isAnimating = true;
           toggleButton.disabled = true;
-          
+
           const currentHeight = expandableDiv.getBoundingClientRect().height;
           expandableDiv.style.height = currentHeight + 'px';
-          
+
           requestAnimationFrame(() => {
             expandableDiv.style.height = COLLAPSED_HEIGHT + 'px';
           });
-          
+
           const onTransitionEnd = (event) => {
             if (event.propertyName !== 'height') return;
-            
+
             expandableDiv.removeEventListener('transitionend', onTransitionEnd);
             expandableDiv.classList.remove('expanded');
             toggleButton.innerHTML = 'Expand All<i class="icon-arrow-down-F iconfont"></i>';
             toggleButton.setAttribute('aria-expanded', 'false');
-            
+
             // Clear inline height to rely on CSS collapsed height
             expandableDiv.style.height = '';
             isAnimating = false;
             toggleButton.disabled = false;
           };
-          
+
           expandableDiv.addEventListener('transitionend', onTransitionEnd);
         }
 
@@ -132,32 +135,32 @@
          */
         function expand() {
           if (isAnimating) return;
-          
+
           isAnimating = true;
           toggleButton.disabled = true;
-          
+
           const startHeight = expandableDiv.getBoundingClientRect().height;
           expandableDiv.style.height = startHeight + 'px';
           const targetHeight = expandableDiv.scrollHeight;
-          
+
           requestAnimationFrame(() => {
             expandableDiv.style.height = targetHeight + 'px';
           });
-          
+
           const onTransitionEnd = (event) => {
             if (event.propertyName !== 'height') return;
-            
+
             expandableDiv.removeEventListener('transitionend', onTransitionEnd);
             expandableDiv.classList.add('expanded');
             toggleButton.innerHTML = 'Collapse All <i class="icon-arrow-up-F iconfont"></i>';
             toggleButton.setAttribute('aria-expanded', 'true');
-            
+
             // Allow content to grow naturally when expanded
             expandableDiv.style.height = 'auto';
             isAnimating = false;
             toggleButton.disabled = false;
           };
-          
+
           expandableDiv.addEventListener('transitionend', onTransitionEnd);
         }
 
@@ -169,14 +172,14 @@
             expand();
           }
         });
-        
+
       } catch (error) {
         console.error('Error initializing expandable section:', error);
       }
     });
   </script>
   <title>Yuwen's Portfolio</title>
-  
+
   <!-- Animation Styles -->
   <style>
     /* ============================================
@@ -190,9 +193,17 @@
     }
 
     @keyframes rad-fade-in-fallback {
-      0% { opacity: 0; }
-      75% { opacity: 0; }
-      100% { opacity: 1; }
+      0% {
+        opacity: 0;
+      }
+
+      75% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
     }
 
     .fonts-loaded .rad-fade-in.rad-waiting {
@@ -207,8 +218,13 @@
     }
 
     @keyframes rad-fade-in {
-      0% { opacity: 0; }
-      100% { opacity: 1; }
+      0% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
     }
 
     /* ============================================
@@ -222,9 +238,17 @@
     }
 
     @keyframes rad-fade-in-long-fallback {
-      0% { opacity: 0; }
-      75% { opacity: 0; }
-      100% { opacity: 1; }
+      0% {
+        opacity: 0;
+      }
+
+      75% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
     }
 
     .fonts-loaded .rad-fade-in-long.rad-waiting {
@@ -239,9 +263,17 @@
     }
 
     @keyframes rad-fade-in-long {
-      0% { opacity: 0; }
-      20% { opacity: 0; }
-      100% { opacity: 1; }
+      0% {
+        opacity: 0;
+      }
+
+      20% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
     }
 
     /* ============================================
@@ -260,10 +292,12 @@
         opacity: 0;
         transform: translateY(-30px);
       }
+
       75% {
         opacity: 0;
         transform: translateY(-30px);
       }
+
       100% {
         opacity: 1;
         transform: translateY(0);
@@ -286,6 +320,7 @@
         opacity: 0;
         transform: translateY(-30px);
       }
+
       100% {
         opacity: 1;
         transform: translateY(0);
@@ -308,10 +343,12 @@
         opacity: 0;
         transform: scaleY(0.95);
       }
+
       75% {
         opacity: 0;
         transform: scaleY(0.95);
       }
+
       100% {
         opacity: 1;
         transform: scaleY(1);
@@ -335,6 +372,7 @@
         opacity: 0;
         transform: scaleY(0.95);
       }
+
       100% {
         opacity: 1;
         transform: scaleY(1);
@@ -345,13 +383,23 @@
        Movement Animations
        ============================================ */
     @keyframes move_left {
-      from { left: -430px; }
-      to { left: -380px; }
+      from {
+        left: -430px;
+      }
+
+      to {
+        left: -380px;
+      }
     }
 
     @keyframes move_right {
-      from { left: 930px; }
-      to { left: 980px; }
+      from {
+        left: 930px;
+      }
+
+      to {
+        left: 980px;
+      }
     }
   </style>
   <!-- Expandable Section Styles -->
@@ -395,12 +443,10 @@
       left: 0;
       width: 100%;
       height: 64px;
-      background: linear-gradient(
-        to bottom, 
-        rgba(255, 255, 255, 0) 0%, 
-        rgba(255, 255, 255, 1) 50%, 
-        rgba(255, 255, 255, 1) 100%
-      );
+      background: linear-gradient(to bottom,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(255, 255, 255, 1) 50%,
+          rgba(255, 255, 255, 1) 100%);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -408,12 +454,10 @@
 
     /* Dark mode gradient overlay */
     html.dark #gradientOverlay {
-      background: linear-gradient(
-        to bottom,
-        rgba(26, 26, 26, 0) 0%,
-        rgba(26, 26, 26, 0.85) 55%,
-        rgba(26, 26, 26, 1) 100%
-      );
+      background: linear-gradient(to bottom,
+          rgba(26, 26, 26, 0) 0%,
+          rgba(26, 26, 26, 0.85) 55%,
+          rgba(26, 26, 26, 1) 100%);
     }
 
     /* ============================================
@@ -440,7 +484,7 @@
 <body class="page-home">
   <!-- Skip to main content link for accessibility -->
   <a href="#main-content" class="skip-link">Skip to main content</a>
-  
+
   <!-- Site Header -->
   <site-header></site-header>
 
@@ -460,12 +504,19 @@
             <h1 class="display-1" style="font-size: 20px; line-height: 1.6;">
               Hi, I'm Yuwen.
               <br />
-              A <div style="color: var(--mode-dark-primary-brand-default); display: contents;">Creative Technologist</div> 
-              and <div style="color: var(--mode-dark-primary-brand-default); display: contents;">System Designer</div> 
-              exploring how <div style="color: var(--mode-dark-primary-brand-default); display: contents;">design and intelligence</div> 
+              A <div style="color: var(--mode-dark-primary-brand-default); display: contents;">Creative Technologist
+              </div>
+              and <div style="color: var(--mode-dark-primary-brand-default); display: contents;">System Designer</div>
+              exploring how <div style="color: var(--mode-dark-primary-brand-default); display: contents;">design and
+                intelligence</div>
               shape meaningful virtual experiences.
               <br />
-              I also share my <a target='_blank' href='my_insight.html' style="color: var(--mode-dark-primary-brand-default); text-decoration: none !important; transition: all 0.3s ease !important;" onmouseover="this.style.color='#ff6b6b'; this.style.transform='scale(1.05)'" onmouseout="this.style.color='var(--mode-dark-primary-brand-default)'; this.style.transform='scale(1)'">Insights<i class="icon-a-directto-s iconfont" style="font-size: 24px !important; margin-left: -2px !important; margin-right: 0 !important; vertical-align: middle !important; transition: all 0.3s ease !important;"></i></a> 
+              I also share my <a target='_blank' href='my_insight.html'
+                style="color: var(--mode-dark-primary-brand-default); text-decoration: none !important; transition: all 0.3s ease !important;"
+                onmouseover="this.style.color='#ff6b6b'; this.style.transform='scale(1.05)'"
+                onmouseout="this.style.color='var(--mode-dark-primary-brand-default)'; this.style.transform='scale(1)'">Insights<i
+                  class="icon-a-directto-s iconfont"
+                  style="font-size: 24px !important; margin-left: -2px !important; margin-right: 0 !important; vertical-align: middle !important; transition: all 0.3s ease !important;"></i></a>
               on AI × Science × Design × Venture × 3D Printing.
             </h1>
             <ul class="lead" style="padding-top: 0px;margin-bottom: 20px;">
@@ -496,7 +547,8 @@
     <section class="section rad-animation-group pb-0" style="margin-top: -60px; ">
       <div class="container rad-fade-down">
         <div class="row d-flex flex-column-reverse flex-md-row justify-content-center">
-          <a href="https://ai.yuwen-qin.com" class="btn btn-primary hover-lift" target="_blank" style="margin-right: 8px;">
+          <a href="https://ai.yuwen-qin.com" class="btn btn-primary hover-lift" target="_blank"
+            style="margin-right: 8px;">
             <i class="icon-Magic iconfont"></i>
             Talk to Yuwen's AI...
           </a>
@@ -512,7 +564,7 @@
         <div class="row d-flex flex-column-reverse flex-md-row">
           <div class="col-12 collapsed" id="expandableDiv">
             <h2>Skills & Certifications</h2>
-            <p style="font-size: 14px;font-weight: 500;margin: var(--s_8) 0">Coding & AI</p>
+            <p style="font-size: 14px;font-weight: 500;margin: var(--s_8) 0">Vibe Coding & AI</p>
             <div style="margin-bottom: 4px;">
               <a href="https://www.coursera.org/account/accomplishments/verify/UNBWWV5QR4FY" class="btn btn-frameless"
                 style="border-radius: 8px!important;border-radius: 0;padding: 0;margin-right: 4px;">
@@ -536,27 +588,6 @@
             <span class="badge rounded-pill bg-primary">Design Strategy</span>
             <span class="badge rounded-pill bg-primary">Design Ops</span>
             <span class="badge rounded-pill bg-primary">Retrospective study</span>
-            <p style="font-size: 14px;font-weight: 500;margin: var(--s_8) 0">Blockchain / Web3</p>
-            <span class="badge rounded-pill bg-primary">Smart Contract Development / Solidity</span>
-            <span class="badge rounded-pill bg-primary">Tokenomics / Cryptoeconomics</span>
-            <span class="badge rounded-pill bg-primary">Blockchain Protocols / Consensus Mechanisms</span>
-            <span class="badge rounded-pill bg-primary">Cryptography & Zero Knowledge Proofs (ZKP)</span>
-            <span class="badge rounded-pill bg-primary">Decentralized Oracles</span>
-            <span class="badge rounded-pill bg-primary">Cross-Chain / Interoperability</span>
-
-            <p style="font-size: 14px;font-weight: 500;margin: var(--s_8) 0">AI Infra / Distributed Inference</p>
-            <span class="badge rounded-pill bg-primary">Generative AI / Prompt Engineering</span>
-            <span class="badge rounded-pill bg-primary">Explainable AI / Responsible AI</span>
-            <span class="badge rounded-pill bg-primary">AI Model Deployment / Model Serving</span>
-            <span class="badge rounded-pill bg-primary">Scalable Inference / Distributed Inference</span>
-            <span class="badge rounded-pill bg-primary">ML Ops / Infra for LLMs</span>
-
-            <p style="font-size: 14px;font-weight: 500;margin: var(--s_8) 0">Quant / Data</p>
-            <span class="badge rounded-pill bg-primary">Backtest / Quant Strategy Simulation</span>
-            <span class="badge rounded-pill bg-primary">Time Series Forecasting</span>
-            <span class="badge rounded-pill bg-primary">Algorithmic Trading</span>
-            <span class="badge rounded-pill bg-primary">Risk Modeling</span>
-            <span class="badge rounded-pill bg-primary">Data Pipeline / Big Data Processing</span>
 
             <p style="font-size: 14px;font-weight: 500;margin: var(--s_8) 0">Design / Product</p>
             <span class="badge rounded-pill bg-primary">Decentralized App (dApp) Design + UX</span>
@@ -658,20 +689,31 @@
           </div>
           <div class="col-6">
             <h2>Work Experience</h2>
-            <p class="lead" style="text-align: left; margin-bottom: 8px;"> 
+            <p class="lead" style="text-align: left; margin-bottom: 8px;">
               <strong>AI Infrastructure & Product Leader</strong> building next-gen intelligent systems at scale.
             </p>
-            
+
             <p class="lead" style="text-align: left; margin-bottom: 8px;">
-              At <a target='_blank' href='https://www.linkedin.com/company/zenlayer/'>Zenlayer</a>: Engineered <a target='_blank' href='https://en.prnasia.com/releases/apac/zenlayer-launches-distributed-inference-to-power-ai-deployment-at-global-scale-506504.shtml'>Distributed Inference</a> infrastructure, <a target='_blank' href='https://www.prnewswire.com/apac/news-releases/zenlayer-launches-ai-gateway-to-simplify-global-access-to-large-language-models-302596057.html?tc=eml_cleartime'>AI gateway</a>, and <a target='_blank' href='https://console.zenlayer.com/dashboard'>Zenlayer Console</a>—scaling AI deployment from 0→1.
+              At <a target='_blank' href='https://www.linkedin.com/company/zenlayer/'>Zenlayer</a>: Engineered <a
+                target='_blank'
+                href='https://en.prnasia.com/releases/apac/zenlayer-launches-distributed-inference-to-power-ai-deployment-at-global-scale-506504.shtml'>Distributed
+                Inference</a> infrastructure, <a target='_blank'
+                href='https://www.prnewswire.com/apac/news-releases/zenlayer-launches-ai-gateway-to-simplify-global-access-to-large-language-models-302596057.html?tc=eml_cleartime'>AI
+                gateway</a>, and <a target='_blank' href='https://console.zenlayer.com/dashboard'>Zenlayer
+                Console</a>—scaling AI deployment from 0→1.
             </p>
-            
+
             <p class="lead" style="text-align: left; margin-bottom: 8px;">
-              Previously at <a target='_blank' href='https://www.linkedin.com/company/xiaohongshu/'>Xiaohongshu</a> & <a target='_blank' href='https://www.linkedin.com/company/%E4%B8%8A%E6%B5%B7%E8%80%80%E4%B9%98%E5%81%A5%E5%BA%B7%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8/'>AlphaLife Science</a>: built intelligent product ecosystems end-to-end, leveraging ML-driven UX and behavioral analytics for exponential growth.
+              Previously at <a target='_blank' href='https://www.linkedin.com/company/xiaohongshu/'>Xiaohongshu</a> & <a
+                target='_blank'
+                href='https://www.linkedin.com/company/%E4%B8%8A%E6%B5%B7%E8%80%80%E4%B9%98%E5%81%A5%E5%BA%B7%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8/'>AlphaLife
+                Science</a>: built intelligent product ecosystems end-to-end, leveraging ML-driven UX and behavioral
+              analytics for exponential growth.
             </p>
-            
+
             <p class="lead" style="text-align: left; padding-bottom: 0px;">
-              Publishing AI/ML insights in <a target='_blank' href='my_insight.html'>My Insight<i class="icon-a-directto-s iconfont" style="font-size: 16px !important;"></i></a>.
+              Publishing AI/ML insights in <a target='_blank' href='my_insight.html'>My Insight<i
+                  class="icon-a-directto-s iconfont" style="font-size: 16px !important;"></i></a>.
             </p>
             <a href="https://www.linkedin.com/in/yuwen-qin-275864114/" class="btn btn-primary" target="_blank">
               <i class="icon-linkedin-fill iconfont"></i>
@@ -691,54 +733,30 @@
         <h2>🧩 Tinkering Zones</h2>
         <section class="section" style="padding-top: 0px; margin-top: 0px; " role="main">
           <div class="container">
-            <div
-              class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
-              style="margin-top: 0px"
-            >
+            <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
+              style="margin-top: 0px">
               <div class="col-12 mt-4 mt-md-0 my-md-auto" style="padding-top: 16px;padding-left: 0px;">
                 <div class="filter-buttons" role="tablist" aria-label="Filter articles by category">
-                   <button 
-                     class="btn btn-sm btn-frameless is-filter" 
-                     style="height: 36px" 
-                     onclick="filterProjects('all')"
-                     role="tab"
-                     aria-selected="false"
-                     aria-controls="project-container"
-                     tabindex="-1"
-                     aria-label="Show all projects"
-                     data-category="all"
-                   >
-                     All<span class="article-count" id="count-all">0</span>
-                   </button>
-                   <button
-                     class="btn btn-sm btn-frameless is-filter" 
-                     style="height: 36px"
-                     onclick="filterProjects('side_project')"
-                     role="tab"
-                     aria-selected="false"
-                     aria-controls="project-container"
-                     tabindex="-1"
-                     aria-label="Show side project articles"
-                     data-category="side_project"
-                   >
-                   🧩 Tinkering Projects
-                   <span class="article-count" id="count-side_project">0</span>
-                   </button>
-                   <button
-                     class="btn btn-sm filter-active" 
-                     style="height: 36px"
-                     onclick="filterProjects('product_initiative')"
-                     role="tab"
-                     aria-selected="true"
-                     aria-controls="project-container"
-                     tabindex="0"
-                     aria-label="Show product initiative articles"
-                     data-category="product_initiative"
-                   >
-                   Product Initiative
-                   <span class="article-count" id="count-product_initiative">0</span>
-                   </button>
-                   
+                  <button class="btn btn-sm btn-frameless is-filter" style="height: 36px"
+                    onclick="filterProjects('all')" role="tab" aria-selected="false" aria-controls="project-container"
+                    tabindex="-1" aria-label="Show all projects" data-category="all">
+                    All<span class="article-count" id="count-all">0</span>
+                  </button>
+                  <button class="btn btn-sm btn-frameless is-filter" style="height: 36px"
+                    onclick="filterProjects('side_project')" role="tab" aria-selected="false"
+                    aria-controls="project-container" tabindex="-1" aria-label="Show side project articles"
+                    data-category="side_project">
+                    🧩 Tinkering Projects
+                    <span class="article-count" id="count-side_project">0</span>
+                  </button>
+                  <button class="btn btn-sm filter-active" style="height: 36px"
+                    onclick="filterProjects('product_initiative')" role="tab" aria-selected="true"
+                    aria-controls="project-container" tabindex="0" aria-label="Show product initiative articles"
+                    data-category="product_initiative">
+                    Product Initiative
+                    <span class="article-count" id="count-product_initiative">0</span>
+                  </button>
+
                 </div>
               </div>
             </div>
@@ -762,7 +780,8 @@
           </div>
           <div class="row row--padded rad-animation-group rad-fade-down " data-category="side_project">
             <div class="col-md-7 pl-md-0 text-right">
-              <img class='lozad img-responsive img-clip-right-backward' data-src="img/works/Gesture based Web Scroller.svg"
+              <img class='lozad img-responsive img-clip-right-backward'
+                data-src="img/works/Gesture based Web Scroller.svg"
                 data-srcset="img/works/Gesture based Web Scroller.svg" />
             </div>
             <div class="col-md-5 mt-4 mt-md-0 my-md-auto" style="line-height: 32px;">
@@ -824,7 +843,8 @@
                   class="icon-arrow-right-sm iconfont"></i></a>
             </div>
           </div>
-          <div class="row row--padded rad-animation-group rad-fade-down customhover\\" data-category="product_initiative">
+          <div class="row row--padded rad-animation-group rad-fade-down customhover\\"
+            data-category="product_initiative">
             <div class="col-md-5 mt-4 mt-md-0 my-md-auto" style="line-height: 32px;">
               <div data-project="ai" data-type="compact"></div>
               <a href="project_AI.html" class="btn btn-primary">Check it out<i
@@ -876,7 +896,8 @@
                   class="icon-arrow-right-sm iconfont"></i></a>
             </div>
           </div>
-          <div class="row row--padded rad-animation-group rad-fade-down customhover\\" data-category="product_initiative">
+          <div class="row row--padded rad-animation-group rad-fade-down customhover\\"
+            data-category="product_initiative">
             <div class="col-md-5 mt-4 mt-md-0 my-md-auto" style="line-height: 32px;">
               <div data-project="askbob" data-type="compact"></div>
               <a href="project_Askbob.html" class="btn btn-primary">Check it out<i
@@ -995,7 +1016,7 @@
      * Project Filter System
      * ============================================
      */
-    
+
     /**
      * Update project counts for each category
      * @function updateProjectCounts
@@ -1008,23 +1029,23 @@
           'product_initiative': 0,
           'side_project': 0
         };
-        
+
         // Count projects by category
-        projects.forEach(function(project) {
+        projects.forEach(function (project) {
           const category = project.getAttribute("data-category");
           if (category && counts.hasOwnProperty(category)) {
             counts[category]++;
           }
         });
-        
+
         // Update button displays
-        Object.keys(counts).forEach(function(category) {
+        Object.keys(counts).forEach(function (category) {
           const countElement = document.getElementById('count-' + category);
           if (countElement) {
             countElement.textContent = counts[category];
           }
         });
-        
+
         console.log('Project counts updated:', counts);
         console.log('Total project divs found:', projects.length);
       } catch (error) {
@@ -1042,22 +1063,22 @@
         const projects = document.querySelectorAll('div[data-category]');
         const buttons = document.querySelectorAll('[role="tab"]');
         const container = document.getElementById('project-container');
-        
+
         // Validate required elements
         if (!projects.length || !buttons.length || !container) {
           console.warn('Required elements for filtering not found');
           return;
         }
-        
+
         // Update button states
         updateButtonStates(buttons, category);
-        
+
         // Filter projects with smooth transition
         filterProjectElements(projects, category);
-        
+
         console.log(`Filtered projects by category: ${category}`);
         console.log('Button states updated for category:', category);
-        
+
       } catch (error) {
         console.error('Error filtering projects:', error);
       }
@@ -1070,19 +1091,19 @@
      * @param {string} activeCategory - The currently active category
      */
     function updateButtonStates(buttons, activeCategory) {
-      buttons.forEach(function(button) {
+      buttons.forEach(function (button) {
         const buttonCategory = button.getAttribute('data-category');
         const isActive = buttonCategory === activeCategory;
-        
+
         // Update ARIA attributes
         button.setAttribute('aria-selected', isActive);
         button.setAttribute('tabindex', isActive ? '0' : '-1');
-        
+
         if (isActive) {
           // Active state: add filter-active class, remove inactive classes
           button.classList.remove('btn-frameless', 'is-filter');
           button.classList.add('filter-active');
-          
+
           // Clear any inline styles that might override
           button.style.backgroundColor = '';
           button.style.color = '';
@@ -1106,7 +1127,7 @@
       projects.forEach(function (project) {
         const projectCategory = project.getAttribute("data-category");
         const shouldShow = category === "all" || projectCategory === category;
-        
+
         if (shouldShow) {
           showProject(project);
         } else {
@@ -1129,9 +1150,9 @@
       project.style.overflow = "visible";
       project.style.margin = "";
       project.style.padding = "";
-      
+
       // Smooth fade-in animation
-      requestAnimationFrame(function() {
+      requestAnimationFrame(function () {
         project.style.transition = "opacity 0.3s ease, transform 0.3s ease";
         project.style.opacity = "1";
         project.style.transform = "translateY(0)";
@@ -1152,8 +1173,8 @@
       project.style.overflow = "hidden";
       project.style.margin = "0";
       project.style.padding = "0";
-      
-      setTimeout(function() {
+
+      setTimeout(function () {
         project.style.display = "none";
       }, 300);
     }
@@ -1163,25 +1184,25 @@
      * Page Initialization
      * ============================================
      */
-    
+
     // Initialize on page load
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
       try {
         // Initialize project styles
         initializeProjectStyles();
-        
+
         // Update project counts
         updateProjectCounts();
-        
+
         // Initialize button states
         initializeButtonStates();
-        
+
         // Add keyboard navigation support
         initializeKeyboardNavigation();
-        
+
         // Set default filter to Product Initiative
         filterProjects('product_initiative');
-        
+
       } catch (error) {
         console.error('Error during page initialization:', error);
       }
@@ -1193,7 +1214,7 @@
      */
     function initializeProjectStyles() {
       const projects = document.querySelectorAll('div[data-category]');
-      projects.forEach(function(project) {
+      projects.forEach(function (project) {
         project.style.display = "block";
         project.style.opacity = "1";
         project.style.transform = "translateY(0)";
@@ -1216,7 +1237,7 @@
         { selector: '[data-category="side_project"]', active: false }
       ];
 
-      buttonStates.forEach(function(config) {
+      buttonStates.forEach(function (config) {
         const button = document.querySelector(config.selector);
         if (button) {
           if (config.active) {
@@ -1239,13 +1260,13 @@
      * @function initializeKeyboardNavigation
      */
     function initializeKeyboardNavigation() {
-      document.querySelectorAll('[role="tab"]').forEach(function(button) {
-        button.addEventListener('keydown', function(e) {
+      document.querySelectorAll('[role="tab"]').forEach(function (button) {
+        button.addEventListener('keydown', function (e) {
           const buttons = Array.from(document.querySelectorAll('[role="tab"]'));
           const currentIndex = buttons.indexOf(this);
           let targetButton = null;
-          
-          switch(e.key) {
+
+          switch (e.key) {
             case 'ArrowLeft':
               e.preventDefault();
               targetButton = buttons[currentIndex - 1] || buttons[buttons.length - 1];
@@ -1261,7 +1282,7 @@
               filterProjects(category);
               break;
           }
-          
+
           if (targetButton) {
             targetButton.focus();
           }
@@ -1269,12 +1290,12 @@
       });
     }
   </script>
-  
+
   <!-- Smooth Scroll and Navigation Scripts -->
   <script>
     // Initialize smooth scrolling
     const scroll = new SmoothScroll('a[href*="#"]');
-    
+
     // Handle mobile navigation toggle
     $('a.nav-link').on('click', () => {
       const navbar = $('.navbar-collapse');
