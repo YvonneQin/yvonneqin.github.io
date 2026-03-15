@@ -11,7 +11,7 @@ class StickyHeader {
     this.stickyClass = "header--sticky";
     this.ticking = false;
     this.bodyPosition = 0;
-    
+
     // If header already exists, initialize directly
     if (this.header) {
       this.initSticky();
@@ -51,33 +51,33 @@ class StickyHeader {
 
   initSticky() {
     if (!this.header) return;
-    
+
     this.headerStaticHeight = this.header.getBoundingClientRect().height;
     this.header.classList.toggle(this.stickyClass, true);
-    
+
     // 添加滚动事件监听
     window.addEventListener("scroll", () => this.scrollHandler());
-    
+
     // 初始化时检查一次
     this.scrollChanged();
   }
 
   scrollHandler() {
     if (this.ticking) return;
-    
+
     window.requestAnimationFrame(() => {
       this.scrollChanged();
       this.ticking = false;
     });
-    
+
     this.ticking = true;
   }
 
   scrollChanged() {
     if (!this.header) return;
-    
+
     this.bodyPosition = Math.abs(this.body.getBoundingClientRect().top);
-    
+
     if (this.bodyPosition > this.thresholdPosition) {
       this.header.classList.toggle(this.triggeredStickyClass, true);
     } else {
@@ -87,7 +87,7 @@ class StickyHeader {
 }
 
 // 创建全局函数，供header组件调用
-window.initStickyHeader = function() {
+window.initStickyHeader = function () {
   const header = document.querySelector(".header");
   if (header) {
     new StickyHeader(header);

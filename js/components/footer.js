@@ -19,7 +19,7 @@ class SiteFooter extends HTMLElement {
           <a class="nav-link" href="index.html#about">Skills</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="index.html#portfolio">🧩 Tinkering Zones</a>
+          <a class="nav-link" href="index.html#portfolio">🧩 Tinkering Zone</a>
         </li>
         <li class="nav-item">
           <a data-scroll class="nav-link" href="my_insight.html">Insights<i class="icon-a-directto-s iconfont"></i></a>

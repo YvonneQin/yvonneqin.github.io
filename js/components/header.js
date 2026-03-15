@@ -18,7 +18,7 @@ class SiteHeader extends HTMLElement {
            
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>    
           <li class="nav-item"><a data-scroll class="nav-link" href="index.html#skills">Skills</a></li>
-          <li class="nav-item"><a data-scroll class="nav-link" href="index.html#portfolio">🧩 Tinkering Zones</a></li>
+          <li class="nav-item"><a data-scroll class="nav-link" href="index.html#portfolio">🧩 Tinkering Zone</a></li>
           <!-- <li class="nav-item"><a data-scroll class="nav-link" href="index.html#contact">Contact me</a></li> -->
           <li class="nav-item"><a target='_blank' data-scroll class="nav-link" href="my_insight.html">Insights<i class="icon-a-directto-s iconfont"></i></a></li>
         </ul>
@@ -26,7 +26,7 @@ class SiteHeader extends HTMLElement {
     </nav>
   </div>
 </header>`;
-    
+
     // 确保导航动效正常工作
     this.ensureNavigationEffects();
   }
@@ -45,7 +45,7 @@ class SiteHeader extends HTMLElement {
     if (window.initStickyHeader) {
       window.initStickyHeader();
     }
-    
+
     // 确保导航链接的平滑滚动
     const navLinks = this.querySelectorAll('.nav-link[data-scroll]');
     navLinks.forEach(link => {

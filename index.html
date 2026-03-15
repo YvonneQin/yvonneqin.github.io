@@ -730,7 +730,7 @@
     </section>
     <section id="portfolio" class="section section--border-bottom">
       <div class="container" style="margin-bottom: 80px;">
-        <h2>🧩 Tinkering Zones</h2>
+        <h2>🧩 Tinkering Zone</h2>
         <section class="section" style="padding-top: 0px; margin-top: 0px; " role="main">
           <div class="container">
             <div class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
@@ -743,10 +743,17 @@
                     All<span class="article-count" id="count-all">0</span>
                   </button>
                   <button class="btn btn-sm btn-frameless is-filter" style="height: 36px"
+                    onclick="filterProjects('skills')" role="tab" aria-selected="false"
+                    aria-controls="project-container" tabindex="-1" aria-label="Show side project articles"
+                    data-category="skills">
+                    AI Skills.md
+                    <span class="article-count" id="count-skills">0</span>
+                  </button>
+                  <button class="btn btn-sm btn-frameless is-filter" style="height: 36px"
                     onclick="filterProjects('side_project')" role="tab" aria-selected="false"
                     aria-controls="project-container" tabindex="-1" aria-label="Show side project articles"
                     data-category="side_project">
-                    🧩 Tinkering Projects
+                    🧩 Vibe Products
                     <span class="article-count" id="count-side_project">0</span>
                   </button>
                   <button class="btn btn-sm filter-active" style="height: 36px"
@@ -1027,7 +1034,8 @@
         const counts = {
           'all': projects.length,
           'product_initiative': 0,
-          'side_project': 0
+          'side_project': 0,
+          'skills': 0
         };
 
         // Count projects by category
