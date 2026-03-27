@@ -2,6 +2,14 @@
 const ProjectData = {
 
   // Tinkering Project
+  codifig: {
+    title: 'codifig',
+    badges: ['Tinkering', 'Product Design', 'Worker'],
+    period: 'Fresh Start',
+    role: 'PM & Deveplorer',
+    duration: '--',
+    category: 'tinkering_project'
+  },
   figma_token_codegen_skills: {
     title: 'figma-token-codegen-skills',
     badges: ['Tinkering', 'Product Design', 'Worker'],
