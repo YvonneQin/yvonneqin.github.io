@@ -2,6 +2,14 @@
 const ProjectData = {
 
   // Tinkering Project
+  figma_token_codegen_skills: {
+    title: 'figma-token-codegen-skills',
+    badges: ['Tinkering', 'Product Design', 'Worker'],
+    period: 'Fresh Start',
+    role: 'PM & Deveplorer',
+    duration: '--',
+    category: 'tinkering_project'
+  },
   TLDW: {
     title: 'TLDW',
     badges: ['Tinkering', 'Product Design', 'Worker'],
@@ -36,7 +44,7 @@ const ProjectData = {
     duration: '20 mins',
     category: 'product_initiative'
   },
-  
+
   // Construct Project
   construct: {
     title: 'Construct Product Design 0 to 1 Case Retro Sharing',
@@ -46,7 +54,7 @@ const ProjectData = {
     duration: '20 mins',
     category: 'product_initiative'
   },
-  
+
   // DCT Project
   dct: {
     title: 'Comprehensive CX Solution for Clinical Trials',
@@ -56,7 +64,7 @@ const ProjectData = {
     duration: '20 mins',
     category: 'product_initiative'
   },
-  
+
   // AI Project
   ai: {
     title: 'LLM-Based Experience Design',
@@ -66,7 +74,7 @@ const ProjectData = {
     duration: '20 mins',
     category: 'product_initiative'
   },
-  
+
   // MM Project
   mm: {
     title: 'Medical Monitoring Config Benchmarking Analysis',
@@ -76,7 +84,7 @@ const ProjectData = {
     duration: '20 mins',
     category: 'product_initiative'
   },
-  
+
   // POC Project
   poc: {
     title: 'Spinning the wheel of Product Growth by Design & Insight - Sneak Peak to Narratives POC demo',
@@ -86,7 +94,7 @@ const ProjectData = {
     duration: '20 mins',
     category: 'side_project'
   },
-  
+
   // Law Project
   law: {
     title: 'Building a 0-to-1 Smart Legal Product Experience System (Ping An)',
@@ -96,7 +104,7 @@ const ProjectData = {
     duration: '20 mins',
     category: 'product_initiative'
   },
-  
+
   // Askbob Project
   askbob: {
     title: 'AskBob Intelligent Office Assistant — Voice Conversation Enhancements',
@@ -106,7 +114,7 @@ const ProjectData = {
     duration: '20 mins',
     category: 'product_initiative'
   },
-  
+
   // Graduate Project
   graduate: {
     title: 'Graduation Project — Motion-Sensing Product-Service System for People with Disabilities',
@@ -116,7 +124,7 @@ const ProjectData = {
     duration: '20 mins',
     category: 'side_project'
   },
-  
+
   // COE Project
   coe: {
     title: 'CoE Workshop Experts Lecture Series — Visual Design for Promotional Materials',
@@ -132,20 +140,20 @@ const ProjectData = {
 function updateProjectInfo() {
   // Find all elements with data-project attribute
   const projectElements = document.querySelectorAll('[data-project]');
-  
+
   projectElements.forEach(element => {
     const projectKey = element.getAttribute('data-project');
     const project = ProjectData[projectKey];
-    
+
     if (!project) {
       console.warn(`Project data not found for: ${projectKey}`);
       return;
     }
-    
+
     // Update content based on element type
     if (element.hasAttribute('data-type')) {
       const type = element.getAttribute('data-type');
-      
+
       switch (type) {
         case 'title':
           element.textContent = project.title;

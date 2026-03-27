@@ -3,7 +3,7 @@ window.SiteConfig = {
   // iconfont配置
   iconfont: {
     // 主要iconfont链接
-    primary: 'https://at.alicdn.com/t/c/font_4545731_1iwxww92za1.css',
+    primary: 'https://at.alicdn.com/t/c/font_4545731_to3i2ew3yn.css',
     // 备用iconfont链接（如果需要）
     fallback: 'https://at.alicdn.com/t/c/font_4545731_3pnlmzv33e7.css',
     // 预连接域名

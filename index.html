@@ -7,6 +7,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self'; img-src 'self' data: https:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://at.alicdn.com; font-src 'self' data: https://fonts.gstatic.com https://at.alicdn.com; connect-src 'self' https://www.google-analytics.com https://stats.g.doubleclick.net;" />
 
   <!-- SEO Meta Tags -->
   <meta name="description"
@@ -58,9 +60,7 @@
       "@type": "PostalAddress",
       "addressLocality": "Shanghai",
       "addressCountry": "CN"
-    },
-    "email": "tatamato811@gmail.com",
-    "telephone": "+86 131 6243 5185"
+    }
   }
   </script>
 
@@ -76,7 +76,7 @@
         j = d.createElement(s),
         dl = l != 'dataLayer' ? '&l=' + l : '';
       j.async = true;
-      j.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-000000' + i + dl;
+      j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
       f.parentNode.insertBefore(j, f);
     })(window, document, 'script', 'dataLayer', 'GTM-000000');
   </script>
@@ -517,22 +517,40 @@
                 onmouseout="this.style.color='var(--mode-dark-primary-brand-default)'; this.style.transform='scale(1)'">Insights<i
                   class="icon-a-directto-s iconfont"
                   style="font-size: 24px !important; margin-left: -2px !important; margin-right: 0 !important; vertical-align: middle !important; transition: all 0.3s ease !important;"></i></a>
-              on AI × Science × Design × Venture × 3D Printing.
+              on <a href="#portfolio" onclick="document.querySelector('[data-category=\'skills\']').click();"
+                style="color: var(--mode-dark-primary-brand-default); text-decoration: none !important; transition: all 0.3s ease !important;"
+                onmouseover="this.style.color='#ff6b6b'; this.style.transform='scale(1.05)'"
+                onmouseout="this.style.color='var(--mode-dark-primary-brand-default)'; this.style.transform='scale(1)'">Vibe
+                Coding<i class="icon-a-directto-s iconfont"
+                  style="font-size: 24px !important; margin-left: -2px !important; margin-right: 0 !important; vertical-align: middle !important; transition: all 0.3s ease !important;"></i></a>
+              × AI × Science × Design × Venture × 3D Printing.
             </h1>
             <ul class="lead" style="padding-top: 0px;margin-bottom: 20px;">
               <!-- <li>Tel: &#43;86 131 6243 5185</li> -->
-              <li>Mail: tatamato811@gmail.com</li>
+              <li>Mail: <a href="#"
+                  onclick="window.location.href='mailto:' + ['tatamato811', 'gmail.com'].join('@'); return false;"
+                  style="color: inherit; text-decoration: none;">
+                  <script>document.write(['tatamato811', 'gmail.com'].join('@'))</script><noscript>Please enable JS to
+                    view email</noscript>
+                </a></li>
               <li>Location: Shanghai</li>
             </ul>
             <div class="row platform-links">
               <div class="col-12">
+                <a href="https://x.com/Qinyuwen" target="_blank">
+                  <i class="icon-x-line iconfont"></i>
+                </a>
+                <a href="https://github.com/YvonneQin" target="_blank">
+                  <i class="icon-github-line iconfont"></i>
+                </a>
                 <!-- <a href="https://www.linkedin.com/in/yuwen-qin-275864114/" target="_blank">
                   <i class="icon-linkedin-line iconfont"></i>
                 </a> -->
-                <!-- <a href="https://github.com/YvonneQin" target="_blank">
-                  <i class="icon-github-line iconfont"></i>
+                <a href="https://www.youtube.com/@yuwenqin4996/playlists" target="_blank">
+                  <i class="icon-youtube-line iconfont"></i>
                 </a>
-                <a href="file/yuwenqin 13162435185 - Designer.pdf" target="blank">
+
+                <!-- <a href="file/yuwenqin 13162435185 - Designer.pdf" target="blank">
                   <i class="icon-profile-fill iconfont"></i>
                 </a> -->
                 <!-- <a href="https://www.figma.com/community/file/1372032938337980594/community-test" target="_blank">
@@ -686,7 +704,7 @@
               <div class="experience__company">Microsoft @ CSS OS & USTC</div>
             </div>
           </div>
-          <div class="col-6">
+          <div class="col-12 col-md-6">
             <h2>Work Experience</h2>
             <p class="lead" style="text-align: left; margin-bottom: 8px;">
               <strong>AI Infrastructure & Product Leader</strong> building next-gen intelligent systems at scale.
@@ -745,7 +763,7 @@
                     onclick="filterProjects('skills')" role="tab" aria-selected="false"
                     aria-controls="project-container" tabindex="-1" aria-label="Show side project articles"
                     data-category="skills">
-                    AI Skills.md
+                    🧩 AI Skills.md
                     <span class="article-count" id="count-skills">0</span>
                   </button>
                   <button class="btn btn-sm btn-frameless is-filter" style="height: 36px"
@@ -759,7 +777,7 @@
                     onclick="filterProjects('product_initiative')" role="tab" aria-selected="true"
                     aria-controls="project-container" tabindex="0" aria-label="Show product initiative articles"
                     data-category="product_initiative">
-                    Product Initiative
+                    🧶 Product Initiative
                     <span class="article-count" id="count-product_initiative">0</span>
                   </button>
 
@@ -768,7 +786,20 @@
             </div>
           </div>
         </section>
+
         <div id="project-container">
+          <div class="row row--padded rad-animation-group rad-fade-down " data-category="skills">
+            <div class="col-md-7 pl-md-0 text-right">
+              <img class='lozad img-responsive img-clip-right-backward'
+                data-src="img/works/figma-token-codegen-skills.svg"
+                data-srcset="img/works/figma-token-codegen-skills.svg" />
+            </div>
+            <div class="col-md-5 mt-4 mt-md-0 my-md-auto" style="line-height: 32px;">
+              <div data-project="figma_token_codegen_skills" data-type="compact"></div>
+              <a href="https://github.com/YvonneQin/figma-token-codegen" target="_blank" class="btn btn-primary">Check
+                it out<i class="icon-arrow-right-sm iconfont"></i></a>
+            </div>
+          </div>
           <div class="row row--padded rad-animation-group rad-fade-down" data-category="side_project">
             <div class="col-md-5 mt-4 mt-md-0 my-md-auto" style="line-height: 32px;">
               <div data-project="TLDW" data-type="compact"></div>
@@ -918,7 +949,7 @@
               <img src="img/figure-svg.svg" alt="">
             </div>
           </div>
-          <div class="row row--padded rad-animation-group rad-fade-down " data-category="side_project">
+          <div class="row row--padded rad-animation-group rad-fade-down " data-category="product_initiative">
             <div class="col-md-7 pl-md-0 text-right">
               <img class='lozad img-responsive img-clip-right-forward'
                 src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
@@ -958,10 +989,14 @@
                 style="border-radius: 10px;box-shadow: 0 42px 34px -16px rgb(0 0 0 / 30%);">
             </div>
             <div class="col-12 col-lg-6 contact__info">
-              <h4>Tel</h4>
+              <!-- <h4>Tel</h4> -->
               <!-- <span>&#43;86 131 6243 5185</span> -->
               <h4>Email</h4>
-              <span><a href="mailto:tatamato811@gmail.com">tatamato811@gmail.com</a></span>
+              <span><a href="#"
+                  onclick="window.location.href='mailto:' + ['tatamato811', 'gmail.com'].join('@'); return false;">
+                  <script>document.write(['tatamato811', 'gmail.com'].join('@'))</script><noscript>Please enable JS to
+                    view email</noscript>
+                </a></span>
               <h4>Current Location</h4>
               <span>Shanghai</span>
             </div>
